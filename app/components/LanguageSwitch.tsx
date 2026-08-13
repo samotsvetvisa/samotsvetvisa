@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { withTrailingSlash } from "../site";
 
 export function LanguageSwitch() {
   const pathname = usePathname();
@@ -13,9 +14,9 @@ export function LanguageSwitch() {
 
   return (
     <div className="language-switch" aria-label={isEnglish ? "Select language" : "Выбор языка"}>
-      <Link href={ruHref} className={!isEnglish ? "is-active" : undefined} lang="ru" hrefLang="ru">RU</Link>
+      <Link href={withTrailingSlash(ruHref)} className={!isEnglish ? "is-active" : undefined} lang="ru" hrefLang="ru">RU</Link>
       <span aria-hidden="true">/</span>
-      <Link href={enHref} className={isEnglish ? "is-active" : undefined} lang="en" hrefLang="en">EN</Link>
+      <Link href={withTrailingSlash(enHref)} className={isEnglish ? "is-active" : undefined} lang="en" hrefLang="en">EN</Link>
     </div>
   );
 }

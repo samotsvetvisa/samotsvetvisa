@@ -3,12 +3,12 @@ type Locale = "ru" | "en";
 const copy = {
   ru: {
     eyebrow: "Опыт и результаты",
-    title: "Более 800 успешно завершенных кейсов",
-    intro: "С 2021 года мы проанализировали более 10 000 профессиональных профилей и успешно завершили более 800 клиентских кейсов, включая более 200 по Великобритании. Этот опыт охватывает маршруты для специалистов, предпринимателей, их семей и компаний. Именные истории публикуем с согласия клиентов.",
+    title: "Пять лет и три роли",
+    intro: "С 2021 года Никита отсмотрел более 10 000 профессиональных профилей — на скрининге в иммиграционных агентствах и самостоятельно. Участвовал в подготовке более 800 успешно завершенных кейсов: часть вел целиком, часть — как партнер, которого агентства привлекали на сложные дела. Более 200 из них — британские.",
     metrics: [
-      ["10 000+", "профессиональных профилей разобрано"],
-      ["800+", "кейсов завершено успешно"],
-      ["200+", "успешных кейсов по Великобритании"],
+      ["10 000+", "профилей отсмотрено"],
+      ["800+", "кейсов с участием Никиты"],
+      ["200+", "британских дел"],
     ],
     casesTitle: "Что будет показано в каждом кейсе",
     cases: [
@@ -20,12 +20,12 @@ const copy = {
   },
   en: {
     eyebrow: "Experience and outcomes",
-    title: "More than 800 successfully completed matters",
-    intro: "Since 2021, we have assessed more than 10,000 professional profiles and successfully completed more than 800 client matters, including over 200 in the UK. Our experience covers specialists, entrepreneurs, their families and businesses. Named stories appear with client permission.",
+    title: "Five years across three roles",
+    intro: "Since 2021, Nikita has screened more than 10,000 professional profiles, both inside immigration agencies and independently. He has contributed to more than 800 successfully completed matters: some led in full, others handled as the partner agencies brought in for difficult cases. More than 200 were UK matters.",
     metrics: [
-      ["10,000+", "professional profiles reviewed"],
-      ["800+", "matters completed successfully"],
-      ["200+", "successful UK matters"],
+      ["10,000+", "profiles screened"],
+      ["800+", "matters involving Nikita"],
+      ["200+", "UK matters"],
     ],
     casesTitle: "What each client story will show",
     cases: [
@@ -57,13 +57,6 @@ export function ClientResults({ locale = "ru" }: { locale?: Locale }) {
         </div>
         <div className="results-metrics">
           {text.metrics.map(([value, label]) => <article key={label}><strong>{value}</strong><span>{label}</span></article>)}
-        </div>
-        <div className="case-framework">
-          <div><p className="eyebrow">{locale === "en" ? "Client stories" : "Кейсы клиентов"}</p><h3>{text.casesTitle}</h3></div>
-          <div className="case-framework-grid">
-            {text.cases.map(([title, description], index) => <article key={title}><span>{String(index + 1).padStart(2, "0")}</span><h4>{title}</h4><p>{description}</p></article>)}
-          </div>
-          <p className="case-publication-note">{text.note}</p>
         </div>
       </div>
     </section>

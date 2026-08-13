@@ -25,11 +25,11 @@ export default async function EnglishArticlePage({ params }: { params: Promise<{
   return (
     <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} /><SiteHeader locale="en" /><main>
       <article className="article-page section-shell">
-        <header><p className="eyebrow">{article.tag}</p><h1>{article.title}</h1><div className="article-byline"><Link href="/en/about#nikita">{article.author}</Link><span aria-hidden="true"> · </span><span>{article.reading}</span><span aria-hidden="true"> · </span><time dateTime={article.published}>Published {formatArticleDate(article.published, "en")}</time></div><p className="article-lead">{article.lead}</p></header>
+        <header><p className="eyebrow">{article.tag}</p><h1>{article.title}</h1><div className="article-byline"><Link href="/en/about/#nikita">{article.author}</Link><span aria-hidden="true"> · </span><span>{article.reading}</span><span aria-hidden="true"> · </span><time dateTime={article.published}>Published {formatArticleDate(article.published, "en")}</time></div><p className="article-lead">{article.lead}</p></header>
         <div className="article-body">
           {article.sections.map((section) => <section key={section.title}><h2>{section.title}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}{section.points && <ul>{section.points.map((point) => <li key={point}>{point}</li>)}</ul>}</section>)}
-          <aside><p>Would an initial review help?</p><Link href={`/en/countries/${article.relatedCountry}`}>View route</Link><Link href="/en/assessment">Request a review</Link></aside>
-          <section className="article-author" id="article-author" aria-label="About the author"><div className="article-author-photo"><img src="/nikita-founder-white-v3.webp" alt="Nikita Samotsvetov" width="180" height="220" /></div><div><p className="article-author-label">Author</p><h2><Link href="/en/about#nikita">Nikita Samotsvetov</Link></h2><p>Founder of Samotsvet. Nikita reviews the facts, plans evidence, checks sources and coordinates relocation projects.</p></div></section>
+          <aside><p>Would an initial review help?</p><Link href={`/en/countries/${article.relatedCountry}/`}>View route</Link><Link href="/en/assessment/">Request a review</Link></aside>
+          <section className="article-author" id="article-author" aria-label="About the author"><div className="article-author-photo"><img src="/nikita-founder-white-v3.webp" alt="Nikita Samotsvetov" width="180" height="220" /></div><div><p className="article-author-label">Author</p><h2><Link href="/en/about/#nikita">Nikita Samotsvetov</Link></h2><p>Founder of Samotsvet. Nikita reviews the facts, plans evidence, checks sources and coordinates relocation projects.</p></div></section>
         </div>
       </article>
     </main><SiteFooter locale="en" /></>

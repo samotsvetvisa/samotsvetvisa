@@ -40,7 +40,6 @@ button, input, textarea, select { font: inherit; }
 .language-switch a.is-active { border-bottom: 1px solid var(--navy); color: var(--navy); }
 .header-cta { border: 1px solid var(--navy); padding: 12px 18px; font-size: 13px; font-weight: 650; transition: background .2s ease, color .2s ease; }
 .header-cta:hover { background: var(--navy); color: white; }
-.cta-short { display: none; }
 
 .hero { min-height: 650px; display: grid; grid-template-columns: minmax(0, .95fr) minmax(440px, 1.05fr); align-items: center; gap: 56px; padding-top: 82px; padding-bottom: 82px; }
 .hero h1 { max-width: 760px; margin: 0; font-family: var(--serif); font-size: clamp(52px, 6vw, 82px); font-weight: 400; letter-spacing: -.045em; line-height: .98; }
@@ -111,7 +110,8 @@ button, input, textarea, select { font: inherit; }
 .country-name { color: var(--grey); font-size: 12px; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; }
 .country-card h3 { max-width: 440px; margin: 30px 0 20px; font-family: var(--serif); font-size: 32px; font-weight: 400; line-height: 1.14; }
 .route-list { display: flex; flex-wrap: wrap; gap: 7px; }
-.route-list span { border: 1px solid var(--line); padding: 7px 10px; color: var(--grey); font-size: 11px; }
+.route-list a { border: 1px solid var(--line); padding: 7px 10px; color: var(--grey); font-size: 11px; transition: border-color .2s ease, background .2s ease, color .2s ease; }
+.route-list a:hover, .route-list a:focus-visible { border-color: var(--navy); background: var(--navy); color: white; outline: none; }
 .country-card > p { max-width: 500px; margin: 23px 0; color: var(--grey); font-size: 14px; line-height: 1.72; }
 .country-card > a { margin-top: auto; font-size: 13px; font-weight: 700; }
 
@@ -219,7 +219,7 @@ button, input, textarea, select { font: inherit; }
 .consent-field a { border-bottom: 1px solid var(--grey); }
 .form-privacy-note { margin: -8px 0 0; color: var(--grey); font-size: 12px; line-height: 1.65; }
 .form-privacy-note a { border-bottom: 1px solid var(--line); color: var(--navy); }
-.honeypot { position: absolute !important; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.honeypot { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; margin: 0 !important; padding: 0 !important; overflow: hidden !important; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
 .form-submit { justify-self: start; cursor: pointer; }
 .form-submit:disabled { cursor: wait; opacity: .65; }
 .form-message { margin: 0; padding: 14px 16px; font-size: 14px; line-height: 1.5; }
@@ -234,7 +234,15 @@ button, input, textarea, select { font: inherit; }
 .inner-section-title { display: grid; grid-template-columns: .45fr 1.55fr; align-items: end; margin-bottom: 52px; }
 .inner-section-title h2 { margin: 0; font-family: var(--serif); font-size: 52px; font-weight: 400; }
 .route-detail-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
-.route-detail-grid article { min-height: 390px; padding: 34px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.route-detail-grid article { min-height: 390px; padding: 34px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); scroll-margin-top: 110px; }
+.country-facts { margin-top: 64px; padding: 38px; border: 1px solid var(--line); background: var(--ivory); overflow-x: auto; }
+.country-facts h2 { margin: 0 0 24px; font-family: var(--serif); font-size: 38px; font-weight: 400; }
+.country-facts table { width: 100%; min-width: 620px; border-collapse: collapse; }
+.country-facts th, .country-facts td { padding: 15px 16px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; font-size: 13px; line-height: 1.55; }
+.country-facts th { width: 30%; color: var(--navy); }
+.country-facts td { color: var(--grey); }
+.country-facts > p:last-child { margin: 22px 0 0; color: var(--grey); font-size: 13px; line-height: 1.7; }
+.country-price-note { max-width: 780px; margin: -10px 0 28px; color: var(--grey); font-size: 13px; line-height: 1.65; }
 .route-detail-grid article > span { color: var(--gold); font-size: 11px; font-weight: 700; }
 .route-detail-grid h3 { margin: 22px 0 16px; font-family: var(--serif); font-size: 34px; font-weight: 400; }
 .route-detail-grid p { color: var(--grey); font-size: 14px; line-height: 1.7; }
@@ -398,8 +406,6 @@ button, input, textarea, select { font: inherit; }
   .brand-lockup-copy strong { font-size: 14px; }
   .brand-lockup-copy small { margin-top: 4px; font-size: 5.2px; }
   .header-cta { padding: 10px 12px; font-size: 11px; }
-  .cta-full { display: none; }
-  .cta-short { display: inline; }
   .language-switch { gap: 5px; font-size: 10px; }
   .hero { min-height: auto; padding-top: 66px; padding-bottom: 70px; gap: 45px; }
   .hero h1 { font-size: clamp(45px, 14vw, 64px); }
