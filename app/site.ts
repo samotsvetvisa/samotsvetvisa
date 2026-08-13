@@ -9,12 +9,23 @@ export const CONTACT_EMAIL = "karfagen38@gmail.com";
 export const TELEGRAM_HANDLE = "@samotsvetvisa";
 export const TELEGRAM_URL = "https://t.me/samotsvetvisa";
 
+export const SERVICE_MODEL_RU = "Samotsvet ведет проект целиком: анализ профиля, стратегия подготовки, план усиления, сбор и сведение доказательств, управление сроками и участниками. Юридическую оценку, подготовку форм и подачу выполняет уполномоченный специалист — адвокат с действующей лицензией США по американским кейсам, регулируемый советник по британским. Их полномочия и стоимость Вы видите до начала работы.";
+export const SERVICE_MODEL_EN = "Samotsvet manages the project as a whole: profile analysis, preparation strategy, development plan, evidence collection and consolidation, deadlines and contributors. Legal assessment, forms and filing are handled by an authorised professional: a US-licensed attorney for US matters and a regulated adviser for UK matters. You receive their credentials and fee before work begins.";
+
 export const SERVICE_PRICES = [
   { code: "UK", countryRu: "Великобритания", countryEn: "United Kingdom", price: "от €5 000", priceEn: "from €5,000", timelineRu: "от 2 месяцев", timelineEn: "from 2 months" },
-  { code: "US", countryRu: "США", countryEn: "United States", price: "от $8 000", priceEn: "from $8,000", timelineRu: "от 1 месяца", timelineEn: "from 1 month" },
-  { code: "ES", countryRu: "Испания", countryEn: "Spain", price: "от €1 600", priceEn: "from €1,600", timelineRu: "от 1 месяца", timelineEn: "from 1 month" },
+  { code: "US", countryRu: "США", countryEn: "United States", price: "от $8 000", priceEn: "from $8,000", timelineRu: "от 1 месяца", timelineEn: "from 1 month", noteRu: "Рассмотрение ведомством зависит от маршрута — подробные сроки указаны на странице США.", noteEn: "Government processing depends on the route — see the US page for route-specific timing." },
+  { code: "ES", countryRu: "Испания", countryEn: "Spain", price: "от €1 600", priceEn: "from €1,600", timelineRu: "от 1 месяца", timelineEn: "from 1 month", noteRu: "Стоимость ниже, чем по другим направлениям: маршрут короче и не требует доказательств профессионального признания. Результат — вид на жительство для удаленной работы.", noteEn: "The fee is lower because the route is shorter and does not require evidence of professional recognition. The outcome is residence for international remote work." },
   { code: "FR", countryRu: "Франция", countryEn: "France", price: "от €6 000", priceEn: "from €6,000", timelineRu: "от 2 месяцев", timelineEn: "from 2 months" },
 ] as const;
+
+export function withTrailingSlash(path: string) {
+  if (!path.startsWith("/") || path === "/") return path;
+  const match = path.match(/^([^?#]*)(.*)$/);
+  if (!match) return path;
+  const [, pathname, suffix] = match;
+  return `${pathname.endsWith("/") ? pathname : `${pathname}/`}${suffix}`;
+}
 
 type PageMetadataOptions = {
   title: string;
@@ -35,13 +46,14 @@ export function pageMetadata({
 }: PageMetadataOptions): Metadata {
   const socialTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
   const isEnglish = locale === "en";
-  const ruPath = isEnglish ? path.replace(/^\/en/, "") || "/" : path;
-  const enPath = isEnglish ? path : path === "/" ? "/en" : `/en${path}`;
+  const canonicalPath = withTrailingSlash(path);
+  const ruPath = withTrailingSlash(isEnglish ? path.replace(/^\/en/, "") || "/" : path);
+  const enPath = withTrailingSlash(isEnglish ? path : path === "/" ? "/en" : `/en${path}`);
   const openGraph = type === "article"
     ? {
         title: socialTitle,
         description,
-        url: path,
+        url: canonicalPath,
         type: "article" as const,
         locale: isEnglish ? "en_GB" : "ru_RU",
         siteName: SITE_NAME,
@@ -50,7 +62,7 @@ export function pageMetadata({
     : {
         title: socialTitle,
         description,
-        url: path,
+        url: canonicalPath,
         type: "website" as const,
         locale: isEnglish ? "en_GB" : "ru_RU",
         siteName: SITE_NAME,
@@ -60,7 +72,9 @@ export function pageMetadata({
   return {
     title,
     description,
-    alternates: hasAlternate ? { canonical: path, languages: { ru: ruPath, en: enPath } } : { canonical: path },
+    alternates: hasAlternate
+      ? { canonical: canonicalPath, languages: { ru: ruPath, en: enPath, "x-default": ruPath } }
+      : { canonical: canonicalPath, languages: { [locale]: canonicalPath, "x-default": canonicalPath } },
     openGraph,
     twitter: {
       card: "summary_large_image",

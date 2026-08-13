@@ -66,7 +66,7 @@ export default function EnglishConsentPage() {
 
           <section>
             <h2>6. Further information</h2>
-            <p>More information about purposes, legal bases, recipients, retention and your rights appears in the <Link href="/en/privacy">Privacy Policy</Link>.</p>
+            <p>More information about purposes, legal bases, recipients, retention and your rights appears in the <Link href="/en/privacy/">Privacy Policy</Link>.</p>
           </section>
         </article>
       </main>

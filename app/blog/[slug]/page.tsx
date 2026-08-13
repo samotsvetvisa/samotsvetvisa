@@ -49,7 +49,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <header>
             <p className="eyebrow">{article.tag}</p>
             <h1>{article.title}</h1>
-            <div className="article-byline"><Link href="/about#nikita">{article.author}</Link><span aria-hidden="true">{" · "}</span><span>{article.reading}</span><span aria-hidden="true">{" · "}</span><time dateTime={article.published}>Опубликовано {formatArticleDate(article.published)}</time></div>
+            <div className="article-byline"><Link href="/about/#nikita">{article.author}</Link><span aria-hidden="true">{" · "}</span><span>{article.reading}</span><span aria-hidden="true">{" · "}</span><time dateTime={article.published}>Опубликовано {formatArticleDate(article.published)}</time></div>
             <p className="article-lead">{article.lead}</p>
           </header>
           <div className="article-body">
@@ -72,14 +72,14 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             )}
             <aside>
               <p>Нужен аудит профиля?</p>
-              <Link href={`/countries/${article.relatedCountry}`}>Посмотреть маршрут</Link>
-              <Link href="/assessment">Получить аудит профиля</Link>
+              <Link href={`/countries/${article.relatedCountry}/`}>Посмотреть маршрут</Link>
+              <Link href="/assessment/">Получить аудит профиля</Link>
             </aside>
             <section className="article-author" id="article-author" aria-label="Об авторе">
               <div className="article-author-photo"><img src="/nikita-founder-white-v3.webp" alt="Никита Самоцветов" width="180" height="220" /></div>
               <div>
                 <p className="article-author-label">Автор</p>
-                <h2><Link href="/about#nikita">Никита Самоцветов</Link></h2>
+                <h2><Link href="/about/#nikita">Никита Самоцветов</Link></h2>
                 <p>Основатель Samotsvet. Никита отвечает за методологию, проверку источников и ведение подготовки иммиграционных и визовых кейсов.</p>
               </div>
             </section>

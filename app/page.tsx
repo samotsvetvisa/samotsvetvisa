@@ -4,12 +4,12 @@ import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
 import { HeroVisual } from "./components/HeroVisual";
 import { ClientResults } from "./components/ClientResults";
-import { FOUNDER_NAME, LEGAL_NAME, SERVICE_PRICES, SITE_URL } from "./site";
+import { FOUNDER_NAME, LEGAL_NAME, SERVICE_MODEL_RU, SERVICE_PRICES, SITE_URL } from "./site";
 
 export const metadata: Metadata = {
   title: { absolute: "Samotsvet — иммиграция и релокация полного цикла" },
   description: "Стратегия, усиление профиля, доказательства, партнеры и сопровождение подачи для Великобритании, Испании, США и Франции.",
-  alternates: { canonical: "/", languages: { ru: "/", en: "/en" } },
+  alternates: { canonical: "/", languages: { ru: "/", en: "/en/", "x-default": "/" } },
   openGraph: {
     title: "Samotsvet — иммиграция и релокация полного цикла",
     description: "Стратегия, усиление профиля, доказательства, партнеры и сопровождение подачи.",
@@ -32,36 +32,36 @@ const countries = [
     code: "UK",
     name: "Великобритания",
     title: "Профессиональные достижения или бизнес",
-    routes: ["Global Talent", "Innovator Founder"],
+    routes: [{ label: "Global Talent", href: "/countries/uk/#route-global-talent" }, { label: "Innovator Founder", href: "/countries/uk/#route-innovator-founder" }],
     text: "Global Talent строится на подтвержденных профессиональных достижениях: рекомендациях, проектах, публикациях и результатах. Для Innovator Founder ключевую роль играет бизнес-проект и его одобрение endorsing body.",
-    href: "/countries/uk",
+    href: "/countries/uk/",
     size: "seven",
   },
   {
     code: "ES",
     name: "Испания",
     title: "Удаленная работа из Испании",
-    routes: ["Digital Nomad Visa (DNV)"],
+    routes: [{ label: "Digital Nomad Visa (DNV)", href: "/countries/spain/#route-digital-nomad-visa" }],
     text: "Здесь важен формат работы: сотрудник зарубежной компании и самостоятельный специалист подтверждают право на ВНЖ по-разному.",
-    href: "/countries/spain",
+    href: "/countries/spain/",
     size: "five",
   },
   {
     code: "US",
     name: "США",
     title: "Карьера, бизнес или инвестиции",
-    routes: ["EB-1A", "EB-2 NIW", "O-1", "E-2"],
+    routes: [{ label: "EB-1A", href: "/countries/usa/#route-eb-1a" }, { label: "EB-2 NIW", href: "/countries/usa/#route-eb-2-niw" }, { label: "O-1", href: "/countries/usa/#route-o-1" }, { label: "E-2", href: "/countries/usa/#route-e-2" }],
     text: "Четыре маршрута решают разные задачи: от работы и подтверждения профессионального уровня до грин-карты и переезда через бизнес.",
-    href: "/countries/usa",
+    href: "/countries/usa/",
     size: "eight",
   },
   {
     code: "FR",
     name: "Франция",
     title: "Инновационный проект или собственный бизнес",
-    routes: ["French Tech Visa", "Passeport Talent"],
+    routes: [{ label: "French Tech Visa", href: "/countries/france/#route-french-tech-visa" }, { label: "Talent – porteur de projet", href: "/countries/france/#route-talent-business" }],
     text: "Для инновационного проекта важны сам проект и его подтверждение французской экосистемой. Предпринимательский маршрут строится вокруг бизнес-плана, финансирования и опыта заявителя.",
-    href: "/countries/france",
+    href: "/countries/france/",
     size: "four",
   },
 ];
@@ -71,19 +71,19 @@ const articles = [
     tag: "Великобритания · Изменения 2026",
     title: "HC 1691: почему правила зависят от даты подачи",
     text: "Календарь вступления в силу ключевых положений — от design pathway до B2 для постоянного проживания.",
-    href: "/blog/uk-hc-1691-dates",
+    href: "/blog/uk-hc-1691-dates/",
   },
   {
     tag: "Испания · Digital Nomad Visa",
     title: "Порог дохода в 2026 году и расчет для семьи",
     text: "Исправленный расчет 200%, 75% и 25% после повышения испанского SMI.",
-    href: "/blog/spain-dnv-income-2026",
+    href: "/blog/spain-dnv-income-2026/",
   },
   {
     tag: "США · EB-2 NIW",
     title: "EB-2 NIW требует собственной логики доказательств",
     text: "Почему будущую деятельность, национальное значение и готовность реализовать план нужно доказывать отдельно.",
-    href: "/blog/eb2-niw-not-simple-alternative",
+    href: "/blog/eb2-niw-not-simple-alternative/",
   },
 ];
 
@@ -117,7 +117,7 @@ export default function Home() {
               координируем партнеров и сопровождаем подачу. Великобритания, Испания, США, Франция.
             </p>
             <div className="hero-actions">
-              <Link className="button button-primary" href="/assessment">Получить аудит профиля</Link>
+              <Link className="button button-primary" href="/assessment/">Получить аудит профиля</Link>
               <Link className="button button-secondary" href="#directions">
                 Выбрать страну
               </Link>
@@ -160,7 +160,7 @@ export default function Home() {
                 </div>
                 <h3>{country.title}</h3>
                 <div className="route-list">
-                  {country.routes.map((route) => <span key={route}>{route}</span>)}
+                  {country.routes.map((route) => <Link key={route.href} href={route.href}>{route.label}</Link>)}
                 </div>
                 <p>{country.text}</p>
                 <Link href={country.href}>Посмотреть маршрут <span aria-hidden="true">↗</span></Link>
@@ -183,7 +183,7 @@ export default function Home() {
             <li><span>04</span><div><h3>Усиление профиля</h3><p>Если кейс еще не готов, планируем реальные проекты, роли, публикации, выступления, показатели, рекомендации и независимое признание. Этот этап может занимать месяцы.</p></div></li>
             <li><span>05</span><div><h3>Подготовка доказательств</h3><p>Проверяем источники, собираем документы, согласуем цифры, роли и даты, готовим рекомендателей и устраняем противоречия.</p></div></li>
             <li><span>06</span><div><h3>Обоснование заявки</h3><p>Выстраиваем аргументацию на основе доказательств и показываем, как факты и документы подтверждают требования выбранного маршрута.</p></div></li>
-            <li><span>07</span><div><h3>Финальная проверка и подача</h3><p>Проверяем комплект целиком, готовим формы и сопровождаем подачу до решения.</p></div></li>
+            <li><span>07</span><div><h3>Юридическая оценка, формы и подача</h3><p>Этот этап выполняет уполномоченный специалист соответствующей юрисдикции. Samotsvet сохраняет единый план и координацию проекта.</p></div></li>
           </ol>
         </section>
 
@@ -196,9 +196,7 @@ export default function Home() {
               <h2>Одна команда ведет весь путь от стратегии до подачи</h2>
             </div>
             <div className="scope-list">
-              <article><span>Экспертиза Samotsvet</span><p>Стратегия, план усиления профиля, подготовка доказательств, логика заявки и управление проектом.</p></article>
-              <article><span>Партнеры и подрядчики</span><p>Адвокаты, переводчики, специалисты по публичному профилю и бизнес-задачам подключаются по мере необходимости.</p></article>
-              <article><span>Единое управление</span><p>У Вас один план, общий график и команда под руководством Samotsvet на всех этапах работы.</p></article>
+              <article><span>Единая модель работы</span><p>{SERVICE_MODEL_RU}</p></article>
             </div>
           </div>
         </section>
@@ -210,7 +208,7 @@ export default function Home() {
                 <p className="eyebrow">Блог</p>
                 <h2>Анализируем изменения и практику применения правил</h2>
               </div>
-              <Link className="text-link" href="/blog">Все материалы <span aria-hidden="true">↗</span></Link>
+              <Link className="text-link" href="/blog/">Все материалы <span aria-hidden="true">↗</span></Link>
             </div>
             <div className="article-grid">
               {articles.map((article) => (
@@ -232,7 +230,7 @@ export default function Home() {
           </div>
           <div>
             <p>Срочная подача с готовым профилем может занять несколько недель. Полный цикл сложной программы, особенно в США, иногда занимает до двух лет: мы усиливаем профиль, создаем новые результаты, собираем подтверждения и координируем всех участников. После анализа фиксируем этапы, ориентиры по срокам и стоимость.</p>
-            <Link className="text-link" href="/legal">Как устроена работа агентства <span aria-hidden="true">↗</span></Link>
+            <Link className="text-link" href="/legal/">Как устроена работа агентства <span aria-hidden="true">↗</span></Link>
           </div>
           <div className="price-grid" aria-label="Ориентировочная стоимость услуг">
             {SERVICE_PRICES.map((item) => (
@@ -240,6 +238,7 @@ export default function Home() {
                 <span>{item.countryRu}</span>
                 <strong>{item.price}</strong>
                 <small>Срок: {item.timelineRu}</small>
+                {"noteRu" in item ? <small>{item.noteRu}</small> : null}
               </div>
             ))}
           </div>
@@ -255,7 +254,7 @@ export default function Home() {
               Ответьте на несколько вопросов. Мы проанализируем исходные данные, отметим сильные
               стороны и предложим план дальнейшей подготовки.
             </p>
-            <Link className="button button-gold" href="/assessment">Получить аудит профиля</Link>
+            <Link className="button button-gold" href="/assessment/">Получить аудит профиля</Link>
           </div>
         </section>
       </main>

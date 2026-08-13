@@ -35,7 +35,7 @@ export default function ContactsPage() {
             <p className="eyebrow">Первичное обращение</p>
             <h2>Начните с короткой анкеты</h2>
             <p>Опишите задачу и оставьте удобный контакт. Мы изучим анкету и предложим подходящий следующий шаг.</p>
-            <Link className="button button-primary" href="/assessment">Перейти к анкете</Link>
+            <Link className="button button-primary" href="/assessment/">Перейти к анкете</Link>
           </article>
 
           <article className="contact-card">
@@ -61,7 +61,7 @@ export default function ContactsPage() {
             <p className="eyebrow">Проект и расчеты</p>
             <h2>Все условия в одном плане</h2>
             <p>До старта Вы получаете состав работ, команду проекта, ключевые этапы, ориентиры по срокам, стоимость и порядок оплаты.</p>
-            <Link className="text-link" href="/legal">Как устроена работа агентства <span aria-hidden="true">↗</span></Link>
+            <Link className="text-link" href="/legal/">Как устроена работа агентства <span aria-hidden="true">↗</span></Link>
           </article>
         </section>
       </main>

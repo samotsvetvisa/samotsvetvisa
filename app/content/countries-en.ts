@@ -10,11 +10,13 @@ export const countriesEn: CountryPageData[] = [
     intro: "Global Talent is built on evidenced professional achievements. Innovator Founder supports the launch of a new UK business and requires endorsing body approval.",
     routes: [
       {
+        anchor: "global-talent",
         name: "Global Talent",
         summary: "A route for leaders and potential leaders in digital technology, science, research, arts and culture.",
         fit: ["Professional achievements are supported by independent sources", "Your role and measurable contribution are clear", "There is evidence of recognition by the professional community"],
       },
       {
+        anchor: "innovator-founder",
         name: "Innovator Founder",
         summary: "A route for a founder establishing and developing an endorsed innovative business in the UK.",
         fit: ["The idea is materially different from existing solutions", "The business can operate sustainably and grow", "There is a credible development plan and a clear role for the founder"],
@@ -42,6 +44,7 @@ export const countriesEn: CountryPageData[] = [
     intro: "Spain's Digital Nomad Visa (DNV) is designed for employees of overseas companies and self-employed professionals working with clients outside Spain. The evidence required depends on the working arrangement.",
     routes: [
       {
+        anchor: "digital-nomad-visa",
         name: "Digital Nomad Visa (DNV) — international remote work visa",
         summary: "A Spanish visa or residence authorisation for international remote employees and independent professionals.",
         fit: ["Contracts permit remote work and match the work actually performed", "Income and its regularity can be evidenced", "Insurance and family documents have been considered in advance"],
@@ -67,10 +70,10 @@ export const countriesEn: CountryPageData[] = [
     title: "The United States — define the status first, then choose the category",
     intro: "EB-1A, EB-2 NIW, O-1 and E-2 serve different purposes: professional standing, temporary work, permanent residence or relocation through business investment.",
     routes: [
-      { name: "EB-1A", summary: "An immigrant category for people of extraordinary ability.", fit: ["There is sustained recognition", "Achievements are supported by independent sources", "Continued work in the field is logical and can be evidenced"] },
-      { name: "EB-2 NIW", summary: "An immigrant category for an advanced-degree professional or a person of exceptional ability whose proposed endeavour serves the US national interest.", fit: ["The proposed work has substantial merit and national importance", "Your experience, record and resources position you to advance the work", "Waiving the job offer and labour certification requirements would benefit the United States"] },
-      { name: "O-1", summary: "A temporary category for people of extraordinary ability; the petition is filed by a US employer or agent.", fit: ["A US employer or agent can act as petitioner", "Your achievements relate to the field claimed", "Planned projects and work commitments can be documented"] },
-      { name: "E-2", summary: "A non-immigrant visa based on a substantial investment in a real, operating business.", fit: ["Your nationality qualifies under an E-2 treaty", "Funds have been committed to the business", "You will develop and direct the enterprise"] },
+      { anchor: "eb-1a", name: "EB-1A", summary: "An immigrant category for people of extraordinary ability.", fit: ["There is sustained recognition", "Achievements are supported by independent sources", "Continued work in the field is logical and can be evidenced"] },
+      { anchor: "eb-2-niw", name: "EB-2 NIW", summary: "An immigrant category for an advanced-degree professional or a person of exceptional ability whose proposed endeavour serves the US national interest.", fit: ["The proposed work has substantial merit and national importance", "Your experience, record and resources position you to advance the work", "Waiving the job offer and labour certification requirements would benefit the United States"] },
+      { anchor: "o-1", name: "O-1", summary: "A temporary category for people of extraordinary ability; the petition is filed by a US employer or agent.", fit: ["A US employer or agent can act as petitioner", "Your achievements relate to the field claimed", "Planned projects and work commitments can be documented"] },
+      { anchor: "e-2", name: "E-2", summary: "A non-immigrant visa based on a substantial investment in a real, operating business.", fit: ["Your nationality qualifies under an E-2 treaty", "Funds have been committed to the business", "You will develop and direct the enterprise"] },
     ],
     risks: [
       { title: "Treating satisfied criteria as automatic approval", detail: "The authorities assess evidence quality, the applicant's standing and the record as a whole. A simple count of apparently satisfied criteria is insufficient." },
@@ -79,6 +82,24 @@ export const countriesEn: CountryPageData[] = [
       { title: "Planning E-2 before checking nationality and funds", detail: "Treaty nationality, ownership, the source and movement of capital, and the fact that funds are genuinely at risk must be checked early." },
     ],
     regulatory: "Samotsvet manages US matters end to end: strategy, profile development, evidence, referees, the petition bundle and the filing process through to the decision.",
+    processing: {
+      title: "Route-specific processing times",
+      headers: ["Route", "Premium processing", "Standard processing"],
+      rows: [
+        ["O-1", "15 calendar days", "2–4 months"],
+        ["EB-1A (I-140)", "15 business days", "6–12 months"],
+        ["EB-2 NIW (I-140)", "45 business days", "Longer than EB-1A"],
+        ["E-2", "Depends on the consulate", "Depends on the consulate"],
+      ],
+      note: "The premium-processing fee for Form I-140 is $2,965 from 9 January 2026.",
+    },
+    important: {
+      title: "Important for Russian citizens",
+      paragraphs: [
+        "There is no priority-date backlog in EB-1: the category remains current for all countries except India and China. Self-petitioning under EB-1A remains available.",
+        "Consular processing takes place in third countries, adding several months. Applicants working in sensitive technology fields are more likely to undergo additional administrative processing.",
+      ],
+    },
     official: [
       { label: "USCIS: EB-1", href: "https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-first-preference-eb-1" },
       { label: "USCIS: EB-2", href: "https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-second-preference-eb-2" },
@@ -90,18 +111,18 @@ export const countriesEn: CountryPageData[] = [
     slug: "france",
     code: "FR",
     country: "France",
-    eyebrow: "French Tech Visa and Passeport Talent",
+    eyebrow: "Carte de sejour Talent",
     title: "France — through a project that can be explained and evidenced",
-    intro: "French Tech Visa and other Passeport Talent routes cover innovative projects and business creation in France. Preparation centres on the project, business plan, funding and the applicant's experience.",
+    intro: "The multi-year ‘talent’ residence permit (known as ‘passeport talent’ until June 2025) covers entrepreneurial and innovative projects in France. Decree no. 2025-539 consolidated six former grounds into two categories; founders and entrepreneurs use ‘talent – porteur de projet’.",
     routes: [
-      { name: "French Tech Visa — innovative economic project", summary: "A Passeport Talent route for developing in France a project recognised as innovative by a public body.", fit: ["The innovation is described in concrete terms", "Your role is necessary to the project", "Resources and delivery in France are evidenced"] },
-      { name: "Passeport Talent — business creation", summary: "A route for establishing and running an economic activity in France, subject to the applicable conditions.", fit: ["The figures support a viable project", "Your role and management arrangements are clear", "Financial assumptions match the supporting documents"] },
+      { anchor: "french-tech-visa", name: "Talent – porteur de projet: innovative project", summary: "This category supports a project in France that has been recognised as innovative by an authorised public body. Selection through a recognised organisation under the French Tech Visa programme can simplify the process, but French Tech Visa is a programme label rather than a separate immigration status.", fit: ["The innovation is described in concrete terms", "Your role is necessary to the project", "Resources and delivery in France are evidenced"] },
+      { anchor: "talent-business", name: "Talent – porteur de projet: business creation", summary: "The same category on a different ground: establishing and operating a business in France, subject to the investment, qualification and project-viability requirements.", fit: ["The figures support a viable project", "Your role and management arrangements are clear", "Financial assumptions match the supporting documents"] },
     ],
     risks: [
       { title: "Using slogans instead of explaining the product", detail: "The review requires concrete information about what has been built, how it differs and how it works for the user." },
       { title: "Failing to show why the project belongs in France", detail: "The market, partners, team, infrastructure and expected economic contribution should explain why the project is being developed in France." },
       { title: "Separating the business plan from the founder's record", detail: "The founder's experience should support the proposed role, while the budget and hiring plan should support the stated growth." },
-      { title: "Combining different Passeport talent grounds", detail: "An innovative project and business creation rely on different legal grounds and evidence. One generic document set will usually weaken both." },
+      { title: "Combining different grounds within talent – porteur de projet", detail: "An innovative project and business creation rely on different grounds and evidence. One generic document set will usually weaken both." },
     ],
     regulatory: "Samotsvet leads the French project from concept to filing: the project and founder's role, business plan, supporting evidence and the filing process through to the decision.",
     official: [

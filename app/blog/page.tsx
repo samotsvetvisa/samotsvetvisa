@@ -26,7 +26,7 @@ export default function BlogPage() {
             <article key={article.slug}>
               <span>{String(index + 1).padStart(2, "0")}</span>
               <div><p className="article-tag">{article.tag}</p><h2>{article.title}</h2><p>{article.description}</p></div>
-              <div className="blog-meta"><span><time dateTime={article.published}>{formatArticleDate(article.published)}</time><br />{article.reading}</span><Link href={`/blog/${article.slug}`}>Читать ↗</Link></div>
+              <div className="blog-meta"><span><time dateTime={article.published}>{formatArticleDate(article.published)}</time><br />{article.reading}</span><Link href={`/blog/${article.slug}/`}>Читать ↗</Link></div>
             </article>
           ))}
         </section>

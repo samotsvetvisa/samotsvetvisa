@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CONTACT_EMAIL, TELEGRAM_HANDLE, TELEGRAM_URL } from "../site";
+import { CONTACT_EMAIL, SERVICE_MODEL_EN, SERVICE_MODEL_RU, TELEGRAM_HANDLE, TELEGRAM_URL, withTrailingSlash } from "../site";
 import { BrandLockup } from "./BrandLockup";
 
 export function SiteFooter({ locale = "ru" }: { locale?: "ru" | "en" }) {
@@ -15,28 +15,28 @@ export function SiteFooter({ locale = "ru" }: { locale?: "ru" | "en" }) {
         </div>
         <div>
           <h3>{isEnglish ? "Destinations" : "Направления"}</h3>
-          <Link href={`${base}/countries/uk`}>{isEnglish ? "United Kingdom" : "Великобритания"}</Link>
-          <Link href={`${base}/countries/spain`}>{isEnglish ? "Spain" : "Испания"}</Link>
-          <Link href={`${base}/countries/usa`}>{isEnglish ? "United States" : "США"}</Link>
-          <Link href={`${base}/countries/france`}>{isEnglish ? "France" : "Франция"}</Link>
+          <Link href={withTrailingSlash(`${base}/countries/uk`)}>{isEnglish ? "United Kingdom" : "Великобритания"}</Link>
+          <Link href={withTrailingSlash(`${base}/countries/spain`)}>{isEnglish ? "Spain" : "Испания"}</Link>
+          <Link href={withTrailingSlash(`${base}/countries/usa`)}>{isEnglish ? "United States" : "США"}</Link>
+          <Link href={withTrailingSlash(`${base}/countries/france`)}>{isEnglish ? "France" : "Франция"}</Link>
         </div>
         <div>
           <h3>Samotsvet</h3>
-          <Link href={`${base}/about`}>{isEnglish ? "About" : "О нас"}</Link>
-          <Link href={`${base}/blog`}>{isEnglish ? "Insights" : "Блог"}</Link>
-          <Link href={`${base}/assessment`}>{isEnglish ? "Profile assessment" : "Аудит профиля"}</Link>
-          <Link href={`${base}/contacts`}>{isEnglish ? "Contact and company details" : "Контакты и реквизиты"}</Link>
-          <Link href={`${base}/privacy`}>{isEnglish ? "Privacy policy" : "Политика обработки персональных данных"}</Link>
-          <Link href={`${base}/consent`}>{isEnglish ? "Data processing consent" : "Согласие на обработку персональных данных"}</Link>
-          <Link href={`${base}/legal`}>{isEnglish ? "Terms of service" : "Условия оказания услуг"}</Link>
+          <Link href={withTrailingSlash(`${base}/about`)}>{isEnglish ? "About" : "О нас"}</Link>
+          <Link href={withTrailingSlash(`${base}/blog`)}>{isEnglish ? "Insights" : "Блог"}</Link>
+          <Link href={withTrailingSlash(`${base}/assessment`)}>{isEnglish ? "Profile assessment" : "Аудит профиля"}</Link>
+          <Link href={withTrailingSlash(`${base}/contacts`)}>{isEnglish ? "Contact and company details" : "Контакты и реквизиты"}</Link>
+          <Link href={withTrailingSlash(`${base}/privacy`)}>{isEnglish ? "Privacy policy" : "Политика обработки персональных данных"}</Link>
+          <Link href={withTrailingSlash(`${base}/consent`)}>{isEnglish ? "Data processing consent" : "Согласие на обработку персональных данных"}</Link>
+          <Link href={withTrailingSlash(`${base}/legal`)}>{isEnglish ? "Terms of service" : "Условия оказания услуг"}</Link>
         </div>
         <div className="footer-note footer-operator">
           <h3>{isEnglish ? "Services provided by" : "Услуги оказывает"}</h3>
           <p><strong>{isEnglish ? "Individual entrepreneur Nikita Andreevich Samotsvetov" : "ИП Самоцветов Никита Андреевич"}</strong><br />{isEnglish ? "OGRNIP" : "ОГРНИП"} 323670000016524<br />{isEnglish ? "INN" : "ИНН"} 672200624836</p>
-          <Link href={`${base}/contacts`}>{isEnglish ? "Full details ↗" : "Полные реквизиты ↗"}</Link>
+          <Link href={withTrailingSlash(`${base}/contacts`)}>{isEnglish ? "Full details ↗" : "Полные реквизиты ↗"}</Link>
         </div>
         <div className="footer-disclaimer">
-          <p>{isEnglish ? "Samotsvet is a full-cycle immigration and relocation agency. We build the strategy, strengthen the profile, prepare the evidence and manage the project through to filing, bringing licensed partners and specialist contractors into the team where required." : "Samotsvet — агентство иммиграции и релокации полного цикла. Мы выстраиваем стратегию, усиливаем профиль, готовим доказательства и ведем проект до подачи, подключая лицензированных партнеров и профильных подрядчиков по мере необходимости."}</p>
+          <p>{isEnglish ? SERVICE_MODEL_EN : SERVICE_MODEL_RU}</p>
         </div>
         <div className="footer-contact">
           <div>

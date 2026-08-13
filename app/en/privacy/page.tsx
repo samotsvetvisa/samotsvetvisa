@@ -27,7 +27,7 @@ export default function EnglishPrivacyPage() {
             <p><strong>Individual entrepreneur Nikita Andreevich Samotsvetov</strong> (Samotsvet), OGRNIP 323670000016524, INN 672200624836, registered in the Russian Federation.</p>
             <p>Email: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Telegram: <a href={TELEGRAM_URL} target="_blank" rel="noreferrer">{TELEGRAM_HANDLE}</a>.</p>
             <p>The full address and contractual details are included in the service agreement.</p>
-            <p>You may send a data request to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Full details appear on the <Link href="/en/contacts">Contact and company details</Link> page.</p>
+            <p>You may send a data request to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Full details appear on the <Link href="/en/contacts/">Contact and company details</Link> page.</p>
           </section>
 
           <section>
@@ -132,7 +132,7 @@ export default function EnglishPrivacyPage() {
 
           <section>
             <h2>14. Requests and complaints</h2>
-            <p>A request may be sent to the controller&apos;s address or through the electronic channels on the <Link href="/en/contacts">contact page</Link>. Please include your name, the contact method used, the nature of the request and enough information to locate the relevant record. Samotsvet will respond within the period required by applicable law.</p>
+            <p>A request may be sent to the controller&apos;s address or through the electronic channels on the <Link href="/en/contacts/">contact page</Link>. Please include your name, the contact method used, the nature of the request and enough information to locate the relevant record. Samotsvet will respond within the period required by applicable law.</p>
           </section>
 
           <section>

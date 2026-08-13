@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
 import { countries } from "../../content/countries";
-import { pageMetadata, SERVICE_PRICES } from "../../site";
+import { pageMetadata, SERVICE_MODEL_RU, SERVICE_PRICES, withTrailingSlash } from "../../site";
 
 export function generateStaticParams() {
   return countries.map(({ slug }) => ({ slug }));
@@ -37,8 +37,8 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
             <h1>{item.title}</h1>
             <p>{item.intro}</p>
             {item.slug === "uk" ? <p className="country-track-record"><strong>Более 200 британских кейсов с 2021 года.</strong></p> : null}
-            {price ? <p className="country-price"><span>Ориентировочная стоимость: <strong>{price.price}</strong></span><span>Срок работы: <strong>{price.timelineRu}</strong></span></p> : null}
-            <Link className="button button-primary" href={`/assessment?country=${item.slug}`}>Получить аудит профиля</Link>
+            {price ? <><p className="country-price"><span>Ориентировочная стоимость: <strong>{price.price}</strong></span><span>Срок работы: <strong>{price.timelineRu}</strong></span></p>{"noteRu" in price ? <p className="country-price-note">{price.noteRu}</p> : null}</> : null}
+            <Link className="button button-primary" href={withTrailingSlash(`/assessment?country=${item.slug}`)}>Получить аудит профиля</Link>
           </div>
         </section>
 
@@ -46,7 +46,7 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
           <div className="inner-section-title"><p className="eyebrow">Маршруты</p><h2>Какие варианты рассматриваем</h2></div>
           <div className="route-detail-grid">
             {item.routes.map((route, index) => (
-              <article key={route.name}>
+              <article key={route.name} id={`route-${route.anchor}`}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
                 <h3>{route.name}</h3>
                 <p>{route.summary}</p>
@@ -55,6 +55,8 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
               </article>
             ))}
           </div>
+          {item.processing ? <div className="country-facts"><h2>{item.processing.title}</h2><table><thead><tr>{item.processing.headers.map((header) => <th key={header}>{header}</th>)}</tr></thead><tbody>{item.processing.rows.map((row) => <tr key={row[0]}>{row.map((cell) => <td key={cell}>{cell}</td>)}</tr>)}</tbody></table><p>{item.processing.note}</p></div> : null}
+          {item.important ? <div className="country-facts"><h2>{item.important.title}</h2>{item.important.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div> : null}
         </section>
 
         <section className="risk-band" id="risks">
@@ -68,8 +70,8 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
           <p className="eyebrow">Команда проекта</p>
           <div>
             <h2>Как мы ведем работу под ключ</h2>
-            <p>{item.regulatory}</p>
-            <Link className="text-link" href="/legal">Как устроена работа агентства <span aria-hidden="true">↗</span></Link>
+            <p>{SERVICE_MODEL_RU}</p>
+            <Link className="text-link" href="/legal/">Как устроена работа агентства <span aria-hidden="true">↗</span></Link>
           </div>
         </section>
 
@@ -83,7 +85,7 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
 
         <section className="section-shell closing-cta country-cta">
           <div><p className="eyebrow eyebrow-light">Следующий шаг</p><h2>Разберем маршрут, профиль и доказательства как единую задачу</h2></div>
-          <div><p>Зафиксируем цель, проанализируем исходные данные и составим план подготовки доказательств.</p><Link className="button button-gold" href={`/assessment?country=${item.slug}`}>Получить аудит профиля</Link></div>
+          <div><p>Зафиксируем цель, проанализируем исходные данные и составим план подготовки доказательств.</p><Link className="button button-gold" href={withTrailingSlash(`/assessment?country=${item.slug}`)}>Получить аудит профиля</Link></div>
         </section>
       </main>
       <SiteFooter />

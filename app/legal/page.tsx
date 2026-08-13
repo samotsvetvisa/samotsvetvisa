@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
-import { pageMetadata } from "../site";
+import { pageMetadata, SERVICE_MODEL_RU } from "../site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Условия работы",
@@ -22,12 +22,12 @@ export default function LegalPage() {
 
           <section>
             <h2>1. Кто оказывает услуги</h2>
-            <p>Проектные услуги под брендом Samotsvet оказывает индивидуальный предприниматель Самоцветов Никита Андреевич, ОГРНИП 323670000016524, ИНН 672200624836, зарегистрированный в Российской Федерации. Полный адрес и каналы для обращений указаны на странице <Link href="/contacts">«Контакты и реквизиты»</Link>.</p>
+            <p>Проектные услуги под брендом Samotsvet оказывает индивидуальный предприниматель Самоцветов Никита Андреевич, ОГРНИП 323670000016524, ИНН 672200624836, зарегистрированный в Российской Федерации. Полный адрес и каналы для обращений указаны на странице <Link href="/contacts/">«Контакты и реквизиты»</Link>.</p>
           </section>
 
           <section>
             <h2>2. Агентство полного цикла</h2>
-            <p>Samotsvet ведет иммиграционные и визовые проекты от анализа исходного профиля до подачи: сравнивает маршруты, составляет стратегию, планирует усиление профиля, готовит доказательства, организует работу рекомендателей и управляет всем процессом.</p>
+            <p>{SERVICE_MODEL_RU}</p>
           </section>
 
           <section>

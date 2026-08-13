@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { SiteFooter } from "../../../components/SiteFooter";
 import { SiteHeader } from "../../../components/SiteHeader";
 import { countriesEn } from "../../../content/countries-en";
-import { pageMetadata, SERVICE_PRICES } from "../../../site";
+import { pageMetadata, SERVICE_MODEL_EN, SERVICE_PRICES, withTrailingSlash } from "../../../site";
 
 export function generateStaticParams() { return countriesEn.map(({ slug }) => ({ slug })); }
 
@@ -26,14 +26,16 @@ export default async function EnglishCountryPage({ params }: { params: Promise<{
       <main>
         <section className="country-hero section-shell">
           <div className="country-hero-code">{item.code}</div>
-          <div><p className="eyebrow">{item.eyebrow}</p><h1>{item.title}</h1><p>{item.intro}</p>{price ? <p className="country-price"><span>Indicative fee: <strong>{price.priceEn}</strong></span><span>Timing: <strong>{price.timelineEn}</strong></span></p> : null}<Link className="button button-primary" href={`/en/assessment?country=${item.slug}`}>Get a profile assessment</Link></div>
+          <div><p className="eyebrow">{item.eyebrow}</p><h1>{item.title}</h1><p>{item.intro}</p>{item.slug === "uk" ? <p className="country-track-record"><strong>More than 200 UK matters since 2021.</strong></p> : null}{price ? <><p className="country-price"><span>Indicative fee: <strong>{price.priceEn}</strong></span><span>Timing: <strong>{price.timelineEn}</strong></span></p>{"noteEn" in price ? <p className="country-price-note">{price.noteEn}</p> : null}</> : null}<Link className="button button-primary" href={withTrailingSlash(`/en/assessment?country=${item.slug}`)}>Get a profile assessment</Link></div>
         </section>
 
         <section className="section-shell country-routes">
           <div className="inner-section-title"><p className="eyebrow">Routes</p><h2>Options we consider</h2></div>
           <div className="route-detail-grid">
-            {item.routes.map((route, index) => <article key={route.name}><span>{String(index + 1).padStart(2, "0")}</span><h3>{route.name}</h3><p>{route.summary}</p><h4>What the preparation depends on</h4><ul>{route.fit.map((point) => <li key={point}>{point}</li>)}</ul></article>)}
+            {item.routes.map((route, index) => <article key={route.name} id={`route-${route.anchor}`}><span>{String(index + 1).padStart(2, "0")}</span><h3>{route.name}</h3><p>{route.summary}</p><h4>What the preparation depends on</h4><ul>{route.fit.map((point) => <li key={point}>{point}</li>)}</ul></article>)}
           </div>
+          {item.processing ? <div className="country-facts"><h2>{item.processing.title}</h2><table><thead><tr>{item.processing.headers.map((header) => <th key={header}>{header}</th>)}</tr></thead><tbody>{item.processing.rows.map((row) => <tr key={row[0]}>{row.map((cell) => <td key={cell}>{cell}</td>)}</tr>)}</tbody></table><p>{item.processing.note}</p></div> : null}
+          {item.important ? <div className="country-facts"><h2>{item.important.title}</h2>{item.important.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div> : null}
         </section>
 
         <section className="risk-band" id="risks">
@@ -42,7 +44,7 @@ export default async function EnglishCountryPage({ params }: { params: Promise<{
 
         <section className="section-shell country-regulatory">
           <p className="eyebrow">Project team</p>
-          <div><h2>How we deliver the work end to end</h2><p>{item.regulatory}</p><Link className="text-link" href="/en/legal">How the agency works <span aria-hidden="true">↗</span></Link></div>
+          <div><h2>How we deliver the work end to end</h2><p>{SERVICE_MODEL_EN}</p><Link className="text-link" href="/en/legal/">How the agency works <span aria-hidden="true">↗</span></Link></div>
         </section>
 
         <section className="section-shell sources-block">
@@ -52,7 +54,7 @@ export default async function EnglishCountryPage({ params }: { params: Promise<{
 
         <section className="section-shell closing-cta country-cta">
           <div><p className="eyebrow eyebrow-light">Next step</p><h2>Review the route, profile and evidence as one project</h2></div>
-          <div><p>We will establish the goal, review the starting position and set out an evidence preparation plan.</p><Link className="button button-gold" href={`/en/assessment?country=${item.slug}`}>Get a profile assessment</Link></div>
+          <div><p>We will establish the goal, review the starting position and set out an evidence preparation plan.</p><Link className="button button-gold" href={withTrailingSlash(`/en/assessment?country=${item.slug}`)}>Get a profile assessment</Link></div>
         </section>
       </main>
       <SiteFooter locale="en" />
