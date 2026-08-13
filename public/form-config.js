@@ -1,0 +1,1 @@
+window.SAMOTSVET_FORM_ENDPOINT = "";

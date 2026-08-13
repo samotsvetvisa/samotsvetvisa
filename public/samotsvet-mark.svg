@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 282 240" role="img" aria-labelledby="title desc">
+  <title id="title">Samotsvet colour mark</title>
+  <desc id="desc">Compact S in negative space between four gemstone facets.</desc>
+  <path fill="#263B56" d="M78 11H203L237 36C190 43 138 49 103 62L98 64 45 36Z"/>
+    <path fill="#10243E" d="M37 43 11 77 86 164c19-4 50-15 64-28 15-14 11-22-11-31-28-9-45-16-48-25-2-7 0-10 3-12Z"/>
+    <path fill="#C99A3D" d="M244 42 272 78 204 154c0-11 1-28-4-41-5-12-16-18-38-25-17-4-33-9-38-14 6-8 46-18 113-31Z"/>
+    <path fill="#263B56" d="M197 133c-1 13-2 27-6 36l-50 58-41-47c21-4 43-9 55-14 22-9 35-20 42-33Z"/>
+</svg>
