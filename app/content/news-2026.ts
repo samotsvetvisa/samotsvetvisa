@@ -1,7 +1,5 @@
 import type { Article } from "./articles";
 
-const verified = "12 августа 2026";
-
 export const news2026: Article[] = [
   {
     slug: "uk-hc-1691-dates",
@@ -13,7 +11,6 @@ export const news2026: Article[] = [
     author: "Никита Самоцветов",
     lead: "Пакет HC 1691 опубликован 5 марта 2026 года, а его положения начали действовать в разные даты. Для заявителя важны сам текст и этап, на котором изменение применяется к его ситуации.",
     relatedCountry: "uk",
-    verified,
     sources: [
       { label: "GOV.UK — Statement of Changes HC 1691", href: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-1619-5-march-2026" },
       { label: "GOV.UK — пояснительная записка к HC 1691", href: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-1619-5-march-2026/explanatory-memorandum-to-the-statement-of-changes-in-the-immigration-rules-hc-1691-5-march-2026-accessible" },
@@ -35,7 +32,6 @@ export const news2026: Article[] = [
     author: "Никита Самоцветов",
     lead: "С 1 июля 2026 года Global Talent охватывает дополнительные дизайнерские роли, которые раньше не находили подходящего места в действующих направлениях. Прежние маршруты для архитектуры и моды при этом сохранились.",
     relatedCountry: "uk",
-    verified,
     sources: [
       { label: "GOV.UK — Appendix Global Talent", href: "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-global-talent" },
       { label: "GOV.UK — пояснение к design pathway", href: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-1619-5-march-2026/explanatory-memorandum-to-the-statement-of-changes-in-the-immigration-rules-hc-1691-5-march-2026-accessible" },
@@ -54,9 +50,8 @@ export const news2026: Article[] = [
     reading: "4 минуты",
     published: "2025-11-21",
     author: "Никита Самоцветов",
-    lead: "В публичных обсуждениях предложение о десятилетнем базовом сроке до постоянного проживания часто описывают как уже действующий закон. На 12 августа 2026 года это неверно: модель Earned Settlement проходила консультацию.",
+    lead: "В публичных обсуждениях предложение о десятилетнем базовом сроке до постоянного проживания часто описывали как уже действующий закон. Модель Earned Settlement была опубликована как консультационное предложение и сама по себе не вводила новое правило.",
     relatedCountry: "uk",
-    verified,
     sources: [
       { label: "GOV.UK — консультация Earned Settlement", href: "https://www.gov.uk/government/consultations/earned-settlement/a-fairer-pathway-to-settlement-statement-and-accompanying-consultation-on-earned-settlement-accessible" },
       { label: "GOV.UK — действующие сроки Global Talent", href: "https://www.gov.uk/global-talent" },
@@ -77,7 +72,6 @@ export const news2026: Article[] = [
     author: "Никита Самоцветов",
     lead: "Для заявлений на постоянное проживание по ряду маршрутов уровень английского повышается с B1 до B2. Изменение вступает в силу 26 марта 2027 года и затрагивает в том числе тех, кто уже находится на пути к ILR.",
     relatedCountry: "uk",
-    verified,
     sources: [
       { label: "GOV.UK — пояснительная записка HC 1691, пункты 5.60–5.62", href: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-1619-5-march-2026/explanatory-memorandum-to-the-statement-of-changes-in-the-immigration-rules-hc-1691-5-march-2026-accessible" },
     ],
@@ -97,7 +91,6 @@ export const news2026: Article[] = [
     author: "Никита Самоцветов",
     lead: "Испанский SMI на 2026 год установлен на уровне €1 221 при 14 выплатах, или €17 094 в год. Для Digital Nomad Visa годовую сумму нужно привести к среднемесячной базе, а затем применить проценты для заявителя и семьи.",
     relatedCountry: "spain",
-    verified,
     sources: [
       { label: "BOE — Real Decreto 126/2026", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2026-3815" },
       { label: "МИД Испании — требования к средствам для teletrabajo", href: "https://www.exteriores.gob.es/Consulados/bogota/es/ServiciosConsulares/Paginas/index.aspx?scca=Visados&scco=Colombia&scd=31&scs=Visado+de+residencia+para+teletrabajo+%28n%C3%B3mada+digital%29" },
@@ -118,7 +111,6 @@ export const news2026: Article[] = [
     author: "Никита Самоцветов",
     lead: "Официальные требования к teletrabajo internacional охватывают договор, реальную и непрерывную деятельность компании, дистанционный формат работы и отношения с заявителем продолжительностью не менее трех месяцев.",
     relatedCountry: "spain",
-    verified,
     sources: [
       { label: "Официальный портал PRIE — Nómadas digitales", href: "https://prie.comercio.gob.es/es-es/Paginas/Teletrabajadores-caracter-internacional.aspx" },
       { label: "BOE — Ley 14/2013 в действующей редакции", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074" },
@@ -139,7 +131,6 @@ export const news2026: Article[] = [
     author: "Никита Самоцветов",
     lead: "Утверждение, что подача из Испании после туристического въезда полностью закрыта, противоречит действующему тексту Ley 14/2013. Иностранец, который находится в Испании законно, может обратиться за разрешением на международную удаленную работу.",
     relatedCountry: "spain",
-    verified,
     sources: [
       { label: "BOE — статья 74 quinquies Ley 14/2013", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074" },
     ],
@@ -159,7 +150,6 @@ export const news2026: Article[] = [
     author: "Никита Самоцветов",
     lead: "USCIS публикует квартальные наборы данных по формам и категориям. Они полезны для наблюдения за общей нагрузкой и решениями ведомства, но не превращаются в персональную вероятность одобрения.",
     relatedCountry: "usa",
-    verified,
     sources: [
       { label: "USCIS — Immigration and Citizenship Data", href: "https://www.uscis.gov/tools/reports-and-studies/immigration-and-citizenship-data" },
       { label: "USCIS — как рассчитываются processing times", href: "https://egov.uscis.gov/processing-times/more-info" },
@@ -180,7 +170,6 @@ export const news2026: Article[] = [
     author: "Никита Самоцветов",
     lead: "EB-1A и EB-2 NIW отвечают на разные вопросы. У NIW нет списка из десяти критериев EB-1A, при этом заявителю нужно убедительно связать будущую деятельность с национальным интересом США.",
     relatedCountry: "usa",
-    verified,
     sources: [
       { label: "USCIS Policy Manual — EB-2 и National Interest Waiver", href: "https://www.uscis.gov/policy-manual/volume-6-part-f-chapter-5" },
       { label: "USCIS Policy Manual — Extraordinary Ability", href: "https://www.uscis.gov/policy-manual/volume-6-part-f-chapter-2" },
@@ -201,7 +190,6 @@ export const news2026: Article[] = [
     author: "Никита Самоцветов",
     lead: "Показатель processing time на сайте USCIS — это время, за которое ведомство завершило 80% рассмотренных дел за предыдущие шесть месяцев. Ретроспективная метрика не устанавливает срок по конкретной петиции.",
     relatedCountry: "usa",
-    verified,
     sources: [
       { label: "USCIS — Case Processing Times", href: "https://egov.uscis.gov/processing-times" },
       { label: "USCIS — пояснение к processing times", href: "https://egov.uscis.gov/processing-times/more-info" },
@@ -221,9 +209,8 @@ export const news2026: Article[] = [
     reading: "4 минуты",
     published: "2025-09-23",
     author: "Никита Самоцветов",
-    lead: "В федеральной программе регулирования есть проект Petition for Immigrant Worker Reforms, который должен уточнить требования к EB-1A, EB-2 NIW и другим трудовым категориям. На дату сверки он находится на стадии proposed rule и пока не действует.",
+    lead: "В федеральной программе регулирования появился проект Petition for Immigrant Worker Reforms, который должен уточнить требования к EB-1A, EB-2 NIW и другим трудовым категориям. Публикация в Unified Agenda описывала планируемое правило, а не действующую норму.",
     relatedCountry: "usa",
-    verified,
     sources: [
       { label: "Reginfo.gov — RIN 1615-AC85", href: "https://www.reginfo.gov/public/do/eAgendaViewRule?RIN=1615-AC85&pubId=202504" },
       { label: "Federal Register — Unified Agenda", href: "https://www.federalregister.gov/documents/2025/09/22/2025-18329/unified-agenda-of-federal-regulatory-and-deregulatory-actions" },
@@ -244,7 +231,6 @@ export const news2026: Article[] = [
     author: "Никита Самоцветов",
     lead: "Декрет № 2025-539 заменил в нормативном тексте название passeport talent на carte talent и перестроил часть подкатегорий. Изменения действуют с 16 июня 2025 года, хотя некоторые официальные и справочные страницы все еще используют прежний термин.",
     relatedCountry: "france",
-    verified,
     sources: [
       { label: "Légifrance — Décret n° 2025-539", href: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000051736256" },
       { label: "France-Visas — International talents", href: "https://france-visas.gouv.fr/en/talents-internationaux-et-attractivite-economique" },
@@ -265,7 +251,6 @@ export const news2026: Article[] = [
     author: "Никита Самоцветов",
     lead: "С 1 января 2026 года examen civique применяется при натурализации и при первом получении ряда многолетних карт или карты резидента. Экзамен содержит 40 вопросов, для прохождения нужно 32 правильных ответа.",
     relatedCountry: "france",
-    verified,
     sources: [
       { label: "Service-Public — новый examen civique", href: "https://www.service-public.fr/particuliers/actualites/A18713" },
       { label: "Légifrance — Arrêté du 10 octobre 2025", href: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000052381620" },
@@ -287,7 +272,6 @@ export const news2026: Article[] = [
     author: "Никита Самоцветов",
     lead: "С 1 января 2026 года для натурализации по декрету нужно подтвердить французский не ниже B2 и устно, и письменно. Отдельно требуется гражданский экзамен.",
     relatedCountry: "france",
-    verified,
     sources: [
       { label: "Service-Public — подтверждение уровня французского", href: "https://www.service-public.fr/particuliers/vosdroits/F11926" },
       { label: "Service-Public — examen civique для натурализации", href: "https://www.service-public.fr/particuliers/vosdroits/F39426" },
@@ -308,7 +292,6 @@ export const news2026: Article[] = [
     author: "Никита Самоцветов",
     lead: "Lei Orgânica № 1/2026 опубликована 18 мая и действует с 19 мая 2026 года. Для натурализации она устанавливает семь лет законного проживания для граждан ЕС и стран с португальским официальным языком и десять лет для граждан остальных стран.",
     relatedCountry: "uk",
-    verified,
     sources: [
       { label: "Diário da República — Lei Orgânica n.º 1/2026", href: "https://diariodarepublica.pt/dr/detalhe/lei-organica/1-2026-1123539996" },
       { label: "Diário da República — консолидированный Lei da Nacionalidade", href: "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/1981-34536975" },
@@ -329,7 +312,6 @@ export const news2026: Article[] = [
     author: "Никита Самоцветов",
     lead: "Изменения 2026 года легко собрать в эффектный рассказ о всеобщем ужесточении. Но точная картина сложнее: часть норм уже действует, часть вступит позже, а британская десятилетняя модель остается предложением.",
     relatedCountry: "uk",
-    verified,
     sources: [
       { label: "GOV.UK — консультация Earned Settlement", href: "https://www.gov.uk/government/consultations/earned-settlement/a-fairer-pathway-to-settlement-statement-and-accompanying-consultation-on-earned-settlement-accessible" },
       { label: "Diário da República — закон о гражданстве", href: "https://diariodarepublica.pt/dr/detalhe/lei-organica/1-2026-1123539996" },
@@ -337,7 +319,7 @@ export const news2026: Article[] = [
       { label: "BOE — SMI 2026", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2026-3815" },
     ],
     sections: [
-      { title: "Четыре разных статуса изменений", paragraphs: ["Португалия уже изменила сроки натурализации. Франция уже ввела B2 и гражданский экзамен для соответствующих процедур. Испания повысила финансовый порог вслед за SMI. Великобритания закрепила B2 для ILR с марта 2027 года, но десятилетний базовый срок Earned Settlement на дату сверки не стал действующим правилом."] },
+      { title: "Четыре разных статуса изменений", paragraphs: ["Португалия изменила сроки натурализации. Франция ввела B2 и гражданский экзамен для соответствующих процедур. Испания повысила финансовый порог вслед за SMI. Великобритания закрепила B2 для ILR с марта 2027 года. Десятилетняя модель Earned Settlement была представлена как консультационное предложение; действующие правила ее не содержали."] },
       { title: "Общая тенденция без ложного обобщения", paragraphs: ["Государства требуют больше подтверждений устойчивости: языка, дохода, реальной деятельности и интеграции. Последствия для каждого талант-маршрута зависят от его конкретных правил."] },
       { title: "Что это меняет для выбора", paragraphs: ["Мы сравниваем весь горизонт: вход в страну, продление, постоянное проживание, гражданство, зависимость от работодателя и положение семьи. Самая короткая виза не обязательно дает самый устойчивый маршрут."] },
     ],

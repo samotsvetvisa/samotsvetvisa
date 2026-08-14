@@ -25,8 +25,9 @@ export function SiteFooter({ locale = "ru" }: { locale?: "ru" | "en" }) {
           <Link href={withTrailingSlash(`${base}/about`)}>{isEnglish ? "About" : "О нас"}</Link>
           <Link href={withTrailingSlash(`${base}/blog`)}>{isEnglish ? "Insights" : "Блог"}</Link>
           <Link href={withTrailingSlash(`${base}/assessment`)}>{isEnglish ? "Profile assessment" : "Аудит профиля"}</Link>
+          <Link href={withTrailingSlash(`${base}/profile-development`)}>{isEnglish ? "Profile development" : "Усиление профиля"}</Link>
           <Link href={withTrailingSlash(`${base}/contacts`)}>{isEnglish ? "Contact and company details" : "Контакты и реквизиты"}</Link>
-          <Link href={withTrailingSlash(`${base}/privacy`)}>{isEnglish ? "Privacy policy" : "Политика обработки персональных данных"}</Link>
+          <Link href={withTrailingSlash(`${base}/privacy`)}>{isEnglish ? "Privacy and personal data" : "Конфиденциальность и персональные данные"}</Link>
           <Link href={withTrailingSlash(`${base}/consent`)}>{isEnglish ? "Data processing consent" : "Согласие на обработку персональных данных"}</Link>
           <Link href={withTrailingSlash(`${base}/legal`)}>{isEnglish ? "Terms of service" : "Условия оказания услуг"}</Link>
         </div>
@@ -50,7 +51,7 @@ export function SiteFooter({ locale = "ru" }: { locale?: "ru" | "en" }) {
         </div>
       </div>
       <div className="section-shell footer-bottom">
-        <span>© 2026 Samotsvet</span>
+        <span>© 2025–2026 Samotsvet</span>
         <span className="footer-divider" aria-hidden="true">{" · "}</span>
         <span>{isEnglish ? "Immigration & Relocation" : "Иммиграция и релокация"}</span>
       </div>

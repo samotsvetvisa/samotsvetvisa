@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Samotsvet — Immigration &amp; Relocation</title>
+  <desc id="desc">Branded social sharing card for Samotsvet</desc>
+  <rect width="1200" height="630" fill="#10243E"/>
+  <rect x="0" y="0" width="1200" height="12" fill="#C99A3D"/>
+  <rect x="72" y="502" width="126" height="8" fill="#C99A3D"/>
+  <g transform="translate(72 70) scale(.62)">
+    <path fill="#F7F3EB" d="M78 11H203L237 36C190 43 138 49 103 62L98 64 45 36Z"/>
+    <path fill="#FFFFFF" d="M37 43 11 77 86 164c19-4 50-15 64-28 15-14 11-22-11-31-28-9-45-16-48-25-2-7 0-10 3-12Z"/>
+    <path fill="#C99A3D" d="M244 42 272 78 204 154c0-11 1-28-4-41-5-12-16-18-38-25-17-4-33-9-38-14 6-8 46-18 113-31Z"/>
+    <path fill="#F7F3EB" d="M197 133c-1 13-2 27-6 36l-50 58-41-47c21-4 43-9 55-14 22-9 35-20 42-33Z"/>
+  </g>
+  <text x="276" y="146" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="700" letter-spacing="2">SAMOTSVET</text>
+  <text x="280" y="191" fill="#C99A3D" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" letter-spacing="5">IMMIGRATION &amp; RELOCATION</text>
+  <text x="72" y="327" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="53" font-weight="700">Виза начинается за год</text>
+  <text x="72" y="393" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="53" font-weight="700">до подачи</text>
+  <text x="72" y="553" fill="#D8DEE6" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" letter-spacing="2">СТРАТЕГИЯ · ДОКАЗАТЕЛЬСТВА · СОПРОВОЖДЕНИЕ</text>
+</svg>

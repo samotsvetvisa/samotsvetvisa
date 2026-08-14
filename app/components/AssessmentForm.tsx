@@ -41,13 +41,13 @@ export function AssessmentForm({ initialCountry = "", locale = "ru" }: { initial
       stage: value("stage"), history: value("history"), referral: value("referral"),
       website: value("website"), consent: data.get("consent") === "on", source: isEnglish ? "assessment-page-en" : "assessment-page",
       utmSource: pageUrl.searchParams.get("utm_source") || "", utmMedium: pageUrl.searchParams.get("utm_medium") || "", utmCampaign: pageUrl.searchParams.get("utm_campaign") || "", landingPage: `${pageUrl.pathname}${pageUrl.search}`, referrer: document.referrer,
-      consentAt: new Date().toISOString(), privacyVersion: "2026-08-13", startedAt,
+      consentAt: new Date().toISOString(), privacyVersion: "2026-08-14", startedAt,
     };
     try {
       const endpoint = (window as Window & { SAMOTSVET_FORM_ENDPOINT?: string }).SAMOTSVET_FORM_ENDPOINT;
       if (!endpoint) throw new Error(isEnglish ? "The form is being configured. Please email karfagen38@gmail.com." : "Форма настраивается. Напишите нам на karfagen38@gmail.com.");
       await fetch(endpoint, { method: "POST", mode: "no-cors", cache: "no-store", headers: { "content-type": "text/plain;charset=UTF-8" }, body: JSON.stringify(payload) });
-      form.reset(); setStatus("success"); setMessage(isEnglish ? "Your enquiry has been sent. We will review it and reply with a proposed next step." : "Анкета отправлена. Мы изучим данные и ответим с предложением следующего шага.");
+      form.reset(); setStatus("success"); setMessage(isEnglish ? "Your enquiry has been sent. We will review it and reply within 24 hours." : "Анкета отправлена. Мы изучим данные и ответим в течение 24 часов.");
     } catch (error) {
       setStatus("error"); setMessage(error instanceof Error ? error.message : (isEnglish ? "Unable to send the form." : "Не удалось отправить анкету."));
     }
@@ -80,7 +80,7 @@ export function AssessmentForm({ initialCountry = "", locale = "ru" }: { initial
 
       <label className="honeypot" aria-hidden="true">Website<input name="website" tabIndex={-1} autoComplete="off" /></label>
       <label className="consent-field"><input type="checkbox" name="consent" required /><span>{isEnglish ? <>I agree to the processing of my personal data under the separate <Link href="/en/consent/">Data Processing Consent</Link>.</> : <>Я даю согласие на обработку персональных данных на условиях отдельного документа <Link href="/consent/">«Согласие на обработку персональных данных»</Link>.</>}</span></label>
-      <p className="form-privacy-note">{isEnglish ? <>Please read the <Link href="/en/privacy/">Privacy Policy</Link> before submitting the form.</> : <>Перед отправкой формы ознакомьтесь с <Link href="/privacy/">Политикой обработки персональных данных</Link>.</>}</p>
+      <p className="form-privacy-note">{isEnglish ? <>Please read the <Link href="/en/privacy/">Privacy Policy</Link> before submitting the form.</> : <>Перед отправкой формы ознакомьтесь с <Link href="/privacy/">Политикой конфиденциальности и обработки персональных данных</Link>.</>}</p>
       <button className="button button-primary form-submit" type="submit" disabled={status === "sending"}>{status === "sending" ? (isEnglish ? "Sending..." : "Отправляем...") : (isEnglish ? "Send" : "Отправить")}</button>
       {message && <p className={`form-message ${status}`} role="status">{message}</p>}
     </form>

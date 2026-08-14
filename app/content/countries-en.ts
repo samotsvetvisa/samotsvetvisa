@@ -22,11 +22,25 @@ export const countriesEn: CountryPageData[] = [
         fit: ["The idea is materially different from existing solutions", "The business can operate sustainably and grow", "There is a credible development plan and a clear role for the founder"],
       },
     ],
-    risks: [
-      { title: "Confusing a strong career with proven recognition", detail: "Strong internal company results do not by themselves show wider professional recognition. Independent sources, a clear sense of scale and your personal role all matter." },
-      { title: "Collecting documents without a single line of argument", detail: "If letters, figures and public materials present different versions of events, volume will not resolve the contradictions." },
-      { title: "Calling an ordinary service business innovative", detail: "Innovator Founder requires a specific point of difference, a viable business and a credible route to growth. General technology language is insufficient." },
-      { title: "Treating the endorsing body as a formality", detail: "Its criteria, checkpoints and evidence requirements shape the project from the outset." },
+    riskGroups: [
+      {
+        title: "Global Talent",
+        risks: [
+          { title: "Relying only on internal company results", detail: "Strong results inside an employer do not by themselves demonstrate professional recognition. Independent sources, a clear sense of scale and a direct link to your work are needed." },
+          { title: "Leaving your contribution inside a team result", detail: "The name of a major project does not explain what the applicant did. The role, decisions and measurable contribution should be evidenced separately." },
+          { title: "Using references built from general praise", detail: "Descriptions such as ‘leading specialist’ carry little weight without specific examples, dates, outcomes and an explanation of how the referee knows the applicant's work." },
+          { title: "Allowing contradictions between sources", detail: "Different roles, periods, figures and versions of the same event undermine the record as a whole. We check the documents as one system before filing." },
+        ],
+      },
+      {
+        title: "Innovator Founder",
+        risks: [
+          { title: "Presenting an ordinary service business as innovative", detail: "Innovator Founder requires a specific point of difference, a viable business and a credible route to growth. General technology language is insufficient." },
+          { title: "Reducing innovation to marketing language", detail: "The proposition needs a new solution, an explanation of how it works and a meaningful distinction from available alternatives. A polished deck cannot replace product logic." },
+          { title: "Separating growth from the financial model", detail: "The scaling plan should align with the budget, team, market and founder's role. Inconsistent forecasts raise questions about viability." },
+          { title: "Treating the endorsing body as a formality", detail: "Its criteria, checkpoints and evidence requirements shape the project from the outset." },
+        ],
+      },
     ],
     regulatory: "Samotsvet manages the UK matter as one project: strategy, profile development, evidence, references, final bundle review and the filing process through to the decision.",
     official: [
@@ -34,6 +48,17 @@ export const countriesEn: CountryPageData[] = [
       { label: "GOV.UK: Global Talent in digital technology", href: "https://www.gov.uk/global-talent-digital-technology" },
       { label: "GOV.UK: Innovator Founder", href: "https://www.gov.uk/innovator-founder-visa" },
     ],
+    processing: {
+      title: "Timing once the bundle is ready",
+      headers: ["Stage", "Indicative time", "What to allow for"],
+      rows: [
+        ["Global Talent endorsement", "2–8 weeks", "Two weeks for some fast-track research routes, five weeks for peer review, five to eight weeks for digital technology and up to eight weeks for arts and culture"],
+        ["Global Talent visa decision", "3 weeks outside the UK / 8 weeks inside", "Priority services apply to the visa stage. A first application relying on endorsement must be filed within three months of the endorsement letter"],
+        ["Innovator Founder visa decision", "3 weeks outside the UK / 8 weeks inside", "The period starts once the online application, identity check and documents are complete; time for endorsement is additional"],
+        ["Overall Global Talent guide", "2–4 months", "An indicative period after the evidence and documents are ready to file"],
+      ],
+      note: "Government processing times exclude profile development, evidence preparation, biometric appointments and any request for further information.",
+    },
   },
   {
     slug: "spain",
@@ -60,7 +85,18 @@ export const countriesEn: CountryPageData[] = [
     official: [
       { label: "Ministerio de Inclusión: Teletrabajadores", href: "https://www.inclusion.gob.es/web/unidadgrandesempresas/teletrabajadores" },
       { label: "UGE: Autorizaciones y requisitos", href: "https://www.inclusion.gob.es/web/unidadgrandesempresas/autorizaciones-y-requisitos" },
+      { label: "BOE: Ley 14/2013", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074" },
     ],
+    processing: {
+      title: "Timing and outcome depend on the filing route",
+      headers: ["Route", "Time", "Outcome and detail"],
+      rows: [
+        ["Through a consulate", "Statutory period: 10 business days", "The practical period depends on the consulate and any checks. The result is a visa valid for up to one year"],
+        ["Through UGE from Spain", "Statutory period: 20 days", "Further-document requests extend the practical period. The result is a three-year authorisation; positive administrative silence applies"],
+        ["TIE after approval", "Within 30 days", "The application for the foreigner's identity card is filed after approval"],
+      ],
+      note: "An applicant may use UGE while legally present in Spain, including within a permitted tourist stay. The key condition is lawful status on the filing date.",
+    },
   },
   {
     slug: "usa",
@@ -75,11 +111,43 @@ export const countriesEn: CountryPageData[] = [
       { anchor: "o-1", name: "O-1", summary: "A temporary category for people of extraordinary ability; the petition is filed by a US employer or agent.", fit: ["A US employer or agent can act as petitioner", "Your achievements relate to the field claimed", "Planned projects and work commitments can be documented"] },
       { anchor: "e-2", name: "E-2", summary: "A non-immigrant visa based on a substantial investment in a real, operating business.", fit: ["Your nationality qualifies under an E-2 treaty", "Funds have been committed to the business", "You will develop and direct the enterprise"] },
     ],
-    risks: [
-      { title: "Treating satisfied criteria as automatic approval", detail: "The authorities assess evidence quality, the applicant's standing and the record as a whole. A simple count of apparently satisfied criteria is insufficient." },
-      { title: "Failing to separate permanent and temporary goals", detail: "EB-1A and EB-2 NIW solve a different problem from O-1. Timing, future work, family circumstances and tolerance for uncertainty all affect the choice." },
-      { title: "Ignoring the petitioner structure for O-1", detail: "The preparation must establish who can file the petition, how the projects are connected and how genuine US work will be evidenced." },
-      { title: "Planning E-2 before checking nationality and funds", detail: "Treaty nationality, ownership, the source and movement of capital, and the fact that funds are genuinely at risk must be checked early." },
+    riskGroups: [
+      {
+        title: "EB-1A",
+        risks: [
+          { title: "Treating the number of criteria as the final assessment", detail: "After considering the threshold criteria, USCIS assesses the record as a whole and the sustained nature of the recognition. Clear reasoning and evidence quality matter more than volume." },
+          { title: "Using only internal evidence for achievements", detail: "Employer records can establish facts but rarely show the wider level of recognition. Public and independent sources strengthen the central claims." },
+          { title: "Losing the individual contribution inside company success", detail: "Business growth, investment or a well-known product must be linked to the applicant's own decisions and supported by documents." },
+          { title: "Describing future work only as a job title", detail: "The filing should show an intention to continue work in the claimed field in the United States and connect that plan with the evidenced achievements." },
+        ],
+      },
+      {
+        title: "EB-2 NIW",
+        risks: [
+          { title: "Defining the proposed endeavour too broadly", detail: "An important sector does not explain the proposed activity. The tasks, delivery model, expected result and implementation horizon need to be concrete." },
+          { title: "Substituting value to one company for national importance", detail: "A project may have substantial commercial value while still requiring a separate explanation of its scale and wider effects." },
+          { title: "Disconnecting past achievements from the future plan", detail: "Experience and awards work more effectively when they explain why the applicant is well positioned to advance the proposed work in the United States." },
+          { title: "Leaving resources and initial action unsupported", detail: "Partners, pilots, funding, a team and work already begun demonstrate readiness. Intentions alone provide limited support." },
+        ],
+      },
+      {
+        title: "O-1",
+        risks: [
+          { title: "Failing to identify a US petitioner", detail: "O-1 does not allow self-petitioning. An employer or agent, their authority and their connection to the proposed projects must be established early." },
+          { title: "Separating achievements from the proposed field of work", detail: "Past recognition should relate to the field in which the applicant will work in the United States. A change of focus needs a reasoned explanation." },
+          { title: "Leaving future projects without supporting documents", detail: "Letters, agreements, an itinerary and event descriptions should demonstrate genuine work, timing and the applicant's role." },
+          { title: "Stopping at a formal list of criteria", detail: "Meeting individual criteria does not by itself establish sustained acclaim. USCIS assesses the level of achievement and the record as a whole." },
+        ],
+      },
+      {
+        title: "E-2",
+        risks: [
+          { title: "Starting before checking treaty nationality", detail: "E-2 is available to nationals of treaty countries. The principal applicant's nationality should be checked before the transaction is designed." },
+          { title: "Failing to document the source and path of funds", detail: "The lawful source of capital and its movement from the owner into the US business should be traceable through documents." },
+          { title: "Leaving the investment uncommitted", detail: "Funds should be invested or irrevocably committed and genuinely at commercial risk. A bank balance alone is insufficient." },
+          { title: "Presenting a marginal business without a growth plan", detail: "The enterprise should be operating or ready to launch, and the model should demonstrate viability, the applicant's control and development beyond minimal self-support." },
+        ],
+      },
     ],
     regulatory: "Samotsvet manages US matters end to end: strategy, profile development, evidence, referees, the petition bundle and the filing process through to the decision.",
     processing: {
@@ -128,5 +196,14 @@ export const countriesEn: CountryPageData[] = [
     official: [
       { label: "France-Visas: International talents", href: "https://france-visas.gouv.fr/en/talents-internationaux-et-attractivite-economique" },
     ],
+    processing: {
+      title: "Indicative timing",
+      headers: ["Stage", "Indicative time", "What to allow for"],
+      rows: [
+        ["DREETS review", "10–20 business days", "An indicative period for a correct bundle where a DREETS opinion is required"],
+        ["Consulate and prefecture", "Depends on the place of filing", "A working estimate is set once the ground, consulate and department are known"],
+      ],
+      note: "The full timetable includes project preparation, any required validation, the consular stage and formalities in France.",
+    },
   },
 ];

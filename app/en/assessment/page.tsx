@@ -17,8 +17,8 @@ export default function EnglishAssessmentPage() {
       <SiteHeader locale="en" />
       <main>
         <section className="inner-hero section-shell assessment-hero">
-          <div><p className="eyebrow">Profile assessment</p><h1>Eight questions — about five minutes</h1></div>
-          <p>We will review the enquiry and reply within two working days. The response covers a preliminary route comparison, the starting profile and a suitable working format.</p>
+          <div><p className="eyebrow">Profile assessment</p><h1>A short form — about five minutes</h1></div>
+          <p>We will review the enquiry and reply within 24 hours. The response covers a preliminary route comparison, the starting profile and a suitable working format.</p>
         </section>
         <section className="section-shell assessment-layout">
           <aside><span>What happens next</span><ol><li>We compare the objective with the available routes.</li><li>We review the starting profile and evidence.</li><li>We identify the gaps and a preliminary sequence of work.</li><li>We propose the next stage and working format.</li></ol></aside>

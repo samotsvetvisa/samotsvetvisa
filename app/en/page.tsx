@@ -55,6 +55,7 @@ export default function EnglishHome() {
               <Link className="button button-primary" href="/en/assessment/">Get a profile assessment</Link>
               <Link className="button button-secondary" href="#directions">Choose a destination</Link>
             </div>
+            <p className="hero-response">We reply within 24 hours</p>
             <p className="hero-note">10,000+ profiles reviewed · 800+ successful matters</p>
           </div>
           <HeroVisual locale="en" />
@@ -95,11 +96,16 @@ export default function EnglishHome() {
             <li><span>04</span><div><h3>Profile development</h3><p>If the matter is not ready, we plan genuine projects, roles, publications, speaking, metrics, references and independent recognition. This stage may take months.</p></div></li>
             <li><span>05</span><div><h3>Evidence preparation</h3><p>We verify sources, collect documents, reconcile figures, roles and dates, prepare referees and resolve contradictions.</p></div></li>
             <li><span>06</span><div><h3>Application rationale</h3><p>We build the argument from the evidence and show how the facts and documents satisfy the requirements of the selected route.</p></div></li>
-            <li><span>07</span><div><h3>Legal assessment, forms and filing</h3><p>This stage is handled by an authorised professional in the relevant jurisdiction. Samotsvet maintains the single project plan and co-ordination.</p></div></li>
+            <li><span>07</span><div><h3>Final review, forms and filing</h3><p>The Samotsvet team checks the bundle, prepares the forms, brings in specialist partners where required and manages the filing process through to the decision.</p></div></li>
           </ol>
         </section>
 
         <ClientResults locale="en" />
+
+        <section className="section-shell development-product">
+          <div><p className="eyebrow">Profile development</p><h2>A 6–12 month preparation plan</h2></div>
+          <div><p>Where the evidence is not yet strong enough, we audit the evidence base and create a separate development plan covering projects, publications, speaking, metrics, references and review points.</p><Link className="text-link" href="/en/profile-development/">How the programme works <span aria-hidden="true">↗</span></Link></div>
+        </section>
 
         <section className="regulatory-band" id="scope">
           <div className="section-shell regulatory-grid">
