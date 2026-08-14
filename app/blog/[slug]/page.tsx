@@ -33,7 +33,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     headline: article.title,
     description: article.description,
     datePublished: article.published,
-    dateModified: article.verified ? "2026-08-12" : article.published,
+    dateModified: article.published,
     author: { "@type": "Person", name: article.author, url: `${SITE_URL}/about#nikita` },
     publisher: { "@id": `${SITE_URL}/#organisation` },
     mainEntityOfPage: `${SITE_URL}/blog/${article.slug}`,
@@ -67,7 +67,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 <div>
                   {article.sources.map((source) => <a href={source.href} key={source.href} target="_blank" rel="noreferrer">{source.label}<span aria-hidden="true">↗</span></a>)}
                 </div>
-                <p>Формулировки сверены {article.verified}. Требования меняются: перед подачей проверяйте действующую редакцию и обстоятельства конкретного дела.</p>
               </section>
             )}
             <aside>

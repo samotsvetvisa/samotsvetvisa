@@ -25,6 +25,7 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
   const item = countries.find((country) => country.slug === slug);
   if (!item) notFound();
   const price = SERVICE_PRICES.find((entry) => entry.code === item.code);
+  const riskGroups = item.riskGroups ?? [{ title: "", risks: item.risks ?? [] }];
 
   return (
     <>
@@ -55,14 +56,14 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
               </article>
             ))}
           </div>
-          {item.processing ? <div className="country-facts"><h2>{item.processing.title}</h2><table><thead><tr>{item.processing.headers.map((header) => <th key={header}>{header}</th>)}</tr></thead><tbody>{item.processing.rows.map((row) => <tr key={row[0]}>{row.map((cell) => <td key={cell}>{cell}</td>)}</tr>)}</tbody></table><p>{item.processing.note}</p></div> : null}
+          {item.processing ? <div className="country-facts"><h2>{item.processing.title}</h2><table><thead><tr>{item.processing.headers.map((header) => <th key={header}>{header}</th>)}</tr></thead><tbody>{item.processing.rows.map((row) => <tr key={row[0]}>{row.map((cell) => <td key={cell}>{cell}</td>)}</tr>)}</tbody></table>{item.processing.note ? <p>{item.processing.note}</p> : null}</div> : null}
           {item.important ? <div className="country-facts"><h2>{item.important.title}</h2>{item.important.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div> : null}
         </section>
 
         <section className="risk-band" id="risks">
           <div className="section-shell risk-grid">
             <div><p className="eyebrow eyebrow-light">Риски</p><h2>Что ослабляет даже перспективную заявку</h2></div>
-            <ol>{item.risks.map((risk, index) => <li key={risk.title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{risk.title}</h3><p>{risk.detail}</p></div></li>)}</ol>
+            <div className="risk-groups">{riskGroups.map((group) => <section className="risk-group" key={group.title || "all-risks"}>{group.title ? <h3 className="risk-group-title">{group.title}</h3> : null}<ol>{group.risks.map((risk, index) => <li key={risk.title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{risk.title}</h3><p>{risk.detail}</p></div></li>)}</ol></section>)}</div>
           </div>
         </section>
 
@@ -79,7 +80,6 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
           <div><p className="eyebrow">Первоисточники</p><h2>Проверяйте правила на официальных сайтах</h2></div>
           <div>
             {item.official.map((source) => <a href={source.href} target="_blank" rel="noreferrer" key={source.href}>{source.label} <span>↗</span></a>)}
-            <p>Формулировки на странице сверены с официальными источниками 12 августа 2026 года. Требования могут меняться.</p>
           </div>
         </section>
 

@@ -7,7 +7,7 @@ import { SITE_URL, withTrailingSlash } from "./site";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPages = ["", "/about", "/assessment", "/blog", "/contacts", "/legal", "/privacy", "/consent"];
+  const staticPages = ["", "/about", "/assessment", "/profile-development", "/blog", "/contacts", "/legal", "/privacy", "/consent"];
   const russianPages = [
     ...staticPages,
     ...countries.map(({ slug }) => `/countries/${slug}`),
@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return pages.map((path) => ({
     url: `${SITE_URL}${withTrailingSlash(path || "/")}`,
-    lastModified: new Date("2026-08-13"),
+    lastModified: new Date("2026-08-14"),
     changeFrequency: path === "" || path === "/en" ? "weekly" : "monthly",
     priority: path === "" || path === "/en" ? 1 : /\/countries\//.test(path) ? 0.9 : 0.7,
   }));

@@ -19,7 +19,7 @@ export default function EnglishPrivacyPage() {
         <article className="legal-page section-shell privacy-page">
           <p className="eyebrow">Data processing</p>
           <h1>Privacy policy</h1>
-          <p className="legal-updated">Version dated 13 August 2026</p>
+          <p className="legal-updated">Version dated 14 August 2026</p>
           <p className="legal-intro">This policy explains what personal data Samotsvet receives through the site, why it is needed, who may receive it and how a data subject can exercise their rights. We aim to collect only the information required to respond to an enquiry.</p>
 
           <section>
@@ -96,8 +96,8 @@ export default function EnglishPrivacyPage() {
           </section>
 
           <section>
-            <h2>9. Browser storage and analytics</h2>
-            <p>At the date of this version, the Samotsvet site does not set cookies, use local browser storage, advertising pixels or third-party analytics. UTM values, the landing page and referring page are stored only with a submitted enquiry to identify its source. The hosting provider may process request data and logs required for page delivery, security and fault diagnosis.</p>
+            <h2>9. Cookies and analytics</h2>
+            <p>The Samotsvet site does not set cookies, use local browser storage, advertising pixels or third-party analytics. A cookie consent banner is therefore not currently required. UTM values, the landing page and referring page are stored only with a submitted enquiry to identify its source. The hosting provider may process request data and logs required for page delivery, security and fault diagnosis.</p>
           </section>
 
           <section>

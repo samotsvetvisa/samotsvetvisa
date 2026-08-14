@@ -9,7 +9,6 @@ export type Article = {
   lead: string;
   sections: { title: string; paragraphs: string[]; points?: string[] }[];
   relatedCountry: string;
-  verified?: string;
   sources?: { label: string; href: string }[];
 };
 
