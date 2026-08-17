@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
+import { OtherDestinations } from "../../components/OtherDestinations";
 import { countries } from "../../content/countries";
 import { pageMetadata, SERVICE_MODEL_RU, SERVICE_PRICES, withTrailingSlash } from "../../site";
 
@@ -82,6 +83,8 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
             {item.official.map((source) => <a href={source.href} target="_blank" rel="noreferrer" key={source.href}>{source.label} <span>↗</span></a>)}
           </div>
         </section>
+
+        <OtherDestinations currentSlug={item.slug} />
 
         <section className="section-shell closing-cta country-cta">
           <div><p className="eyebrow eyebrow-light">Следующий шаг</p><h2>Разберем маршрут, профиль и доказательства как единую задачу</h2></div>
