@@ -32,7 +32,7 @@ button, input, textarea, select { font: inherit; }
 .brand-lockup-mark { width: 47px; height: 41px; flex: 0 0 auto; }
 .brand-lockup-copy { min-width: 0; display: flex; flex-direction: column; }
 .brand-lockup-copy strong { color: var(--navy); font-size: 20px; font-weight: 560; letter-spacing: .06em; line-height: 1; }
-.brand-lockup-copy small { margin-top: 6px; color: var(--navy); font-size: 7.5px; font-weight: 750; letter-spacing: .17em; line-height: 1; white-space: nowrap; }
+.brand-lockup-copy small { margin-top: 6px; color: var(--navy); font-size: 7.5px; font-weight: 750; letter-spacing: .1em; line-height: 1; white-space: nowrap; }
 .desktop-nav { margin-left: auto; display: flex; align-items: center; gap: 30px; color: var(--grey); font-size: 14px; }
 .desktop-nav a, .footer-grid a { transition: color .2s ease; }
 .desktop-nav a:hover, .footer-grid a:hover { color: var(--gold); }
@@ -64,7 +64,7 @@ button, input, textarea, select { font: inherit; }
 .hero-brand-lockup { align-items: center; gap: 19px; }
 .hero-brand-lockup .brand-lockup-mark { width: 78px; height: 67px; }
 .hero-brand-lockup .brand-lockup-copy strong { font-size: 30px; letter-spacing: .055em; }
-.hero-brand-lockup .brand-lockup-copy small { margin-top: 9px; font-size: 10px; letter-spacing: .2em; }
+.hero-brand-lockup .brand-lockup-copy small { margin-top: 9px; font-size: 10px; letter-spacing: .17em; }
 .hero-visual-identity > p { margin: 18px 0 0 96px; color: var(--grey); font-size: 11px; font-weight: 650; letter-spacing: .08em; text-transform: uppercase; }
 .hero-route-map { position: absolute; top: 180px; left: 24px; right: 24px; height: 180px; }
 .hero-route-channel { position: absolute; inset: 0; width: 100%; height: 155px; overflow: visible; }
