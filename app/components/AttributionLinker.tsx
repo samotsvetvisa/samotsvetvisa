@@ -21,20 +21,6 @@ export function AttributionLinker() {
       const destination = new URL(anchor.href, window.location.href);
       if (destination.origin !== window.location.origin) return;
 
-      if (destination.pathname === window.location.pathname && destination.hash) {
-        const targetId = decodeURIComponent(destination.hash.slice(1));
-        const section = document.getElementById(targetId);
-        if (!section) return;
-        event.preventDefault();
-        event.stopPropagation();
-        for (const [key, value] of attribution) {
-          if (!destination.searchParams.has(key)) destination.searchParams.set(key, value);
-        }
-        window.history.replaceState(null, "", `${destination.pathname}${destination.search}${destination.hash}`);
-        window.requestAnimationFrame(() => section.scrollIntoView({ behavior: "smooth", block: "start" }));
-        return;
-      }
-
       if (attribution.length === 0) return;
 
       for (const [key, value] of attribution) {

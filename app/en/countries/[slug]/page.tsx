@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SiteFooter } from "../../../components/SiteFooter";
 import { SiteHeader } from "../../../components/SiteHeader";
+import { OtherDestinations } from "../../../components/OtherDestinations";
 import { countriesEn } from "../../../content/countries-en";
 import { pageMetadata, SERVICE_MODEL_EN, SERVICE_PRICES, withTrailingSlash } from "../../../site";
 
@@ -52,6 +53,8 @@ export default async function EnglishCountryPage({ params }: { params: Promise<{
           <div><p className="eyebrow">Primary sources</p><h2>Check the current rules on official websites</h2></div>
           <div>{item.official.map((source) => <a href={source.href} target="_blank" rel="noreferrer" key={source.href}>{source.label} <span>↗</span></a>)}</div>
         </section>
+
+        <OtherDestinations currentSlug={item.slug} locale="en" />
 
         <section className="section-shell closing-cta country-cta">
           <div><p className="eyebrow eyebrow-light">Next step</p><h2>Review the route, profile and evidence as one project</h2></div>

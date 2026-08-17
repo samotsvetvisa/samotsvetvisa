@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { HeroVisual } from "../components/HeroVisual";
+import { HashLink } from "../components/HashLink";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
 import { ClientResults } from "../components/ClientResults";
@@ -50,10 +51,10 @@ export default function EnglishHome() {
           <div className="hero-copy">
             <p className="eyebrow">A full-cycle immigration and relocation agency</p>
             <h1>The visa process starts a year before the application</h1>
-            <p className="hero-lede">We lead the entire project: route selection, profile development, evidence preparation, partner co-ordination and filing support.</p>
+            <p className="hero-lede">We lead the entire project: route selection, evidence preparation and filing co-ordination. If the profile is not ready, we plan its development in advance.</p>
             <div className="hero-actions">
               <Link className="button button-primary" href="/en/assessment/">Get a profile assessment</Link>
-              <Link className="button button-secondary" href="#directions">Choose a destination</Link>
+              <HashLink className="button button-secondary" href="#directions">Choose a destination</HashLink>
             </div>
             <p className="hero-response">We reply within 24 hours</p>
             <p className="hero-note">10,000+ profiles reviewed · 800+ successful matters</p>
@@ -65,7 +66,7 @@ export default function EnglishHome() {
           <div className="section-shell principle-grid">
             <p className="eyebrow eyebrow-light">Depth of preparation</p>
             <h2>A complex route requires time, a strong team and a clear sequence</h2>
-            <p>We establish the starting point, build a development plan, create new professional results, assemble the evidence and manage the project through to filing.</p>
+            <p>Digital-technology Global Talent applications require three recommendation letters and up to ten evidence documents. Endorsement usually takes 5–8 weeks, followed by a visa decision in about 3 weeks for an overseas application.</p>
           </div>
         </section>
 
@@ -89,14 +90,15 @@ export default function EnglishHome() {
 
         <section className="section-shell section-block process-section" id="process">
           <div className="section-heading compact-heading"><div><p className="eyebrow">Process</p><h2>Several distinct pieces of work sit between an idea and a filing</h2></div></div>
+          <p className="process-fact">Seven stages connect the starting position, the evidence and the filing in one verifiable bundle.</p>
           <ol className="process-list">
-            <li><span>01</span><div><h3>Starting profile analysis</h3><p>We establish the objective, nationality, career, business, family position, timing, previous applications and constraints.</p></div></li>
-            <li><span>02</span><div><h3>Route comparison</h3><p>We compare requirements, intended status, timing, cost, filing structure and risk.</p></div></li>
-            <li><span>03</span><div><h3>Criteria and gap map</h3><p>Each criterion is tested against the available evidence to identify missing facts and weak support.</p></div></li>
-            <li><span>04</span><div><h3>Profile development</h3><p>If the matter is not ready, we plan genuine projects, roles, publications, speaking, metrics, references and independent recognition. This stage may take months.</p></div></li>
-            <li><span>05</span><div><h3>Evidence preparation</h3><p>We verify sources, collect documents, reconcile figures, roles and dates, prepare referees and resolve contradictions.</p></div></li>
-            <li><span>06</span><div><h3>Application rationale</h3><p>We build the argument from the evidence and show how the facts and documents satisfy the requirements of the selected route.</p></div></li>
-            <li><span>07</span><div><h3>Final review, forms and filing</h3><p>The Samotsvet team checks the bundle, prepares the forms, brings in specialist partners where required and manages the filing process through to the decision.</p></div></li>
+            <li><span>01</span><div><h3>Starting profile analysis</h3><p>We examine three things: every nationality, facts supported by documents and the date by which an outcome is needed.</p></div></li>
+            <li><span>02</span><div><h3>Route comparison</h3><p>We compare the outcome, the time to reach it and the principal restrictions. Global Talent may lead to ILR after 3 or 5 years, while O-1 remains a temporary work category.</p></div></li>
+            <li><span>03</span><div><h3>Criteria and gap map</h3><p>For each criterion, we record what is proved, which support is weak and which fact is still missing.</p></div></li>
+            <li><span>04</span><div><h3>Profile development</h3><p>We plan genuine projects, public work and independent recognition. Each step has a measurable outcome; the full stage usually takes 6–12 months.</p></div></li>
+            <li><span>05</span><div><h3>Evidence preparation</h3><p>We check that dates, figures and roles agree across references, employment records and publications. Discrepancies are resolved before the final bundle is assembled.</p></div></li>
+            <li><span>06</span><div><h3>Application rationale</h3><p>We connect each requirement to a specific fact and document. Weak points that cannot be solved by adding volume are addressed separately.</p></div></li>
+            <li><span>07</span><div><h3>Final review, forms and filing</h3><p>We check the bundle, agree forms with specialist partners and manage the filing process through to the decision.</p></div></li>
           </ol>
         </section>
 
@@ -104,7 +106,7 @@ export default function EnglishHome() {
 
         <section className="section-shell development-product">
           <div><p className="eyebrow">Profile development</p><h2>A 6–12 month preparation plan</h2></div>
-          <div><p>Where the evidence is not yet strong enough, we audit the evidence base and create a separate development plan covering projects, publications, speaking, metrics, references and review points.</p><Link className="text-link" href="/en/profile-development/">How the programme works <span aria-hidden="true">↗</span></Link></div>
+          <div><p>The audit identifies which evidence is missing. We then plan projects, publications and speaking; metrics, references and review points are recorded separately.</p><Link className="text-link" href="/en/profile-development/">How the programme works <span aria-hidden="true">↗</span></Link></div>
         </section>
 
         <section className="regulatory-band" id="scope">
@@ -125,7 +127,7 @@ export default function EnglishHome() {
 
         <section className="section-shell pricing-strip" id="pricing">
           <div><p className="eyebrow">Fees and timing</p><h2>The scope determines the budget and timetable</h2></div>
-          <div><p>An urgent filing with a developed profile may take several weeks. A full-cycle complex programme, particularly in the United States, can take up to two years while we strengthen the profile, create new results, assemble the evidence and co-ordinate every contributor. Following the initial review, we set out the stages, indicative timing and fee.</p><Link className="text-link" href="/en/legal/">How the agency works <span aria-hidden="true">↗</span></Link></div>
+          <div><p>An urgent filing with a developed profile may take several weeks. A full-cycle complex programme, particularly in the United States, can take up to two years while we create results, assemble evidence and co-ordinate contributors. Following the initial review, we set out the stages, indicative timing and fee.</p><Link className="text-link" href="/en/legal/">How the agency works <span aria-hidden="true">↗</span></Link></div>
           <div className="price-grid" aria-label="Indicative fees">
             {SERVICE_PRICES.map((item) => <div className="price-item" key={item.code}><span>{item.countryEn}</span><strong>{item.priceEn}</strong><small>Timing: {item.timelineEn}</small>{"noteEn" in item ? <small>{item.noteEn}</small> : null}</div>)}
           </div>
@@ -133,7 +135,7 @@ export default function EnglishHome() {
 
         <section className="section-shell closing-cta">
           <div><p className="eyebrow eyebrow-light">First step</p><h2>A profile assessment will define the route, scope of preparation and next steps</h2></div>
-          <div><p>Answer a small number of questions. We will review the starting position, identify the stronger parts of the record and propose a preparation plan.</p><Link className="button button-gold" href="/en/assessment/">Get a profile assessment</Link></div>
+          <div><p>Complete the short form. Within 24 hours, we will say which route is worth testing, what is already evidenced and what is still missing.</p><Link className="button button-gold" href="/en/assessment/">Get a profile assessment</Link></div>
         </section>
       </main>
       <SiteFooter locale="en" />
