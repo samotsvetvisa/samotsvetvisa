@@ -13,7 +13,16 @@ export const metadata: Metadata = {
   title: { default: "Samotsvet — иммиграция и релокация полного цикла", template: "%s | Samotsvet" },
   description: "Агентство иммиграции и релокации полного цикла для специалистов, предпринимателей и семей: Великобритания, Испания, США и Франция.",
   robots: { index: true, follow: true },
-  icons: { icon: [{ url: "/favicon.ico" }, { url: "/favicon.svg", type: "image/svg+xml" }], shortcut: "/favicon.ico" },
+  icons: {
+    icon: [
+      { url: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
+      { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
+      { url: "/favicon.ico", sizes: "48x48" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" }],
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     title: "Samotsvet — иммиграция и релокация полного цикла",
     description: "Стратегия, усиление профиля, доказательства, партнеры и сопровождение подачи.",
