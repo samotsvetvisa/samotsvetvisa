@@ -67,7 +67,7 @@ export function AssessmentForm({ initialCountry = "", locale = "ru" }: { initial
       cUtmCampaign: pageUrl.searchParams.get("utm_campaign") || "",
       cLandingPage: `${pageUrl.pathname}${pageUrl.search}`,
       cReferrer: document.referrer,
-      cConsentAt: new Date().toISOString(),
+      cConsentAt: new Date().toISOString().replace("T", " ").replace(/\.\d{3}Z$/, ""),
       cPrivacyVersion: "2026-08-14",
       cStartedAt: String(startedAt),
     };
