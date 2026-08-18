@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import { AttributionLinker } from "./components/AttributionLinker";
 import { LanguageAttribute } from "./components/LanguageAttribute";
@@ -57,7 +56,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="ru">
       <body className={geist.variable}>
-        <Script src="/form-config.js" strategy="beforeInteractive" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }} />
         <AttributionLinker />
         <LanguageAttribute />
