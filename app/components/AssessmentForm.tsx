@@ -32,24 +32,73 @@ export function AssessmentForm({ initialCountry = "", locale = "ru" }: { initial
     const data = new FormData(form);
     const pageUrl = new URL(window.location.href);
     const value = (name: string) => String(data.get(name) || "").trim();
-    setStatus("sending"); setMessage("");
+
+    setStatus("sending");
+    setMessage("");
+
+    if (value("website")) {
+      form.reset();
+      setStatus("success");
+      setMessage(isEnglish ? "Your enquiry has been sent." : "Анкета отправлена.");
+      return;
+    }
+
     const payload = {
-      name: value("name"), contact: value("contact"), country: value("country"), route: value("route"),
-      objective: value("objective"), timing: value("timing"), citizenship: value("citizenship"),
-      residence: value("residence"), family: value("family"), employment: value("employment"),
-      profile: value("profile"), profileLink: value("profileLink"), evidence: value("evidence"),
-      stage: value("stage"), history: value("history"), referral: value("referral"),
-      website: value("website"), consent: data.get("consent") === "on", source: isEnglish ? "assessment-page-en" : "assessment-page",
-      utmSource: pageUrl.searchParams.get("utm_source") || "", utmMedium: pageUrl.searchParams.get("utm_medium") || "", utmCampaign: pageUrl.searchParams.get("utm_campaign") || "", landingPage: `${pageUrl.pathname}${pageUrl.search}`, referrer: document.referrer,
-      consentAt: new Date().toISOString(), privacyVersion: "2026-08-14", startedAt,
+      firstName: value("name"),
+      cContact: value("contact"),
+      cCountry: value("country"),
+      cRoute: value("route"),
+      cObjective: value("objective"),
+      cTiming: value("timing"),
+      cCitizenship: value("citizenship"),
+      cResidence: value("residence"),
+      cFamily: value("family"),
+      cEmployment: value("employment"),
+      cProfile: value("profile"),
+      cProfileLink: value("profileLink"),
+      cEvidence: value("evidence"),
+      cStage: value("stage"),
+      cHistory: value("history"),
+      cReferral: value("referral"),
+      cConsent: data.get("consent") === "on",
+      cFormSource: isEnglish ? "assessment-page-en" : "assessment-page",
+      cUtmSource: pageUrl.searchParams.get("utm_source") || "",
+      cUtmMedium: pageUrl.searchParams.get("utm_medium") || "",
+      cUtmCampaign: pageUrl.searchParams.get("utm_campaign") || "",
+      cLandingPage: `${pageUrl.pathname}${pageUrl.search}`,
+      cReferrer: document.referrer,
+      cConsentAt: new Date().toISOString(),
+      cPrivacyVersion: "2026-08-14",
+      cStartedAt: String(startedAt),
     };
+
     try {
       const endpoint = (window as Window & { SAMOTSVET_FORM_ENDPOINT?: string }).SAMOTSVET_FORM_ENDPOINT;
-      if (!endpoint) throw new Error(isEnglish ? "The form is being configured. Please email karfagen38@gmail.com." : "Форма настраивается. Напишите нам на karfagen38@gmail.com.");
-      await fetch(endpoint, { method: "POST", mode: "no-cors", cache: "no-store", headers: { "content-type": "text/plain;charset=UTF-8" }, body: JSON.stringify(payload) });
-      form.reset(); setStatus("success"); setMessage(isEnglish ? "Your enquiry has been sent. We will review it and reply within 24 hours." : "Анкета отправлена. Мы изучим данные и ответим в течение 24 часов.");
+      if (!endpoint) {
+        throw new Error(isEnglish ? "The form is being configured. Please email karfagen38@gmail.com." : "Форма настраивается. Напишите нам на karfagen38@gmail.com.");
+      }
+
+      const response = await fetch(endpoint, {
+        method: "POST",
+        cache: "no-store",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error(isEnglish ? "Unable to send the form. Please try again." : "Не удалось отправить анкету. Попробуйте еще раз.");
+      }
+
+      form.reset();
+      setSelectedCountry("");
+      setStatus("success");
+      setMessage(isEnglish ? "Your enquiry has been sent. We will review it and reply within 24 hours." : "Анкета отправлена. Мы изучим данные и ответим в течение 24 часов.");
     } catch (error) {
-      setStatus("error"); setMessage(error instanceof Error ? error.message : (isEnglish ? "Unable to send the form." : "Не удалось отправить анкету."));
+      setStatus("error");
+      setMessage(error instanceof Error ? error.message : (isEnglish ? "Unable to send the form." : "Не удалось отправить анкету."));
     }
   }
 
