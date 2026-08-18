@@ -12,6 +12,8 @@ const countryNames: Record<string, string> = {
   france: "France",
 };
 
+const assessmentEndpoint = "https://crm.samotsvetvisa.com/api/v1/LeadCapture/eaae72575ba4af3570883591e8916d30";
+
 export function AssessmentForm({ initialCountry = "", locale = "ru" }: { initialCountry?: string; locale?: "ru" | "en" }) {
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
@@ -73,12 +75,7 @@ export function AssessmentForm({ initialCountry = "", locale = "ru" }: { initial
     };
 
     try {
-      const endpoint = (window as Window & { SAMOTSVET_FORM_ENDPOINT?: string }).SAMOTSVET_FORM_ENDPOINT;
-      if (!endpoint) {
-        throw new Error(isEnglish ? "The form is being configured. Please email karfagen38@gmail.com." : "Форма настраивается. Напишите нам на karfagen38@gmail.com.");
-      }
-
-      const response = await fetch(endpoint, {
+      const response = await fetch(assessmentEndpoint, {
         method: "POST",
         cache: "no-store",
         headers: {
@@ -89,7 +86,7 @@ export function AssessmentForm({ initialCountry = "", locale = "ru" }: { initial
       });
 
       if (!response.ok) {
-        throw new Error(isEnglish ? "Unable to send the form. Please try again." : "Не удалось отправить анкету. Попробуйте еще раз.");
+        throw new Error(isEnglish ? `Unable to send the form (${response.status}). Please try again.` : `Не удалось отправить анкету (${response.status}). Попробуйте еще раз.`);
       }
 
       form.reset();
