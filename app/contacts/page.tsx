@@ -53,8 +53,14 @@ export default function ContactsPage() {
           <article className="contact-card">
             <p className="eyebrow">Обращения по данным</p>
             <h2>Как направить запрос</h2>
-            <p>Запрос на доступ, исправление, ограничение обработки или удаление данных можно направить письменно по указанному почтовому адресу либо по электронной почте.</p>
+            <p>Запрос на доступ, исправление, ограничение обработки или удаление данных можно направить по электронной почте. Укажите имя и контакт, использованный в анкете, чтобы мы могли найти запись.</p>
             <a className="text-link" href={`mailto:${CONTACT_EMAIL}`}>Направить электронный запрос <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article className="contact-card">
+            <p className="eyebrow">Роскомнадзор</p>
+            <h2>Уведомление направлено</h2>
+            <p>Оператор направил уведомление о намерении осуществлять обработку персональных данных. Номер и дата записи появятся здесь после публикации сведений в <a href="https://pd.rkn.gov.ru/operators-registry/operators-list/" target="_blank" rel="noreferrer">реестре операторов Роскомнадзора</a>.</p>
           </article>
 
           <article className="contact-card">

@@ -19,7 +19,7 @@ export default function EnglishConsentPage() {
         <article className="legal-page section-shell privacy-page">
           <p className="eyebrow">Personal data</p>
           <h1>Consent to the processing of personal data</h1>
-          <p className="legal-updated">Version dated 12 August 2026</p>
+          <p className="legal-updated">Version dated 19 August 2026</p>
           <p className="legal-intro">By selecting the separate checkbox below the enquiry form and submitting it, you freely give this consent.</p>
 
           <section>
@@ -59,13 +59,19 @@ export default function EnglishConsentPage() {
           </section>
 
           <section>
-            <h2>5. Duration and withdrawal</h2>
+            <h2>5. Recipients and location of the primary record</h2>
+            <p>The user&apos;s browser sends the form directly to the Samotsvet CRM at <code>crm.samotsvetvisa.com</code>. The initial record is stored on a server in Russia and may be accessed by authorised Samotsvet personnel and contractors to the extent required to answer the enquiry.</p>
+            <p>Case material is sent to a foreign lawyer, regulated adviser, translator or other professional only after the applicable legal basis has been established and any required notice, consent and contractual steps have been completed.</p>
+          </section>
+
+          <section>
+            <h2>6. Duration and withdrawal</h2>
             <p>The consent remains effective until withdrawn, but no longer than 24 months after the last substantive communication if the enquiry does not lead to contracted work. Where a contract is signed, some records may be kept for longer where required for performance, accounting or the protection of rights.</p>
             <p>You may withdraw consent by emailing <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Include your name, the contact method used in the form and the nature of the request. Withdrawal does not affect processing carried out lawfully before it was received.</p>
           </section>
 
           <section>
-            <h2>6. Further information</h2>
+            <h2>7. Further information</h2>
             <p>More information about purposes, legal bases, recipients, retention and your rights appears in the <Link href="/en/privacy/">Privacy Policy</Link>.</p>
           </section>
         </article>

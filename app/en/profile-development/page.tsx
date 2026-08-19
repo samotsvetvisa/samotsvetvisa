@@ -39,6 +39,11 @@ export default function EnglishProfileDevelopmentPage() {
           </ol>
         </section>
 
+        <section className="section-shell about-details">
+          <article><p className="eyebrow">Working document</p><h2>Evidence matrix</h2><p>For every requirement, we record the proposition, available sources, current level of support, gap and next verifiable result.</p></article>
+          <article><p className="eyebrow">Plan management</p><h2>A calendar with responsibilities</h2><p>Each task has a date, owner, expected output and readiness test. The plan is updated at review points using the results actually achieved.</p></article>
+        </section>
+
         <section className="section-shell closing-cta">
           <div><p className="eyebrow eyebrow-light">First step</p><h2>We begin with the profile and available evidence</h2></div>
           <div><p>After the assessment, we set out the scope, indicative timing and programme fee.</p><Link className="button button-gold" href="/en/assessment/">Get a profile assessment</Link></div>

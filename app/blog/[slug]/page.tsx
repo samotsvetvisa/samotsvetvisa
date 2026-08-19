@@ -63,7 +63,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             {article.sources && article.sources.length > 0 && (
               <section className="article-sources" aria-labelledby="article-sources-title">
                 <p className="eyebrow">Первоисточники</p>
-                <h2 id="article-sources-title">Проверить самостоятельно</h2>
+                <h2 id="article-sources-title">{article.title}: официальные документы</h2>
+                <p>Сверяйте дату публикации, статус документа и редакцию, действующую на дату конкретной подачи.</p>
                 <div>
                   {article.sources.map((source) => <a href={source.href} key={source.href} target="_blank" rel="noreferrer">{source.label}<span aria-hidden="true">↗</span></a>)}
                 </div>
@@ -79,7 +80,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               <div>
                 <p className="article-author-label">Автор</p>
                 <h2><Link href="/about/#nikita">Никита Самоцветов</Link></h2>
-                <p>Основатель Samotsvet. Никита отвечает за методологию, проверку источников и ведение подготовки иммиграционных и визовых кейсов.</p>
+                <p>Основатель и руководитель практики Samotsvet. Никита отвечает за методологию, проверку источников и контроль качества подготовки.</p>
               </div>
             </section>
           </div>

@@ -3,11 +3,11 @@ type Locale = "ru" | "en";
 const copy = {
   ru: {
     eyebrow: "Опыт и результаты",
-    title: "Пять лет и три роли",
-    intro: "С 2021 года Никита отсмотрел более 10 000 профессиональных профилей — на скрининге в иммиграционных агентствах и самостоятельно. Участвовал в подготовке более 800 успешно завершенных кейсов: часть вел целиком, часть — как партнер, которого агентства привлекали на сложные дела. Более 200 из них — британские.",
+    title: "Опыт команды с 2021 года",
+    intro: "Совокупный опыт команды Samotsvet включает более 10 000 разобранных профессиональных профилей и более 800 успешно завершенных кейсов. Часть проектов мы вели целиком, к части подключались как партнер других агентств. Более 200 дел были связаны с Великобританией.",
     metrics: [
-      ["10 000+", "профилей отсмотрено"],
-      ["800+", "кейсов с участием Никиты"],
+      ["10 000+", "профессиональных профилей разобрано"],
+      ["800+", "завершенных кейсов в опыте команды"],
       ["200+", "британских дел"],
     ],
     casesTitle: "Что будет показано в каждом кейсе",
@@ -20,11 +20,11 @@ const copy = {
   },
   en: {
     eyebrow: "Experience and outcomes",
-    title: "Five years across three roles",
-    intro: "Since 2021, Nikita has screened more than 10,000 professional profiles, both inside immigration agencies and independently. He has contributed to more than 800 successfully completed matters: some led in full, others handled as the partner agencies brought in for difficult cases. More than 200 were UK matters.",
+    title: "Team experience since 2021",
+    intro: "The Samotsvet team's combined experience includes more than 10,000 professional profile reviews and over 800 successfully completed matters. We led some projects in full and joined others as a partner to immigration agencies. More than 200 were UK matters.",
     metrics: [
-      ["10,000+", "profiles screened"],
-      ["800+", "matters involving Nikita"],
+      ["10,000+", "professional profiles reviewed"],
+      ["800+", "completed matters in the team's experience"],
       ["200+", "UK matters"],
     ],
     casesTitle: "What each client story will show",

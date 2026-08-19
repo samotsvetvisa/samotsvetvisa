@@ -34,6 +34,15 @@ export function AssessmentForm({ initialCountry = "", locale = "ru" }: { initial
     const data = new FormData(form);
     const pageUrl = new URL(window.location.href);
     const value = (name: string) => String(data.get(name) || "").trim();
+    const referrer = (() => {
+      if (!document.referrer) return "";
+      try {
+        const referrerUrl = new URL(document.referrer);
+        return `${referrerUrl.origin}${referrerUrl.pathname}`;
+      } catch {
+        return "";
+      }
+    })();
 
     setStatus("sending");
     setMessage("");
@@ -67,10 +76,10 @@ export function AssessmentForm({ initialCountry = "", locale = "ru" }: { initial
       cUtmSource: pageUrl.searchParams.get("utm_source") || "",
       cUtmMedium: pageUrl.searchParams.get("utm_medium") || "",
       cUtmCampaign: pageUrl.searchParams.get("utm_campaign") || "",
-      cLandingPage: `${pageUrl.pathname}${pageUrl.search}`,
-      cReferrer: document.referrer,
+      cLandingPage: pageUrl.pathname,
+      cReferrer: referrer,
       cConsentAt: new Date().toISOString().replace("T", " ").replace(/\.\d{3}Z$/, ""),
-      cPrivacyVersion: "2026-08-14",
+      cPrivacyVersion: "2026-08-19",
       cStartedAt: String(startedAt),
     };
 
@@ -119,13 +128,15 @@ export function AssessmentForm({ initialCountry = "", locale = "ru" }: { initial
         <label><span className="field-label">{isEnglish ? "Current country of residence" : "Где Вы живете сейчас?"} <span className="required-mark">*</span></span><input name="residence" required placeholder={isEnglish ? "Country and current status" : "Страна и текущий статус"} /></label>
       </div><div className="form-row"><label><span className="field-label">{isEnglish ? "Employment format" : "Формат занятости"} <span className="required-mark">*</span></span><select name="employment" required defaultValue=""><option value="" disabled>{isEnglish ? "Select" : "Выберите вариант"}</option><option value="Employee">{isEnglish ? "Employed by a company" : "Наем в компании"}</option><option value="Freelance">{isEnglish ? "Freelance or contracts" : "ИП, фриланс, контракты"}</option><option value="Business owner">{isEnglish ? "Business owner" : "Владею бизнесом"}</option><option value="Other">{isEnglish ? "Other" : "Другое"}</option></select></label><label>{isEnglish ? "LinkedIn or CV link" : "Ссылка на LinkedIn или CV"}<input name="profileLink" type="url" placeholder="https://" /></label></div><label><span className="field-label">{isEnglish ? "Professional or business profile" : "Профессиональный или предпринимательский профиль"} <span className="required-mark">*</span></span><textarea name="profile" rows={4} required placeholder={isEnglish ? "Role, sector, years of experience, business, responsibilities and strongest results" : "Роль, отрасль, стаж, бизнес, зона ответственности и наиболее сильные результаты"} /></label><label>{isEnglish ? "What evidence is already available?" : "Какие доказательства уже есть?"}<textarea name="evidence" rows={4} placeholder={isEnglish ? "Awards, publications, media, speaking, judging, revenue, investment, references, contracts or other evidence" : "Награды, публикации, СМИ, выступления, судейство, выручка, инвестиции, рекомендации, договоры и другие материалы"} /></label></fieldset>
 
+      <p className="form-privacy-note">{isEnglish ? "Do not enter passport numbers, medical information, bank details or other sensitive data in this initial form." : "Не указывайте в первичной анкете паспортные данные, медицинские сведения, банковские реквизиты и другую чувствительную информацию."}</p>
+
       <fieldset className="form-section"><legend><span>04</span>{isEnglish ? "Current stage" : "Текущий этап"}</legend><div className="form-row">
         <label>{isEnglish ? "Where are you in the process?" : "На каком этапе Вы находитесь?"}<select name="stage" defaultValue=""><option value="">{isEnglish ? "Select" : "Выберите вариант"}</option><option value="Exploring routes">{isEnglish ? "Exploring routes" : "Сравниваю маршруты"}</option><option value="Developing profile">{isEnglish ? "Developing the profile" : "Нарабатываю профиль"}</option><option value="Collecting evidence">{isEnglish ? "Collecting evidence" : "Собираю доказательства"}</option><option value="Ready to file">{isEnglish ? "Preparing to file" : "Готовлюсь к подаче"}</option><option value="Refusal or reapplication">{isEnglish ? "Refusal or reapplication" : "Есть отказ или переподача"}</option></select></label>
         <label>{isEnglish ? "Previous applications or refusals" : "Предыдущие подачи или отказы"}<textarea name="history" rows={3} placeholder={isEnglish ? "Route, date and outcome" : "Маршрут, дата и результат"} /></label>
       </div><label>{isEnglish ? "How did you hear about Samotsvet?" : "Откуда Вы узнали о Samotsvet?"}<select name="referral" defaultValue=""><option value="">{isEnglish ? "Select" : "Выберите вариант"}</option><option value="Telegram">Telegram</option><option value="Search">{isEnglish ? "Search" : "Поиск"}</option><option value="Referral">{isEnglish ? "Recommendation" : "Рекомендация"}</option><option value="Social media">{isEnglish ? "Social media" : "Социальные сети"}</option><option value="Other">{isEnglish ? "Other" : "Другое"}</option></select></label></fieldset>
 
       <label className="honeypot" aria-hidden="true">Website<input name="website" tabIndex={-1} autoComplete="off" /></label>
-      <label className="consent-field"><input type="checkbox" name="consent" required /><span>{isEnglish ? <>I agree to the processing of my personal data under the separate <Link href="/en/consent/">Data Processing Consent</Link>.</> : <>Я даю согласие на обработку персональных данных на условиях отдельного документа <Link href="/consent/">«Согласие на обработку персональных данных»</Link>.</>}</span></label>
+      <label className="consent-field"><input type="checkbox" name="consent" required /><span>{isEnglish ? <>I agree to the processing of my personal data under the separate <Link href="/en/consent/">Data Processing Consent</Link>. <span className="required-mark" aria-label="required">*</span></> : <>Я даю согласие на обработку персональных данных на условиях отдельного документа <Link href="/consent/">«Согласие на обработку персональных данных»</Link>. <span className="required-mark" aria-label="обязательное поле">*</span></>}</span></label>
       <p className="form-privacy-note">{isEnglish ? <>Please read the <Link href="/en/privacy/">Privacy Policy</Link> before submitting the form.</> : <>Перед отправкой формы ознакомьтесь с <Link href="/privacy/">Политикой конфиденциальности и обработки персональных данных</Link>.</>}</p>
       <button className="button button-primary form-submit" type="submit" disabled={status === "sending"}>{status === "sending" ? (isEnglish ? "Sending..." : "Отправляем...") : (isEnglish ? "Send" : "Отправить")}</button>
       {message && <p className={`form-message ${status}`} role="status">{message}</p>}

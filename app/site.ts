@@ -9,8 +9,8 @@ export const CONTACT_EMAIL = "karfagen38@gmail.com";
 export const TELEGRAM_HANDLE = "@samotsvetvisa";
 export const TELEGRAM_URL = "https://t.me/samotsvetvisa";
 
-export const SERVICE_MODEL_RU = "Samotsvet ведет проект целиком: анализирует профиль, выбирает стратегию, составляет план усиления, собирает доказательства и проверяет их на противоречия, готовит формы, координирует партнеров и сопровождает подачу до решения. За единый план, сроки и качество подготовки отвечает наша команда.";
-export const SERVICE_MODEL_EN = "Samotsvet manages the project as a whole: profile analysis, strategy, a development plan, evidence collection and consistency checks, forms, specialist partners and filing support through to the decision. Our team remains responsible for the single plan, timetable and quality of preparation.";
+export const SERVICE_MODEL_RU = "Samotsvet ведет проект одной командой. После первичного разбора клиент получает карту маршрутов и таблицу доказательств с пробелами, сроками и ответственными. Затем мы собираем материалы, сверяем факты между документами, координируем профильных партнеров и сопровождаем подачу до решения.";
+export const SERVICE_MODEL_EN = "Samotsvet delivers each project through one team. Following the initial review, the client receives a route map and an evidence table showing gaps, timing and responsibilities. We then assemble the material, reconcile facts across documents, co-ordinate specialist partners and support the filing through to the decision.";
 
 export const SERVICE_PRICES = [
   { code: "UK", countryRu: "Великобритания", countryEn: "United Kingdom", price: "от €5 000", priceEn: "from €5,000", timelineRu: "от 2 месяцев", timelineEn: "from 2 months" },

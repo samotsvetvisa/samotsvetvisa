@@ -22,9 +22,9 @@ const countries = [
 ];
 
 const articles = [
-  { tag: "United Kingdom · Global Talent", title: "How a strong professional record becomes a convincing application", text: "Why achievements need a clear evidential structure and a precise account of the applicant's role.", href: "/en/blog/strong-profile-vs-strong-case/" },
-  { tag: "United States · Route comparison", title: "EB-1A, EB-2 NIW or O-1: how to compare the routes", text: "A comparison by intended status, timing, evidence and the structure of future work.", href: "/en/blog/usa-route-comparison/" },
-  { tag: "Spain · Remote work", title: "What to check before applying for Spain's international remote work visa", text: "Working arrangements, contracts, income, social security and family documents — before translation and apostille.", href: "/en/blog/spain-digital-nomad-precheck/" },
+  { tag: "United Kingdom · 2026 changes", title: "HC 1691: why the filing date determines which rules apply", text: "A timetable from the design pathway to the B2 requirement for settlement.", href: "/en/blog/uk-hc-1691-dates/" },
+  { tag: "Spain · Digital Nomad Visa", title: "The 2026 income threshold and family calculation", text: "The corrected 200%, 75% and 25% calculation following the increase in Spain's SMI.", href: "/en/blog/spain-dnv-income-2026/" },
+  { tag: "United States · EB-2 NIW", title: "EB-2 NIW requires its own evidential rationale", text: "Why the proposed work, national importance and readiness to deliver it must be established separately.", href: "/en/blog/eb2-niw-not-simple-alternative/" },
 ];
 
 export default function EnglishHome() {
@@ -57,7 +57,7 @@ export default function EnglishHome() {
               <HashLink className="button button-secondary" href="#directions">Choose a destination</HashLink>
             </div>
             <p className="hero-response">We reply within 24 hours</p>
-            <p className="hero-note">10,000+ profiles reviewed · 800+ successful matters</p>
+            <p className="hero-note">Team experience: 10,000+ profiles reviewed · 800+ completed matters</p>
           </div>
           <HeroVisual locale="en" />
         </section>
@@ -72,8 +72,8 @@ export default function EnglishHome() {
 
         <section className="section-shell section-block" id="directions">
           <div className="section-heading">
-            <div><p className="eyebrow">Destinations</p><h2>Four countries and several fundamentally different routes</h2></div>
-            <p>Every matter begins with an evidence-based view of the available routes, the gaps and the work required to strengthen the record.</p>
+            <div><p className="eyebrow">Destinations</p><h2>Four countries and nine routes</h2></div>
+            <p>The same person may qualify for UK Global Talent and US EB-2 NIW. They are separate matters with different evidence. The cards below show the distinctions.</p>
           </div>
           <div className="country-grid">
             {countries.map((country) => (

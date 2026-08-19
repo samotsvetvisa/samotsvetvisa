@@ -30,12 +30,17 @@ export default function ProfileDevelopmentPage() {
         <section className="section-shell development-page">
           <div className="development-intro">
             <p className="eyebrow">Результат программы</p>
-            <h2>Понятная карта подготовки вместо ожидания</h2>
+            <h2>Карта подготовки на 6–12 месяцев</h2>
             <p>Вы получаете аудит текущей доказательной базы, выбранный рабочий маршрут, план усиления на 6–12 месяцев и контрольные точки. Продолжительность зависит от исходного профиля и программы.</p>
           </div>
           <ol className="development-stages">
             {stages.map(([title, text], index) => <li key={title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{title}</h3><p>{text}</p></div></li>)}
           </ol>
+        </section>
+
+        <section className="section-shell about-details">
+          <article><p className="eyebrow">Рабочий документ</p><h2>Матрица доказательств</h2><p>Для каждого требования фиксируем тезис, доступные источники, уровень подтверждения, пробел и следующий проверяемый результат.</p></article>
+          <article><p className="eyebrow">Управление планом</p><h2>Календарь с ответственными</h2><p>Каждая задача получает срок, владельца, ожидаемый материал и критерий готовности. На контрольных точках план обновляется по фактическим результатам.</p></article>
         </section>
 
         <section className="section-shell closing-cta">

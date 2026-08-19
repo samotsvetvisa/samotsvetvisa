@@ -19,7 +19,7 @@ export default function EnglishPrivacyPage() {
         <article className="legal-page section-shell privacy-page">
           <p className="eyebrow">Data processing</p>
           <h1>Privacy policy</h1>
-          <p className="legal-updated">Version dated 14 August 2026</p>
+          <p className="legal-updated">Version dated 19 August 2026</p>
           <p className="legal-intro">This policy explains what personal data Samotsvet receives through the site, why it is needed, who may receive it and how a data subject can exercise their rights. We aim to collect only the information required to respond to an enquiry.</p>
 
           <section>
@@ -33,6 +33,7 @@ export default function EnglishPrivacyPage() {
           <section>
             <h2>2. Scope and applicable law</h2>
             <p>This policy applies to the Samotsvet website and enquiries submitted through its forms. Processing takes account of Russian Federal Law No. 152-FZ on Personal Data, the EU General Data Protection Regulation where it applies, and any other mandatory law of the relevant jurisdiction.</p>
+            <p>The controller has submitted a personal-data processing notification to Roskomnadzor. The registry details will be added to the site after the entry appears in the public register.</p>
           </section>
 
           <section>
@@ -41,7 +42,7 @@ export default function EnglishPrivacyPage() {
               <li><strong>Identity and contact data:</strong> name, email address, messenger username or another contact method.</li>
               <li><strong>Enquiry data:</strong> destination, route of interest, goal, timing, professional or business profile, and information voluntarily entered in the form.</li>
               <li><strong>Attribution data:</strong> landing page, referring page and UTM source, medium and campaign values, when included in the link.</li>
-              <li><strong>Technical data:</strong> request details and security logs which the site infrastructure may process for delivery, abuse prevention and fault diagnosis.</li>
+              <li><strong>Technical data:</strong> request details and security logs which the site and CRM infrastructure may process for page delivery, form receipt, abuse prevention and fault diagnosis.</li>
             </ul>
             <p>The initial form does not ask for passport details, health data, political or religious views, biometric data, bank details or other sensitive or excessive information. Please do not submit such information through the form.</p>
           </section>
@@ -82,7 +83,8 @@ export default function EnglishPrivacyPage() {
             <h2>7. Recipients and processors</h2>
             <p>Access is limited to what is necessary for a specific purpose and may be given to:</p>
             <ul>
-              <li>site hosting and infrastructure providers, including GitHub Pages, as well as Google Apps Script and Google Sheets, which receive and store enquiries;</li>
+              <li><strong>GitHub Pages</strong>, which delivers the static site pages. Submitted form fields do not pass through GitHub Pages;</li>
+              <li><strong>the Samotsvet CRM and the provider of its Russian server infrastructure</strong>, which receive and store enquiries. The user&apos;s browser sends the form directly to <code>crm.samotsvetvisa.com</code>, and the record is stored in the CRM on a server in Russia;</li>
               <li>Samotsvet personnel and contractors who need the data to respond or carry out agreed work and are bound by confidentiality;</li>
               <li>an independent lawyer, regulated immigration adviser, translator or other professional where this is needed for the requested service, covered by the agreement or separately approved by the client;</li>
               <li>public authorities or other parties where disclosure is required by law or needed to protect lawful rights.</li>
@@ -92,7 +94,8 @@ export default function EnglishPrivacyPage() {
 
           <section>
             <h2>8. International processing</h2>
-            <p>Technical infrastructure and some independent professionals may be located outside the data subject&apos;s country. Such processing takes place only where a lawful basis and the required contractual, organisational or other safeguards are in place. If a transfer requires a separate notice or consent, it will be arranged before the transfer.</p>
+            <p>The enquiry is first recorded and stored in the CRM on a server in Russia. GitHub Pages delivers the site through foreign infrastructure and may process technical request data, but does not receive the contents of the submitted form fields.</p>
+            <p>If a user chooses to communicate through Gmail or Telegram, that service processes the communication under its own terms. Before sending case material to a foreign lawyer, regulated adviser, translator or other professional, Samotsvet establishes the applicable legal basis and completes any required notice, consent and contractual steps.</p>
           </section>
 
           <section>
@@ -102,7 +105,7 @@ export default function EnglishPrivacyPage() {
 
           <section>
             <h2>10. Security</h2>
-            <p>Measures include restricting access to the enquiries spreadsheet through a Google account, validation of submitted data, automated spam protection, encrypted connections and other reasonable organisational and technical safeguards. No method of internet transmission or storage can remove all risk.</p>
+            <p>Measures include account-based access controls in the CRM, validation of submitted data, a hidden anti-spam field, HTTPS encryption and other organisational and technical safeguards. No method of internet transmission or storage can remove all risk.</p>
           </section>
 
           <section>

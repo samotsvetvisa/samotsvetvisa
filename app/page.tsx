@@ -124,7 +124,7 @@ export default function Home() {
               </HashLink>
             </div>
             <p className="hero-response">Ответим в течение 24 часов</p>
-            <p className="hero-note">Более 10 000 разобранных профилей · Более 800 успешных кейсов</p>
+            <p className="hero-note">Опыт команды: 10 000+ разобранных профилей · 800+ завершенных кейсов</p>
           </div>
 
           <HeroVisual />

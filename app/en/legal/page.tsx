@@ -9,7 +9,7 @@ export const metadata: Metadata = pageMetadata({ title: "Working terms", descrip
 export default function EnglishLegalPage() {
   return (
     <><SiteHeader locale="en" /><main><article className="legal-page section-shell">
-      <p className="eyebrow">Terms of work</p><h1>Working terms</h1><p className="legal-updated">Version dated 12 August 2026</p>
+      <p className="eyebrow">Terms of work</p><h1>Working terms</h1><p className="legal-updated">Version dated 19 August 2026</p>
       <section><h2>1. Service provider</h2><p>Project services under the Samotsvet brand are provided by individual entrepreneur Nikita Andreevich Samotsvetov, OGRNIP 323670000016524, INN 672200624836, registered in the Russian Federation. The full address and contact channels appear on the <Link href="/en/contacts/">Contact and company details</Link> page.</p></section>
       <section><h2>2. Full-cycle agency</h2><p>{SERVICE_MODEL_EN}</p></section>
       <section><h2>3. Project team</h2><p>The team is built around the destination, route and starting profile. Samotsvet brings in attorneys, regulated immigration professionals, translators, public-profile specialists and other contractors while maintaining one plan and centralised project management.</p></section>
@@ -17,6 +17,7 @@ export default function EnglishLegalPage() {
       <section><h2>5. Timing and fees</h2><p>Our work ranges from several weeks for an urgent filing with a developed profile to two years for a full-cycle complex programme. The stages, timetable, fee and payment schedule are recorded before work begins.</p></section>
       <section><h2>6. Prices on the site</h2><p>Published fees are indicative and provide a basis for discussing an individual project. A public offer arises only where expressly stated. Final terms are recorded in the personal proposal and agreement.</p></section>
       <section><h2>7. Outcome and currency of information</h2><p>The competent public authority makes the final decision. Samotsvet is responsible for the quality of the strategy, preparation and project management. Rules and their application may change, so we check the official requirements again before filing.</p></section>
+      <section><h2>8. Ending the work and refunds</h2><p>The agreement records the acceptance process for each stage, the rules for ending the work and the refund terms before payment. If the client ends the engagement early, the unperformed portion is calculated after allowing for completed stages, evidenced expenses and any mandatory rule of applicable law.</p></section>
     </article></main><SiteFooter locale="en" /></>
   );
 }

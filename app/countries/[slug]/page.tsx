@@ -45,14 +45,14 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
         </section>
 
         <section className="section-shell country-routes">
-          <div className="inner-section-title"><p className="eyebrow">Маршруты</p><h2>Какие варианты рассматриваем</h2></div>
+          <div className="inner-section-title"><p className="eyebrow">Маршруты</p><h2>{item.headings.routes}</h2></div>
           <div className="route-detail-grid">
             {item.routes.map((route, index) => (
               <article key={route.name} id={`route-${route.anchor}`}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
                 <h3>{route.name}</h3>
                 <p>{route.summary}</p>
-                <h4>На чем строится подготовка</h4>
+                <h4>{route.fitTitle}</h4>
                 <ul>{route.fit.map((point) => <li key={point}>{point}</li>)}</ul>
               </article>
             ))}
@@ -63,7 +63,7 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
 
         <section className="risk-band" id="risks">
           <div className="section-shell risk-grid">
-            <div><p className="eyebrow eyebrow-light">Риски</p><h2>Что ослабляет даже перспективную заявку</h2></div>
+            <div><p className="eyebrow eyebrow-light">Риски</p><h2>{item.headings.risks}</h2></div>
             <div className="risk-groups">{riskGroups.map((group) => <section className="risk-group" key={group.title || "all-risks"}>{group.title ? <h3 className="risk-group-title">{group.title}</h3> : null}<ol>{group.risks.map((risk, index) => <li key={risk.title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{risk.title}</h3><p>{risk.detail}</p></div></li>)}</ol></section>)}</div>
           </div>
         </section>
@@ -71,14 +71,14 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
         <section className="section-shell country-regulatory">
           <p className="eyebrow">Команда проекта</p>
           <div>
-            <h2>Как мы ведем работу под ключ</h2>
+            <h2>{item.headings.team}</h2>
             <p>{SERVICE_MODEL_RU}</p>
             <Link className="text-link" href="/legal/">Как устроена работа агентства <span aria-hidden="true">↗</span></Link>
           </div>
         </section>
 
         <section className="section-shell sources-block">
-          <div><p className="eyebrow">Первоисточники</p><h2>Проверяйте правила на официальных сайтах</h2></div>
+          <div><p className="eyebrow">Первоисточники</p><h2>{item.headings.sources}</h2><p>{item.headings.sourcesNote}</p></div>
           <div>
             {item.official.map((source) => <a href={source.href} target="_blank" rel="noreferrer" key={source.href}>{source.label} <span>↗</span></a>)}
           </div>
@@ -87,8 +87,8 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
         <OtherDestinations currentSlug={item.slug} />
 
         <section className="section-shell closing-cta country-cta">
-          <div><p className="eyebrow eyebrow-light">Следующий шаг</p><h2>Разберем маршрут, профиль и доказательства как единую задачу</h2></div>
-          <div><p>Зафиксируем цель, проанализируем исходные данные и составим план подготовки доказательств.</p><Link className="button button-gold" href={withTrailingSlash(`/assessment?country=${item.slug}`)}>Получить аудит профиля</Link></div>
+          <div><p className="eyebrow eyebrow-light">Следующий шаг</p><h2>{item.headings.closing}</h2></div>
+          <div><p>{item.headings.closingBody}</p><Link className="button button-gold" href={withTrailingSlash(`/assessment?country=${item.slug}`)}>Получить аудит профиля</Link></div>
         </section>
       </main>
       <SiteFooter />

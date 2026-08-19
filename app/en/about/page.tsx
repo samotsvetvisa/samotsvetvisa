@@ -7,7 +7,7 @@ import { pageMetadata } from "../../site";
 
 export const metadata: Metadata = pageMetadata({
   title: "About",
-  description: "Nikita Samotsvetov, founder of Samotsvet, and our approach to evidence preparation for immigration and visa matters.",
+  description: "The Samotsvet team, its combined experience and its approach to evidence preparation for immigration and visa matters.",
   path: "/en/about",
   locale: "en",
 });
@@ -27,9 +27,9 @@ export default function EnglishAboutPage() {
           <div className="founder-copy">
             <p className="eyebrow">Founder</p>
             <h2>Nikita Samotsvetov</h2>
-            <p className="founder-role">Founder of Samotsvet. Nikita personally leads the preparation of immigration and visa matters.</p>
-            <p>Since 2021, Nikita has screened <strong>more than 10,000 professional profiles</strong>, both inside immigration agencies and independently. He has contributed to more than 800 successfully completed matters: some led in full, others handled as the partner agencies brought in for difficult cases. More than 200 were UK matters.</p>
-            <p>Before founding Samotsvet, Nikita worked inside an immigration agency with specialists, founders and families. His work covers the initial fact review, evidence planning, source verification, consistency between documents and coordination of the preparation process.</p>
+            <p className="founder-role">Founder and practice lead. Nikita is responsible for the methodology, strategy on complex projects and quality control.</p>
+            <p>Since 2021, the team&apos;s combined experience has included <strong>more than 10,000 professional profile reviews</strong> and over 800 successfully completed matters. We led some projects in full and joined others as a partner to immigration agencies. More than 200 were UK matters.</p>
+            <p>Before founding Samotsvet, Nikita worked inside an immigration agency with specialists, founders and families. That experience became the basis of the team&apos;s methodology: reviewing the starting facts, planning evidence, checking sources and reconciling information across documents.</p>
             <p>Nikita holds an <strong>LLM in International Law and Global Governance</strong> from the University of Leeds. His academic specialism in international law complements his practical experience with immigration and visa matters.</p>
             <p>The international-law degree provides a methodological foundation. It does not confer the right to practise immigration law in a particular country; that work is carried out by appropriately licensed partners.</p>
             <p>Current areas of focus include Global Talent and Innovator Founder in the UK; O-1, EB-1A, EB-2 NIW and E-2 in the US; Spain&apos;s Digital Nomad Visa (DNV); and the carte de sejour Talent in France.</p>
@@ -39,7 +39,7 @@ export default function EnglishAboutPage() {
 
         <section className="section-shell values-grid facts-grid">
           <article><span>01</span><h2>10,000+ profiles screened</h2><p>Screening and detailed review of specialists, entrepreneurs, their families and businesses across the UK, US, Spain and France.</p></article>
-          <article><span>02</span><h2>800+ matters involving Nikita</h2><p>Nikita led some projects in full and joined others as an agency partner. More than 200 were UK matters.</p></article>
+          <article><span>02</span><h2>800+ completed matters in the team&apos;s experience</h2><p>We led some projects in full and joined others as a partner to immigration agencies. More than 200 were UK matters.</p></article>
           <article><span>03</span><h2>Agencies brought us in</h2><p>We were asked to assist where a matter was difficult, the evidence conflicted or the preparation required a less conventional approach.</p></article>
           <article><span>04</span><h2>US-licensed attorney partner</h2><p>The legal stage of US matters is led by our partner, an attorney holding a current licence to practise in the United States.</p></article>
         </section>
