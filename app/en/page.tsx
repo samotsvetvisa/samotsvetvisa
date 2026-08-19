@@ -66,7 +66,7 @@ export default function EnglishHome() {
           <div className="section-shell principle-grid">
             <p className="eyebrow eyebrow-light">Depth of preparation</p>
             <h2>A complex route requires time, a strong team and a clear sequence</h2>
-            <p>Digital-technology Global Talent applications require three recommendation letters and up to ten evidence documents. Endorsement usually takes 5–8 weeks, followed by a visa decision in about 3 weeks for an overseas application.</p>
+            <p>Complex cases are built in stages: first we select the route and map the criteria, then close gaps, prepare evidence and assemble the final filing. Where the profile needs development, preparation may begin 6–12 months before filing; filing and decision times then depend on the country and route.</p>
           </div>
         </section>
 
