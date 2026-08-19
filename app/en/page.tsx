@@ -15,8 +15,8 @@ export const metadata: Metadata = pageMetadata({
 });
 
 const countries = [
-  { code: "UK", name: "United Kingdom", title: "Professional achievements or business", routes: [{ label: "Global Talent", href: "/en/countries/uk/#route-global-talent" }, { label: "Innovator Founder", href: "/en/countries/uk/#route-innovator-founder" }], text: "Global Talent is built on evidenced professional achievements: references, projects, publications and results. For Innovator Founder, the business project and endorsing body approval are central.", href: "/en/countries/uk/", size: "seven" },
-  { code: "ES", name: "Spain", title: "Remote work from Spain", routes: [{ label: "Digital Nomad Visa (DNV)", href: "/en/countries/spain/#route-digital-nomad-visa" }], text: "The working arrangement matters: an employee of an overseas company and a self-employed professional evidence their eligibility in different ways.", href: "/en/countries/spain/", size: "five" },
+  { code: "UK", name: "United Kingdom", title: "Professional achievements or a start-up", routes: [{ label: "Global Talent", href: "/en/countries/uk/#route-global-talent" }, { label: "Innovator Founder", href: "/en/countries/uk/#route-innovator-founder" }], text: "Global Talent is built on evidenced professional achievements: references, projects, publications and results. For Innovator Founder, the business project and endorsing body approval are central.", href: "/en/countries/uk/", size: "seven" },
+  { code: "ES", name: "Spain", title: "Remote work from Spain", routes: [{ label: "Digital Nomad Visa (DNV)", href: "/en/countries/spain/#route-digital-nomad-visa" }], text: "Different contract, experience and income evidence requirements apply to employees of overseas companies and to sole traders or contractors.", href: "/en/countries/spain/", size: "five" },
   { code: "US", name: "United States", title: "Career, business or investment", routes: [{ label: "EB-1A", href: "/en/countries/usa/#route-eb-1a" }, { label: "EB-2 NIW", href: "/en/countries/usa/#route-eb-2-niw" }, { label: "O-1", href: "/en/countries/usa/#route-o-1" }, { label: "E-2", href: "/en/countries/usa/#route-e-2" }], text: "The four routes serve different purposes, from work and professional standing to permanent residence and relocation through business.", href: "/en/countries/usa/", size: "eight" },
   { code: "FR", name: "France", title: "An innovative project or your own business", routes: [{ label: "French Tech Visa", href: "/en/countries/france/#route-french-tech-visa" }, { label: "Talent – porteur de projet", href: "/en/countries/france/#route-talent-business" }], text: "An innovative route depends on the project and its validation within the French ecosystem. The entrepreneurial route centres on the business plan, funding and the applicant's experience.", href: "/en/countries/france/", size: "four" },
 ];
@@ -57,7 +57,7 @@ export default function EnglishHome() {
               <HashLink className="button button-secondary" href="#directions">Choose a destination</HashLink>
             </div>
             <p className="hero-response">We reply within 24 hours</p>
-            <p className="hero-note">Team experience: 10,000+ profiles reviewed · 800+ completed matters</p>
+            <p className="hero-note">10,000+ profiles reviewed · 800+ completed matters</p>
           </div>
           <HeroVisual locale="en" />
         </section>
@@ -73,7 +73,7 @@ export default function EnglishHome() {
         <section className="section-shell section-block" id="directions">
           <div className="section-heading">
             <div><p className="eyebrow">Destinations</p><h2>Four countries and nine routes</h2></div>
-            <p>The same person may qualify for UK Global Talent and US EB-2 NIW. They are separate matters with different evidence. The cards below show the distinctions.</p>
+            <p>Each country has its own immigration programmes and assessment criteria. We review the client&apos;s circumstances, compare the available options and assess the prospects of each suitable route.</p>
           </div>
           <div className="country-grid">
             {countries.map((country) => (
