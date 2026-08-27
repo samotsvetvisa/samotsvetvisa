@@ -2,6 +2,28 @@ import type { Article } from "./articles";
 
 export const news2026En: Article[] = [
   {
+    slug: "us-immigrant-visa-issuance-pause-russia",
+    tag: "United States · Immigrant visas",
+    title: "US immigrant-visa issuance pause for Russian nationals: what it means for EB-1A and NIW",
+    description: "How the 2026 issuance pause interacts with USCIS petitions, interviews and visa-number availability.",
+    reading: "5 min read",
+    published: "2026-08-27",
+    author: "Nikita Samotsvetov",
+    lead: "Since 21 January 2026, the US Department of State has paused issuance of immigrant visas to Russian nationals. This materially affects the consular stage of EB-1A and EB-2 NIW, but it is not a ban on filing every petition or a suspension of all US visas.",
+    relatedCountry: "usa",
+    sources: [
+      { label: "Department of State — immigrant-visa issuance pause", href: "https://travel.state.gov/content/travel/en/News/visas-news/immigrant-visa-processing-updates-for-nationalities-at-high-risk-of-public-benefits-usage.html" },
+      { label: "Department of State — September 2026 Visa Bulletin", href: "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2026/visa-bulletin-for-september-2026.html" },
+      { label: "Department of State — immigrant-visa interview location", href: "https://travel.state.gov/content/travel/en/News/visas-news/adjudicating-iv-applicants-in-their-country-of-residence.html" },
+    ],
+    sections: [
+      { title: "What has been paused", paragraphs: ["The measure concerns issuance of immigrant visas to nationals of the listed countries, including Russia. The Department of State says applications and interviews may continue, but a visa is not issued while the pause applies.", "Dual nationals applying with a valid passport of a country not on the list are exempt. Visas already issued were not revoked by this measure."] },
+      { title: "Routes affected", paragraphs: ["EB-1A and EB-2 NIW lead to an immigrant visa where consular processing is used, so the pause affects final issuance to a Russian national. The I-140 petition and the consular stage are separate processes: approval of the petition does not itself displace the Department of State restriction.", "O-1 and E-2 are nonimmigrant classifications and are not covered by this particular pause. They remain subject to their own eligibility and consular requirements."] },
+      { title: "Why a current Visa Bulletin category does not resolve the issue", paragraphs: ["In September 2026, EB-1 and EB-2 are current for All Chargeability Areas Except Those Listed. This describes visa-number availability for the relevant preference and chargeability area; it does not override a separate nationality-based pause on visa issuance."] },
+      { title: "Questions for the strategy", paragraphs: ["Four issues need to be separated: USCIS petition approval, visa-number availability, whether a visa can be issued to the particular national and interview location. Adjustment of status in the United States is analysed separately from consular issuance. The answer depends on nationality, any second nationality, country of residence and present status."], points: ["Nationality and any second nationality", "Consular processing or adjustment of status", "Immigrant or nonimmigrant classification", "Country of residence and designated post"] },
+    ],
+  },
+  {
     slug: "uk-hc-1691-dates",
     tag: "United Kingdom · 2026 changes",
     title: "HC 1691: why the filing date determines which rules apply",

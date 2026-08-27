@@ -1,0 +1,9 @@
+{
+  "name": "Samotsvet Assessment Pipeline",
+  "version": "1.0.0",
+  "acceptableVersions": [">=9.0.0"],
+  "php": [">=8.1"],
+  "releaseDate": "2026-08-27",
+  "author": "Samotsvet",
+  "description": "Two-stage assessment deduplication, lead scoring and next-business-day follow-up for Samotsvet."
+}

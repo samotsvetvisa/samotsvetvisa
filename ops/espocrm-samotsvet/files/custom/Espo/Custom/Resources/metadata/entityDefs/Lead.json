@@ -1,0 +1,101 @@
+{
+  "fields": {
+    "cAssessmentId": {
+      "type": "varchar",
+      "maxLength": 64,
+      "isCustom": true,
+      "audited": true,
+      "copyToClipboard": true
+    },
+    "cAssessmentStage": {
+      "type": "enum",
+      "options": ["Short", "Detailed"],
+      "default": "Short",
+      "isCustom": true,
+      "audited": true,
+      "displayAsLabel": true,
+      "style": {
+        "Short": "info",
+        "Detailed": "success"
+      }
+    },
+    "cAssessmentResult": {
+      "type": "text",
+      "isCustom": true
+    },
+    "cRouteCandidates": {
+      "type": "text",
+      "isCustom": true
+    },
+    "cFitScore": {
+      "type": "int",
+      "min": 0,
+      "max": 3,
+      "isCustom": true
+    },
+    "cEvidenceScore": {
+      "type": "int",
+      "min": 0,
+      "max": 3,
+      "isCustom": true
+    },
+    "cUrgencyScore": {
+      "type": "int",
+      "min": 0,
+      "max": 3,
+      "isCustom": true
+    },
+    "cReadinessScore": {
+      "type": "int",
+      "min": 0,
+      "max": 3,
+      "isCustom": true
+    },
+    "cTotalScore": {
+      "type": "int",
+      "min": 0,
+      "max": 12,
+      "readOnly": true,
+      "isCustom": true,
+      "audited": true
+    },
+    "cTier": {
+      "type": "enum",
+      "options": ["A", "B", "C"],
+      "readOnly": true,
+      "isCustom": true,
+      "audited": true,
+      "displayAsLabel": true,
+      "style": {
+        "A": "success",
+        "B": "warning",
+        "C": "info"
+      }
+    },
+    "cNextStep": {
+      "type": "text",
+      "isCustom": true,
+      "audited": true
+    },
+    "cFollowUpAt": {
+      "type": "datetime",
+      "readOnly": true,
+      "isCustom": true,
+      "audited": true
+    },
+    "cFollowUpTaskCreated": {
+      "type": "bool",
+      "default": false,
+      "readOnly": true,
+      "isCustom": true
+    }
+  },
+  "indexes": {
+    "samotsvetAssessmentId": {
+      "columns": ["cAssessmentId"]
+    },
+    "samotsvetTierFollowUp": {
+      "columns": ["cTier", "cFollowUpAt"]
+    }
+  }
+}

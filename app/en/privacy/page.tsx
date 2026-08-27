@@ -19,7 +19,7 @@ export default function EnglishPrivacyPage() {
         <article className="legal-page section-shell privacy-page">
           <p className="eyebrow">Data processing</p>
           <h1>Privacy policy</h1>
-          <p className="legal-updated">Version dated 19 August 2026</p>
+          <p className="legal-updated">Version dated 27 August 2026</p>
           <p className="legal-intro">This policy explains what personal data Samotsvet receives through the site, why it is needed, who may receive it and how a data subject can exercise their rights. We aim to collect only the information required to respond to an enquiry.</p>
 
           <section>
@@ -66,7 +66,7 @@ export default function EnglishPrivacyPage() {
 
           <section>
             <h2>5. Source of data and required fields</h2>
-            <p>Data normally comes directly from the person submitting the enquiry. Required fields are marked in the form. Without a name, contact method, destination, description and consent confirmation, the form cannot be submitted because Samotsvet would not have enough information to provide a meaningful response. Other fields are optional.</p>
+            <p>Data normally comes directly from the person submitting the enquiry. The preliminary result requires a name, contact method, intended destination or comparison request, profile type and level, current level of external evidence, timing and consent confirmation. The result is first calculated locally in the browser. One version chosen by the user is then sent to the CRM: either the short profile or the profile completed with second-stage detail. Additional information is voluntary unless a field is clearly marked as required.</p>
           </section>
 
           <section>
@@ -125,7 +125,8 @@ export default function EnglishPrivacyPage() {
 
           <section>
             <h2>12. Automated decisions</h2>
-            <p>The form does not make an automated decision about a visa, status or whether Samotsvet can take on the work. It does not produce legal effects without human involvement.</p>
+            <p>After the first stage, the form automatically displays an indicative profile-readiness result and routes worth checking. It is based only on the selected answers and is not legal advice, an approval forecast or a decision on whether Samotsvet can take on the work.</p>
+            <p>The form does not make an automated decision about a visa or status and does not produce legal effects. A specialist provides the substantive assessment after reviewing the enquiry.</p>
           </section>
 
           <section>

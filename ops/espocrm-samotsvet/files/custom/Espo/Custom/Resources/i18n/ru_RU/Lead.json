@@ -1,0 +1,23 @@
+{
+  "fields": {
+    "cAssessmentId": "ID оценки",
+    "cAssessmentStage": "Этап анкеты",
+    "cAssessmentResult": "Предварительный результат",
+    "cRouteCandidates": "Маршруты для проверки",
+    "cFitScore": "Соответствие маршруту",
+    "cEvidenceScore": "Доказательства",
+    "cUrgencyScore": "Срочность",
+    "cReadinessScore": "Готовность",
+    "cTotalScore": "Общий балл",
+    "cTier": "Приоритет",
+    "cNextStep": "Следующий шаг",
+    "cFollowUpAt": "Ответить до",
+    "cFollowUpTaskCreated": "Задача на ответ создана"
+  },
+  "options": {
+    "cAssessmentStage": {
+      "Short": "Короткий этап",
+      "Detailed": "Подробный профиль"
+    }
+  }
+}

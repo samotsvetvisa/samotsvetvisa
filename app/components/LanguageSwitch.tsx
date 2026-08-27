@@ -7,8 +7,9 @@ import { withTrailingSlash } from "../site";
 export function LanguageSwitch() {
   const pathname = usePathname();
   const isEnglish = pathname.startsWith("/en");
-  const ruHref = isEnglish ? pathname.replace(/^\/en/, "") || "/" : pathname;
-  const enHref = isEnglish ? pathname : pathname === "/" ? "/en" : `/en${pathname}`;
+  const isNotFound = pathname.includes("_not-found");
+  const ruHref = isNotFound ? "/" : isEnglish ? pathname.replace(/^\/en/, "") || "/" : pathname;
+  const enHref = isNotFound ? "/en" : isEnglish ? pathname : pathname === "/" ? "/en" : `/en${pathname}`;
 
   return (
     <div className="language-switch" aria-label={isEnglish ? "Select language" : "Выбор языка"}>

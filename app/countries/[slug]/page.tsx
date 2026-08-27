@@ -38,10 +38,11 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
             <p className="eyebrow">{item.eyebrow}</p>
             <h1>{item.title}</h1>
             <p>{item.intro}</p>
-            {item.slug === "uk" ? <p className="country-track-record"><strong>Более 200 британских кейсов с 2021 года.</strong></p> : null}
+            {item.slug === "uk" ? <p className="country-track-record"><strong>Британское направление входит в основной фокус практики с 2021 года.</strong></p> : null}
             {price ? <><p className="country-price"><span>Ориентировочная стоимость: <strong>{price.price}</strong></span><span>Срок работы: <strong>{price.timelineRu}</strong></span></p>{"noteRu" in price ? <p className="country-price-note">{price.noteRu}</p> : null}</> : null}
-            <Link className="button button-primary" href={withTrailingSlash(`/assessment?country=${item.slug}`)}>Получить аудит профиля</Link>
+            <Link className="button button-primary" href={withTrailingSlash(`/assessment?country=${item.slug}`)}>Проверить этот маршрут</Link>
           </div>
+          {item.slug === "uk" ? <Link className="text-link criteria-country-link" href="/global-talent-criteria/">Открыть карту критериев Global Talent <span aria-hidden="true">↗</span></Link> : null}
         </section>
 
         <section className="section-shell country-routes">
@@ -78,7 +79,7 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
         </section>
 
         <section className="section-shell sources-block">
-          <div><p className="eyebrow">Первоисточники</p><h2>{item.headings.sources}</h2><p>{item.headings.sourcesNote}</p></div>
+          <div><p className="eyebrow">Первоисточники</p><h2>{item.headings.sources}</h2><p>{item.headings.sourcesNote}</p><p className="source-reviewed"><time dateTime="2026-08-27">Сверено по официальным источникам 27 августа 2026 года</time></p></div>
           <div>
             {item.official.map((source) => <a href={source.href} target="_blank" rel="noreferrer" key={source.href}>{source.label} <span>↗</span></a>)}
           </div>
@@ -88,7 +89,7 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
 
         <section className="section-shell closing-cta country-cta">
           <div><p className="eyebrow eyebrow-light">Следующий шаг</p><h2>{item.headings.closing}</h2></div>
-          <div><p>{item.headings.closingBody}</p><Link className="button button-gold" href={withTrailingSlash(`/assessment?country=${item.slug}`)}>Получить аудит профиля</Link></div>
+          <div><p>{item.headings.closingBody}</p><Link className="button button-gold" href={withTrailingSlash(`/assessment?country=${item.slug}`)}>Обсудить свою ситуацию</Link></div>
         </section>
       </main>
       <SiteFooter />

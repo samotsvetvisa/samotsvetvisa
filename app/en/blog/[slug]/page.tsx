@@ -36,7 +36,7 @@ export default async function EnglishArticlePage({ params }: { params: Promise<{
               <div>{article.sources.map((source) => <a href={source.href} key={source.href} target="_blank" rel="noreferrer">{source.label}<span aria-hidden="true">↗</span></a>)}</div>
             </section>
           )}
-          <aside><p>Would an initial review help?</p><Link href={`/en/countries/${article.relatedCountry}/`}>View route</Link><Link href="/en/assessment/">Request a review</Link></aside>
+          <aside><p>Would you like to apply this to your circumstances?</p><Link href={`/en/countries/${article.relatedCountry}/`}>View route</Link><Link href="/en/assessment/">Ask about your circumstances</Link></aside>
           <section className="article-author" id="article-author" aria-label="About the author"><div className="article-author-photo"><img src="/nikita-founder-white-v3.webp" alt="Nikita Samotsvetov" width="180" height="220" /></div><div><p className="article-author-label">Author</p><h2><Link href="/en/about/#nikita">Nikita Samotsvetov</Link></h2><p>Founder and practice lead at Samotsvet. Nikita is responsible for the methodology, source review and quality control.</p></div></section>
         </div>
       </article>

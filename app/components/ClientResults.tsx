@@ -2,38 +2,30 @@ type Locale = "ru" | "en";
 
 const copy = {
   ru: {
-    eyebrow: "Опыт и результаты",
-    title: "Опыт команды с 2021 года",
-    intro: "Совокупный опыт команды Samotsvet включает более 10 000 разобранных профессиональных профилей и более 800 успешно завершенных кейсов. Часть проектов мы вели целиком, к части подключались как партнер других агентств. Более 200 дел были связаны с Великобританией.",
+    eyebrow: "Практика в цифрах",
+    title: "Более 10 000 разобранных профилей",
+    intro: "С 2021 года мы разбирали собственные проекты, работали с агентствами и сравнивали варианты переезда для разных профессиональных и семейных ситуаций.",
     metrics: [
       ["10 000+", "профессиональных профилей разобрано"],
-      ["800+", "завершенных кейсов в опыте команды"],
-      ["200+", "британских дел"],
+      ["14", "стран входили в сравнительный разбор"],
+      ["с 2021", "накапливается практический опыт"],
     ],
-    casesTitle: "Что будет показано в каждом кейсе",
-    cases: [
-      ["Исходная точка", "Профиль клиента, цель, ограничения и доказательства на старте."],
-      ["Проделанная работа", "Какие пробелы нашли, что пришлось наработать и как был собран пакет."],
-      ["Результат", "Маршрут, срок, решение и выводы, которые могут быть полезны другим клиентам."],
-    ],
-    note: "Раздел подготовлен для фотографий и историй клиентов. Первые именные кейсы будут добавлены после получения согласий.",
+    casesTitle: "",
+    cases: [],
+    note: "",
   },
   en: {
-    eyebrow: "Experience and outcomes",
-    title: "Team experience since 2021",
-    intro: "The Samotsvet team's combined experience includes more than 10,000 professional profile reviews and over 800 successfully completed matters. We led some projects in full and joined others as a partner to immigration agencies. More than 200 were UK matters.",
+    eyebrow: "Practice in figures",
+    title: "More than 10,000 profiles reviewed",
+    intro: "Since 2021, we have reviewed direct projects, worked with agencies and compared routes for different professional and family circumstances.",
     metrics: [
       ["10,000+", "professional profiles reviewed"],
-      ["800+", "completed matters in the team's experience"],
-      ["200+", "UK matters"],
+      ["14", "countries included in route comparisons"],
+      ["since 2021", "practical experience accumulated"],
     ],
-    casesTitle: "What each client story will show",
-    cases: [
-      ["Starting point", "The client profile, objective, constraints and evidence available at the outset."],
-      ["Work completed", "The gaps identified, the profile development required and how the evidence was assembled."],
-      ["Outcome", "The route, timing, decision and practical conclusions for other applicants."],
-    ],
-    note: "This section is ready for client photographs and individual stories. The first named cases will be added once permission has been obtained.",
+    casesTitle: "",
+    cases: [],
+    note: "",
   },
 } satisfies Record<Locale, {
   eyebrow: string;

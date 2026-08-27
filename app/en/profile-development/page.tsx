@@ -46,7 +46,7 @@ export default function EnglishProfileDevelopmentPage() {
 
         <section className="section-shell closing-cta">
           <div><p className="eyebrow eyebrow-light">First step</p><h2>We begin with the profile and available evidence</h2></div>
-          <div><p>After the assessment, we set out the scope, indicative timing and programme fee.</p><Link className="button button-gold" href="/en/assessment/">Get a profile assessment</Link></div>
+          <div><p>After the assessment, we set out the scope, indicative timing and programme fee.</p><Link className="button button-gold" href="/en/assessment/">Request a preparation plan</Link></div>
         </section>
       </main>
       <SiteFooter locale="en" />

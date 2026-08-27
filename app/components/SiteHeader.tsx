@@ -23,12 +23,25 @@ export function SiteHeader({ locale = "ru" }: { locale?: "ru" | "en" }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [headerHidden, setHeaderHidden] = useState(false);
   const [showStickyAudit, setShowStickyAudit] = useState(false);
+  const [closingAreaVisible, setClosingAreaVisible] = useState(false);
 
   useEffect(() => {
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = menuOpen ? "hidden" : previousOverflow;
     return () => { document.body.style.overflow = previousOverflow; };
   }, [menuOpen]);
+
+  useEffect(() => {
+    const elements = Array.from(document.querySelectorAll(".closing-cta, .site-footer"));
+    if (!elements.length || !("IntersectionObserver" in window)) return;
+    const visible = new Set<Element>();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => entry.isIntersecting ? visible.add(entry.target) : visible.delete(entry.target));
+      setClosingAreaVisible(visible.size > 0);
+    }, { rootMargin: "0px 0px -10% 0px", threshold: 0.05 });
+    elements.forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, [pathname]);
 
   useEffect(() => {
     function closeOnEscape(event: KeyboardEvent) {
@@ -75,13 +88,14 @@ export function SiteHeader({ locale = "ru" }: { locale?: "ru" | "en" }) {
           </Link>
           <nav className="desktop-nav" aria-label={isEnglish ? "Primary navigation" : "Главная навигация"}>
             <HashLink href={withTrailingSlash(`${base}/#directions`)}>{isEnglish ? "Destinations" : "Направления"}</HashLink>
+            <HashLink href={withTrailingSlash(`${base}/#services`)}>{isEnglish ? "Services" : "Услуги"}</HashLink>
             <HashLink href={withTrailingSlash(`${base}/#process`)}>{isEnglish ? "How we work" : "Как работаем"}</HashLink>
-            <HashLink href={withTrailingSlash(`${base}/#results`)}>{isEnglish ? "Results" : "Результаты"}</HashLink>
+            <HashLink href={withTrailingSlash(`${base}/#results`)}>{isEnglish ? "Experience" : "Опыт"}</HashLink>
             <Link href={withTrailingSlash(`${base}/blog`)}>{isEnglish ? "Insights" : "Блог"}</Link>
             <Link href={withTrailingSlash(`${base}/about`)}>{isEnglish ? "About" : "О нас"}</Link>
           </nav>
           <LanguageSwitch />
-          <Link className="header-cta" href={assessmentPath}>{isEnglish ? "Profile assessment" : "Аудит профиля"}</Link>
+          <Link className="header-cta" href={assessmentPath}>{isEnglish ? "Assess profile" : "Оценить профиль"}</Link>
           <button
             className={`mobile-menu-toggle${menuOpen ? " is-open" : ""}`}
             type="button"
@@ -109,24 +123,25 @@ export function SiteHeader({ locale = "ru" }: { locale?: "ru" | "en" }) {
           </div>
           <div className="mobile-menu-secondary">
             <HashLink href={withTrailingSlash(`${base}/#process`)} afterNavigate={closeMenu}>{isEnglish ? "How we work" : "Как работаем"}</HashLink>
+            <HashLink href={withTrailingSlash(`${base}/#services`)} afterNavigate={closeMenu}>{isEnglish ? "Services" : "Услуги"}</HashLink>
             <Link href={withTrailingSlash(`${base}/blog`)} onClick={closeMenu}>{isEnglish ? "Insights" : "Блог"}</Link>
             <Link href={withTrailingSlash(`${base}/about`)} onClick={closeMenu}>{isEnglish ? "About" : "О нас"}</Link>
             <Link href={withTrailingSlash(`${base}/contacts`)} onClick={closeMenu}>{isEnglish ? "Contact" : "Контакты"}</Link>
           </div>
           <Link className="button button-primary mobile-menu-audit" href={assessmentPath} onClick={closeMenu}>
-            {isEnglish ? "Get a profile assessment" : "Получить аудит профиля"}
+            {isEnglish ? "Get a preliminary assessment" : "Получить предварительную оценку"}
           </Link>
         </nav>
       </div>
 
       {!isAssessmentPage ? (
         <Link
-          className={`mobile-sticky-audit${showStickyAudit && !menuOpen ? " is-visible" : ""}`}
+          className={`mobile-sticky-audit${showStickyAudit && !menuOpen && !closingAreaVisible ? " is-visible" : ""}`}
           href={assessmentPath}
-          aria-hidden={!showStickyAudit || menuOpen}
-          tabIndex={showStickyAudit && !menuOpen ? 0 : -1}
+          aria-hidden={!showStickyAudit || menuOpen || closingAreaVisible}
+          tabIndex={showStickyAudit && !menuOpen && !closingAreaVisible ? 0 : -1}
         >
-          {isEnglish ? "Get a profile assessment" : "Получить аудит профиля"}
+          {isEnglish ? "Get a preliminary assessment" : "Получить предварительную оценку"}
           <span aria-hidden="true">→</span>
         </Link>
       ) : null}

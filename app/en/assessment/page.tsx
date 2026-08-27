@@ -5,8 +5,8 @@ import { SiteHeader } from "../../components/SiteHeader";
 import { pageMetadata } from "../../site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Profile assessment",
-  description: "A short enquiry form for an analysis of your starting profile and a proposed preparation plan.",
+  title: "Preliminary profile and route assessment",
+  description: "A short assessment of potential immigration routes, present profile readiness and the next preparation step.",
   path: "/en/assessment",
   locale: "en",
 });
@@ -17,11 +17,11 @@ export default function EnglishAssessmentPage() {
       <SiteHeader locale="en" />
       <main>
         <section className="inner-hero section-shell assessment-hero">
-          <div><p className="eyebrow">Profile assessment</p><h1>A short form — about five minutes</h1></div>
-          <p>We will review the enquiry and reply within 24 hours. The response covers a preliminary route comparison, the starting profile and a suitable working format.</p>
+          <div><p className="eyebrow">Preliminary assessment</p><h1>Start with a 2–3 minute screening</h1></div>
+          <p>You will immediately see which directions are worth checking and the present profile readiness. You can then add detail for a substantive team reply within one business day.</p>
         </section>
         <section className="section-shell assessment-layout">
-          <aside><span>What happens next</span><ol><li>We compare the objective with the available routes.</li><li>We review the starting profile and evidence.</li><li>We identify the gaps and a preliminary sequence of work.</li><li>We propose the next stage and working format.</li></ol></aside>
+          <aside><span>What you receive</span><ol><li>Directions worth examining.</li><li>A readiness assessment without a spurious percentage.</li><li>A view of what can already be evidenced.</li><li>A plan where no publications exist at the outset.</li></ol></aside>
           <AssessmentForm locale="en" />
         </section>
       </main>

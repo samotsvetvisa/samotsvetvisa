@@ -9,8 +9,8 @@ export const metadata: Metadata = pageMetadata({ title: "Working terms", descrip
 export default function EnglishLegalPage() {
   return (
     <><SiteHeader locale="en" /><main><article className="legal-page section-shell">
-      <p className="eyebrow">Terms of work</p><h1>Working terms</h1><p className="legal-updated">Version dated 19 August 2026</p>
-      <section><h2>1. Service provider</h2><p>Project services under the Samotsvet brand are provided by individual entrepreneur Nikita Andreevich Samotsvetov, OGRNIP 323670000016524, INN 672200624836, registered in the Russian Federation. The full address and contact channels appear on the <Link href="/en/contacts/">Contact and company details</Link> page.</p></section>
+      <p className="eyebrow">Terms of work</p><h1>Working terms</h1><p className="legal-updated">Version dated 27 August 2026</p>
+      <section><h2>1. Service provider</h2><p>Project services under the Samotsvet brand are provided by individual entrepreneur Nikita Andreevich Samotsvetov, OGRNIP 323670000016524, INN 672200624836, registered in the Russian Federation. Current contact channels and registration details appear on the <Link href="/en/contacts/">Contact and company details</Link> page.</p></section>
       <section><h2>2. Full-cycle agency</h2><p>{SERVICE_MODEL_EN}</p></section>
       <section><h2>3. Project team</h2><p>The team is built around the destination, route and starting profile. Samotsvet brings in attorneys, regulated immigration professionals, translators, public-profile specialists and other contractors while maintaining one plan and centralised project management.</p></section>
       <section><h2>4. Partner network</h2><p>Samotsvet brings in specialist professionals and contractors for particular project tasks. They work within a single plan, while we remain responsible for co-ordination and the overall delivery.</p></section>

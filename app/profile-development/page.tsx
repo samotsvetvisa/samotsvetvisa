@@ -45,7 +45,7 @@ export default function ProfileDevelopmentPage() {
 
         <section className="section-shell closing-cta">
           <div><p className="eyebrow eyebrow-light">Первый шаг</p><h2>Начнем с аудита профиля и доступных доказательств</h2></div>
-          <div><p>После анализа зафиксируем объем работы, ориентир по срокам и стоимость программы.</p><Link className="button button-gold" href="/assessment/">Получить аудит профиля</Link></div>
+          <div><p>После анализа зафиксируем объем работы, ориентир по срокам и стоимость программы.</p><Link className="button button-gold" href="/assessment/">Получить план подготовки</Link></div>
         </section>
       </main>
       <SiteFooter />

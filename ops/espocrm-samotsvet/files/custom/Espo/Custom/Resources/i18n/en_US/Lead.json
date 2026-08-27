@@ -1,0 +1,23 @@
+{
+  "fields": {
+    "cAssessmentId": "Assessment ID",
+    "cAssessmentStage": "Assessment stage",
+    "cAssessmentResult": "Preliminary result",
+    "cRouteCandidates": "Routes to review",
+    "cFitScore": "Route fit",
+    "cEvidenceScore": "Evidence",
+    "cUrgencyScore": "Urgency",
+    "cReadinessScore": "Readiness",
+    "cTotalScore": "Total score",
+    "cTier": "Priority tier",
+    "cNextStep": "Next step",
+    "cFollowUpAt": "Reply by",
+    "cFollowUpTaskCreated": "Reply task created"
+  },
+  "options": {
+    "cAssessmentStage": {
+      "Short": "Short stage",
+      "Detailed": "Detailed profile"
+    }
+  }
+}

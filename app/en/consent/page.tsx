@@ -19,8 +19,8 @@ export default function EnglishConsentPage() {
         <article className="legal-page section-shell privacy-page">
           <p className="eyebrow">Personal data</p>
           <h1>Consent to the processing of personal data</h1>
-          <p className="legal-updated">Version dated 19 August 2026</p>
-          <p className="legal-intro">By selecting the separate checkbox below the enquiry form and submitting it, you freely give this consent.</p>
+          <p className="legal-updated">Version dated 27 August 2026</p>
+          <p className="legal-intro">By selecting the separate checkbox and submitting the first stage of the enquiry form, you freely give this consent.</p>
 
           <section>
             <h2>1. Controller</h2>
@@ -46,7 +46,7 @@ export default function EnglishConsentPage() {
             <h2>3. Purposes</h2>
             <ul>
               <li>to respond and conduct an initial review;</li>
-              <li>to compare the starting position with possible routes and propose the next stage;</li>
+              <li>to display an automated preliminary screening result, compare the starting position with possible routes and propose the next stage;</li>
               <li>to prepare an individual proposal and take pre-contractual steps;</li>
               <li>to understand the enquiry source, secure the form and protect lawful rights.</li>
             </ul>
@@ -60,7 +60,8 @@ export default function EnglishConsentPage() {
 
           <section>
             <h2>5. Recipients and location of the primary record</h2>
-            <p>The user&apos;s browser sends the form directly to the Samotsvet CRM at <code>crm.samotsvetvisa.com</code>. The initial record is stored on a server in Russia and may be accessed by authorised Samotsvet personnel and contractors to the extent required to answer the enquiry.</p>
+            <p>The preliminary result is first calculated locally in the browser. After the user makes a separate choice, the browser sends one version of the profile to the Samotsvet CRM at <code>crm.samotsvetvisa.com</code>: either the short version or the version completed with second-stage detail. The primary record is created on a server in Russia. Authorised Samotsvet personnel and contractors may access the enquiry to the extent required to respond.</p>
+            <p>The preliminary result displayed on the site is not legal advice, an approval forecast or an automated decision producing legal effects.</p>
             <p>Case material is sent to a foreign lawyer, regulated adviser, translator or other professional only after the applicable legal basis has been established and any required notice, consent and contractual steps have been completed.</p>
           </section>
 

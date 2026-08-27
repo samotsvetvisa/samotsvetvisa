@@ -7,7 +7,8 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/postprocess-static-html.mjs",
+    "check:static": "node scripts/check-static-links.mjs",
     "start": "next start",
     "lint": "eslint . --ignore-pattern .next --ignore-pattern out"
   },

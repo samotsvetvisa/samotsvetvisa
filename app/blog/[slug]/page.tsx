@@ -71,9 +71,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               </section>
             )}
             <aside>
-              <p>Нужен аудит профиля?</p>
+              <p>Нужно применить это к Вашей ситуации?</p>
               <Link href={`/countries/${article.relatedCountry}/`}>Посмотреть маршрут</Link>
-              <Link href="/assessment/">Получить аудит профиля</Link>
+              <Link href="/assessment/">Задать вопрос по своей ситуации</Link>
             </aside>
             <section className="article-author" id="article-author" aria-label="Об авторе">
               <div className="article-author-photo"><img src="/nikita-founder-white-v3.webp" alt="Никита Самоцветов" width="180" height="220" /></div>
