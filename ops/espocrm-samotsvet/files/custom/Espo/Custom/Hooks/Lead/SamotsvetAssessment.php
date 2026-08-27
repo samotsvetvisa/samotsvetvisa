@@ -36,6 +36,13 @@ final class SamotsvetAssessment
         'cReferrer',
         'cConsentAt',
         'cPrivacyVersion',
+        'cAssessmentResult',
+        'cRouteCandidates',
+        'cFitScore',
+        'cEvidenceScore',
+        'cUrgencyScore',
+        'cReadinessScore',
+        'cNextStep',
     ];
 
     public function __construct(private EntityManager $entityManager)
@@ -72,14 +79,15 @@ final class SamotsvetAssessment
         }
 
         if ($lead->get('cAssessmentStage') === 'Detailed') {
-            $this->mergeDetailedStage($lead, $assessmentId);
-            return;
+            if ($this->mergeDetailedStage($lead, $assessmentId)) {
+                return;
+            }
         }
 
         $this->scheduleReply($lead, $assessmentId);
     }
 
-    private function mergeDetailedStage(Entity $supplement, string $assessmentId): void
+    private function mergeDetailedStage(Entity $supplement, string $assessmentId): bool
     {
         $lead = $this->entityManager
             ->getRDBRepository('Lead')
@@ -91,7 +99,7 @@ final class SamotsvetAssessment
             ->findOne();
 
         if (!$lead) {
-            return;
+            return false;
         }
 
         foreach (self::DETAIL_FIELDS as $field) {
@@ -105,6 +113,8 @@ final class SamotsvetAssessment
         $lead->set('cAssessmentStage', 'Detailed');
         $this->entityManager->saveEntity($lead, [SaveOption::SKIP_HOOKS => true]);
         $this->entityManager->removeEntity($supplement);
+
+        return true;
     }
 
     private function scheduleReply(Entity $lead, string $assessmentId): void
@@ -125,7 +135,7 @@ final class SamotsvetAssessment
 
         try {
             $this->entityManager->createEntity('Task', [
-                'name' => "Ответить на предварительную оценку {$assessmentId}",
+                'name' => "Ответить на аудит профиля {$assessmentId}",
                 'status' => 'Not Started',
                 'priority' => 'Normal',
                 'dateEnd' => $dueAt,

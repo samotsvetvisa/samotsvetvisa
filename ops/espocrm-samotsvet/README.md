@@ -1,8 +1,8 @@
-# Samotsvet Assessment Pipeline 1.0.0
+# Samotsvet Assessment Pipeline 1.1.0
 
-EspoCRM extension for the Samotsvet two-stage preliminary assessment.
+EspoCRM extension for the Samotsvet profile audit.
 
-It adds assessment fields, calculates an internal 0–12 operational score, assigns Tier A/B/C, joins the detailed stage to the original Lead by `cAssessmentId`, and creates a next-business-day reply task.
+It adds audit fields, calculates an internal 0–12 operational score, assigns Tier A/B/C and creates a next-business-day reply task. The live form sends one complete Lead only after the visitor requests a team review. Backward-compatible merging by `cAssessmentId` remains available for earlier two-stage forms.
 
 ## Build
 
@@ -16,7 +16,7 @@ Create the ZIP from the contents of this directory, keeping `manifest.json` and 
 4. Run `Administration → Rebuild`.
 5. Add the new fields to Lead Detail/List layouts.
 6. Add the new input fields to the active Lead Capture record's Payload Fields.
-7. Submit one marked test assessment and confirm that the detailed stage updates the original Lead.
+7. Submit one clearly marked test audit and confirm that one Lead and one reply task are created.
 
 The operational score is not a visa approval probability and must not be presented as one.
 

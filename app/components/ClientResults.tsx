@@ -3,9 +3,10 @@ type Locale = "ru" | "en";
 const copy = {
   ru: {
     eyebrow: "Практика в цифрах",
-    title: "Более 10 000 разобранных профилей",
-    intro: "С 2021 года мы разбирали собственные проекты, работали с агентствами и сравнивали варианты переезда для разных профессиональных и семейных ситуаций.",
+    title: "800+ кейсов и 10 000+ разобранных профилей",
+    intro: "С 2021 года мы завершили более 800 клиентских кейсов и разобрали более 10 000 профессиональных профилей — напрямую и в работе с агентствами.",
     metrics: [
+      ["800+", "завершённых клиентских кейсов"],
       ["10 000+", "профессиональных профилей разобрано"],
       ["14", "стран входили в сравнительный разбор"],
       ["с 2021", "накапливается практический опыт"],
@@ -16,9 +17,10 @@ const copy = {
   },
   en: {
     eyebrow: "Practice in figures",
-    title: "More than 10,000 profiles reviewed",
-    intro: "Since 2021, we have reviewed direct projects, worked with agencies and compared routes for different professional and family circumstances.",
+    title: "800+ matters and 10,000+ profiles reviewed",
+    intro: "Since 2021, we have completed more than 800 client matters and reviewed more than 10,000 professional profiles, both directly and through agency work.",
     metrics: [
+      ["800+", "completed client matters"],
       ["10,000+", "professional profiles reviewed"],
       ["14", "countries included in route comparisons"],
       ["since 2021", "practical experience accumulated"],

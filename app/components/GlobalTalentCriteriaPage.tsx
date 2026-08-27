@@ -45,8 +45,8 @@ const copy = {
     sourceTitle: "Официальные источники",
     sourceNote: "Требования могут измениться. Перед подачей нужно заново проверить действующие страницы GOV.UK и инструкции endorsing body.",
     ctaTitle: "Разложим Ваш опыт по карте без псевдопроцента",
-    ctaBody: "Предварительная оценка покажет, какие основания стоит проверить, что уже можно подтвердить и где нужен план развития профиля.",
-    cta: "Получить предварительную оценку",
+    ctaBody: "Аудит профиля покажет, какие основания стоит проверить, что уже можно подтвердить и где нужен план развития профиля.",
+    cta: "Пройти аудит профиля",
   },
   en: {
     eyebrow: "Open methodology",
@@ -87,8 +87,8 @@ const copy = {
     sourceTitle: "Official sources",
     sourceNote: "Requirements can change. Re-check the current GOV.UK pages and endorsing-body guidance before filing.",
     ctaTitle: "Map your experience without a spurious percentage",
-    ctaBody: "The preliminary assessment identifies grounds worth testing, evidence already available and areas requiring a profile-development plan.",
-    cta: "Get a preliminary assessment",
+    ctaBody: "The profile audit identifies grounds worth testing, evidence already available and areas requiring a profile-development plan.",
+    cta: "Start profile audit",
   },
 } as const;
 

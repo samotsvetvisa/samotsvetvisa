@@ -66,7 +66,7 @@ export default function EnglishPrivacyPage() {
 
           <section>
             <h2>5. Source of data and required fields</h2>
-            <p>Data normally comes directly from the person submitting the enquiry. The preliminary result requires a name, contact method, intended destination or comparison request, profile type and level, current level of external evidence, timing and consent confirmation. The result is first calculated locally in the browser. One version chosen by the user is then sent to the CRM: either the short profile or the profile completed with second-stage detail. Additional information is voluntary unless a field is clearly marked as required.</p>
+            <p>Data normally comes directly from the person submitting the enquiry. The audit result uses answers about the professional objective, field, experience, role, measurable impact, independent evidence and timing. These answers are processed locally in the browser and are not sent to the controller. Only if the user separately requests a team review do they provide contact details, additional context and consent; one completed enquiry is then sent to the CRM.</p>
           </section>
 
           <section>
@@ -125,7 +125,7 @@ export default function EnglishPrivacyPage() {
 
           <section>
             <h2>12. Automated decisions</h2>
-            <p>After the first stage, the form automatically displays an indicative profile-readiness result and routes worth checking. It is based only on the selected answers and is not legal advice, an approval forecast or a decision on whether Samotsvet can take on the work.</p>
+            <p>The form automatically compares answers about career foundation, impact and evidence across several programmes. A preferred country does not determine the result. The output is not legal advice, an approval forecast or a decision on whether Samotsvet can take on the work.</p>
             <p>The form does not make an automated decision about a visa or status and does not produce legal effects. A specialist provides the substantive assessment after reviewing the enquiry.</p>
           </section>
 

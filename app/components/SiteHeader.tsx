@@ -95,7 +95,7 @@ export function SiteHeader({ locale = "ru" }: { locale?: "ru" | "en" }) {
             <Link href={withTrailingSlash(`${base}/about`)}>{isEnglish ? "About" : "О нас"}</Link>
           </nav>
           <LanguageSwitch />
-          <Link className="header-cta" href={assessmentPath}>{isEnglish ? "Assess profile" : "Оценить профиль"}</Link>
+          <Link className="header-cta" href={assessmentPath}>{isEnglish ? "Profile audit" : "Аудит профиля"}</Link>
           <button
             className={`mobile-menu-toggle${menuOpen ? " is-open" : ""}`}
             type="button"
@@ -129,7 +129,7 @@ export function SiteHeader({ locale = "ru" }: { locale?: "ru" | "en" }) {
             <Link href={withTrailingSlash(`${base}/contacts`)} onClick={closeMenu}>{isEnglish ? "Contact" : "Контакты"}</Link>
           </div>
           <Link className="button button-primary mobile-menu-audit" href={assessmentPath} onClick={closeMenu}>
-            {isEnglish ? "Get a preliminary assessment" : "Получить предварительную оценку"}
+            {isEnglish ? "Start profile audit" : "Пройти аудит профиля"}
           </Link>
         </nav>
       </div>
@@ -141,7 +141,7 @@ export function SiteHeader({ locale = "ru" }: { locale?: "ru" | "en" }) {
           aria-hidden={!showStickyAudit || menuOpen || closingAreaVisible}
           tabIndex={showStickyAudit && !menuOpen && !closingAreaVisible ? 0 : -1}
         >
-          {isEnglish ? "Get a preliminary assessment" : "Получить предварительную оценку"}
+          {isEnglish ? "Start profile audit" : "Пройти аудит профиля"}
           <span aria-hidden="true">→</span>
         </Link>
       ) : null}

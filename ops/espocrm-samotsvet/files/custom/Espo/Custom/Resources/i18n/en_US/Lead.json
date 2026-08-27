@@ -2,9 +2,9 @@
   "fields": {
     "cAssessmentId": "Assessment ID",
     "cAssessmentStage": "Assessment stage",
-    "cAssessmentResult": "Preliminary result",
-    "cRouteCandidates": "Routes to review",
-    "cFitScore": "Route fit",
+    "cAssessmentResult": "Profile audit result",
+    "cRouteCandidates": "Programmes to review",
+    "cFitScore": "Career foundation",
     "cEvidenceScore": "Evidence",
     "cUrgencyScore": "Urgency",
     "cReadinessScore": "Readiness",
@@ -16,8 +16,8 @@
   },
   "options": {
     "cAssessmentStage": {
-      "Short": "Short stage",
-      "Detailed": "Detailed profile"
+      "Short": "Local result",
+      "Detailed": "Sent for review"
     }
   }
 }

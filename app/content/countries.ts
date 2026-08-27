@@ -106,7 +106,7 @@ export const countries: CountryPageData[] = [
       risks: "Где чаще всего рассыпается комплект по DNV",
       team: "Испанский проект: от договора до TIE",
       sources: "Первоисточники по Digital Nomad Visa",
-      sourcesNote: "Проверяйте отдельно закон, требования UGE и правила выбранного консульства: комплект и результат зависят от места подачи.",
+      sourcesNote: "Проверяйте отдельно закон, требования подразделения по крупным компаниям и стратегическим категориям (Unidad de Grandes Empresas y Colectivos Estratégicos, UGE) и правила выбранного консульства: комплект и результат зависят от места подачи.",
       closing: "Проверим доход, договор и историю отношений с заказчиком",
       closingBody: "До переводов и апостилей сопоставим схему работы, выплаты, страхование и семейные документы.",
     },
@@ -127,7 +127,7 @@ export const countries: CountryPageData[] = [
     regulatory: "Samotsvet ведет подготовку целиком: проверяет договоры, обязанности, платежи, страхование и семейный комплект, организует переводы и сопровождает подачу до решения.",
     official: [
       { label: "Ministerio de Inclusión: Teletrabajadores", href: "https://www.inclusion.gob.es/web/unidadgrandesempresas/teletrabajadores" },
-      { label: "UGE: Autorizaciones y requisitos", href: "https://www.inclusion.gob.es/web/unidadgrandesempresas/autorizaciones-y-requisitos" },
+      { label: "Испанское подразделение UGE: разрешения и требования", href: "https://www.inclusion.gob.es/web/unidadgrandesempresas/autorizaciones-y-requisitos" },
       { label: "BOE: Ley 14/2013", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074" },
     ],
     processing: {
@@ -135,10 +135,10 @@ export const countries: CountryPageData[] = [
       headers: ["Сценарий", "Срок", "Результат и особенности"],
       rows: [
         ["Через консульство", "Нормативно 10 рабочих дней", "На практике срок зависит от консульства и проверок. Результат — виза сроком до 1 года"],
-        ["Через UGE из Испании", "Нормативно 20 дней", "Запросы дополнительных документов увеличивают фактический срок. Результат — разрешение на 3 года; действует положительное административное молчание"],
+        ["Из Испании через подразделение UGE", "Нормативно 20 дней", "UGE — подразделение Министерства по крупным компаниям и стратегическим категориям. Запросы дополнительных документов увеличивают фактический срок. Результат — разрешение на 3 года; действует положительное административное молчание"],
         ["TIE после одобрения", "В течение 30 дней", "Подается заявление на оформление карты иностранца"],
       ],
-      note: "Обратиться через UGE можно при законном нахождении в Испании, в том числе в пределах разрешенного срока туристического пребывания. Ключевое условие — законный статус на дату подачи.",
+      note: "Подать заявление через подразделение UGE можно при законном нахождении в Испании, в том числе в пределах разрешённого срока туристического пребывания. Ключевое условие — законный статус на дату подачи.",
     },
   },
   {
@@ -216,9 +216,9 @@ export const countries: CountryPageData[] = [
     important: {
       title: "Что важно для граждан России",
       paragraphs: [
-        "По Visa Bulletin за сентябрь 2026 года EB-1 и EB-2 доступны без очереди по приоритетной дате для All Chargeability Areas Except Those Listed. Однако это не отменяет отдельное решение Госдепартамента: с 21 января 2026 года выдача иммиграционных виз гражданам России приостановлена.",
-        "Подача документов и интервью могут продолжаться. Исключение предусмотрено для двойных граждан, которые подают заявление по действительному паспорту страны, не включенной в список. Уже выданные визы этим решением не аннулированы.",
-        "EB-1A и NIW при консульской процедуре относятся к иммиграционным визам. O-1 и E-2 — неиммиграционные категории и этой конкретной приостановкой не охвачены. Место интервью определяется по гражданству или месту проживания; adjustment of status внутри США нужно анализировать отдельно от консульской выдачи.",
+        "21 января 2026 года Госдепартамент приостановил выдачу иммиграционных виз гражданам России и ещё 74 стран. Заявления и интервью могли продолжаться, но финальная выдача визы была остановлена. Эта мера не относилась ко всем грин-картам внутри США и не охватывала O-1 или E-2.",
+        "21 августа федеральный окружной суд Нью-Йорка признал политику незаконной и отменил её полностью. Это решение суда первой инстанции, а не Верховного суда США. Суд также отменил отказы, основанные только на этой политике.",
+        "На 26 августа практическое исполнение оставалось спорным: заявители сообщили суду о продолжающейся паузе и отменённых интервью. Поэтому мы не пишем, что выдача безусловно возобновилась, и проверяем фактическую работу конкретного консульского поста перед планированием этапа EB-1A или NIW.",
       ],
     },
     official: [
@@ -228,6 +228,8 @@ export const countries: CountryPageData[] = [
       { label: "USCIS: Premium Processing", href: "https://www.uscis.gov/forms/all-forms/how-do-i-request-premium-processing" },
       { label: "State Department: E visas", href: "https://travel.state.gov/content/travel/en/us-visas/employment/treaty-trader-investor-visa-e.html" },
       { label: "State Department: приостановка выдачи иммиграционных виз", href: "https://travel.state.gov/content/travel/en/News/visas-news/immigrant-visa-processing-updates-for-nationalities-at-high-risk-of-public-benefits-usage.html" },
+      { label: "Федеральный суд: решение от 21 августа 2026 года", href: "https://media.nilc.org/2026/04/CLINIC-v-Rubio-partial-MSJ-decision-08-21-2026.pdf" },
+      { label: "CLINIC v. Rubio: материалы дела и статус исполнения", href: "https://www.nilc.org/litigation/clinic-v-rubio/" },
       { label: "State Department: Visa Bulletin за сентябрь 2026", href: "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2026/visa-bulletin-for-september-2026.html" },
       { label: "State Department: место подачи на неиммиграционную визу", href: "https://travel.state.gov/content/travel/en/News/visas-news/adjudicating-niv-applicants-in-their-country-of-residence.html" },
       { label: "State Department: место подачи на иммиграционную визу", href: "https://travel.state.gov/content/travel/en/News/visas-news/adjudicating-iv-applicants-in-their-country-of-residence.html" },

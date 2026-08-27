@@ -83,7 +83,7 @@ export const countriesEn: CountryPageData[] = [
       risks: "Where a DNV document set most often breaks down",
       team: "A Spanish project from the contract through to the TIE",
       sources: "Primary sources for the Digital Nomad Visa",
-      sourcesNote: "Check the legislation, UGE requirements and the rules of the chosen consulate separately: the evidence and outcome depend on the place of filing.",
+      sourcesNote: "Check the legislation, the requirements of Spain's Large Companies and Strategic Groups Unit (Unidad de Grandes Empresas y Colectivos Estratégicos, UGE) and the chosen consulate separately: evidence and outcome depend on the place of filing.",
       closing: "Check the income, contract and history of the working relationship",
       closingBody: "Before translation and apostille, we compare the working model, payments, insurance and family documents.",
     },
@@ -104,7 +104,7 @@ export const countriesEn: CountryPageData[] = [
     regulatory: "Samotsvet leads the preparation end to end: contracts, duties, payments, insurance, family documents, translations and the filing process through to the decision.",
     official: [
       { label: "Ministerio de Inclusión: Teletrabajadores", href: "https://www.inclusion.gob.es/web/unidadgrandesempresas/teletrabajadores" },
-      { label: "UGE: Autorizaciones y requisitos", href: "https://www.inclusion.gob.es/web/unidadgrandesempresas/autorizaciones-y-requisitos" },
+      { label: "Spain's UGE unit: authorisations and requirements", href: "https://www.inclusion.gob.es/web/unidadgrandesempresas/autorizaciones-y-requisitos" },
       { label: "BOE: Ley 14/2013", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074" },
     ],
     processing: {
@@ -112,10 +112,10 @@ export const countriesEn: CountryPageData[] = [
       headers: ["Route", "Time", "Outcome and detail"],
       rows: [
         ["Through a consulate", "Statutory period: 10 business days", "The practical period depends on the consulate and any checks. The result is a visa valid for up to one year"],
-        ["Through UGE from Spain", "Statutory period: 20 days", "Further-document requests extend the practical period. The result is a three-year authorisation; positive administrative silence applies"],
+        ["From Spain through the UGE unit", "Statutory period: 20 days", "UGE is the ministry unit for large companies and strategic groups. Further-document requests extend the practical period. The result is a three-year authorisation; positive administrative silence applies"],
         ["TIE after approval", "Within 30 days", "The application for the foreigner's identity card is filed after approval"],
       ],
-      note: "An applicant may use UGE while legally present in Spain, including within a permitted tourist stay. The key condition is lawful status on the filing date.",
+      note: "An applicant may file through the UGE unit while legally present in Spain, including during a permitted tourist stay. The key condition is lawful status on the filing date.",
     },
   },
   {
@@ -193,9 +193,9 @@ export const countriesEn: CountryPageData[] = [
     important: {
       title: "Important for Russian citizens",
       paragraphs: [
-        "In the September 2026 Visa Bulletin, EB-1 and EB-2 are current for All Chargeability Areas Except Those Listed. That does not override a separate Department of State measure: issuance of immigrant visas to Russian nationals has been paused since 21 January 2026.",
-        "Applications and interviews may continue. Dual nationals applying with a valid passport of a country not on the list are exempt, and visas already issued were not revoked by this measure.",
-        "EB-1A and NIW use immigrant visas in consular processing. O-1 and E-2 are nonimmigrant categories and are not covered by this particular pause. Interview location is determined by nationality or residence; adjustment of status in the United States requires a separate analysis from consular visa issuance.",
+        "On 21 January 2026, the Department of State paused immigrant-visa issuance to nationals of Russia and 74 other countries. Applications and interviews could continue, but final visa issuance was stopped. The measure did not cover every green-card process inside the United States and did not apply to O-1 or E-2 visas.",
+        "On 21 August, a federal district court in New York held the policy unlawful and vacated it in full. This was a first-instance federal judgment, not a decision of the US Supreme Court. The court also vacated refusals based solely on the policy.",
+        "Practical implementation remained disputed on 26 August: the plaintiffs reported a continuing operational pause and cancelled interviews. We therefore do not describe issuance as unconditionally resumed and check the position at the relevant consular post before planning an EB-1A or NIW stage.",
       ],
     },
     official: [
@@ -205,6 +205,8 @@ export const countriesEn: CountryPageData[] = [
       { label: "USCIS: Premium Processing", href: "https://www.uscis.gov/forms/all-forms/how-do-i-request-premium-processing" },
       { label: "US Department of State: E visas", href: "https://travel.state.gov/content/travel/en/us-visas/employment/treaty-trader-investor-visa-e.html" },
       { label: "US Department of State: immigrant-visa issuance pause", href: "https://travel.state.gov/content/travel/en/News/visas-news/immigrant-visa-processing-updates-for-nationalities-at-high-risk-of-public-benefits-usage.html" },
+      { label: "Federal district court: 21 August 2026 decision", href: "https://media.nilc.org/2026/04/CLINIC-v-Rubio-partial-MSJ-decision-08-21-2026.pdf" },
+      { label: "CLINIC v. Rubio: case materials and implementation updates", href: "https://www.nilc.org/litigation/clinic-v-rubio/" },
       { label: "US Department of State: September 2026 Visa Bulletin", href: "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2026/visa-bulletin-for-september-2026.html" },
       { label: "US Department of State: nonimmigrant interview location", href: "https://travel.state.gov/content/travel/en/News/visas-news/adjudicating-niv-applicants-in-their-country-of-residence.html" },
       { label: "US Department of State: immigrant interview location", href: "https://travel.state.gov/content/travel/en/News/visas-news/adjudicating-iv-applicants-in-their-country-of-residence.html" },

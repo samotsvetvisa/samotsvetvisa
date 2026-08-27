@@ -24,7 +24,7 @@ export function SiteFooter({ locale = "ru" }: { locale?: "ru" | "en" }) {
           <h3>Samotsvet</h3>
           <Link href={withTrailingSlash(`${base}/about`)}>{isEnglish ? "About" : "О нас"}</Link>
           <Link href={withTrailingSlash(`${base}/blog`)}>{isEnglish ? "Insights" : "Блог"}</Link>
-          <Link href={withTrailingSlash(`${base}/assessment`)}>{isEnglish ? "Profile assessment" : "Аудит профиля"}</Link>
+          <Link href={withTrailingSlash(`${base}/assessment`)}>{isEnglish ? "Profile audit" : "Аудит профиля"}</Link>
           <Link href={withTrailingSlash(`${base}/profile-development`)}>{isEnglish ? "Profile development" : "Усиление профиля"}</Link>
           <Link href={withTrailingSlash(`${base}/contacts`)}>{isEnglish ? "Contact and company details" : "Контакты и реквизиты"}</Link>
           <Link href={withTrailingSlash(`${base}/privacy`)}>{isEnglish ? "Privacy and personal data" : "Конфиденциальность и персональные данные"}</Link>

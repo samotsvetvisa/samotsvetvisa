@@ -1,10 +1,10 @@
 {
   "fields": {
-    "cAssessmentId": "ID оценки",
-    "cAssessmentStage": "Этап анкеты",
-    "cAssessmentResult": "Предварительный результат",
-    "cRouteCandidates": "Маршруты для проверки",
-    "cFitScore": "Соответствие маршруту",
+    "cAssessmentId": "ID аудита",
+    "cAssessmentStage": "Этап аудита",
+    "cAssessmentResult": "Результат аудита",
+    "cRouteCandidates": "Программы для проверки",
+    "cFitScore": "Карьерная основа",
     "cEvidenceScore": "Доказательства",
     "cUrgencyScore": "Срочность",
     "cReadinessScore": "Готовность",
@@ -16,8 +16,8 @@
   },
   "options": {
     "cAssessmentStage": {
-      "Short": "Короткий этап",
-      "Detailed": "Подробный профиль"
+      "Short": "Локальный результат",
+      "Detailed": "Отправлен на разбор"
     }
   }
 }
