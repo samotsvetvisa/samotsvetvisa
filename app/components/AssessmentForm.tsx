@@ -194,9 +194,24 @@ export function AssessmentForm({ initialCountry = "", locale = "ru" }: { initial
     const data = new FormData(form);
     if (value(data, "website")) { setStage("done"); return; }
     const routes = result.routes.map(item => `${item.name} — ${statusLabel(item.status, locale)}`).join("\n");
-    const profile = [words.track[answers.track as keyof typeof words.track], words.years[answers.years as keyof typeof words.years], words.role[answers.role as keyof typeof words.role], words.impact[answers.impact as keyof typeof words.impact], value(data, "profile")].filter(Boolean).join("\n");
+    const scoreLine = en
+      ? `Internal screening: foundation ${result.foundationScore}/3; evidence ${result.evidenceScore}/3; urgency ${{ urgent: 3, medium: 2, planned: 1, long: 0 }[answers.timing as "urgent" | "medium" | "planned" | "long"]}/3; readiness ${result.readinessScore}/3.`
+      : `Внутренний скрининг: основа ${result.foundationScore}/3; доказательства ${result.evidenceScore}/3; срочность ${{ urgent: 3, medium: 2, planned: 1, long: 0 }[answers.timing as "urgent" | "medium" | "planned" | "long"]}/3; готовность ${result.readinessScore}/3.`;
+    const profile = [
+      `Assessment ID: ${assessmentId}`,
+      result.heading,
+      result.readiness,
+      scoreLine,
+      `${en ? "Programmes to test" : "Программы для проверки"}:\n${routes}`,
+      `${en ? "Next step" : "Следующий шаг"}: ${result.next}`,
+      "",
+      words.track[answers.track as keyof typeof words.track],
+      words.years[answers.years as keyof typeof words.years],
+      words.role[answers.role as keyof typeof words.role],
+      words.impact[answers.impact as keyof typeof words.impact],
+      value(data, "profile"),
+    ].filter(Boolean).join("\n");
     const evidence = [words.recognition[answers.recognition as keyof typeof words.recognition], ...answers.evidence.map(item => words.evidence[item as keyof typeof words.evidence]), value(data, "evidence")].filter(Boolean).join("\n");
-    const resultText = [result.heading, result.readiness, `Strengths: ${result.strengths.join("; ")}`, `Gaps: ${result.gaps.join("; ")}`].join("\n");
     setStatus("sending"); setMessage(""); emit("detail_submit");
     try {
       await send({
@@ -204,9 +219,7 @@ export function AssessmentForm({ initialCountry = "", locale = "ru" }: { initial
         cRoute: result.routes.map(item => item.name).join("; "), cObjective: [words.objective[answers.objective as keyof typeof words.objective], value(data, "objective")].filter(Boolean).join("\n"),
         cTiming: words.timing[answers.timing as keyof typeof words.timing], cCitizenship: value(data, "citizenship"), cResidence: value(data, "residence"), cFamily: value(data, "family"),
         cEmployment: words.track[answers.track as keyof typeof words.track], cProfile: profile, cProfileLink: value(data, "profileLink"), cEvidence: evidence,
-        cStage: en ? "Profile audit completed" : "Пройден аудит профиля", cHistory: value(data, "history"), cReferral: value(data, "referral"), cConsent: data.get("consent") === "on",
-        cAssessmentId: assessmentId, cAssessmentStage: "Detailed", cAssessmentResult: resultText, cRouteCandidates: routes,
-        cFitScore: result.foundationScore, cEvidenceScore: result.evidenceScore, cUrgencyScore: { urgent: 3, medium: 2, planned: 1, long: 0 }[answers.timing as "urgent" | "medium" | "planned" | "long"], cReadinessScore: result.readinessScore, cNextStep: result.next,
+        cStage: `${en ? "Profile audit completed" : "Пройден аудит профиля"} · ${assessmentId}`, cHistory: value(data, "history"), cReferral: value(data, "referral"), cConsent: data.get("consent") === "on",
         ...tracking(),
       });
       form.reset(); setStage("done"); setStatus("idle"); emit("detail_success");
