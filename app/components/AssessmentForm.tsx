@@ -224,7 +224,7 @@ export function AssessmentForm({ initialCountry = "", locale = "ru" }: { initial
         firstName: value(data, "name"), cContact: value(data, "contact"), cCountry: preferredCountry,
         cRoute: result.routes.map(item => item.name).join("; "), cObjective: [words.objective[answers.objective as keyof typeof words.objective], value(data, "objective")].filter(Boolean).join("\n"),
         cTiming: crmTiming, cCitizenship: value(data, "citizenship"), cResidence: value(data, "residence"), cFamily: value(data, "family"),
-        cEmployment: null, cProfile: profile, cProfileLink: value(data, "profileLink"), cEvidence: evidence,
+        cEmployment: "Other", cProfile: profile, cProfileLink: value(data, "profileLink"), cEvidence: evidence,
         cStage: "Exploring routes", cHistory: value(data, "history"), cReferral: value(data, "referral"), cConsent: data.get("consent") === "on",
         ...tracking(),
       });
