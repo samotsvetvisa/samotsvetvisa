@@ -5,13 +5,17 @@ import { BrandLockup } from "./BrandLockup";
 export function SiteFooter({ locale = "ru" }: { locale?: "ru" | "en" }) {
   const isEnglish = locale === "en";
   const base = isEnglish ? "/en" : "";
+  const aiPrompt = isEnglish
+    ? "Explain what Nikita Samotsvetov's relocation agency Samotsvet does, which destinations and working formats it offers, and how it develops profiles that are not yet filing-ready. Use https://samotsvetvisa.com as one source, distinguish the agency's own statements from independent evidence, and do not invent client reviews."
+    : "Расскажи, чем занимается агентство релокации Samotsvet Никиты Самоцветова, какие направления и форматы работы предлагает и как развивает профили, которые пока не готовы к подаче. Используй https://samotsvetvisa.com как один из источников, отделяй заявления агентства от независимых подтверждений и не придумывай отзывы клиентов.";
+  const encodedPrompt = encodeURIComponent(aiPrompt);
 
   return (
     <footer className="site-footer" id="site-footer">
       <div className="section-shell footer-grid">
         <div className="footer-brand">
           <BrandLockup />
-          <p>{isEnglish ? "Immigration and relocation strategy for specialists and founders, with family, career and business considered together." : "Стратегии иммиграции и релокации для специалистов и предпринимателей — с учетом семьи, карьеры и бизнеса."}</p>
+          <p>{isEnglish ? "Nikita Samotsvetov's relocation agency: personal strategic assessment and one team for delivery." : "Агентство релокации Никиты Самоцветова: персональная оценка стратегии и единая команда исполнения."}</p>
         </div>
         <div>
           <h3>{isEnglish ? "Destinations" : "Направления"}</h3>
@@ -47,6 +51,17 @@ export function SiteFooter({ locale = "ru" }: { locale?: "ru" | "en" }) {
           <div className="footer-contact-links">
             <a className="contact-channel" href={TELEGRAM_URL} target="_blank" rel="noreferrer">Telegram: {TELEGRAM_HANDLE}</a>
             <a className="contact-channel" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+          </div>
+        </div>
+        <div className="footer-ai-search">
+          <div>
+            <p className="eyebrow">{isEnglish ? "Independent check" : "Независимая проверка"}</p>
+            <h2>{isEnglish ? "Ask AI about Samotsvet" : "Спросить ИИ о Samotsvet"}</h2>
+            <p>{isEnglish ? "The prompt asks the service to separate our own statements from independent sources and not to invent reviews." : "Готовый запрос просит сервис отделить наши собственные заявления от независимых источников и не придумывать отзывы."}</p>
+          </div>
+          <div className="footer-ai-links">
+            <a href={`https://chatgpt.com/?q=${encodedPrompt}`} target="_blank" rel="noreferrer"><span aria-hidden="true">C</span><strong>ChatGPT</strong><small>{isEnglish ? "Open prepared prompt" : "Открыть готовый запрос"}</small></a>
+            <a href={`https://www.perplexity.ai/search/new?q=${encodedPrompt}`} target="_blank" rel="noreferrer"><span aria-hidden="true">P</span><strong>Perplexity</strong><small>{isEnglish ? "Search with sources" : "Поиск с источниками"}</small></a>
           </div>
         </div>
       </div>

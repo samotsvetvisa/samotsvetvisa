@@ -2,28 +2,28 @@ type Locale = "ru" | "en";
 
 const copy = {
   ru: {
-    eyebrow: "Практика в цифрах",
-    title: "800+ кейсов и 10 000+ разобранных профилей",
-    intro: "С 2021 года мы завершили более 800 клиентских кейсов и разобрали более 10 000 профессиональных профилей — напрямую и в работе с агентствами.",
+    eyebrow: "Насмотренность",
+    title: "Десять тысяч профилей учат видеть закономерности",
+    intro: "С 2021 года через мою работу в агентствах и напрямую прошло более 10 000 профессиональных профилей. Командой доведено до результата более 800 клиентских кейсов, в том числе свыше 200 по Великобритании. Этот объём помогает быстрее узнавать повторяющиеся риски и отличать сильную основу от неподтверждённого впечатления.",
     metrics: [
       ["800+", "завершённых клиентских кейсов"],
       ["10 000+", "профессиональных профилей разобрано"],
-      ["14", "стран входили в сравнительный разбор"],
-      ["с 2021", "накапливается практический опыт"],
+      ["200+", "кейсов по Великобритании"],
+      ["с 2021", "практика в иммиграционных проектах"],
     ],
     casesTitle: "",
     cases: [],
     note: "",
   },
   en: {
-    eyebrow: "Practice in figures",
-    title: "800+ matters and 10,000+ profiles reviewed",
-    intro: "Since 2021, we have completed more than 800 client matters and reviewed more than 10,000 professional profiles, both directly and through agency work.",
+    eyebrow: "Pattern recognition",
+    title: "Ten thousand profiles teach you to recognise patterns",
+    intro: "Since 2021, more than 10,000 professional profiles have passed through my work in agencies and directly. The team has taken more than 800 client matters through to completion, including over 200 UK matters. That volume helps us identify recurring risks and distinguish a strong foundation from an unsupported impression sooner.",
     metrics: [
       ["800+", "completed client matters"],
       ["10,000+", "professional profiles reviewed"],
-      ["14", "countries included in route comparisons"],
-      ["since 2021", "practical experience accumulated"],
+      ["200+", "United Kingdom matters"],
+      ["since 2021", "work on immigration projects"],
     ],
     casesTitle: "",
     cases: [],

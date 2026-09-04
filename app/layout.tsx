@@ -3,14 +3,15 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 import { AttributionLinker } from "./components/AttributionLinker";
 import { LanguageAttribute } from "./components/LanguageAttribute";
-import { CONTACT_EMAIL, LEGAL_NAME, OG_IMAGE, SITE_NAME, SITE_URL, TELEGRAM_URL } from "./site";
+import { TelegramButton } from "./components/TelegramButton";
+import { CONTACT_EMAIL, FOUNDER_NAME, LEGAL_NAME, OG_IMAGE, SITE_NAME, SITE_URL, TELEGRAM_URL } from "./site";
 
 const geist = Geist({ variable: "--font-geist", subsets: ["latin", "cyrillic"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: "Samotsvet — иммиграция и релокация полного цикла", template: "%s | Samotsvet" },
-  description: "Агентство иммиграции и релокации полного цикла для специалистов, предпринимателей и семей: Великобритания, Испания, США и Франция.",
+  title: { default: "Samotsvet — агентство релокации Никиты Самоцветова", template: "%s | Samotsvet" },
+  description: "Агентство Никиты Самоцветова для специалистов, предпринимателей и семей: аудит профиля, сравнение маршрутов, развитие доказательств и сопровождение релокации.",
   robots: { index: true, follow: true },
   icons: {
     icon: [
@@ -23,8 +24,8 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   openGraph: {
-    title: "Samotsvet — иммиграция и релокация полного цикла",
-    description: "Стратегия, усиление профиля, доказательства, партнеры и сопровождение подачи.",
+    title: "Samotsvet — агентство релокации Никиты Самоцветова",
+    description: "Персональная оценка стратегии и единая команда для развития профиля, доказательств и сопровождения подачи.",
     url: "/",
     type: "website",
     locale: "ru_RU",
@@ -33,8 +34,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Samotsvet — иммиграция и релокация полного цикла",
-    description: "Стратегия, усиление профиля, доказательства, партнеры и сопровождение подачи.",
+    title: "Samotsvet — агентство релокации Никиты Самоцветова",
+    description: "Персональная оценка стратегии и единая команда для развития профиля, доказательств и сопровождения подачи.",
     images: [OG_IMAGE],
   },
 };
@@ -50,16 +51,31 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     logo: `${SITE_URL}/samotsvet-logo.svg`,
     email: CONTACT_EMAIL,
     sameAs: [TELEGRAM_URL],
+    founder: { "@id": `${SITE_URL}/about/#nikita` },
     description: "Агентство полного цикла: стратегия, усиление профиля, доказательства, партнеры и сопровождение подачи.",
+  };
+  const founder = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${SITE_URL}/about/#nikita`,
+    name: FOUNDER_NAME,
+    url: `${SITE_URL}/about/#nikita`,
+    image: `${SITE_URL}/nikita-founder-white-v3.webp`,
+    jobTitle: "Основатель и руководитель практики Samotsvet",
+    worksFor: { "@id": `${SITE_URL}/#organisation` },
+    alumniOf: { "@type": "CollegeOrUniversity", name: "University of Leeds" },
+    knowsAbout: ["Immigration strategy", "Relocation", "Professional profile development", "Immigration evidence"],
   };
 
   return (
     <html lang="ru">
       <body className={geist.variable}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(founder) }} />
         <AttributionLinker />
         <LanguageAttribute />
         {children}
+        <TelegramButton />
       </body>
     </html>
   );

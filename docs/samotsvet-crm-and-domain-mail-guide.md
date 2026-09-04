@@ -208,7 +208,7 @@ docker compose exec --user root <app-service> sh -lc '
 
 ### Rate limit на Nginx
 
-Honeypot остается на сайте. На сервере добавьте ограничение частоты для публичного LeadCapture endpoint. Начальная настройка: не более пяти POST-запросов в минуту с одного IP, короткий burst до трех запросов. Не подключайте reCAPTCHA без отдельной оценки обработки данных: встроенная форма EspoCRM использует Google reCAPTCHA v3.
+Honeypot остаётся на сайте. Целевой лимит — не более трёх отправок с одного IP за 60 минут. Точный почасовой счётчик нужно делать в серверном proxy endpoint, а не имитировать клиентским JavaScript. Одновременно этот endpoint проверяет невидимую Yandex SmartCaptcha и только затем создаёт Lead в EspoCRM. Полная схема, тексты ошибок и безопасный порядок переключения описаны в [инструкции по SmartCaptcha](./samotsvet-smartcaptcha-guide.md).
 
 ## 6. Проверка CRM после установки
 

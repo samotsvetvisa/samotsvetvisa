@@ -5,6 +5,7 @@ import { SiteFooter } from "../../../components/SiteFooter";
 import { SiteHeader } from "../../../components/SiteHeader";
 import { OtherDestinations } from "../../../components/OtherDestinations";
 import { countriesEn } from "../../../content/countries-en";
+import { countryFaqsEn } from "../../../content/country-faqs";
 import { pageMetadata, SERVICE_MODEL_EN, SERVICE_PRICES, withTrailingSlash } from "../../../site";
 
 export function generateStaticParams() { return countriesEn.map(({ slug }) => ({ slug })); }
@@ -21,9 +22,12 @@ export default async function EnglishCountryPage({ params }: { params: Promise<{
   if (!item) notFound();
   const price = SERVICE_PRICES.find((entry) => entry.code === item.code);
   const riskGroups = item.riskGroups ?? [{ title: "", risks: item.risks ?? [] }];
+  const faqs = countryFaqsEn[item.slug as keyof typeof countryFaqsEn] ?? [];
+  const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) };
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <SiteHeader locale="en" />
       <main>
         <section className="country-hero section-shell">
@@ -54,6 +58,8 @@ export default async function EnglishCountryPage({ params }: { params: Promise<{
           <div><p className="eyebrow">Primary sources</p><h2>{item.headings.sources}</h2><p>{item.headings.sourcesNote}</p><p className="source-reviewed"><time dateTime="2026-08-27">Reviewed against official sources on 27 August 2026</time></p></div>
           <div>{item.official.map((source) => <a href={source.href} target="_blank" rel="noreferrer" key={source.href}>{source.label} <span>↗</span></a>)}</div>
         </section>
+
+        <section className="section-shell section-block country-faq"><div className="inner-section-title"><p className="eyebrow">Destination questions</p><h2>What clients usually clarify before choosing a route</h2></div><div className="faq-list">{faqs.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div></section>
 
         <OtherDestinations currentSlug={item.slug} locale="en" />
 

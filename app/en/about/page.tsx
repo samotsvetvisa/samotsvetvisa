@@ -6,8 +6,8 @@ import { SiteHeader } from "../../components/SiteHeader";
 import { pageMetadata } from "../../site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "About",
-  description: "The Samotsvet team, 800+ completed matters, 10,000+ profile reviews and its approach to immigration evidence preparation.",
+  title: "Nikita Samotsvetov's agency",
+  description: "Nikita Samotsvetov and the Samotsvet team: 800+ completed matters, 10,000+ profile reviews and a structured approach to immigration projects.",
   path: "/en/about",
   locale: "en",
 });
@@ -18,8 +18,8 @@ export default function EnglishAboutPage() {
       <SiteHeader locale="en" />
       <main>
         <section className="inner-hero section-shell about-hero">
-          <div><p className="eyebrow">About Samotsvet</p><h1>We look beyond a list of visa categories</h1></div>
-          <p>We begin with the client&apos;s objective and circumstances, rather than a country or visa name. We review the professional or business profile, nationality, family circumstances and timing, compare the available programmes and propose realistic relocation options. If a suitable route requires stronger evidence, we set out a preparation plan in advance.</p>
+          <div><p className="eyebrow">Nikita Samotsvetov&apos;s agency</p><h1>Personal expertise. Team delivery</h1></div>
+          <p>I am responsible for profile assessment, strategy and quality control. The Samotsvet team develops evidence and documents, co-ordinates specialist partners and manages the agreed process through to the decision.</p>
         </section>
 
         <section className="section-shell founder-profile" id="nikita">
@@ -27,8 +27,8 @@ export default function EnglishAboutPage() {
           <div className="founder-copy">
             <p className="eyebrow">Founder</p>
             <h2>Nikita Samotsvetov</h2>
-            <p className="founder-role">Founder and practice lead. Nikita is responsible for the methodology, strategy on complex projects and quality control.</p>
-            <p>Since 2021, we have completed <strong>more than 800 client matters</strong> and reviewed <strong>more than 10,000 professional profiles</strong>. We led some projects in full and worked with agencies on route assessment or individual preparation stages in others.</p>
+            <p className="founder-role">Founder and practice lead. I am responsible for the methodology, strategy on complex projects and quality control.</p>
+            <p>Since 2021, more than <strong>10,000 professional profiles</strong> have passed through my work in agencies and directly. The team has completed <strong>more than 800 client matters</strong>, including over 200 UK matters.</p>
             <p>Before founding Samotsvet, Nikita worked for several immigration agencies in Europe and the United Kingdom. He reviewed immigration profiles, launched new service lines and served as a partner in relocation businesses. That experience shaped the team&apos;s methodology: comparing possible routes, identifying the evidence required, checking sources and reconciling information across documents.</p>
             <p>In 2023, Nikita completed the <strong>LLM in International Law and Global Governance</strong> at the University of Leeds.</p>
             <p>Current areas of focus include Global Talent and Innovator Founder in the UK; O-1, EB-1A, EB-2 NIW and E-2 in the US; Spain&apos;s Digital Nomad Visa (DNV); and the carte de sejour Talent in France.</p>
@@ -44,8 +44,8 @@ export default function EnglishAboutPage() {
         </section>
 
         <section className="section-shell about-details">
-          <article><p className="eyebrow">Why Samotsvet</p><h2>Complex matters require individual work</h2><p>The practice grew from experience inside an agency, where strong profiles could be lost in a template. We limit the number of concurrent projects and agree stages, timing and communication before work begins.</p></article>
-          <article><p className="eyebrow">Our standard</p><h2>Facts and genuine achievements</h2><p>Every proposition should be supported by verifiable documents and a genuine result. Early-stage profiles receive a development plan; where a viable route is absent, we explain the reasons at the outset.</p></article>
+          <article><p className="eyebrow">Why Samotsvet</p><h2>I will say when it is too early to file</h2><p>The assessment is not fitted to a country selected in advance. I compare programmes and separate what can already be evidenced from what still needs development. The team proceeds only with an agreed, realistic plan.</p></article>
+          <article><p className="eyebrow">Our standard</p><h2>Facts and genuine achievements</h2><p>Every proposition should be supported by verifiable documents and a genuine result. We build a development plan for early-stage profiles and explain the reasons at the outset where no viable route is present.</p></article>
         </section>
 
         <section className="section-shell closing-cta">

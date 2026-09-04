@@ -5,6 +5,7 @@ import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
 import { OtherDestinations } from "../../components/OtherDestinations";
 import { countries } from "../../content/countries";
+import { countryFaqs } from "../../content/country-faqs";
 import { pageMetadata, SERVICE_MODEL_RU, SERVICE_PRICES, withTrailingSlash } from "../../site";
 
 export function generateStaticParams() {
@@ -27,9 +28,12 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
   if (!item) notFound();
   const price = SERVICE_PRICES.find((entry) => entry.code === item.code);
   const riskGroups = item.riskGroups ?? [{ title: "", risks: item.risks ?? [] }];
+  const faqs = countryFaqs[item.slug as keyof typeof countryFaqs] ?? [];
+  const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) };
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <SiteHeader />
       <main>
         <section className="country-hero section-shell">
@@ -84,6 +88,8 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
             {item.official.map((source) => <a href={source.href} target="_blank" rel="noreferrer" key={source.href}>{source.label} <span>↗</span></a>)}
           </div>
         </section>
+
+        <section className="section-shell section-block country-faq"><div className="inner-section-title"><p className="eyebrow">Вопросы по направлению</p><h2>Что обычно уточняют до выбора маршрута</h2></div><div className="faq-list">{faqs.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div></section>
 
         <OtherDestinations currentSlug={item.slug} />
 

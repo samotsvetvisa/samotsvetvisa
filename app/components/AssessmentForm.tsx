@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { FormEvent, useEffect, useState } from "react";
+import { TELEGRAM_HANDLE, TELEGRAM_URL } from "../site";
+import { TelegramIcon } from "./TelegramButton";
 
 type Locale = "ru" | "en";
 type FormStatus = "idle" | "sending" | "error";
@@ -250,7 +252,8 @@ export function AssessmentForm({ initialCountry = "", locale = "ru" }: { initial
     <fieldset className="form-section"><legend><span>03</span>{en ? "Experience and evidence" : "Опыт и доказательства"}</legend><label>{en ? "Strongest projects and measurable outcomes" : "Сильнейшие проекты и измеримые результаты"}<textarea name="profile" rows={5} required placeholder={en ? "Your role, decisions and what changed as a result" : "Ваша роль, принятые решения и что изменилось в результате"} /></label><div className="form-row"><label>{en ? "LinkedIn, CV or portfolio" : "LinkedIn, CV или портфолио"}<input name="profileLink" type="url" placeholder="https://" /></label><label>{en ? "Previous applications or refusals" : "Предыдущие подачи или отказы"}<input name="history" /></label></div><label>{en ? "Evidence or links not covered by the audit" : "Доказательства или ссылки, которых не было в аудите"}<textarea name="evidence" rows={3} /></label><label>{en ? "How did you hear about Samotsvet?" : "Откуда Вы узнали о Samotsvet?"}<select name="referral" defaultValue=""><option value="">{en ? "Select" : "Выберите"}</option><option value="Telegram">Telegram</option><option value="Search">{en ? "Search" : "Поиск"}</option><option value="Referral">{en ? "Recommendation" : "Рекомендация"}</option><option value="Social media">{en ? "Social media" : "Социальные сети"}</option><option value="Other">{en ? "Other" : "Другое"}</option></select></label></fieldset>
     <p className="form-privacy-note">{en ? "Do not enter passport numbers, medical information or bank details." : "Не указывайте паспортные данные, медицинские сведения и банковские реквизиты."}</p>
     <label className="honeypot" aria-hidden="true">Website<input name="website" tabIndex={-1} autoComplete="off" /></label><label className="consent-field"><input type="checkbox" name="consent" required /><span>{en ? <>I agree to personal data processing under the <Link href="/en/consent/">Data Processing Consent</Link>.</> : <>Я даю согласие на обработку персональных данных на условиях документа <Link href="/consent/">«Согласие на обработку персональных данных»</Link>.</>}</span></label>
-    <button className="button button-primary form-submit" type="submit" disabled={status === "sending"}>{status === "sending" ? (en ? "Sending..." : "Отправляем...") : (en ? "Send for team review" : "Отправить на разбор команды")}</button>{message && <p className={`form-message ${status}`} role="status">{message}</p>}
+    <button className="button button-primary form-submit" type="submit" disabled={status === "sending"}>{status === "sending" ? (en ? "Sending..." : "Отправляем...") : (en ? "Send for team review" : "Отправить на разбор команды")}</button>
+    {message && <div className={`form-message ${status}`} role="status"><p>{message}</p>{status === "error" ? <a className="form-telegram-link" href={TELEGRAM_URL} target="_blank" rel="noreferrer"><TelegramIcon /><span><strong>{en ? "Send the audit in Telegram" : "Отправить аудит в Telegram"}</strong><small>{TELEGRAM_HANDLE}</small></span></a> : null}</div>}
   </form>;
 
   return <form className="assessment-form assessment-audit-form" onSubmit={submitAudit}>
