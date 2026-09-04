@@ -8,13 +8,13 @@ type Locale = "ru" | "en";
 const stages = {
   ru: [
     { title: "Маршрут", text: "Смотрим гражданство, карьеру, бизнес и сроки. Выбираем категории, которые соответствуют цели и исходным данным." },
-    { title: "Усиление профиля", text: "Если доказательств пока не хватает — планируем реальные проекты, роли, публикации и независимое признание. Каждый шаг должен создавать результат, который выдержит проверку." },
+    { title: "Усиление профиля", text: "Если доказательств пока не хватает – планируем реальные проекты, роли, публикации и независимое признание. Каждый шаг должен создавать результат, который выдержит проверку." },
     { title: "Доказательства", text: "Сверяем даты, цифры и роли в письмах, документах и публикациях, затем собираем материалы в согласованный комплект." },
     { title: "Подача", text: "Команда Samotsvet проводит финальную проверку, готовит формы и сопровождает подачу до решения." },
   ],
   en: [
     { title: "Route", text: "We review nationality, career, business and timing, then establish which categories are viable and which can be ruled out at once." },
-    { title: "Profile development", text: "If the evidence is not yet sufficient, we plan genuine projects, roles, publications and independent recognition — work that can withstand scrutiny." },
+    { title: "Profile development", text: "If the evidence is not yet sufficient, we plan genuine projects, roles, publications and independent recognition – work that can withstand scrutiny." },
     { title: "Evidence", text: "We assemble the material so dates, figures and roles remain consistent across letters, documents and publications." },
     { title: "Filing", text: "The Samotsvet team runs the final review, prepares the forms and manages the filing process through to the decision." },
   ],

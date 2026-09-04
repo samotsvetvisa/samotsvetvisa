@@ -13,7 +13,7 @@ export default function NotFound() {
         <p>Вернитесь на главную или расскажите нам о своей задаче.</p>
         <div className="hero-actions">
           <Link className="button button-primary" href="/">На главную</Link>
-          <Link className="button button-secondary" href="/assessment/">Пройти аудит профиля</Link>
+          <Link className="button button-secondary" href="/assessment/">Оценить шансы</Link>
         </div>
       </main>
       <SiteFooter />

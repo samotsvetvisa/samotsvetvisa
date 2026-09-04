@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && node scripts/postprocess-static-html.mjs",
+    "check:copy": "node scripts/check-copy-style.mjs",
     "check:static": "node scripts/check-static-links.mjs",
     "start": "next start",
     "lint": "eslint . --ignore-pattern .next --ignore-pattern out"

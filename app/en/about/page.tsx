@@ -18,8 +18,8 @@ export default function EnglishAboutPage() {
       <SiteHeader locale="en" />
       <main>
         <section className="inner-hero section-shell about-hero">
-          <div><p className="eyebrow">Nikita Samotsvetov&apos;s agency</p><h1>Personal expertise. Team delivery</h1></div>
-          <p>I am responsible for profile assessment, strategy and quality control. The Samotsvet team develops evidence and documents, co-ordinates specialist partners and manages the agreed process through to the decision.</p>
+          <div><p className="eyebrow">Nikita Samotsvetov&apos;s agency</p><h1>Founder-led strategy. Team delivery</h1></div>
+          <p>Nikita is responsible for methodology, strategy and quality control. The Samotsvet team develops evidence and documents, co-ordinates specialist partners and manages the agreed process through to the decision.</p>
         </section>
 
         <section className="section-shell founder-profile" id="nikita">
@@ -27,8 +27,8 @@ export default function EnglishAboutPage() {
           <div className="founder-copy">
             <p className="eyebrow">Founder</p>
             <h2>Nikita Samotsvetov</h2>
-            <p className="founder-role">Founder and practice lead. I am responsible for the methodology, strategy on complex projects and quality control.</p>
-            <p>Since 2021, more than <strong>10,000 professional profiles</strong> have passed through my work in agencies and directly. The team has completed <strong>more than 800 client matters</strong>, including over 200 UK matters.</p>
+            <p className="founder-role">Founder and practice lead. Responsible for methodology, strategy on complex projects and quality control.</p>
+            <p>Since 2021, more than <strong>10,000 professional profiles</strong> have passed through Nikita&apos;s work in agencies and directly. The team has completed <strong>more than 800 client matters</strong>, including over 200 UK matters.</p>
             <p>Before founding Samotsvet, Nikita worked for several immigration agencies in Europe and the United Kingdom. He reviewed immigration profiles, launched new service lines and served as a partner in relocation businesses. That experience shaped the team&apos;s methodology: comparing possible routes, identifying the evidence required, checking sources and reconciling information across documents.</p>
             <p>In 2023, Nikita completed the <strong>LLM in International Law and Global Governance</strong> at the University of Leeds.</p>
             <p>Current areas of focus include Global Talent and Innovator Founder in the UK; O-1, EB-1A, EB-2 NIW and E-2 in the US; Spain&apos;s Digital Nomad Visa (DNV); and the carte de sejour Talent in France.</p>
@@ -44,13 +44,13 @@ export default function EnglishAboutPage() {
         </section>
 
         <section className="section-shell about-details">
-          <article><p className="eyebrow">Why Samotsvet</p><h2>I will say when it is too early to file</h2><p>The assessment is not fitted to a country selected in advance. I compare programmes and separate what can already be evidenced from what still needs development. The team proceeds only with an agreed, realistic plan.</p></article>
+          <article><p className="eyebrow">Why Samotsvet</p><h2>A realistic view before work begins</h2><p>We compare programmes and establish what can already be evidenced and what requires development. Work proceeds against an agreed plan with clear tasks, timing and limitations.</p></article>
           <article><p className="eyebrow">Our standard</p><h2>Facts and genuine achievements</h2><p>Every proposition should be supported by verifiable documents and a genuine result. We build a development plan for early-stage profiles and explain the reasons at the outset where no viable route is present.</p></article>
         </section>
 
         <section className="section-shell closing-cta">
           <div><p className="eyebrow eyebrow-light">Working with us</p><h2>Establish what can already be evidenced and what needs to be strengthened</h2></div>
-          <div><p>The profile audit gives us enough information for a useful first conversation.</p><Link className="button button-gold" href="/en/assessment/">Start profile audit</Link></div>
+          <div><p>The introductory form gives our team enough information for a useful first conversation.</p><Link className="button button-gold" href="/en/assessment/">Assess my options</Link></div>
         </section>
       </main>
       <SiteFooter locale="en" />

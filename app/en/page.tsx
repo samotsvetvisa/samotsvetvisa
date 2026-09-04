@@ -3,8 +3,8 @@ import { HomePage } from "../components/HomePage";
 import { pageMetadata } from "../site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Samotsvet — Nikita Samotsvetov's relocation agency",
-  description: "Nikita Samotsvetov's agency for profile audits, route comparison, evidence development and relocation support across the United Kingdom, United States, Spain and France.",
+  title: "Samotsvet: end-to-end immigration and relocation",
+  description: "Options assessment, programme selection, profile development, document preparation, filing and practical relocation support.",
   path: "/en",
   locale: "en",
 });

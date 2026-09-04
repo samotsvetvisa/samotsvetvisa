@@ -44,7 +44,7 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
             <p>{item.intro}</p>
             {item.slug === "uk" ? <p className="country-track-record"><strong>Британское направление входит в основной фокус практики с 2021 года.</strong></p> : null}
             {price ? <><p className="country-price"><span>Ориентировочная стоимость: <strong>{price.price}</strong></span><span>Срок работы: <strong>{price.timelineRu}</strong></span></p>{"noteRu" in price ? <p className="country-price-note">{price.noteRu}</p> : null}</> : null}
-            <Link className="button button-primary" href={withTrailingSlash(`/assessment?country=${item.slug}`)}>Проверить этот маршрут</Link>
+            <Link className="button button-primary" href={withTrailingSlash(`/assessment?country=${item.slug}`)}>Оценить шансы</Link>
           </div>
           {item.slug === "uk" ? <Link className="text-link criteria-country-link" href="/global-talent-criteria/">Открыть карту критериев Global Talent <span aria-hidden="true">↗</span></Link> : null}
         </section>
@@ -95,7 +95,7 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
 
         <section className="section-shell closing-cta country-cta">
           <div><p className="eyebrow eyebrow-light">Следующий шаг</p><h2>{item.headings.closing}</h2></div>
-          <div><p>{item.headings.closingBody}</p><Link className="button button-gold" href={withTrailingSlash(`/assessment?country=${item.slug}`)}>Обсудить свою ситуацию</Link></div>
+          <div><p>{item.headings.closingBody}</p><Link className="button button-gold" href={withTrailingSlash(`/assessment?country=${item.slug}`)}>Оценить шансы</Link></div>
         </section>
       </main>
       <SiteFooter />

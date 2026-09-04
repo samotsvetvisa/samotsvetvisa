@@ -32,7 +32,7 @@ export default async function EnglishCountryPage({ params }: { params: Promise<{
       <main>
         <section className="country-hero section-shell">
           <div className="country-hero-code">{item.code}</div>
-          <div><p className="eyebrow">{item.eyebrow}</p><h1>{item.title}</h1><p>{item.intro}</p>{item.slug === "uk" ? <p className="country-track-record"><strong>The United Kingdom has been a core practice focus since 2021.</strong></p> : null}{price ? <><p className="country-price"><span>Indicative fee: <strong>{price.priceEn}</strong></span><span>Timing: <strong>{price.timelineEn}</strong></span></p>{"noteEn" in price ? <p className="country-price-note">{price.noteEn}</p> : null}</> : null}<Link className="button button-primary" href={withTrailingSlash(`/en/assessment?country=${item.slug}`)}>Check this route</Link></div>
+          <div><p className="eyebrow">{item.eyebrow}</p><h1>{item.title}</h1><p>{item.intro}</p>{item.slug === "uk" ? <p className="country-track-record"><strong>The United Kingdom has been a core practice focus since 2021.</strong></p> : null}{price ? <><p className="country-price"><span>Indicative fee: <strong>{price.priceEn}</strong></span><span>Timing: <strong>{price.timelineEn}</strong></span></p>{"noteEn" in price ? <p className="country-price-note">{price.noteEn}</p> : null}</> : null}<Link className="button button-primary" href={withTrailingSlash(`/en/assessment?country=${item.slug}`)}>Assess my options</Link></div>
         </section>
 
         <section className="section-shell country-routes">
@@ -65,7 +65,7 @@ export default async function EnglishCountryPage({ params }: { params: Promise<{
 
         <section className="section-shell closing-cta country-cta">
           <div><p className="eyebrow eyebrow-light">Next step</p><h2>{item.headings.closing}</h2></div>
-          <div><p>{item.headings.closingBody}</p><Link className="button button-gold" href={withTrailingSlash(`/en/assessment?country=${item.slug}`)}>Discuss your circumstances</Link></div>
+          <div><p>{item.headings.closingBody}</p><Link className="button button-gold" href={withTrailingSlash(`/en/assessment?country=${item.slug}`)}>Assess my options</Link></div>
         </section>
       </main>
       <SiteFooter locale="en" />

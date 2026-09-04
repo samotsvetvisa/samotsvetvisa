@@ -22,7 +22,7 @@ export function SiteHeader({ locale = "ru" }: { locale?: "ru" | "en" }) {
   const lastScrollY = useRef(0);
   const [menuOpen, setMenuOpen] = useState(false);
   const [headerHidden, setHeaderHidden] = useState(false);
-  const [showStickyAudit, setShowStickyAudit] = useState(false);
+  const [showStickyAssessment, setShowStickyAssessment] = useState(false);
   const [closingAreaVisible, setClosingAreaVisible] = useState(false);
 
   useEffect(() => {
@@ -55,7 +55,7 @@ export function SiteHeader({ locale = "ru" }: { locale?: "ru" | "en" }) {
     function handleScroll() {
       const currentScrollY = window.scrollY;
       const isMobileLayout = window.matchMedia("(max-width: 980px)").matches;
-      setShowStickyAudit(currentScrollY > window.innerHeight * 0.8);
+      setShowStickyAssessment(currentScrollY > window.innerHeight * 0.8);
 
       if (!isMobileLayout || menuOpen || currentScrollY < 90) {
         setHeaderHidden(false);
@@ -83,7 +83,7 @@ export function SiteHeader({ locale = "ru" }: { locale?: "ru" | "en" }) {
     <>
       <header className={`site-header${headerHidden ? " site-header--hidden" : ""}${menuOpen ? " site-header--menu-open" : ""}`}>
         <div className="section-shell header-inner">
-          <Link className="brand-link" href={withTrailingSlash(base || "/")} aria-label={isEnglish ? "Samotsvet — home" : "Samotsvet — главная"} onClick={closeMenu}>
+          <Link className="brand-link" href={withTrailingSlash(base || "/")} aria-label={isEnglish ? "Samotsvet: home" : "Samotsvet: главная"} onClick={closeMenu}>
             <BrandLockup />
           </Link>
           <nav className="desktop-nav" aria-label={isEnglish ? "Primary navigation" : "Главная навигация"}>
@@ -95,7 +95,7 @@ export function SiteHeader({ locale = "ru" }: { locale?: "ru" | "en" }) {
             <Link href={withTrailingSlash(`${base}/about`)}>{isEnglish ? "About" : "О нас"}</Link>
           </nav>
           <LanguageSwitch />
-          <Link className="header-cta" href={assessmentPath}>{isEnglish ? "Profile audit" : "Аудит профиля"}</Link>
+          <Link className="header-cta" href={assessmentPath}>{isEnglish ? "Assess my options" : "Оценить шансы"}</Link>
           <button
             className={`mobile-menu-toggle${menuOpen ? " is-open" : ""}`}
             type="button"
@@ -128,20 +128,20 @@ export function SiteHeader({ locale = "ru" }: { locale?: "ru" | "en" }) {
             <Link href={withTrailingSlash(`${base}/about`)} onClick={closeMenu}>{isEnglish ? "About" : "О нас"}</Link>
             <Link href={withTrailingSlash(`${base}/contacts`)} onClick={closeMenu}>{isEnglish ? "Contact" : "Контакты"}</Link>
           </div>
-          <Link className="button button-primary mobile-menu-audit" href={assessmentPath} onClick={closeMenu}>
-            {isEnglish ? "Start profile audit" : "Пройти аудит профиля"}
+          <Link className="button button-primary mobile-menu-assessment" href={assessmentPath} onClick={closeMenu}>
+            {isEnglish ? "Assess my options" : "Оценить шансы"}
           </Link>
         </nav>
       </div>
 
       {!isAssessmentPage ? (
         <Link
-          className={`mobile-sticky-audit${showStickyAudit && !menuOpen && !closingAreaVisible ? " is-visible" : ""}`}
+          className={`mobile-sticky-assessment${showStickyAssessment && !menuOpen && !closingAreaVisible ? " is-visible" : ""}`}
           href={assessmentPath}
-          aria-hidden={!showStickyAudit || menuOpen || closingAreaVisible}
-          tabIndex={showStickyAudit && !menuOpen && !closingAreaVisible ? 0 : -1}
+          aria-hidden={!showStickyAssessment || menuOpen || closingAreaVisible}
+          tabIndex={showStickyAssessment && !menuOpen && !closingAreaVisible ? 0 : -1}
         >
-          {isEnglish ? "Start profile audit" : "Пройти аудит профиля"}
+          {isEnglish ? "Assess my options" : "Оценить шансы"}
           <span aria-hidden="true">→</span>
         </Link>
       ) : null}

@@ -19,7 +19,7 @@ export default function EnglishPrivacyPage() {
         <article className="legal-page section-shell privacy-page">
           <p className="eyebrow">Data processing</p>
           <h1>Privacy policy</h1>
-          <p className="legal-updated">Version dated 27 August 2026</p>
+          <p className="legal-updated">Version dated 4 September 2026</p>
           <p className="legal-intro">This policy explains what personal data Samotsvet receives through the site, why it is needed, who may receive it and how a data subject can exercise their rights. We aim to collect only the information required to respond to an enquiry.</p>
 
           <section>
@@ -66,7 +66,7 @@ export default function EnglishPrivacyPage() {
 
           <section>
             <h2>5. Source of data and required fields</h2>
-            <p>Data normally comes directly from the person submitting the enquiry. The audit result uses answers about the professional objective, field, experience, role, measurable impact, independent evidence and timing. These answers are processed locally in the browser and are not sent to the controller. Only if the user separately requests a team review do they provide contact details, additional context and consent; one completed enquiry is then sent to the CRM.</p>
+            <p>Data normally comes directly from the person submitting the enquiry. The options assessment uses answers about the relocation objective, citizenship, current residence, family, working arrangements, professional experience, available evidence and timing. After consent is confirmed, the completed form is sent directly to the CRM for specialist review.</p>
           </section>
 
           <section>
@@ -124,9 +124,9 @@ export default function EnglishPrivacyPage() {
           </section>
 
           <section>
-            <h2>12. Automated decisions</h2>
-            <p>The form automatically compares answers about career foundation, impact and evidence across several programmes. A preferred country does not determine the result. The output is not legal advice, an approval forecast or a decision on whether Samotsvet can take on the work.</p>
-            <p>The form does not make an automated decision about a visa or status and does not produce legal effects. A specialist provides the substantive assessment after reviewing the enquiry.</p>
+            <h2>12. Form assessment</h2>
+            <p>The form collects introductory information and sends it to the CRM. It does not calculate approval prospects or select a programme automatically.</p>
+            <p>A specialist provides the substantive assessment after reviewing the enquiry. The response is not legal advice, a guarantee of approval or a decision by an immigration authority.</p>
           </section>
 
           <section>

@@ -3,15 +3,14 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 import { AttributionLinker } from "./components/AttributionLinker";
 import { LanguageAttribute } from "./components/LanguageAttribute";
-import { TelegramButton } from "./components/TelegramButton";
 import { CONTACT_EMAIL, FOUNDER_NAME, LEGAL_NAME, OG_IMAGE, SITE_NAME, SITE_URL, TELEGRAM_URL } from "./site";
 
 const geist = Geist({ variable: "--font-geist", subsets: ["latin", "cyrillic"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: "Samotsvet — агентство релокации Никиты Самоцветова", template: "%s | Samotsvet" },
-  description: "Агентство Никиты Самоцветова для специалистов, предпринимателей и семей: аудит профиля, сравнение маршрутов, развитие доказательств и сопровождение релокации.",
+  title: { default: "Samotsvet: иммиграция и релокация под ключ", template: "%s | Samotsvet" },
+  description: "Агентство полного цикла для специалистов, предпринимателей и семей: оценка шансов, выбор маршрута, развитие профиля, подготовка документов и релокация под ключ.",
   robots: { index: true, follow: true },
   icons: {
     icon: [
@@ -24,18 +23,18 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   openGraph: {
-    title: "Samotsvet — агентство релокации Никиты Самоцветова",
-    description: "Персональная оценка стратегии и единая команда для развития профиля, доказательств и сопровождения подачи.",
+    title: "Samotsvet: иммиграция и релокация под ключ",
+    description: "Оценка шансов, выбор маршрута, подготовка кейса, подача и сервисы для переезда одной командой.",
     url: "/",
     type: "website",
     locale: "ru_RU",
     siteName: SITE_NAME,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Samotsvet — иммиграция и релокация" }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Samotsvet: иммиграция и релокация" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Samotsvet — агентство релокации Никиты Самоцветова",
-    description: "Персональная оценка стратегии и единая команда для развития профиля, доказательств и сопровождения подачи.",
+    title: "Samotsvet: иммиграция и релокация под ключ",
+    description: "Оценка шансов, выбор маршрута, подготовка кейса, подача и сервисы для переезда одной командой.",
     images: [OG_IMAGE],
   },
 };
@@ -75,7 +74,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <AttributionLinker />
         <LanguageAttribute />
         {children}
-        <TelegramButton />
       </body>
     </html>
   );

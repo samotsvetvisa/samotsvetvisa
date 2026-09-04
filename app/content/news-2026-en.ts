@@ -12,11 +12,11 @@ export const news2026En: Article[] = [
     lead: "On 21 January 2026, the US Department of State paused immigrant-visa issuance to Russian nationals. On 21 August, a federal district court in New York held the policy unlawful and vacated it. This was not a Supreme Court judgment, and practical implementation remained disputed on 26 August.",
     relatedCountry: "usa",
     sources: [
-      { label: "Department of State — immigrant-visa issuance pause", href: "https://travel.state.gov/content/travel/en/News/visas-news/immigrant-visa-processing-updates-for-nationalities-at-high-risk-of-public-benefits-usage.html" },
-      { label: "Department of State — September 2026 Visa Bulletin", href: "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2026/visa-bulletin-for-september-2026.html" },
-      { label: "Department of State — immigrant-visa interview location", href: "https://travel.state.gov/content/travel/en/News/visas-news/adjudicating-iv-applicants-in-their-country-of-residence.html" },
-      { label: "Federal district court — 21 August 2026 decision", href: "https://media.nilc.org/2026/04/CLINIC-v-Rubio-partial-MSJ-decision-08-21-2026.pdf" },
-      { label: "CLINIC v. Rubio — case materials and updates", href: "https://www.nilc.org/litigation/clinic-v-rubio/" },
+      { label: "Department of State – immigrant-visa issuance pause", href: "https://travel.state.gov/content/travel/en/News/visas-news/immigrant-visa-processing-updates-for-nationalities-at-high-risk-of-public-benefits-usage.html" },
+      { label: "Department of State – September 2026 Visa Bulletin", href: "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2026/visa-bulletin-for-september-2026.html" },
+      { label: "Department of State – immigrant-visa interview location", href: "https://travel.state.gov/content/travel/en/News/visas-news/adjudicating-iv-applicants-in-their-country-of-residence.html" },
+      { label: "Federal district court – 21 August 2026 decision", href: "https://media.nilc.org/2026/04/CLINIC-v-Rubio-partial-MSJ-decision-08-21-2026.pdf" },
+      { label: "CLINIC v. Rubio – case materials and updates", href: "https://www.nilc.org/litigation/clinic-v-rubio/" },
     ],
     sections: [
       { title: "21 January: what the Department of State paused", paragraphs: ["The measure concerned immigrant-visa issuance to nationals of 75 countries, including Russia. Applications and interviews could continue, but the final visa was not issued. Dual nationals applying with a passport of a country outside the list were exempt, and previously issued visas were not revoked.", "This was not a blanket pause on every green-card process. USCIS petitions and adjustment of status inside the United States are separate. O-1 and E-2 nonimmigrant visas were not covered by this particular measure."] },
@@ -36,9 +36,9 @@ export const news2026En: Article[] = [
     lead: "HC 1691 was published on 5 March 2026, but its provisions took effect on different dates. Both the text and the stage at which a change applies matter to an applicant.",
     relatedCountry: "uk",
     sources: [
-      { label: "GOV.UK — Statement of Changes HC 1691", href: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-1619-5-march-2026" },
-      { label: "GOV.UK — Explanatory Memorandum to HC 1691", href: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-1619-5-march-2026/explanatory-memorandum-to-the-statement-of-changes-in-the-immigration-rules-hc-1691-5-march-2026-accessible" },
-      { label: "GOV.UK — Immigration Rules updates", href: "https://www.gov.uk/guidance/immigration-rules/updates" },
+      { label: "GOV.UK – Statement of Changes HC 1691", href: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-1619-5-march-2026" },
+      { label: "GOV.UK – Explanatory Memorandum to HC 1691", href: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-1619-5-march-2026/explanatory-memorandum-to-the-statement-of-changes-in-the-immigration-rules-hc-1691-5-march-2026-accessible" },
+      { label: "GOV.UK – Immigration Rules updates", href: "https://www.gov.uk/guidance/immigration-rules/updates" },
     ],
     sections: [
       { title: "One package with several commencement dates", paragraphs: ["Some changes took effect on 26 March and 8 April 2026. The extension of Global Talent to additional design roles started on 1 July 2026. The new B2 English requirement for settlement on a number of routes applies to applications made from 26 March 2027.", "A reference to the March document without its commencement date may therefore be misleading. We check the operative version of the rule together with its transitional provisions."] },
@@ -57,8 +57,8 @@ export const news2026En: Article[] = [
     lead: "From 1 July 2026, Global Talent covers additional design roles that did not previously fit within the existing fields. The established architecture and fashion routes remain in place.",
     relatedCountry: "uk",
     sources: [
-      { label: "GOV.UK — Appendix Global Talent", href: "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-global-talent" },
-      { label: "GOV.UK — HC 1691 explanation of the design pathway", href: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-1619-5-march-2026/explanatory-memorandum-to-the-statement-of-changes-in-the-immigration-rules-hc-1691-5-march-2026-accessible" },
+      { label: "GOV.UK – Appendix Global Talent", href: "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-global-talent" },
+      { label: "GOV.UK – HC 1691 explanation of the design pathway", href: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-1619-5-march-2026/explanatory-memorandum-to-the-statement-of-changes-in-the-immigration-rules-hc-1691-5-march-2026-accessible" },
     ],
     sections: [
       { title: "What opened on 1 July", paragraphs: ["The official wording covers additional design roles. Architecture and fashion already had separate Global Talent mechanisms before the new design pathway was introduced."] },
@@ -77,8 +77,8 @@ export const news2026En: Article[] = [
     lead: "Earned Settlement was published as a consultation model. Its proposed ten-year baseline did not itself become an operative rule.",
     relatedCountry: "uk",
     sources: [
-      { label: "GOV.UK — Earned Settlement consultation", href: "https://www.gov.uk/government/consultations/earned-settlement/a-fairer-pathway-to-settlement-statement-and-accompanying-consultation-on-earned-settlement-accessible" },
-      { label: "GOV.UK — current Global Talent settlement periods", href: "https://www.gov.uk/global-talent" },
+      { label: "GOV.UK – Earned Settlement consultation", href: "https://www.gov.uk/government/consultations/earned-settlement/a-fairer-pathway-to-settlement-statement-and-accompanying-consultation-on-earned-settlement-accessible" },
+      { label: "GOV.UK – current Global Talent settlement periods", href: "https://www.gov.uk/global-talent" },
     ],
     sections: [
       { title: "The current position", paragraphs: ["The GOV.UK Global Talent page continues to state that settlement may be available after three or five years, depending on the field and the basis on which permission was granted."] },
@@ -97,7 +97,7 @@ export const news2026En: Article[] = [
     lead: "The English requirement for settlement on a number of routes rises from B1 to B2. The change takes effect on 26 March 2027 and may affect people already progressing towards settlement.",
     relatedCountry: "uk",
     sources: [
-      { label: "GOV.UK — HC 1691 Explanatory Memorandum, paragraphs 5.60–5.62", href: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-1619-5-march-2026/explanatory-memorandum-to-the-statement-of-changes-in-the-immigration-rules-hc-1691-5-march-2026-accessible" },
+      { label: "GOV.UK – HC 1691 Explanatory Memorandum, paragraphs 5.60–5.62", href: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-1619-5-march-2026/explanatory-memorandum-to-the-statement-of-changes-in-the-immigration-rules-hc-1691-5-march-2026-accessible" },
     ],
     sections: [
       { title: "Applications affected by the change", paragraphs: ["The official list includes Appendix KoLL, Skilled Worker, Global Talent, Scale-up, Innovator Founder, UK Ancestry and other routes. The rule applies to applications made from 26 March 2027."] },
@@ -116,12 +116,12 @@ export const news2026En: Article[] = [
     lead: "Spain's SMI for 2026 is €1,221 across 14 payments, or €17,094 a year. For the Digital Nomad Visa, the annual amount must be converted to an average monthly figure before applying the percentages for the principal applicant and family.",
     relatedCountry: "spain",
     sources: [
-      { label: "BOE — Royal Decree 126/2026", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2026-3815" },
-      { label: "Spanish Ministry of Foreign Affairs — telework financial requirements", href: "https://www.exteriores.gob.es/Consulados/bogota/es/ServiciosConsulares/Paginas/index.aspx?scca=Visados&scco=Colombia&scd=31&scs=Visado+de+residencia+para+teletrabajo+%28n%C3%B3mada+digital%29" },
+      { label: "BOE – Royal Decree 126/2026", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2026-3815" },
+      { label: "Spanish Ministry of Foreign Affairs – telework financial requirements", href: "https://www.exteriores.gob.es/Consulados/bogota/es/ServiciosConsulares/Paginas/index.aspx?scca=Visados&scco=Colombia&scd=31&scs=Visado+de+residencia+para+teletrabajo+%28n%C3%B3mada+digital%29" },
     ],
     sections: [
       { title: "The correct calculation base", paragraphs: ["Dividing €17,094 by 12 gives €1,424.50 a month. The principal applicant needs 200% of that amount, or €2,849 a month."] },
-      { title: "Family members", paragraphs: ["The first family member adds 75% of the average monthly SMI, or €1,068.38. Each additional family member adds 25%, or €356.13. The calculated minimum for a family of three is €4,273.50 a month."], points: ["Principal applicant — €2,849", "First family member — €1,068.38", "Each additional family member — €356.13"] },
+      { title: "Family members", paragraphs: ["The first family member adds 75% of the average monthly SMI, or €1,068.38. Each additional family member adds 25%, or €356.13. The calculated minimum for a family of three is €4,273.50 a month."], points: ["Principal applicant – €2,849", "First family member – €1,068.38", "Each additional family member – €356.13"] },
       { title: "Allowance for exchange-rate movement", paragraphs: ["Where income is received in another currency, meeting the minimum on one calculation date provides little resilience. We allow for currency movement and check that the amount is supported by contracts, receipts and bank records."] },
     ],
   },
@@ -136,8 +136,8 @@ export const news2026En: Article[] = [
     lead: "The official requirements for international telework cover the contract, the company's genuine and continuous activity, the remote nature of the work and a relationship with the applicant lasting at least three months.",
     relatedCountry: "spain",
     sources: [
-      { label: "Official PRIE portal — Digital nomads", href: "https://prie.comercio.gob.es/es-es/Paginas/Teletrabajadores-caracter-internacional.aspx" },
-      { label: "BOE — current consolidated Law 14/2013", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074" },
+      { label: "Official PRIE portal – Digital nomads", href: "https://prie.comercio.gob.es/es-es/Paginas/Teletrabajadores-caracter-internacional.aspx" },
+      { label: "BOE – current consolidated Law 14/2013", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074" },
     ],
     sections: [
       { title: "Three propositions to establish", paragraphs: ["The evidence should show that the overseas company genuinely operates, that the applicant's duties can be performed remotely and that the employment or professional relationship existed for at least three months before the application."] },
@@ -156,7 +156,7 @@ export const news2026En: Article[] = [
     lead: "The current wording of Law 14/2013 allows a foreign national who is lawfully in Spain to apply for an international telework authorisation. Lawful status on the filing date is central.",
     relatedCountry: "spain",
     sources: [
-      { label: "BOE — Article 74 quinquies of Law 14/2013", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074" },
+      { label: "BOE – Article 74 quinquies of Law 14/2013", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074" },
     ],
     sections: [
       { title: "The statutory wording", paragraphs: ["Article 74 quinquies expressly covers foreign nationals who are in Spain lawfully, as well as those who entered on the corresponding visa. The authorisation may be granted for up to three years."] },
@@ -175,8 +175,8 @@ export const news2026En: Article[] = [
     lead: "USCIS publishes quarterly data by form and category. The figures help to track workload and decisions at agency level, but they do not become a personal probability of approval.",
     relatedCountry: "usa",
     sources: [
-      { label: "USCIS — Immigration and Citizenship Data", href: "https://www.uscis.gov/tools/reports-and-studies/immigration-and-citizenship-data" },
-      { label: "USCIS — how processing times are calculated", href: "https://egov.uscis.gov/processing-times/more-info" },
+      { label: "USCIS – Immigration and Citizenship Data", href: "https://www.uscis.gov/tools/reports-and-studies/immigration-and-citizenship-data" },
+      { label: "USCIS – how processing times are calculated", href: "https://egov.uscis.gov/processing-times/more-info" },
     ],
     sections: [
       { title: "An average combines unlike matters", paragraphs: ["A single category contains applicants from different sectors with different histories and evidence quality. A quarterly approval rate does not show how persuasive one particular record is."] },
@@ -195,8 +195,8 @@ export const news2026En: Article[] = [
     lead: "EB-1A and EB-2 NIW answer different questions. NIW requires the applicant to connect a defined proposed endeavour convincingly to the US national interest through its own three-part analysis.",
     relatedCountry: "usa",
     sources: [
-      { label: "USCIS Policy Manual — EB-2 and National Interest Waiver", href: "https://www.uscis.gov/policy-manual/volume-6-part-f-chapter-5" },
-      { label: "USCIS Policy Manual — Extraordinary Ability", href: "https://www.uscis.gov/policy-manual/volume-6-part-f-chapter-2" },
+      { label: "USCIS Policy Manual – EB-2 and National Interest Waiver", href: "https://www.uscis.gov/policy-manual/volume-6-part-f-chapter-5" },
+      { label: "USCIS Policy Manual – Extraordinary Ability", href: "https://www.uscis.gov/policy-manual/volume-6-part-f-chapter-2" },
     ],
     sections: [
       { title: "What NIW examines", paragraphs: ["The current framework considers the substantial merit and national importance of the proposed endeavour, whether the applicant is well positioned to advance it and whether waiving the job offer and labour certification requirements would benefit the United States."] },
@@ -215,9 +215,9 @@ export const news2026En: Article[] = [
     lead: "The USCIS processing-time figure is the period in which the agency completed 80% of adjudicated cases over the previous six months. It is a retrospective metric, not a deadline for an individual petition.",
     relatedCountry: "usa",
     sources: [
-      { label: "USCIS — Case Processing Times", href: "https://egov.uscis.gov/processing-times" },
-      { label: "USCIS — information about processing times", href: "https://egov.uscis.gov/processing-times/more-info" },
-      { label: "USCIS — Premium Processing", href: "https://www.uscis.gov/forms/all-forms/how-do-i-request-premium-processing" },
+      { label: "USCIS – Case Processing Times", href: "https://egov.uscis.gov/processing-times" },
+      { label: "USCIS – information about processing times", href: "https://egov.uscis.gov/processing-times/more-info" },
+      { label: "USCIS – Premium Processing", href: "https://www.uscis.gov/forms/all-forms/how-do-i-request-premium-processing" },
     ],
     sections: [
       { title: "Why the figure changes", paragraphs: ["The metric changes with the set of completed cases. An individual request for evidence, workload transfer or the circumstances of a particular office are reflected only once the relevant cases enter the completed sample."] },
@@ -236,8 +236,8 @@ export const news2026En: Article[] = [
     lead: "The federal regulatory agenda includes a Petition for Immigrant Worker Reforms project intended to clarify requirements for EB-1A, EB-2 NIW and other employment-based categories. Its Unified Agenda entry described planned rulemaking, not an operative rule.",
     relatedCountry: "usa",
     sources: [
-      { label: "Reginfo.gov — RIN 1615-AC85", href: "https://www.reginfo.gov/public/do/eAgendaViewRule?RIN=1615-AC85&pubId=202504" },
-      { label: "Federal Register — Unified Agenda", href: "https://www.federalregister.gov/documents/2025/09/22/2025-18329/unified-agenda-of-federal-regulatory-and-deregulatory-actions" },
+      { label: "Reginfo.gov – RIN 1615-AC85", href: "https://www.reginfo.gov/public/do/eAgendaViewRule?RIN=1615-AC85&pubId=202504" },
+      { label: "Federal Register – Unified Agenda", href: "https://www.federalregister.gov/documents/2025/09/22/2025-18329/unified-agenda-of-federal-regulatory-and-deregulatory-actions" },
     ],
     sections: [
       { title: "The stated objective", paragraphs: ["DHS refers to codifying current guidance, updating the extraordinary-ability provisions and clarifying evidential requirements for first-preference and National Interest Waiver petitions."] },
@@ -256,8 +256,8 @@ export const news2026En: Article[] = [
     lead: "Decree no. 2025-539 replaced passeport talent with carte talent in the legislation and reorganised some subcategories. The changes took effect on 16 June 2025, although some official and reference pages still use the former term.",
     relatedCountry: "france",
     sources: [
-      { label: "Légifrance — Decree no. 2025-539", href: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000051736256" },
-      { label: "France-Visas — International talents", href: "https://france-visas.gouv.fr/en/talents-internationaux-et-attractivite-economique" },
+      { label: "Légifrance – Decree no. 2025-539", href: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000051736256" },
+      { label: "France-Visas – International talents", href: "https://france-visas.gouv.fr/en/talents-internationaux-et-attractivite-economique" },
     ],
     sections: [
       { title: "The official name", paragraphs: ["The code now uses carte talent. Our material therefore uses the current term and, where useful, gives the former search term Passeport Talent alongside it so that readers can recognise the same developing system."] },
@@ -276,9 +276,9 @@ export const news2026En: Article[] = [
     lead: "From 1 January 2026, the examen civique applies to naturalisation and the first issue of certain multi-year or resident cards. The examination has 40 questions and requires 32 correct answers.",
     relatedCountry: "france",
     sources: [
-      { label: "Service-Public — the new examen civique", href: "https://www.service-public.fr/particuliers/actualites/A18713" },
-      { label: "Légifrance — Order of 10 October 2025", href: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000052381620" },
-      { label: "Légifrance — CIR exemptions, Article L413-5", href: "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006070158/LEGISCTA000042771476/" },
+      { label: "Service-Public – the new examen civique", href: "https://www.service-public.fr/particuliers/actualites/A18713" },
+      { label: "Légifrance – Order of 10 October 2025", href: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000052381620" },
+      { label: "Légifrance – CIR exemptions, Article L413-5", href: "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006070158/LEGISCTA000042771476/" },
     ],
     sections: [
       { title: "Format", paragraphs: ["The digital test lasts up to 45 minutes and covers the principles of the Republic, institutions, rights and duties, history, culture and everyday situations. The pass mark is 80%."] },
@@ -297,8 +297,8 @@ export const news2026En: Article[] = [
     lead: "From 1 January 2026, naturalisation by decree requires French at B2 or above in both speaking and writing. A separate civic examination also applies.",
     relatedCountry: "france",
     sources: [
-      { label: "Service-Public — evidence of French level", href: "https://www.service-public.fr/particuliers/vosdroits/F11926" },
-      { label: "Service-Public — civic examination for naturalisation", href: "https://www.service-public.fr/particuliers/vosdroits/F39426" },
+      { label: "Service-Public – evidence of French level", href: "https://www.service-public.fr/particuliers/vosdroits/F11926" },
+      { label: "Service-Public – civic examination for naturalisation", href: "https://www.service-public.fr/particuliers/vosdroits/F39426" },
     ],
     sections: [
       { title: "What B2 includes", paragraphs: ["The level requires comprehension of complex text and the ability to develop an argument clearly. Comfortable conversation in everyday settings does not establish the written B2 component."] },
@@ -317,8 +317,8 @@ export const news2026En: Article[] = [
     lead: "Organic Law no. 1/2026 was published on 18 May and took effect on 19 May 2026. It requires seven years of lawful residence for EU nationals and nationals of countries where Portuguese is an official language, and ten years for other nationals.",
     relatedCountry: "uk",
     sources: [
-      { label: "Diário da República — Organic Law no. 1/2026", href: "https://diariodarepublica.pt/dr/detalhe/lei-organica/1-2026-1123539996" },
-      { label: "Diário da República — consolidated Nationality Law", href: "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/1981-34536975" },
+      { label: "Diário da República – Organic Law no. 1/2026", href: "https://diariodarepublica.pt/dr/detalhe/lei-organica/1-2026-1123539996" },
+      { label: "Diário da República – consolidated Nationality Law", href: "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/1981-34536975" },
     ],
     sections: [
       { title: "The date of the law matters", paragraphs: ["The measure was promulgated on 3 May, published on 18 May and entered into force the following day. For the operative law, the publication and commencement dates matter; the signature date alone is insufficient."] },
@@ -337,10 +337,10 @@ export const news2026En: Article[] = [
     lead: "The 2026 changes have different legal statuses: some are already in force, some take effect later, and the UK's ten-year model remains a proposal.",
     relatedCountry: "uk",
     sources: [
-      { label: "GOV.UK — Earned Settlement consultation", href: "https://www.gov.uk/government/consultations/earned-settlement/a-fairer-pathway-to-settlement-statement-and-accompanying-consultation-on-earned-settlement-accessible" },
-      { label: "Diário da República — Nationality Law", href: "https://diariodarepublica.pt/dr/detalhe/lei-organica/1-2026-1123539996" },
-      { label: "Service-Public — examen civique", href: "https://www.service-public.fr/particuliers/actualites/A18713" },
-      { label: "BOE — 2026 SMI", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2026-3815" },
+      { label: "GOV.UK – Earned Settlement consultation", href: "https://www.gov.uk/government/consultations/earned-settlement/a-fairer-pathway-to-settlement-statement-and-accompanying-consultation-on-earned-settlement-accessible" },
+      { label: "Diário da República – Nationality Law", href: "https://diariodarepublica.pt/dr/detalhe/lei-organica/1-2026-1123539996" },
+      { label: "Service-Public – examen civique", href: "https://www.service-public.fr/particuliers/actualites/A18713" },
+      { label: "BOE – 2026 SMI", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2026-3815" },
     ],
     sections: [
       { title: "Four different legal positions", paragraphs: ["Portugal changed the residence periods for naturalisation. France introduced B2 and a civic examination for the relevant procedures. Spain raised the financial threshold in line with the SMI. The United Kingdom set B2 for settlement from March 2027. The ten-year Earned Settlement model was presented as a consultation proposal and was not contained in the operative rules."] },

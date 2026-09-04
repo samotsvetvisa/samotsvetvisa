@@ -36,10 +36,10 @@ const groups: Record<Locale, CountryGroup[]> = {
           name: "Global Talent",
           outcome: "Работа, смена работодателя, самостоятельная занятость и собственный бизнес без привязки к одному спонсору.",
           forWhom: "Специалисты и основатели в digital technology, а также заявители в науке, искусстве и других поддерживаемых направлениях.",
-          evidence: "Признание в профессиональной области, личный вклад, результаты и независимые источники. Публикации — лишь один из возможных видов доказательств.",
-          preparation: "Обычно от 2–4 месяцев, если основа уже есть; при развитии профиля — дольше.",
-          processing: "Предварительное одобрение профильной организации — обычно 2–8 недель; визовый этап — ориентировочно 3 недели из-за рубежа или 8 недель из Великобритании.",
-          external: "Профильная организация, которая выдаёт предварительное одобрение (endorsement). Работодатель не требуется.",
+          evidence: "Признание в профессиональной области, личный вклад, результаты и независимые источники. Публикации – лишь один из возможных видов доказательств.",
+          preparation: "Обычно от 2–4 месяцев, если основа уже есть; при развитии профиля – дольше.",
+          processing: "Предварительное одобрение профильной организации – обычно 2–8 недель; визовый этап – ориентировочно 3 недели из-за рубежа или 8 недель из Великобритании.",
+          external: "Профильная организация, которая выдает предварительное одобрение (endorsement). Работодатель не требуется.",
           href: "/countries/uk/#route-global-talent",
         },
         {
@@ -48,8 +48,8 @@ const groups: Record<Locale, CountryGroup[]> = {
           forWhom: "Основатели с новой, жизнеспособной и масштабируемой бизнес-моделью, которую планируют реализовывать в Великобритании.",
           evidence: "Инновационность идеи, жизнеспособность модели, потенциал масштабирования и реальная роль основателя.",
           preparation: "От 2 месяцев плюс время на проработку проекта и получение предварительного одобрения.",
-          processing: "Срок предварительного одобрения зависит от выбранной организации; визовый этап — обычно 3 недели из-за рубежа или 8 недель из Великобритании.",
-          external: "Уполномоченная организация, которая оценивает стартап и выдаёт предварительное одобрение. Работодатель не требуется.",
+          processing: "Срок предварительного одобрения зависит от выбранной организации; визовый этап – обычно 3 недели из-за рубежа или 8 недель из Великобритании.",
+          external: "Уполномоченная организация, которая оценивает стартап и выдает предварительное одобрение. Работодатель не требуется.",
           href: "/countries/uk/#route-innovator-founder",
         },
       ],
@@ -61,37 +61,37 @@ const groups: Record<Locale, CountryGroup[]> = {
       intro: "Четыре программы с разным результатом: постоянный статус, временная работа или переезд через инвестиционный бизнес.",
       routes: [
         {
-          name: "EB-1A — выдающиеся способности",
+          name: "EB-1A – выдающиеся способности",
           outcome: "Иммиграционная категория, которая может привести к постоянному статусу без обязательного работодателя.",
           forWhom: "Специалисты и основатели с устойчивым признанием и достижениями высокого уровня в своей области.",
           evidence: "Формальные критерии плюс итоговая оценка всего кейса: масштаб признания, личный вклад и продолжение работы в области.",
-          preparation: "От 1–2 месяцев при готовой доказательственной базе; при развитии профиля — дольше.",
-          processing: "Иммиграционная служба США (USCIS): ускоренное рассмотрение петиции I-140 — 15 рабочих дней. Консульский этап или смена статуса внутри США идут отдельно.",
+          preparation: "От 1–2 месяцев при готовой доказательственной базе; при развитии профиля – дольше.",
+          processing: "Иммиграционная служба США (USCIS): ускоренное рассмотрение петиции I-140 – 15 рабочих дней. Консульский этап или смена статуса внутри США идут отдельно.",
           external: "Работодатель не обязателен: заявитель может подать петицию самостоятельно.",
           href: "/countries/usa/#route-eb-1a",
         },
         {
-          name: "EB-2 NIW — национальный интерес",
+          name: "EB-2 NIW – национальный интерес",
           outcome: "Иммиграционная категория с освобождением от работодателя и трудовой сертификации в интересах США.",
-          forWhom: "Специалисты, исследователи и предприниматели с конкретным планом будущей деятельности в США и подтверждённой способностью его реализовать.",
-          evidence: "Значение будущей деятельности для США, готовность заявителя продвигать её и основания отказаться от обычного требования работодателя.",
+          forWhom: "Специалисты, исследователи и предприниматели с конкретным планом будущей деятельности в США и подтвержденной способностью его реализовать.",
+          evidence: "Значение будущей деятельности для США, готовность заявителя продвигать ее и основания отказаться от обычного требования работодателя.",
           preparation: "От 1–2 месяцев после формирования будущего плана и доказательственной логики.",
-          processing: "Иммиграционная служба США (USCIS): ускоренное рассмотрение петиции I-140 — 45 рабочих дней. Следующий иммиграционный этап рассматривается отдельно.",
+          processing: "Иммиграционная служба США (USCIS): ускоренное рассмотрение петиции I-140 – 45 рабочих дней. Следующий иммиграционный этап рассматривается отдельно.",
           external: "Работодатель не обязателен: заявитель может подать петицию самостоятельно.",
           href: "/countries/usa/#route-eb-2-niw",
         },
         {
-          name: "O-1 — выдающиеся специалисты",
+          name: "O-1 – выдающиеся специалисты",
           outcome: "Временная работа в США по заявленной профессиональной деятельности и конкретным будущим проектам.",
-          forWhom: "Специалисты с достижениями и подтверждённой работой в США через работодателя или агента.",
+          forWhom: "Специалисты с достижениями и подтвержденной работой в США через работодателя или агента.",
           evidence: "Профессиональные достижения, признание, связь прошлых результатов с будущей работой и документы по проектам.",
           preparation: "Обычно от 1–2 месяцев после определения американского заявителя и будущих проектов.",
-          processing: "Иммиграционная служба США (USCIS): ускоренное рассмотрение — 15 рабочих дней; консульский этап идёт отдельно.",
-          external: "Американский работодатель или агент подаёт петицию. Самостоятельная подача невозможна.",
+          processing: "Иммиграционная служба США (USCIS): ускоренное рассмотрение – 15 рабочих дней; консульский этап идет отдельно.",
+          external: "Американский работодатель или агент подает петицию. Самостоятельная подача невозможна.",
           href: "/countries/usa/#route-o-1",
         },
         {
-          name: "E-2 — инвестиционный бизнес",
+          name: "E-2 – инвестиционный бизнес",
           outcome: "Временный статус для развития и контроля действующего бизнеса в США.",
           forWhom: "Граждане стран, имеющих соответствующий договор с США, готовые вложить существенные средства в реальный бизнес.",
           evidence: "Гражданство договорной страны, законное происхождение средств, реальность инвестиций, работающая модель и контроль над компанией.",
@@ -106,16 +106,16 @@ const groups: Record<Locale, CountryGroup[]> = {
       id: "spain",
       code: "ES",
       country: "Испания",
-      intro: "Маршрут для удалённой работы на зарубежную компанию или клиентов с разными требованиями к сотрудникам и ИП/контракторам.",
+      intro: "Маршрут для удаленной работы на зарубежную компанию или клиентов с разными требованиями к сотрудникам и ИП/контракторам.",
       routes: [
         {
-          name: "Digital Nomad — ВНЖ для удалённой работы",
-          outcome: "Право жить в Испании и работать удалённо на зарубежную компанию или иностранных клиентов.",
+          name: "Digital Nomad – ВНЖ для удаленной работы",
+          outcome: "Право жить в Испании и работать удаленно на зарубежную компанию или иностранных клиентов.",
           forWhom: "Сотрудники иностранных компаний, ИП и контракторы, которые соответствуют требованиям к стажу, договору, доходу и формату работы.",
           evidence: "Трудовые или коммерческие договоры, стаж отношений, квалификация, доход, страхование и документы семьи.",
           preparation: "Обычно от 1 месяца при стабильной занятости и готовых справках.",
-          processing: "Для визы через консульство нормативный срок — 10 рабочих дней. При подаче из Испании подразделение по работе с крупными компаниями и международными специалистами рассматривает заявление нормативно до 20 дней.",
-          external: "Зарубежный работодатель или клиенты подтверждают отношения и разрешение на удалённую работу.",
+          processing: "Для визы через консульство нормативный срок – 10 рабочих дней. При подаче из Испании подразделение по работе с крупными компаниями и международными специалистами рассматривает заявление нормативно до 20 дней.",
+          external: "Зарубежный работодатель или клиенты подтверждают отношения и разрешение на удаленную работу.",
           href: "/countries/spain/#route-digital-nomad-visa",
         },
       ],
@@ -127,7 +127,7 @@ const groups: Record<Locale, CountryGroup[]> = {
       intro: "Программы Talent отличаются основанием: признанный инновационный проект или собственная предпринимательская деятельность.",
       routes: [
         {
-          name: "Talent — инновационный проект",
+          name: "Talent – инновационный проект",
           outcome: "Переезд во Францию для реализации инновационного проекта, признанного уполномоченной организацией.",
           forWhom: "Основатели и ключевые участники инновационных проектов, которым нужна французская экосистема для реализации плана.",
           evidence: "Инновационность проекта, его признание, ресурсы, финансирование и необходимая роль заявителя.",
@@ -137,7 +137,7 @@ const groups: Record<Locale, CountryGroup[]> = {
           href: "/countries/france/#route-french-tech-visa",
         },
         {
-          name: "Talent — предприниматель",
+          name: "Talent – предприниматель",
           outcome: "Создание или развитие собственного бизнеса во Франции.",
           forWhom: "Предприниматели с опытом, финансированием и реалистичным планом деятельности во Франции.",
           evidence: "Бизнес-план, профессиональный опыт, финансирование, экономическая жизнеспособность и роль заявителя.",
@@ -185,7 +185,7 @@ const groups: Record<Locale, CountryGroup[]> = {
       intro: "Four programmes with different outcomes: permanent residence, temporary work or relocation through an investment business.",
       routes: [
         {
-          name: "EB-1A — extraordinary ability",
+          name: "EB-1A – extraordinary ability",
           outcome: "An immigrant category that may lead to permanent residence without a required employer.",
           forWhom: "Specialists and founders with sustained recognition and high-level achievement in their field.",
           evidence: "Threshold criteria and a final review of the whole record: the scale of recognition, personal contribution and continued work in the field.",
@@ -195,7 +195,7 @@ const groups: Record<Locale, CountryGroup[]> = {
           href: "/en/countries/usa/#route-eb-1a",
         },
         {
-          name: "EB-2 NIW — national interest waiver",
+          name: "EB-2 NIW – national interest waiver",
           outcome: "An immigrant category that waives the employer and labour-certification requirements in the US national interest.",
           forWhom: "Specialists, researchers and entrepreneurs with a defined proposed endeavour in the United States and evidence that they can advance it.",
           evidence: "The importance of the proposed work, the applicant's ability to advance it and the reasons for waiving the ordinary employer requirement.",
@@ -205,7 +205,7 @@ const groups: Record<Locale, CountryGroup[]> = {
           href: "/en/countries/usa/#route-eb-2-niw",
         },
         {
-          name: "O-1 — extraordinary ability",
+          name: "O-1 – extraordinary ability",
           outcome: "Temporary work in the United States in the stated field and on documented future projects.",
           forWhom: "Accomplished specialists with a US employer or agent and defined work in the United States.",
           evidence: "Professional achievement, recognition, continuity between past work and future activity, and documents for the proposed projects.",
@@ -215,7 +215,7 @@ const groups: Record<Locale, CountryGroup[]> = {
           href: "/en/countries/usa/#route-o-1",
         },
         {
-          name: "E-2 — investment business",
+          name: "E-2 – investment business",
           outcome: "Temporary status to develop and control an operating business in the United States.",
           forWhom: "Nationals of treaty countries who are prepared to invest a substantial amount in a genuine business.",
           evidence: "Treaty nationality, lawful source of funds, a committed investment, a viable business and control by the applicant.",
@@ -233,7 +233,7 @@ const groups: Record<Locale, CountryGroup[]> = {
       intro: "A route for remote work for an overseas company or clients, with different evidence for employees and self-employed contractors.",
       routes: [
         {
-          name: "Digital Nomad — remote-work residence",
+          name: "Digital Nomad – remote-work residence",
           outcome: "Live in Spain while working remotely for an overseas company or foreign clients.",
           forWhom: "Employees of foreign companies and self-employed contractors who meet the experience, contract, income and working-arrangement requirements.",
           evidence: "Employment or commercial contracts, duration of the relationship, qualifications, income, insurance and family documents.",
@@ -251,7 +251,7 @@ const groups: Record<Locale, CountryGroup[]> = {
       intro: "Talent programmes differ by basis: a recognised innovative project or the applicant's own entrepreneurial activity.",
       routes: [
         {
-          name: "Talent — innovative project",
+          name: "Talent – innovative project",
           outcome: "Relocate to France to deliver an innovative project recognised by an authorised organisation.",
           forWhom: "Founders and essential project participants who need the French ecosystem to deliver an innovative plan.",
           evidence: "The project's innovative nature, recognition, resources, funding and the applicant's essential role.",
@@ -261,7 +261,7 @@ const groups: Record<Locale, CountryGroup[]> = {
           href: "/en/countries/france/#route-french-tech-visa",
         },
         {
-          name: "Talent — entrepreneur",
+          name: "Talent – entrepreneur",
           outcome: "Create or develop the applicant's own business in France.",
           forWhom: "Entrepreneurs with relevant experience, funding and a realistic plan for activity in France.",
           evidence: "A business plan, professional experience, funding, commercial viability and the applicant's role.",
@@ -305,7 +305,7 @@ export function ComparePage({ locale = "ru" }: { locale?: Locale }) {
           <span>{en ? "United States · update 27 August 2026" : "США · обновление на 27 августа 2026"}</span>
           <div>
             <h2>{en ? "A federal court vacated the January immigrant-visa pause" : "Федеральный суд отменил январскую приостановку иммиграционных виз"}</h2>
-            <p>{en ? "The State Department paused immigrant-visa issuance to Russian nationals on 21 January. On 21 August, a federal district court in New York held the policy unlawful and vacated it. This was not a Supreme Court judgment. Practical implementation remained disputed on 26 August, so consular timing should still be checked for the individual case." : "Госдепартамент приостановил выдачу иммиграционных виз гражданам России 21 января. 21 августа федеральный окружной суд Нью-Йорка признал эту политику незаконной и отменил её. Это не решение Верховного суда. На 26 августа исполнение решения ещё оспаривалось, поэтому фактический статус консульского этапа нужно проверять по конкретному делу."}</p>
+            <p>{en ? "The State Department paused immigrant-visa issuance to Russian nationals on 21 January. On 21 August, a federal district court in New York held the policy unlawful and vacated it. This was not a Supreme Court judgment. Practical implementation remained disputed on 26 August, so consular timing should still be checked for the individual case." : "Госдепартамент приостановил выдачу иммиграционных виз гражданам России 21 января. 21 августа федеральный окружной суд Нью-Йорка признал эту политику незаконной и отменил ее. Это не решение Верховного суда. На 26 августа исполнение решения еще оспаривалось, поэтому фактический статус консульского этапа нужно проверять по конкретному делу."}</p>
             <Link href={withTrailingSlash(`${base}/blog/us-immigrant-visa-issuance-pause-russia`)}>{en ? "Read the chronology" : "Разобрать хронологию"} <span aria-hidden="true">→</span></Link>
           </div>
         </aside>
@@ -336,7 +336,7 @@ export function ComparePage({ locale = "ru" }: { locale?: Locale }) {
         <p className="compare-disclaimer">{en ? "This comparison is a starting point, not an eligibility decision. Nationality, present status, family circumstances, filing location and documentary detail may change the conclusion." : "Это отправная точка, а не решение о соответствии. Гражданство, текущий статус, семья, место подачи и содержание документов могут изменить вывод."}</p>
       </section>
 
-      <section className="section-shell closing-cta"><div><p className="eyebrow eyebrow-light">{en ? "Your circumstances" : "Ваша ситуация"}</p><h2>{en ? "Test several programmes against the same facts" : "Проверим несколько программ на одних и тех же фактах"}</h2></div><div><p>{en ? "The profile audit examines career foundation, measurable impact and independent evidence before it suggests routes." : "Аудит профиля сначала проверяет карьерную основу, измеримый вклад и независимые подтверждения — и только затем предлагает маршруты."}</p><Link className="button button-gold" href={withTrailingSlash(`${base}/assessment`)}>{en ? "Start profile audit" : "Начать аудит профиля"}</Link></div></section>
+      <section className="section-shell closing-cta"><div><p className="eyebrow eyebrow-light">{en ? "Your circumstances" : "Ваша ситуация"}</p><h2>{en ? "Compare several programmes against the same facts" : "Сравним несколько программ на одних и тех же фактах"}</h2></div><div><p>{en ? "Complete the introductory form. Our team will review the objective, starting position, experience and available evidence." : "Заполните вводную анкету. Команда изучит цель, исходные данные, опыт и доступные доказательства."}</p><Link className="button button-gold" href={withTrailingSlash(`${base}/assessment`)}>{en ? "Assess my options" : "Оценить шансы"}</Link></div></section>
     </main>
     <SiteFooter locale={locale} />
   </>;

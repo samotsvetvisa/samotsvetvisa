@@ -1,28 +1,3 @@
-"use client";
-
-import { usePathname } from "next/navigation";
-import { TELEGRAM_HANDLE, TELEGRAM_URL } from "../site";
-
-export function TelegramButton() {
-  const english = usePathname()?.startsWith("/en");
-
-  return (
-    <a
-      className="telegram-float"
-      href={TELEGRAM_URL}
-      target="_blank"
-      rel="noreferrer"
-      aria-label={english ? `Message Samotsvet on Telegram: ${TELEGRAM_HANDLE}` : `Написать Samotsvet в Telegram: ${TELEGRAM_HANDLE}`}
-    >
-      <TelegramIcon />
-      <span>
-        <strong>{english ? "Message us" : "Написать нам"}</strong>
-        <small>Telegram · {TELEGRAM_HANDLE}</small>
-      </span>
-    </a>
-  );
-}
-
 export function TelegramIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">

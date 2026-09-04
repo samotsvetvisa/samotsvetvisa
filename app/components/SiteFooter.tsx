@@ -1,13 +1,14 @@
 import Link from "next/link";
-import { CONTACT_EMAIL, SERVICE_MODEL_EN, SERVICE_MODEL_RU, TELEGRAM_HANDLE, TELEGRAM_URL, withTrailingSlash } from "../site";
+import { CONTACT_EMAIL, SERVICE_MODEL_EN, SERVICE_MODEL_RU, TELEGRAM_DIRECT_URL, TELEGRAM_HANDLE, TELEGRAM_URL, withTrailingSlash } from "../site";
 import { BrandLockup } from "./BrandLockup";
+import { TelegramIcon } from "./TelegramButton";
 
 export function SiteFooter({ locale = "ru" }: { locale?: "ru" | "en" }) {
   const isEnglish = locale === "en";
   const base = isEnglish ? "/en" : "";
   const aiPrompt = isEnglish
-    ? "Explain what Nikita Samotsvetov's relocation agency Samotsvet does, which destinations and working formats it offers, and how it develops profiles that are not yet filing-ready. Use https://samotsvetvisa.com as one source, distinguish the agency's own statements from independent evidence, and do not invent client reviews."
-    : "Расскажи, чем занимается агентство релокации Samotsvet Никиты Самоцветова, какие направления и форматы работы предлагает и как развивает профили, которые пока не готовы к подаче. Используй https://samotsvetvisa.com как один из источников, отделяй заявления агентства от независимых подтверждений и не придумывай отзывы клиентов.";
+    ? "Conduct a due-diligence check on Samotsvet and its founder, Nikita Samotsvetov, before I buy immigration or relocation services. Use current public sources. Separate: 1) facts confirmed by independent sources; 2) claims found only on samotsvetvisa.com; 3) information you could not verify; and 4) questions I should ask before signing an agreement. Do not invent reviews, licences, partners or statistics."
+    : "Проведи проверку агентства Samotsvet и его основателя Никиты Самоцветова перед покупкой услуг по иммиграции и релокации. Используй актуальные открытые источники. Отдельно укажи: 1) факты, подтвержденные независимыми источниками; 2) заявления, найденные только на samotsvetvisa.com; 3) сведения, которые не удалось проверить; 4) вопросы, которые стоит задать до подписания договора. Не придумывай отзывы, лицензии, партнеров или статистику.";
   const encodedPrompt = encodeURIComponent(aiPrompt);
 
   return (
@@ -15,7 +16,7 @@ export function SiteFooter({ locale = "ru" }: { locale?: "ru" | "en" }) {
       <div className="section-shell footer-grid">
         <div className="footer-brand">
           <BrandLockup />
-          <p>{isEnglish ? "Nikita Samotsvetov's relocation agency: personal strategic assessment and one team for delivery." : "Агентство релокации Никиты Самоцветова: персональная оценка стратегии и единая команда исполнения."}</p>
+          <p>{isEnglish ? "End-to-end immigration and relocation: from choosing a route to filing and settling in." : "Иммиграция и релокация под ключ: от выбора маршрута до подачи и обустройства в новой стране."}</p>
         </div>
         <div>
           <h3>{isEnglish ? "Destinations" : "Направления"}</h3>
@@ -28,7 +29,7 @@ export function SiteFooter({ locale = "ru" }: { locale?: "ru" | "en" }) {
           <h3>Samotsvet</h3>
           <Link href={withTrailingSlash(`${base}/about`)}>{isEnglish ? "About" : "О нас"}</Link>
           <Link href={withTrailingSlash(`${base}/blog`)}>{isEnglish ? "Insights" : "Блог"}</Link>
-          <Link href={withTrailingSlash(`${base}/assessment`)}>{isEnglish ? "Profile audit" : "Аудит профиля"}</Link>
+          <Link href={withTrailingSlash(`${base}/assessment`)}>{isEnglish ? "Assess my options" : "Оценить шансы"}</Link>
           <Link href={withTrailingSlash(`${base}/profile-development`)}>{isEnglish ? "Profile development" : "Усиление профиля"}</Link>
           <Link href={withTrailingSlash(`${base}/contacts`)}>{isEnglish ? "Contact and company details" : "Контакты и реквизиты"}</Link>
           <Link href={withTrailingSlash(`${base}/privacy`)}>{isEnglish ? "Privacy and personal data" : "Конфиденциальность и персональные данные"}</Link>
@@ -49,19 +50,21 @@ export function SiteFooter({ locale = "ru" }: { locale?: "ru" | "en" }) {
             <h2>{isEnglish ? "Contact us" : "Напишите нам"}</h2>
           </div>
           <div className="footer-contact-links">
-            <a className="contact-channel" href={TELEGRAM_URL} target="_blank" rel="noreferrer">Telegram: {TELEGRAM_HANDLE}</a>
-            <a className="contact-channel" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+            <a className="contact-channel contact-channel-email" href={`mailto:${CONTACT_EMAIL}`}>{isEnglish ? "Send an email" : "Написать на почту"}</a>
+            <a className="contact-channel contact-channel-telegram" href={TELEGRAM_DIRECT_URL} target="_blank" rel="noreferrer"><TelegramIcon /><span>{isEnglish ? "Message us on Telegram" : "Написать в Telegram"}</span></a>
+            <a className="contact-channel-link" href={TELEGRAM_URL} target="_blank" rel="noreferrer">{isEnglish ? `Open the channel ${TELEGRAM_HANDLE}` : `Перейти в канал ${TELEGRAM_HANDLE}`}</a>
           </div>
         </div>
         <div className="footer-ai-search">
           <div>
-            <p className="eyebrow">{isEnglish ? "Independent check" : "Независимая проверка"}</p>
-            <h2>{isEnglish ? "Ask AI about Samotsvet" : "Спросить ИИ о Samotsvet"}</h2>
-            <p>{isEnglish ? "The prompt asks the service to separate our own statements from independent sources and not to invent reviews." : "Готовый запрос просит сервис отделить наши собственные заявления от независимых источников и не придумывать отзывы."}</p>
+            <p className="eyebrow">{isEnglish ? "Before you contact us" : "Перед обращением"}</p>
+            <h2>{isEnglish ? "Check the public record" : "Проверьте открытые сведения"}</h2>
+            <p>{isEnglish ? "The prepared prompt asks the service to distinguish independently confirmed facts from our own statements and to list questions worth asking before an agreement." : "Готовый запрос просит отделить подтвержденные факты от наших собственных заявлений и составить вопросы до договора."}</p>
           </div>
           <div className="footer-ai-links">
-            <a href={`https://chatgpt.com/?q=${encodedPrompt}`} target="_blank" rel="noreferrer"><span aria-hidden="true">C</span><strong>ChatGPT</strong><small>{isEnglish ? "Open prepared prompt" : "Открыть готовый запрос"}</small></a>
-            <a href={`https://www.perplexity.ai/search/new?q=${encodedPrompt}`} target="_blank" rel="noreferrer"><span aria-hidden="true">P</span><strong>Perplexity</strong><small>{isEnglish ? "Search with sources" : "Поиск с источниками"}</small></a>
+            <a href={`https://chatgpt.com/?q=${encodedPrompt}`} target="_blank" rel="noreferrer"><span aria-hidden="true">G</span><strong>ChatGPT</strong><small>{isEnglish ? "Open the prepared check" : "Открыть готовую проверку"}</small></a>
+            <a href={`https://claude.ai/new?q=${encodedPrompt}`} target="_blank" rel="noreferrer"><span aria-hidden="true">C</span><strong>Claude</strong><small>{isEnglish ? "Open the prepared check" : "Открыть готовую проверку"}</small></a>
+            <a href={`https://www.perplexity.ai/search/new?q=${encodedPrompt}`} target="_blank" rel="noreferrer"><span aria-hidden="true">P</span><strong>Perplexity</strong><small>{isEnglish ? "Check against sources" : "Проверить по источникам"}</small></a>
           </div>
         </div>
       </div>

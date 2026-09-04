@@ -3,11 +3,7 @@
 export function BrandLockup({ className = "" }: { className?: string }) {
   return (
     <span className={`brand-lockup ${className}`.trim()}>
-      <img className="brand-lockup-mark" src="/samotsvet-mark.svg" alt="" width="282" height="240" />
-      <span className="brand-lockup-copy">
-        <strong>SAMOTSVET</strong>
-        <small>IMMIGRATION &amp; RELOCATION</small>
-      </span>
+      <img className="brand-lockup-logo" src="/samotsvet-logo.svg" alt="Samotsvet Immigration & Relocation" width="870" height="245" />
     </span>
   );
 }

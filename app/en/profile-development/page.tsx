@@ -6,13 +6,13 @@ import { pageMetadata } from "../../site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Profile development before filing",
-  description: "An evidence audit and a 6–12 month profile development plan for Global Talent, EB-1A, EB-2 NIW, O-1 and other complex routes.",
+  description: "An evidence review and a 6–12 month profile development plan for Global Talent, EB-1A, EB-2 NIW, O-1 and other complex routes.",
   path: "/en/profile-development",
   locale: "en",
 });
 
 const stages = [
-  ["Evidence-base audit", "We review achievements, documents and independent sources, then map strong evidence, weak support and missing facts against each requirement."],
+  ["Evidence review", "We review achievements, documents and independent sources, then map strong evidence, weak support and missing facts against each requirement."],
   ["A 6–12 month plan", "We define the projects, publications, speaking, referees, metrics and other genuine results that can strengthen the selected route."],
   ["Review points", "The plan is divided into stages with dates. New results are reviewed regularly against the programme requirements."],
   ["Preparation for filing", "Once the evidence base is ready, we assemble the bundle, check it for contradictions and move the project into the filing stage."],
@@ -32,7 +32,7 @@ export default function EnglishProfileDevelopmentPage() {
           <div className="development-intro">
             <p className="eyebrow">Programme outcome</p>
             <h2>A clear preparation map</h2>
-            <p>You receive an audit of the current evidence base, a working route, a 6–12 month development plan and defined review points. The duration depends on the starting profile and programme.</p>
+            <p>You receive a review of the current evidence base, a working route, a 6–12 month development plan and defined review points. The duration depends on the starting profile and programme.</p>
           </div>
           <ol className="development-stages">
             {stages.map(([title, text], index) => <li key={title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{title}</h3><p>{text}</p></div></li>)}
@@ -46,7 +46,7 @@ export default function EnglishProfileDevelopmentPage() {
 
         <section className="section-shell closing-cta">
           <div><p className="eyebrow eyebrow-light">First step</p><h2>We begin with the profile and available evidence</h2></div>
-          <div><p>After the assessment, we set out the scope, indicative timing and programme fee.</p><Link className="button button-gold" href="/en/assessment/">Request a preparation plan</Link></div>
+          <div><p>After the assessment, we set out the scope, indicative timing and programme fee.</p><Link className="button button-gold" href="/en/assessment/">Assess my options</Link></div>
         </section>
       </main>
       <SiteFooter locale="en" />

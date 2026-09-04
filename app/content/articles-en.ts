@@ -13,10 +13,10 @@ const evergreenArticlesEn: Article[] = [
     lead: "A convincing application explains the professional's contribution, recognition and position in the sector through verifiable evidence. A strong career does not become evidence by itself: the assessor must be able to see what each document establishes and why the source is reliable.",
     relatedCountry: "uk",
     sources: [
-      { label: "GOV.UK — Global Talent in digital technology", href: "https://www.gov.uk/global-talent-digital-technology" },
-      { label: "GOV.UK — documents for endorsement", href: "https://www.gov.uk/global-talent-digital-technology/documents-you-need-to-apply-endorsement" },
-      { label: "GOV.UK — Appendix Global Talent", href: "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-global-talent" },
-      { label: "GOV.UK — Global Talent caseworker guidance", href: "https://www.gov.uk/government/publications/global-talent-appendix-w-workers/global-talent-caseworker-guidance-accessible" },
+      { label: "GOV.UK – Global Talent in digital technology", href: "https://www.gov.uk/global-talent-digital-technology" },
+      { label: "GOV.UK – documents for endorsement", href: "https://www.gov.uk/global-talent-digital-technology/documents-you-need-to-apply-endorsement" },
+      { label: "GOV.UK – Appendix Global Talent", href: "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-global-talent" },
+      { label: "GOV.UK – Global Talent caseworker guidance", href: "https://www.gov.uk/government/publications/global-talent-appendix-w-workers/global-talent-caseworker-guidance-accessible" },
     ],
     sections: [
       {
@@ -111,11 +111,11 @@ const evergreenArticlesEn: Article[] = [
     lead: "EB-1A, EB-2 NIW and O-1 may draw on the same career facts, but they ask different legal questions. A comparison starts with the required status, proposed work and filing structure before it turns to the criteria.",
     relatedCountry: "usa",
     sources: [
-      { label: "USCIS — EB-1 and EB-1A", href: "https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-first-preference-eb-1" },
-      { label: "USCIS — EB-2 and National Interest Waiver", href: "https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-second-preference-eb-2" },
-      { label: "USCIS Policy Manual — EB-2 NIW", href: "https://www.uscis.gov/policy-manual/volume-6-part-f-chapter-5" },
-      { label: "USCIS — O-1", href: "https://www.uscis.gov/working-in-the-united-states/temporary-workers/o-1-visa-individuals-with-extraordinary-ability-or-achievement" },
-      { label: "USCIS Policy Manual — O-1", href: "https://www.uscis.gov/policy-manual/volume-2-part-m-chapter-4" },
+      { label: "USCIS – EB-1 and EB-1A", href: "https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-first-preference-eb-1" },
+      { label: "USCIS – EB-2 and National Interest Waiver", href: "https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-second-preference-eb-2" },
+      { label: "USCIS Policy Manual – EB-2 NIW", href: "https://www.uscis.gov/policy-manual/volume-6-part-f-chapter-5" },
+      { label: "USCIS – O-1", href: "https://www.uscis.gov/working-in-the-united-states/temporary-workers/o-1-visa-individuals-with-extraordinary-ability-or-achievement" },
+      { label: "USCIS Policy Manual – O-1", href: "https://www.uscis.gov/policy-manual/volume-2-part-m-chapter-4" },
     ],
     sections: [
       {
@@ -211,10 +211,10 @@ const evergreenArticlesEn: Article[] = [
     lead: "Many expensive mistakes occur before filing, when documents are translated and apostilled before anyone checks whether they describe the same working arrangement. An early review connects the contract, actual duties, payments, insurance and family bundle before irreversible costs are incurred.",
     relatedCountry: "spain",
     sources: [
-      { label: "Spanish Ministry of Inclusion — International teleworkers", href: "https://www.inclusion.gob.es/web/unidadgrandesempresas/teletrabajadores" },
-      { label: "Spanish Ministry of Inclusion — authorisations and requirements", href: "https://www.inclusion.gob.es/web/unidadgrandesempresas/autorizaciones-y-requisitos" },
-      { label: "BOE — current consolidated Law 14/2013", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074" },
-      { label: "Official PRIE portal — Digital nomads", href: "https://prie.comercio.gob.es/es-es/Paginas/Teletrabajadores-caracter-internacional.aspx" },
+      { label: "Spanish Ministry of Inclusion – International teleworkers", href: "https://www.inclusion.gob.es/web/unidadgrandesempresas/teletrabajadores" },
+      { label: "Spanish Ministry of Inclusion – authorisations and requirements", href: "https://www.inclusion.gob.es/web/unidadgrandesempresas/autorizaciones-y-requisitos" },
+      { label: "BOE – current consolidated Law 14/2013", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074" },
+      { label: "Official PRIE portal – Digital nomads", href: "https://prie.comercio.gob.es/es-es/Paginas/Teletrabajadores-caracter-internacional.aspx" },
     ],
     sections: [
       {

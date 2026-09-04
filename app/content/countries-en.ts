@@ -6,7 +6,7 @@ export const countriesEn: CountryPageData[] = [
     code: "UK",
     country: "United Kingdom",
     eyebrow: "Professional recognition and entrepreneurship",
-    title: "The United Kingdom — through recognised expertise or an innovative business",
+    title: "The United Kingdom – through recognised expertise or an innovative business",
     intro: "Global Talent is built on evidenced professional achievements. Innovator Founder supports the launch of a new UK business and requires endorsing body approval.",
     headings: {
       routes: "Global Talent and Innovator Founder use different grounds",
@@ -76,7 +76,7 @@ export const countriesEn: CountryPageData[] = [
     code: "ES",
     country: "Spain",
     eyebrow: "International remote work",
-    title: "Spain — for genuine and evidenced remote work",
+    title: "Spain – for genuine and evidenced remote work",
     intro: "Spain's Digital Nomad Visa (DNV) is designed for employees of overseas companies and self-employed professionals working with clients outside Spain. The evidence required depends on the working arrangement.",
     headings: {
       routes: "One route: the Digital Nomad Visa",
@@ -90,7 +90,7 @@ export const countriesEn: CountryPageData[] = [
     routes: [
       {
         anchor: "digital-nomad-visa",
-        name: "Digital Nomad Visa (DNV) — international remote work visa",
+        name: "Digital Nomad Visa (DNV) – international remote work visa",
         summary: "A Spanish visa or residence authorisation for international remote employees and independent professionals.",
         fitTitle: "What to check before translating documents",
         fit: ["Contracts permit remote work and match the work actually performed", "Income and its regularity can be evidenced", "Insurance and family documents have been considered in advance"],
@@ -123,7 +123,7 @@ export const countriesEn: CountryPageData[] = [
     code: "US",
     country: "United States",
     eyebrow: "Extraordinary ability, national interest and investment",
-    title: "The United States — define the status first, then choose the category",
+    title: "The United States – define the status first, then choose the category",
     intro: "EB-1A, EB-2 NIW, O-1 and E-2 serve different purposes: professional standing, temporary work, permanent residence or relocation through business investment.",
     headings: {
       routes: "Four categories with different immigration outcomes",
@@ -217,7 +217,7 @@ export const countriesEn: CountryPageData[] = [
     code: "FR",
     country: "France",
     eyebrow: "Carte de sejour Talent",
-    title: "France — through a project that can be explained and evidenced",
+    title: "France – through a project that can be explained and evidenced",
     intro: "The multi-year ‘talent’ residence permit (known as ‘passeport talent’ until June 2025) covers entrepreneurial and innovative projects in France. Decree no. 2025-539 consolidated six former grounds into two categories; founders and entrepreneurs use ‘talent – porteur de projet’.",
     headings: {
       routes: "Two grounds within talent – porteur de projet",

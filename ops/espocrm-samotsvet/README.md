@@ -1,23 +1,15 @@
-# Samotsvet Assessment Pipeline 1.1.0
+# Archived: Samotsvet Assessment Pipeline 1.1.0
 
-EspoCRM extension for the Samotsvet profile audit.
+Do not build or install this extension.
 
-It adds audit fields, calculates an internal 0–12 operational score, assigns Tier A/B/C and creates a next-business-day reply task. The live form sends one complete Lead only after the visitor requests a team review. Backward-compatible merging by `cAssessmentId` remains available for earlier two-stage forms.
+It belongs to the discontinued two-stage assessment concept and contains score, Tier and merge logic that the current product deliberately does not use. The live site now has one detailed introductory form. A specialist compares programmes and assesses the case after submission; the site does not calculate or display an automatic verdict.
 
-## Build
+The directory remains only as development history. A future EspoCRM extension, if required, must be implemented separately and limited to operational workflow:
 
-Create the ZIP from the contents of this directory, keeping `manifest.json` and `files/` at the archive root.
+- set the first-response deadline;
+- create reminders;
+- require a next step for profile-development leads;
+- require a reason when a lead is closed;
+- avoid any automatic immigration-case score.
 
-## Install
-
-1. Back up the EspoCRM database and files.
-2. Open `Administration → Extensions`.
-3. Upload and install the ZIP.
-4. Run `Administration → Rebuild`.
-5. Add the new fields to Lead Detail/List layouts.
-6. Add the new input fields to the active Lead Capture record's Payload Fields.
-7. Submit one clearly marked test audit and confirm that one Lead and one reply task are created.
-
-The operational score is not a visa approval probability and must not be presented as one.
-
-See `docs/samotsvet-crm-and-domain-mail-guide.md` in the site repository for the full field map, pipeline, security controls and test plan.
+See `docs/samotsvet-crm-and-domain-mail-guide.md` for the current field map, pipeline, security controls and test plan.

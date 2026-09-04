@@ -9,20 +9,20 @@ export const news2026: Article[] = [
     reading: "6 минут",
     published: "2026-08-27",
     author: "Никита Самоцветов",
-    lead: "21 января 2026 года Госдепартамент США приостановил выдачу иммиграционных виз гражданам России. 21 августа федеральный окружной суд Нью-Йорка признал политику незаконной и отменил её. Это не решение Верховного суда, а практическое исполнение на 26 августа всё ещё оспаривалось.",
+    lead: "21 января 2026 года Госдепартамент США приостановил выдачу иммиграционных виз гражданам России. 21 августа федеральный окружной суд Нью-Йорка признал политику незаконной и отменил ее. Это не решение Верховного суда, а практическое исполнение на 26 августа все еще оспаривалось.",
     relatedCountry: "usa",
     sources: [
-      { label: "Department of State — приостановка выдачи иммиграционных виз", href: "https://travel.state.gov/content/travel/en/News/visas-news/immigrant-visa-processing-updates-for-nationalities-at-high-risk-of-public-benefits-usage.html" },
-      { label: "Department of State — Visa Bulletin за сентябрь 2026", href: "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2026/visa-bulletin-for-september-2026.html" },
-      { label: "Department of State — место рассмотрения иммиграционной визы", href: "https://travel.state.gov/content/travel/en/News/visas-news/adjudicating-iv-applicants-in-their-country-of-residence.html" },
-      { label: "Федеральный окружной суд — решение от 21 августа 2026 года", href: "https://media.nilc.org/2026/04/CLINIC-v-Rubio-partial-MSJ-decision-08-21-2026.pdf" },
-      { label: "CLINIC v. Rubio — материалы дела и обновления", href: "https://www.nilc.org/litigation/clinic-v-rubio/" },
+      { label: "Department of State – приостановка выдачи иммиграционных виз", href: "https://travel.state.gov/content/travel/en/News/visas-news/immigrant-visa-processing-updates-for-nationalities-at-high-risk-of-public-benefits-usage.html" },
+      { label: "Department of State – Visa Bulletin за сентябрь 2026", href: "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin/2026/visa-bulletin-for-september-2026.html" },
+      { label: "Department of State – место рассмотрения иммиграционной визы", href: "https://travel.state.gov/content/travel/en/News/visas-news/adjudicating-iv-applicants-in-their-country-of-residence.html" },
+      { label: "Федеральный окружной суд – решение от 21 августа 2026 года", href: "https://media.nilc.org/2026/04/CLINIC-v-Rubio-partial-MSJ-decision-08-21-2026.pdf" },
+      { label: "CLINIC v. Rubio – материалы дела и обновления", href: "https://www.nilc.org/litigation/clinic-v-rubio/" },
     ],
     sections: [
-      { title: "21 января: что именно приостановил Госдепартамент", paragraphs: ["Мера относилась к выдаче иммиграционных виз гражданам 75 стран, включая Россию. Заявления и интервью могли продолжаться, но финальная виза не выдавалась. Исключение предусматривалось для двойных граждан, подающих с паспортом страны вне списка; уже выданные визы не аннулировались.", "Это не было общей приостановкой всех грин-карт. Петиции USCIS и adjustment of status внутри США — отдельные процессы. Неиммиграционные визы O-1 и E-2 этой конкретной мерой не охватывались."] },
-      { title: "21 августа: что решил суд", paragraphs: ["Федеральный окружной суд Южного округа Нью-Йорка признал политику незаконной и отменил её полностью. Суд также отменил отказы, вынесенные только на основании этой политики.", "Решение вынес суд первой инстанции. Утверждение, что запрет отменил Верховный суд США, неверно."] },
-      { title: "26 августа: почему рано писать о безусловном возобновлении", paragraphs: ["Заявители обратились с экстренным ходатайством об исполнении решения и утверждали, что Госдепартамент сохранил операционную паузу, а отдельные интервью отменялись. Это позиция стороны процесса, которую суду ещё предстояло оценить.", "Поэтому корректная формулировка такая: политика отменена судом, но практическое исполнение нужно проверять по конкретному консульскому посту и делу."] },
-      { title: "Что это меняет для EB-1A и NIW", paragraphs: ["Одобрение петиции I-140, доступность визового номера и консульская выдача — три разных вопроса. Судебное решение касается последнего барьера, но не заменяет проверку категории, приоритетной даты, места интервью и личных обстоятельств.", "O-1 и E-2 остаются отдельными неиммиграционными категориями со своими требованиями."], points: ["Гражданство и возможное второе гражданство", "Консульская процедура или adjustment of status", "Статус исполнения судебного решения", "Страна проживания и назначаемый консульский пост"] },
+      { title: "21 января: что именно приостановил Госдепартамент", paragraphs: ["Мера относилась к выдаче иммиграционных виз гражданам 75 стран, включая Россию. Заявления и интервью могли продолжаться, но финальная виза не выдавалась. Исключение предусматривалось для двойных граждан, подающих с паспортом страны вне списка; уже выданные визы не аннулировались.", "Это не было общей приостановкой всех грин-карт. Петиции USCIS и adjustment of status внутри США – отдельные процессы. Неиммиграционные визы O-1 и E-2 этой конкретной мерой не охватывались."] },
+      { title: "21 августа: что решил суд", paragraphs: ["Федеральный окружной суд Южного округа Нью-Йорка признал политику незаконной и отменил ее полностью. Суд также отменил отказы, вынесенные только на основании этой политики.", "Решение вынес суд первой инстанции. Утверждение, что запрет отменил Верховный суд США, неверно."] },
+      { title: "26 августа: почему рано писать о безусловном возобновлении", paragraphs: ["Заявители обратились с экстренным ходатайством об исполнении решения и утверждали, что Госдепартамент сохранил операционную паузу, а отдельные интервью отменялись. Это позиция стороны процесса, которую суду еще предстояло оценить.", "Поэтому корректная формулировка такая: политика отменена судом, но практическое исполнение нужно проверять по конкретному консульскому посту и делу."] },
+      { title: "Что это меняет для EB-1A и NIW", paragraphs: ["Одобрение петиции I-140, доступность визового номера и консульская выдача – три разных вопроса. Судебное решение касается последнего барьера, но не заменяет проверку категории, приоритетной даты, места интервью и личных обстоятельств.", "O-1 и E-2 остаются отдельными неиммиграционными категориями со своими требованиями."], points: ["Гражданство и возможное второе гражданство", "Консульская процедура или adjustment of status", "Статус исполнения судебного решения", "Страна проживания и назначаемый консульский пост"] },
     ],
   },
   {
@@ -36,12 +36,12 @@ export const news2026: Article[] = [
     lead: "Пакет HC 1691 опубликован 5 марта 2026 года, а его положения начали действовать в разные даты. Для заявителя важны сам текст и этап, на котором изменение применяется к его ситуации.",
     relatedCountry: "uk",
     sources: [
-      { label: "GOV.UK — Statement of Changes HC 1691", href: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-1619-5-march-2026" },
-      { label: "GOV.UK — пояснительная записка к HC 1691", href: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-1619-5-march-2026/explanatory-memorandum-to-the-statement-of-changes-in-the-immigration-rules-hc-1691-5-march-2026-accessible" },
-      { label: "GOV.UK — история обновлений Immigration Rules", href: "https://www.gov.uk/guidance/immigration-rules/updates" },
+      { label: "GOV.UK – Statement of Changes HC 1691", href: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-1619-5-march-2026" },
+      { label: "GOV.UK – пояснительная записка к HC 1691", href: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-1619-5-march-2026/explanatory-memorandum-to-the-statement-of-changes-in-the-immigration-rules-hc-1691-5-march-2026-accessible" },
+      { label: "GOV.UK – история обновлений Immigration Rules", href: "https://www.gov.uk/guidance/immigration-rules/updates" },
     ],
     sections: [
-      { title: "Один пакет — несколько дат", paragraphs: ["Часть изменений начала действовать 26 марта и 8 апреля 2026 года. Расширение Global Talent на дополнительные дизайнерские роли заработало 1 июля 2026 года. Новый уровень английского B2 для постоянного проживания по ряду маршрутов применяется к заявлениям с 26 марта 2027 года.", "Поэтому ссылка на мартовский документ без даты применения может вводить в заблуждение. Мы всегда проверяем действующую редакцию правила вместе с переходными положениями."] },
+      { title: "Один пакет – несколько дат", paragraphs: ["Часть изменений начала действовать 26 марта и 8 апреля 2026 года. Расширение Global Talent на дополнительные дизайнерские роли заработало 1 июля 2026 года. Новый уровень английского B2 для постоянного проживания по ряду маршрутов применяется к заявлениям с 26 марта 2027 года.", "Поэтому ссылка на мартовский документ без даты применения может вводить в заблуждение. Мы всегда проверяем действующую редакцию правила вместе с переходными положениями."] },
       { title: "Что зафиксировать в своем плане", paragraphs: ["Отдельно запишите даты первоначального разрешения, следующего продления и предполагаемой подачи на постоянное проживание. Каждому этапу может соответствовать своя редакция правил."], points: ["Категория и дата текущего разрешения", "Плановая дата следующего заявления", "Требования к языку именно на этом этапе", "Переходные положения для уже находящихся на маршруте"] },
       { title: "Наш вывод", paragraphs: ["Дата подачи стала самостоятельным элементом стратегии. Общий пересказ реформы не отвечает на вопрос, какие требования будут действовать именно для Вашего заявления."] },
     ],
@@ -57,8 +57,8 @@ export const news2026: Article[] = [
     lead: "С 1 июля 2026 года Global Talent охватывает дополнительные дизайнерские роли, которые раньше не находили подходящего места в действующих направлениях. Прежние маршруты для архитектуры и моды при этом сохранились.",
     relatedCountry: "uk",
     sources: [
-      { label: "GOV.UK — Appendix Global Talent", href: "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-global-talent" },
-      { label: "GOV.UK — пояснение к design pathway", href: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-1619-5-march-2026/explanatory-memorandum-to-the-statement-of-changes-in-the-immigration-rules-hc-1691-5-march-2026-accessible" },
+      { label: "GOV.UK – Appendix Global Talent", href: "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-global-talent" },
+      { label: "GOV.UK – пояснение к design pathway", href: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-1619-5-march-2026/explanatory-memorandum-to-the-statement-of-changes-in-the-immigration-rules-hc-1691-5-march-2026-accessible" },
     ],
     sections: [
       { title: "Что открылось 1 июля", paragraphs: ["Официальная формулировка охватывает дополнительные дизайнерские роли. Архитектура и мода уже имели отдельные механизмы Global Talent до появления нового design pathway."] },
@@ -77,11 +77,11 @@ export const news2026: Article[] = [
     lead: "Модель Earned Settlement была опубликована как консультационное предложение. Указанный в ней десятилетний базовый срок сам по себе не стал действующим правилом.",
     relatedCountry: "uk",
     sources: [
-      { label: "GOV.UK — консультация Earned Settlement", href: "https://www.gov.uk/government/consultations/earned-settlement/a-fairer-pathway-to-settlement-statement-and-accompanying-consultation-on-earned-settlement-accessible" },
-      { label: "GOV.UK — действующие сроки Global Talent", href: "https://www.gov.uk/global-talent" },
+      { label: "GOV.UK – консультация Earned Settlement", href: "https://www.gov.uk/government/consultations/earned-settlement/a-fairer-pathway-to-settlement-statement-and-accompanying-consultation-on-earned-settlement-accessible" },
+      { label: "GOV.UK – действующие сроки Global Talent", href: "https://www.gov.uk/global-talent" },
     ],
     sections: [
-      { title: "Что действует сейчас", paragraphs: ["Страница GOV.UK по Global Talent по-прежнему указывает возможность получить ILR через три или пять лет — срок зависит от направления и основания получения статуса."] },
+      { title: "Что действует сейчас", paragraphs: ["Страница GOV.UK по Global Talent по-прежнему указывает возможность получить ILR через три или пять лет – срок зависит от направления и основания получения статуса."] },
       { title: "Что предлагалось", paragraphs: ["Консультационная модель использовала десятилетний базовый срок и возможные сокращения за вклад, доход и нахождение на отдельных маршрутах. Для Global Talent и Innovator Founder обсуждалось сокращение на семь лет после трех лет непрерывного проживания.", "Консультационный документ показывает направление политики, но сам по себе не создает нового права и не заменяет действующие Immigration Rules."] },
       { title: "Как планировать", paragraphs: ["Мы разделяем два сценария: план по действующим правилам и запасной расчет на случай будущей реформы. Нельзя обещать клиенту ни десятилетний срок, ни сохранение трехлетнего срока на основании одного консультационного текста."] },
     ],
@@ -97,7 +97,7 @@ export const news2026: Article[] = [
     lead: "Для заявлений на постоянное проживание по ряду маршрутов уровень английского повышается с B1 до B2. Изменение вступает в силу 26 марта 2027 года и затрагивает в том числе тех, кто уже находится на пути к ILR.",
     relatedCountry: "uk",
     sources: [
-      { label: "GOV.UK — пояснительная записка HC 1691, пункты 5.60–5.62", href: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-1619-5-march-2026/explanatory-memorandum-to-the-statement-of-changes-in-the-immigration-rules-hc-1691-5-march-2026-accessible" },
+      { label: "GOV.UK – пояснительная записка HC 1691, пункты 5.60–5.62", href: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-1619-5-march-2026/explanatory-memorandum-to-the-statement-of-changes-in-the-immigration-rules-hc-1691-5-march-2026-accessible" },
     ],
     sections: [
       { title: "Кого затрагивает изменение", paragraphs: ["В официальном перечне есть Appendix KoLL, Skilled Worker, Global Talent, Scale-up, Innovator Founder, UK Ancestry и ряд других маршрутов. Правило применяется к заявлениям, поданным с 26 марта 2027 года."] },
@@ -116,12 +116,12 @@ export const news2026: Article[] = [
     lead: "Испанский SMI на 2026 год установлен на уровне €1 221 при 14 выплатах, или €17 094 в год. Для Digital Nomad Visa годовую сумму нужно привести к среднемесячной базе, а затем применить проценты для заявителя и семьи.",
     relatedCountry: "spain",
     sources: [
-      { label: "BOE — Real Decreto 126/2026", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2026-3815" },
-      { label: "МИД Испании — требования к средствам для teletrabajo", href: "https://www.exteriores.gob.es/Consulados/bogota/es/ServiciosConsulares/Paginas/index.aspx?scca=Visados&scco=Colombia&scd=31&scs=Visado+de+residencia+para+teletrabajo+%28n%C3%B3mada+digital%29" },
+      { label: "BOE – Real Decreto 126/2026", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2026-3815" },
+      { label: "МИД Испании – требования к средствам для teletrabajo", href: "https://www.exteriores.gob.es/Consulados/bogota/es/ServiciosConsulares/Paginas/index.aspx?scca=Visados&scco=Colombia&scd=31&scs=Visado+de+residencia+para+teletrabajo+%28n%C3%B3mada+digital%29" },
     ],
     sections: [
-      { title: "Правильная база расчета", paragraphs: ["€17 094 в год делим на 12 месяцев и получаем €1 424,50. Основному заявителю требуется 200% этой суммы — €2 849 в месяц."] },
-      { title: "Семья", paragraphs: ["На первого члена семьи требуется еще 75% среднемесячного SMI — €1 068,38. На каждого следующего — 25%, или €356,13. Для семьи из трех человек расчетный минимум составляет €4 273,50 в месяц."], points: ["Основной заявитель — €2 849", "Первый член семьи — €1 068,38", "Каждый следующий — €356,13"] },
+      { title: "Правильная база расчета", paragraphs: ["€17 094 в год делим на 12 месяцев и получаем €1 424,50. Основному заявителю требуется 200% этой суммы – €2 849 в месяц."] },
+      { title: "Семья", paragraphs: ["На первого члена семьи требуется еще 75% среднемесячного SMI – €1 068,38. На каждого следующего – 25%, или €356,13. Для семьи из трех человек расчетный минимум составляет €4 273,50 в месяц."], points: ["Основной заявитель – €2 849", "Первый член семьи – €1 068,38", "Каждый следующий – €356,13"] },
       { title: "Запас на курсовые колебания", paragraphs: ["Если доход поступает в другой валюте, минимальное соответствие в день расчета не дает устойчивости. Мы закладываем запас на курсовые колебания и проверяем, подтверждается ли заявленная сумма договорами, поступлениями и банковскими документами."] },
     ],
   },
@@ -136,8 +136,8 @@ export const news2026: Article[] = [
     lead: "Официальные требования к teletrabajo internacional охватывают договор, реальную и непрерывную деятельность компании, дистанционный формат работы и отношения с заявителем продолжительностью не менее трех месяцев.",
     relatedCountry: "spain",
     sources: [
-      { label: "Официальный портал PRIE — Nómadas digitales", href: "https://prie.comercio.gob.es/es-es/Paginas/Teletrabajadores-caracter-internacional.aspx" },
-      { label: "BOE — Ley 14/2013 в действующей редакции", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074" },
+      { label: "Официальный портал PRIE – Nómadas digitales", href: "https://prie.comercio.gob.es/es-es/Paginas/Teletrabajadores-caracter-internacional.aspx" },
+      { label: "BOE – Ley 14/2013 в действующей редакции", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074" },
     ],
     sections: [
       { title: "Три отдельных утверждения", paragraphs: ["Нужно показать, что иностранная компания действительно работает, что конкретные обязанности можно выполнять удаленно и что трудовые или профессиональные отношения с заявителем существовали как минимум три месяца до обращения."] },
@@ -156,11 +156,11 @@ export const news2026: Article[] = [
     lead: "Действующий текст Ley 14/2013 позволяет иностранцу, который находится в Испании законно, обратиться за разрешением на международную удаленную работу. Значение имеет законность статуса на дату подачи.",
     relatedCountry: "spain",
     sources: [
-      { label: "BOE — статья 74 quinquies Ley 14/2013", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074" },
+      { label: "BOE – статья 74 quinquies Ley 14/2013", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2013-10074" },
     ],
     sections: [
       { title: "Что говорит закон", paragraphs: ["Статья 74 quinquies прямо охватывает иностранцев, которые находятся в Испании de forma regular, а также тех, кто въехал по соответствующей визе. Такое разрешение может быть выдано на срок до трех лет."] },
-      { title: "Консульство и подача в Испании — разные процедуры", paragraphs: ["Нерезидент, который планирует переезд, запрашивает консульскую визу максимум на год. Заявитель, законно находящийся в Испании, обращается за разрешением на проживание. Набор обстоятельств и практическая организация подачи различаются."] },
+      { title: "Консульство и подача в Испании – разные процедуры", paragraphs: ["Нерезидент, который планирует переезд, запрашивает консульскую визу максимум на год. Заявитель, законно находящийся в Испании, обращается за разрешением на проживание. Набор обстоятельств и практическая организация подачи различаются."] },
       { title: "Что проверить до выбора", paragraphs: ["Законное основание нахождения, оставшийся срок, место получения документов, социальное страхование и семейный комплект нужно оценивать вместе. Возможность подать внутри страны не означает, что этот способ оптимален для каждого заявителя."] },
     ],
   },
@@ -175,8 +175,8 @@ export const news2026: Article[] = [
     lead: "USCIS публикует квартальные наборы данных по формам и категориям. Они полезны для наблюдения за общей нагрузкой и решениями ведомства, но не превращаются в персональную вероятность одобрения.",
     relatedCountry: "usa",
     sources: [
-      { label: "USCIS — Immigration and Citizenship Data", href: "https://www.uscis.gov/tools/reports-and-studies/immigration-and-citizenship-data" },
-      { label: "USCIS — как рассчитываются processing times", href: "https://egov.uscis.gov/processing-times/more-info" },
+      { label: "USCIS – Immigration and Citizenship Data", href: "https://www.uscis.gov/tools/reports-and-studies/immigration-and-citizenship-data" },
+      { label: "USCIS – как рассчитываются processing times", href: "https://egov.uscis.gov/processing-times/more-info" },
     ],
     sections: [
       { title: "Средняя цифра смешивает разные дела", paragraphs: ["В одной категории оказываются заявители из разных отраслей, с разной историей и качеством доказательств. Доля одобрений по кварталу не показывает, насколько убедителен конкретный комплект."] },
@@ -195,13 +195,13 @@ export const news2026: Article[] = [
     lead: "EB-1A и EB-2 NIW отвечают на разные вопросы. У NIW нет списка из десяти критериев EB-1A, при этом заявителю нужно убедительно связать будущую деятельность с национальным интересом США.",
     relatedCountry: "usa",
     sources: [
-      { label: "USCIS Policy Manual — EB-2 и National Interest Waiver", href: "https://www.uscis.gov/policy-manual/volume-6-part-f-chapter-5" },
-      { label: "USCIS Policy Manual — Extraordinary Ability", href: "https://www.uscis.gov/policy-manual/volume-6-part-f-chapter-2" },
+      { label: "USCIS Policy Manual – EB-2 и National Interest Waiver", href: "https://www.uscis.gov/policy-manual/volume-6-part-f-chapter-5" },
+      { label: "USCIS Policy Manual – Extraordinary Ability", href: "https://www.uscis.gov/policy-manual/volume-6-part-f-chapter-2" },
     ],
     sections: [
       { title: "Что проверяет NIW", paragraphs: ["Действующий подход оценивает существенную ценность и национальное значение планируемой деятельности, готовность заявителя продвигать ее и то, будет ли полезно отказаться от требования работодателя и трудовой сертификации."] },
       { title: "Где обоснование распадается", paragraphs: ["Широкая важность отрасли не доказывает национального значения именно Вашей работы. Формула «развивать искусственный интеллект» называет область, но не объясняет задачу, результат, ресурсы и круг тех, кому он нужен."], points: ["Нет конкретного плана деятельности", "Прошлые результаты не связаны с будущей работой", "Нет партнеров, ресурсов или начатых действий", "Польза отрасли подменяет значение конкретного проекта"] },
-      { title: "Как сравнивать с EB-1A", paragraphs: ["Сопоставляем доступные доказательства с задачей каждой категории. Устойчивое прошлое признание может сильнее работать для EB-1A; конкретный и уже развивающийся проект с масштабируемой пользой — для NIW."] },
+      { title: "Как сравнивать с EB-1A", paragraphs: ["Сопоставляем доступные доказательства с задачей каждой категории. Устойчивое прошлое признание может сильнее работать для EB-1A; конкретный и уже развивающийся проект с масштабируемой пользой – для NIW."] },
     ],
   },
   {
@@ -212,12 +212,12 @@ export const news2026: Article[] = [
     reading: "4 минуты",
     published: "2026-08-10",
     author: "Никита Самоцветов",
-    lead: "Показатель processing time на сайте USCIS — это время, за которое ведомство завершило 80% рассмотренных дел за предыдущие шесть месяцев. Ретроспективная метрика не устанавливает срок по конкретной петиции.",
+    lead: "Показатель processing time на сайте USCIS – это время, за которое ведомство завершило 80% рассмотренных дел за предыдущие шесть месяцев. Ретроспективная метрика не устанавливает срок по конкретной петиции.",
     relatedCountry: "usa",
     sources: [
-      { label: "USCIS — Case Processing Times", href: "https://egov.uscis.gov/processing-times" },
-      { label: "USCIS — пояснение к processing times", href: "https://egov.uscis.gov/processing-times/more-info" },
-      { label: "USCIS — Premium Processing", href: "https://www.uscis.gov/forms/all-forms/how-do-i-request-premium-processing" },
+      { label: "USCIS – Case Processing Times", href: "https://egov.uscis.gov/processing-times" },
+      { label: "USCIS – пояснение к processing times", href: "https://egov.uscis.gov/processing-times/more-info" },
+      { label: "USCIS – Premium Processing", href: "https://www.uscis.gov/forms/all-forms/how-do-i-request-premium-processing" },
     ],
     sections: [
       { title: "Почему цифра меняется", paragraphs: ["Метрика обновляется вместе с массивом завершенных дел. Она не учитывает индивидуальный запрос доказательств, перенос нагрузки и особенности конкретного офиса до тех пор, пока эти дела не попадут в завершенную выборку."] },
@@ -236,8 +236,8 @@ export const news2026: Article[] = [
     lead: "В федеральной программе регулирования появился проект Petition for Immigrant Worker Reforms, который должен уточнить требования к EB-1A, EB-2 NIW и другим трудовым категориям. Публикация в Unified Agenda описывала планируемое правило, а не действующую норму.",
     relatedCountry: "usa",
     sources: [
-      { label: "Reginfo.gov — RIN 1615-AC85", href: "https://www.reginfo.gov/public/do/eAgendaViewRule?RIN=1615-AC85&pubId=202504" },
-      { label: "Federal Register — Unified Agenda", href: "https://www.federalregister.gov/documents/2025/09/22/2025-18329/unified-agenda-of-federal-regulatory-and-deregulatory-actions" },
+      { label: "Reginfo.gov – RIN 1615-AC85", href: "https://www.reginfo.gov/public/do/eAgendaViewRule?RIN=1615-AC85&pubId=202504" },
+      { label: "Federal Register – Unified Agenda", href: "https://www.federalregister.gov/documents/2025/09/22/2025-18329/unified-agenda-of-federal-regulatory-and-deregulatory-actions" },
     ],
     sections: [
       { title: "Заявленная цель", paragraphs: ["DHS указывает кодификацию текущих разъяснений, обновление норм об extraordinary ability и уточнение доказательственных требований для first preference и National Interest Waiver."] },
@@ -256,11 +256,11 @@ export const news2026: Article[] = [
     lead: "Декрет № 2025-539 заменил в нормативном тексте название passeport talent на carte talent и перестроил часть подкатегорий. Изменения действуют с 16 июня 2025 года, хотя некоторые официальные и справочные страницы все еще используют прежний термин.",
     relatedCountry: "france",
     sources: [
-      { label: "Légifrance — Décret n° 2025-539", href: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000051736256" },
-      { label: "France-Visas — International talents", href: "https://france-visas.gouv.fr/en/talents-internationaux-et-attractivite-economique" },
+      { label: "Légifrance – Décret n° 2025-539", href: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000051736256" },
+      { label: "France-Visas – International talents", href: "https://france-visas.gouv.fr/en/talents-internationaux-et-attractivite-economique" },
     ],
     sections: [
-      { title: "Официальное название", paragraphs: ["В кодексе теперь используется carte talent. Поэтому в материалах мы ставим действующее название латиницей и рядом указываем прежний поисковый термин Passeport Talent — так читатель понимает, что речь идет об одной развивавшейся системе."] },
+      { title: "Официальное название", paragraphs: ["В кодексе теперь используется carte talent. Поэтому в материалах мы ставим действующее название латиницей и рядом указываем прежний поисковый термин Passeport Talent – так читатель понимает, что речь идет об одной развивавшейся системе."] },
       { title: "Почему возникает путаница", paragraphs: ["Старое название остается в поиске, разговорной практике и даже на части государственных страниц. Без даты источника невозможно понять, описывает ли материал структуру до или после июня 2025 года."] },
       { title: "Что проверять", paragraphs: ["Нужно сверить общее семейство Talent, точное текущее название подкатегории, условия проекта или занятости и норму CESEDA. Старый комплект нельзя автоматически переносить в новую структуру."] },
     ],
@@ -276,12 +276,12 @@ export const news2026: Article[] = [
     lead: "С 1 января 2026 года examen civique применяется при натурализации и при первом получении ряда многолетних карт или карты резидента. Экзамен содержит 40 вопросов, для прохождения нужно 32 правильных ответа.",
     relatedCountry: "france",
     sources: [
-      { label: "Service-Public — новый examen civique", href: "https://www.service-public.fr/particuliers/actualites/A18713" },
-      { label: "Légifrance — Arrêté du 10 octobre 2025", href: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000052381620" },
-      { label: "Légifrance — освобождения от CIR, статья L413-5", href: "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006070158/LEGISCTA000042771476/" },
+      { label: "Service-Public – новый examen civique", href: "https://www.service-public.fr/particuliers/actualites/A18713" },
+      { label: "Légifrance – Arrêté du 10 octobre 2025", href: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000052381620" },
+      { label: "Légifrance – освобождения от CIR, статья L413-5", href: "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006070158/LEGISCTA000042771476/" },
     ],
     sections: [
-      { title: "Формат", paragraphs: ["Цифровой тест длится до 45 минут и включает вопросы о принципах Республики, институтах, правах и обязанностях, истории, культуре и повседневных ситуациях. Проходной результат — 80%."] },
+      { title: "Формат", paragraphs: ["Цифровой тест длится до 45 минут и включает вопросы о принципах Республики, институтах, правах и обязанностях, истории, культуре и повседневных ситуациях. Проходной результат – 80%."] },
       { title: "Экзамен зависит от точной процедуры", paragraphs: ["Многие держатели Carte talent освобождены от contrat d’intégration républicaine, а Talent часто выдается сразу как многолетняя карта по отдельной процедуре. Но обязанность зависит от точного типа карты, первого обращения или продления и цели следующего этапа." ] },
       { title: "Что делаем мы", paragraphs: ["Мы фиксируем точное название текущего разрешения и будущего заявления, затем сверяем его с действующей процедурой. Общее слово Talent недостаточно для вывода об освобождении."] },
     ],
@@ -297,8 +297,8 @@ export const news2026: Article[] = [
     lead: "С 1 января 2026 года для натурализации по декрету нужно подтвердить французский не ниже B2 и устно, и письменно. Отдельно требуется гражданский экзамен.",
     relatedCountry: "france",
     sources: [
-      { label: "Service-Public — подтверждение уровня французского", href: "https://www.service-public.fr/particuliers/vosdroits/F11926" },
-      { label: "Service-Public — examen civique для натурализации", href: "https://www.service-public.fr/particuliers/vosdroits/F39426" },
+      { label: "Service-Public – подтверждение уровня французского", href: "https://www.service-public.fr/particuliers/vosdroits/F11926" },
+      { label: "Service-Public – examen civique для натурализации", href: "https://www.service-public.fr/particuliers/vosdroits/F39426" },
     ],
     sections: [
       { title: "Что включает уровень B2", paragraphs: ["Уровень предполагает понимание сложных текстов и способность ясно развивать аргументацию. Свободное общение в магазине или с соседями не подтверждает письменную часть B2."] },
@@ -317,8 +317,8 @@ export const news2026: Article[] = [
     lead: "Lei Orgânica № 1/2026 опубликована 18 мая и действует с 19 мая 2026 года. Для натурализации она устанавливает семь лет законного проживания для граждан ЕС и стран с португальским официальным языком и десять лет для граждан остальных стран.",
     relatedCountry: "uk",
     sources: [
-      { label: "Diário da República — Lei Orgânica n.º 1/2026", href: "https://diariodarepublica.pt/dr/detalhe/lei-organica/1-2026-1123539996" },
-      { label: "Diário da República — консолидированный Lei da Nacionalidade", href: "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/1981-34536975" },
+      { label: "Diário da República – Lei Orgânica n.º 1/2026", href: "https://diariodarepublica.pt/dr/detalhe/lei-organica/1-2026-1123539996" },
+      { label: "Diário da República – консолидированный Lei da Nacionalidade", href: "https://diariodarepublica.pt/dr/legislacao-consolidada/lei/1981-34536975" },
     ],
     sections: [
       { title: "Дата закона имеет значение", paragraphs: ["Документ был промульгирован 3 мая, опубликован 18 мая и вступил в силу на следующий день. Для действующего права важны дата публикации и дата вступления в силу; одной даты подписи недостаточно."] },
@@ -329,7 +329,7 @@ export const news2026: Article[] = [
   {
     slug: "europe-routes-2026-context",
     tag: "Контекст · Европа 2026",
-    title: "Европа меняет путь к статусу — но четыре страны движутся по-разному",
+    title: "Европа меняет путь к статусу – но четыре страны движутся по-разному",
     description: "Что действительно вступило в силу в Португалии, Франции и Испании, а что в Великобритании пока остается предложением.",
     reading: "6 минут",
     published: "2026-08-12",
@@ -337,10 +337,10 @@ export const news2026: Article[] = [
     lead: "У изменений 2026 года разные юридические статусы: часть норм уже действует, часть вступит позже, а британская десятилетняя модель остается предложением.",
     relatedCountry: "uk",
     sources: [
-      { label: "GOV.UK — консультация Earned Settlement", href: "https://www.gov.uk/government/consultations/earned-settlement/a-fairer-pathway-to-settlement-statement-and-accompanying-consultation-on-earned-settlement-accessible" },
-      { label: "Diário da República — закон о гражданстве", href: "https://diariodarepublica.pt/dr/detalhe/lei-organica/1-2026-1123539996" },
-      { label: "Service-Public — examen civique", href: "https://www.service-public.fr/particuliers/actualites/A18713" },
-      { label: "BOE — SMI 2026", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2026-3815" },
+      { label: "GOV.UK – консультация Earned Settlement", href: "https://www.gov.uk/government/consultations/earned-settlement/a-fairer-pathway-to-settlement-statement-and-accompanying-consultation-on-earned-settlement-accessible" },
+      { label: "Diário da República – закон о гражданстве", href: "https://diariodarepublica.pt/dr/detalhe/lei-organica/1-2026-1123539996" },
+      { label: "Service-Public – examen civique", href: "https://www.service-public.fr/particuliers/actualites/A18713" },
+      { label: "BOE – SMI 2026", href: "https://www.boe.es/buscar/act.php?id=BOE-A-2026-3815" },
     ],
     sections: [
       { title: "Четыре разных статуса изменений", paragraphs: ["Португалия изменила сроки натурализации. Франция ввела B2 и гражданский экзамен для соответствующих процедур. Испания повысила финансовый порог вслед за SMI. Великобритания закрепила B2 для ILR с марта 2027 года. Десятилетняя модель Earned Settlement была представлена как консультационное предложение; действующие правила ее не содержали."] },

@@ -5,8 +5,8 @@ import { SiteHeader } from "../../components/SiteHeader";
 import { pageMetadata } from "../../site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Profile audit and immigration programme screening",
-  description: "A local audit of career foundation, impact and evidence across several programmes, without a spurious approval percentage.",
+  title: "Immigration options assessment",
+  description: "Tell us about your objectives, experience and starting position. Samotsvet will compare suitable programmes and recommend the next step.",
   path: "/en/assessment",
   locale: "en",
 });
@@ -17,11 +17,11 @@ export default function EnglishAssessmentPage() {
       <SiteHeader locale="en" />
       <main>
         <section className="inner-hero section-shell assessment-hero">
-          <div><p className="eyebrow">Profile audit</p><h1>Test the experience before choosing a country</h1></div>
-          <p>Answer questions about trajectory, personal contribution and independent evidence. The result compares several programmes and explains what already works and what can be developed.</p>
+          <div><p className="eyebrow">Options assessment</p><h1>Start with your circumstances</h1></div>
+          <p>Complete the introductory form. We will review your objective, starting position, experience and available evidence, then compare realistic programmes.</p>
         </section>
         <section className="section-shell assessment-layout">
-          <aside><span>What you receive</span><ol><li>Several programmes rather than the route attached to one country.</li><li>Strengths and gaps without a spurious percentage.</li><li>A view of what can already be evidenced.</li><li>Development options even where no publications exist yet.</li></ol></aside>
+          <aside><span>What happens next</span><ol><li>Our team reviews the form personally.</li><li>We compare suitable countries and programmes.</li><li>We assess the case foundation and key gaps.</li><li>We recommend the next step within one business day.</li></ol></aside>
           <AssessmentForm locale="en" />
         </section>
       </main>

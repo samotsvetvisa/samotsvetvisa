@@ -1,68 +1,291 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { FOUNDER_NAME, LEGAL_NAME, SERVICE_PRICES, SITE_URL, withTrailingSlash } from "../site";
 import { ClientResults } from "./ClientResults";
 import { PressMentions } from "./PressMentions";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
-import { FOUNDER_NAME, LEGAL_NAME, SERVICE_PRICES, SITE_URL, withTrailingSlash } from "../site";
 
 type Locale = "ru" | "en";
 
 const copy = {
   ru: {
-    hero: ["С экспертизой Никиты Самоцветова", "Ваш переезд — наш проект", "Вы занимаетесь работой, бизнесом и семьёй. Я сравниваю маршруты и оцениваю основу кейса; команда берёт на себя усиление профиля, доказательства, документы, партнёров и подачу.", "Разобрать мой кейс", "Сравнить маршруты", "Аудит занимает 4–6 минут · результат появится на экране · ответим в течение одного рабочего дня", "10 000+ профилей с 2021 года · 800+ кейсов · 200+ по Великобритании"],
+    hero: [
+      "Иммиграция и релокация под ключ",
+      "Виза: Ваш первый шаг к ВНЖ",
+      "Samotsvet работает как агентство полного цикла. Мы подбираем маршрут, готовим стратегию и документы, координируем подачу и подключаем нужные сервисы для переезда и обустройства в новой стране.",
+      "Оценить шансы",
+      "Сравнить программы",
+      "Анкета занимает около 5 минут. Ответим в течение одного рабочего дня.",
+      "10 000+ разобранных профилей с 2021 года · 800+ кейсов · 200+ по Великобритании",
+    ],
     founder: ["Никита Самоцветов", "Основатель Samotsvet", "LLM International Law and Global Governance", "University of Leeds · 2023"],
     delegation: {
-      eyebrow: "Переезд можно передать", title: "Что остаётся на Вас", body: "Один подробный разговор об опыте — обычно полтора-два часа. Подписи там, где они действительно нужны, и решения в ключевых точках проекта.", note: "Разобраться в критериях, подготовить рекомендации, сверить даты и факты между документами, следить за правилами и координировать партнёров — наша работа. О ходе проекта Вы узнаёте из коротких отчётов.", items: ["Разговор об опыте", "Подписи", "Решения в ключевых точках"],
+      eyebrow: "Релокация под ключ",
+      title: "Одна команда ведет проект от стратегии до переезда",
+      body: "Вы принимаете решения в ключевых точках и предоставляете исходные сведения. Мы берем на себя маршрут, доказательства, документы, контроль сроков и координацию участников проекта.",
+      note: "После подачи можем подключить проверенных специалистов по налогам, банкам, страхованию, жилью и другим практическим задачам. Состав сервисов зависит от страны и фиксируется в предложении.",
+      items: ["Выбор маршрута", "Подготовка и подача", "Сервисы после переезда"],
     },
     audiences: {
-      eyebrow: "Кому помогаем", title: "Начинаем не со страны, а с Вашей ситуации", intro: "Один и тот же опыт может поддерживать несколько программ. Я сопоставляю цель, нужный статус, сроки и факты, которые можно подтвердить, а команда превращает вывод в план работы.",
+      eyebrow: "Кому помогаем",
+      title: "Начинаем с Вашей цели и исходных данных",
+      intro: "У стран разные программы, критерии и требования к доказательствам. Мы изучаем ситуацию человека, оцениваем шансы по нескольким вариантам и предлагаем маршрут, который соответствует его цели, срокам и планам семьи.",
       items: [
-        ["01", "Специалисты и руководители", "Отделяем личный вклад в продукты, команды и бизнес-результаты от обычных должностных обязанностей."],
-        ["02", "Основатели и предприниматели", "Сравниваем маршруты через достижения, стартап или инвестиции и проверяем роль основателя в результатах бизнеса."],
-        ["03", "Исследователи и авторы", "Собираем академическое, профессиональное и независимое признание в одну проверяемую траекторию."],
+        ["01", "Специалисты и руководители", "Разбираем личный вклад в продукты, команды и бизнес-результаты, затем соотносим факты с критериями программ."],
+        ["02", "Основатели и предприниматели", "Сравниваем маршруты через достижения, стартап или инвестиции и подтверждаем роль основателя в результатах бизнеса."],
+        ["03", "Исследователи и авторы", "Собираем академический и профессиональный опыт, независимое признание и планы дальнейшей работы."],
         ["04", "Удаленные специалисты и семьи", "Проверяем формат занятости, договоры, доход, семейный комплект и последствия выбранного статуса."],
       ],
     },
     problem: {
-      eyebrow: "Почему одного сильного опыта недостаточно", title: "Заявка теряет убедительность в разрывах между фактами", body: "Сильная карьера не превращается в доказательства автоматически. При оценке я ищу места, где личная роль теряется внутри командного результата, цифры расходятся между документами, а внешнее упоминание не подтверждает вклад. Команда устраняет эти разрывы до подачи.",
-      items: [["Личный вклад", "Показываем, что именно сделал заявитель и как его решения связаны с результатом."], ["Независимый контекст", "Отделяем внутреннее подтверждение компании от признания за ее пределами."], ["Согласованность", "Сверяем даты, роли, показатели и единицы измерения во всем комплекте."]],
+      eyebrow: "Подготовка кейса",
+      title: "Решение строится на фактах и их согласованности",
+      body: "Сильный опыт нужно перевести на язык конкретной программы. Мы определяем личный вклад, сверяем даты и показатели, находим независимые подтверждения и собираем документы в последовательную систему.",
+      items: [
+        ["Личный вклад", "Показываем, какие решения принял заявитель и как они повлияли на результат."],
+        ["Независимый контекст", "Подтверждаем масштаб проекта и профессиональное признание внешними источниками."],
+        ["Согласованность", "Сверяем даты, роли, показатели и единицы измерения во всем комплекте."],
+      ],
     },
     development: {
-      eyebrow: "Профиль можно подготовить", title: "Отсутствие публикаций на старте не закрывает маршрут", body: "Я не ограничиваюсь оценкой уже готового профиля. Если доказательств недостаточно, мы строим план на 3–12 месяцев: выбираем реальные проекты и профессиональные действия, заранее определяем измеримый результат и источники, которые смогут его подтвердить.", note: "Цель — не создать видимость публичности, а довести фактический опыт до состояния, в котором его можно последовательно и честно доказать.", link: "Как устроено развитие профиля",
-      items: [["01", "Находим основу", "Разбираем проекты, решения, рост ответственности и результаты, которые уже есть в карьере или бизнесе."], ["02", "Строим план пробелов", "Определяем, чего не хватает: независимой оценки, публичного следа, рекомендателей, метрик или нового результата."], ["03", "Создаем подтверждаемые результаты", "Планируем выступления, авторские материалы, экспертные роли и проекты, которые продолжают профессиональную траекторию."], ["04", "Собираем доказательства", "Фиксируем итог, личный вклад, масштаб и независимый источник до того, как детали потеряются."]],
+      eyebrow: "Профиль можно подготовить",
+      title: "Отсутствие публикаций не закрывает путь к визе таланта",
+      body: "Публикации составляют только один из возможных видов доказательств. Мы оцениваем проекты, измеримые результаты, лидерство, рекомендации и профессиональное признание. Если профиль пока не готов к подаче, составляем план развития на 3–12 месяцев.",
+      note: "План опирается на реальные проекты и профессиональные действия. Для каждого шага заранее определяем результат, срок и способ подтверждения, чтобы привести профиль к готовому кейсу.",
+      link: "Как устроено развитие профиля",
+      items: [
+        ["01", "Находим основу", "Разбираем проекты, решения, рост ответственности и результаты, которые уже есть в карьере или бизнесе."],
+        ["02", "Определяем пробелы", "Проверяем, где нужны метрики, рекомендатели, независимая оценка, публичный след или новый результат."],
+        ["03", "Создаем результаты", "Планируем выступления, авторские материалы, экспертные роли и проекты, связанные с профессиональной траекторией."],
+        ["04", "Фиксируем доказательства", "Документируем итог, личный вклад, масштаб и независимый источник по мере выполнения плана."],
+      ],
     },
     compare: {
-      eyebrow: "Гибкость маршрута", title: "Мы не продаём страну", intro: "Я начинаю с цели, сроков, зависимости от работодателя и положения семьи. Затем сопоставляю один и тот же опыт с критериями нескольких программ — предпочтительная страна сама по себе не определяет вывод.", link: "Открыть полное сравнение",
-      rows: [["UK", "Global Talent", "Карьера без привязки к одному работодателю", "Признание, личный вклад и независимые подтверждения"], ["UK", "Innovator Founder", "Запуск инновационного стартапа", "Новая идея, жизнеспособность и масштабирование"], ["US", "EB-1A", "Постоянный статус через выдающиеся способности", "Устойчивое признание и достижения высокого уровня"], ["US", "EB-2 NIW", "Постоянный статус через проект в интересах США", "Будущий план и способность его реализовать"], ["US", "O-1", "Временная работа по профессиональному профилю", "Достижения и американский заявитель"], ["US", "E-2", "Управление инвестиционным бизнесом", "Инвестиции, работающий бизнес и контроль"], ["ES", "Digital Nomad", "ВНЖ для удалённой работы", "Занятость, договоры, доход и страхование"], ["FR", "Talent — инновационный проект", "Работа над признанным инновационным проектом", "Проект, принимающая компания и достаточные средства"], ["FR", "Talent — создание бизнеса", "Создание коммерческого проекта во Франции", "Реальный бизнес-план, ресурсы и роль основателя"]],
+      eyebrow: "Выбор программы",
+      title: "Маршрут выбираем по цели и ситуации",
+      intro: "Критерии оценки различаются даже у внешне похожих программ. Мы сравниваем будущий статус, сроки, требования, положение семьи и доступные доказательства, затем объясняем шансы и ограничения каждого варианта.",
+      link: "Открыть сравнение программ",
+      rows: [
+        ["UK", "Global Talent", "Карьера без привязки к одному работодателю", "Признание, личный вклад и независимые подтверждения"],
+        ["UK", "Innovator Founder", "Запуск инновационного стартапа", "Новая идея, жизнеспособность и масштабирование"],
+        ["US", "EB-1A", "Постоянный статус через выдающиеся способности", "Устойчивое признание и достижения высокого уровня"],
+        ["US", "EB-2 NIW", "Постоянный статус через проект в интересах США", "Будущий план и способность его реализовать"],
+        ["US", "O-1", "Временная работа по профессиональному профилю", "Достижения и американский заявитель"],
+        ["US", "E-2", "Управление инвестиционным бизнесом", "Инвестиции, работающий бизнес и контроль"],
+        ["ES", "Digital Nomad", "ВНЖ для удаленной работы", "Работа по найму, ИП или контракт, доход и страхование"],
+        ["FR", "Talent: инновационный проект", "Работа над признанным инновационным проектом", "Проект, принимающая компания и достаточные средства"],
+        ["FR", "Talent: создание бизнеса", "Создание коммерческого проекта во Франции", "Бизнес-план, ресурсы и роль основателя"],
+      ],
     },
     services: {
-      eyebrow: "Форматы работы", title: "От первого сравнения до подачи и следующих статусов", intro: "Проект можно начать с отдельной задачи или пройти весь цикл одной командой. Состав и границы работы фиксируем до начала платного этапа.", link: "Посмотреть форматы подробно",
-      items: [["01", "Аудит профиля", "Несколько потенциальных программ, текущая основа и вопросы, которые нужно проверить глубже.", "Бесплатно · один рабочий день"], ["02", "Сравнение маршрутов", "Матрица вариантов с итоговым статусом, сроками, ограничениями и доказательственными задачами.", "Отдельный стратегический результат"], ["03", "Аудит доказательной базы", "Карта критериев, реестр сильных фактов, слабые места и план подготовки материалов.", "Для выбранного маршрута"], ["04", "Развитие профиля", "План профессиональных действий на 3–12 месяцев и система фиксации новых результатов.", "Когда профиль ещё не готов"], ["05", "Полное сопровождение", "Стратегия, доказательства, рекомендации, формы, партнёры и подача.", "UK от €5 000 · US от €8 000"], ["06", "Продление и семья", "Следующий статус, семейная подача, продление и связанные документы.", "После основного решения"]],
+      eyebrow: "Форматы работы",
+      title: "От оценки шансов до подачи и обустройства",
+      intro: "Проект можно начать с отдельной задачи или передать нам весь цикл. Состав работы, стоимость, сроки и ответственность сторон фиксируем до платного этапа.",
+      link: "Посмотреть все услуги",
+      items: [
+        ["01", "Оценка шансов", "Изучаем вводную анкету, сравниваем подходящие программы и предлагаем следующий шаг.", "Бесплатно · один рабочий день"],
+        ["02", "Сравнение маршрутов", "Готовим матрицу вариантов со статусом, сроками, ограничениями и задачами по доказательствам.", "Отдельный стратегический результат"],
+        ["03", "Проверка доказательств", "Сопоставляем факты с критериями, отмечаем сильные материалы и составляем план подготовки.", "Для выбранного маршрута"],
+        ["04", "Развитие профиля", "Формируем план профессиональных действий на 3–12 месяцев и систему фиксации результатов.", "Когда профиль пока не готов"],
+        ["05", "Полное сопровождение", "Ведем стратегию, доказательства, рекомендации, формы, партнеров и подачу.", "UK от €5 000 · US от €8 000"],
+        ["06", "Релокационные сервисы", "Координируем задачи после решения: семья, продление, налоги, банки, страхование и жилье.", "Состав зависит от страны"],
+      ],
     },
-    process: { eyebrow: "Как работаем", title: "Четыре результата вместо длинной цепочки действий", items: [["01", "Карта маршрутов", "Сравниваем статус, срок, ограничения и положение семьи."], ["02", "Матрица доказательств", "Связываем каждый центральный тезис с фактом, источником и критерием."], ["03", "План подготовки", "Фиксируем пробелы, задачи, ответственных и контрольные даты."], ["04", "Согласованный комплект", "Проверяем факты между документами и ведем подачу в согласованном объеме."]]},
-    articles: { eyebrow: "Что изменилось", title: "Следим за правилами и отделяем решение суда от его исполнения", all: "Все материалы", read: "Разобрать изменение", items: [["США · 27 августа 2026", "Суд отменил приостановку иммиграционных виз: что известно", "Почему это не решение Верховного суда и что ещё нужно проверять перед консульским этапом EB-1A и NIW.", "/blog/us-immigrant-visa-issuance-pause-russia/"], ["Великобритания · 6 марта 2026", "HC 1691: почему правила зависят от даты подачи", "Календарь вступления в силу ключевых положений.", "/blog/uk-hc-1691-dates/"], ["Испания · 20 февраля 2026", "Порог дохода DNV в 2026 году и расчёт для семьи", "Расчёт 200%, 75% и 25% после повышения испанского SMI.", "/blog/spain-dnv-income-2026/"]]},
-    pricing: ["Стоимость и сроки", "Финальный бюджет зависит от маршрута и состояния профиля", "После аудита профиля определяем, нужна ли отдельная стратегия, развитие профиля или полное сопровождение. До платного этапа письменно фиксируем состав работы, срок и стоимость.", "Цены указаны за работу Samotsvet. Государственные сборы, переводы, лицензированные партнёры и другие внешние расходы рассчитываются отдельно, если прямо не включены в предложение."],
+    process: {
+      eyebrow: "Как работаем",
+      title: "Четыре понятных результата по ходу проекта",
+      items: [
+        ["01", "Карта маршрутов", "Сравниваем статус, срок, ограничения и положение семьи."],
+        ["02", "Матрица доказательств", "Связываем каждый центральный тезис с фактом, источником и критерием."],
+        ["03", "План подготовки", "Фиксируем пробелы, задачи, ответственных и контрольные даты."],
+        ["04", "Согласованный комплект", "Проверяем факты между документами и ведем подачу в согласованном объеме."],
+      ],
+    },
+    articles: {
+      eyebrow: "Изменения правил",
+      title: "Объясняем, что изменилось и как это влияет на подачу",
+      all: "Все материалы",
+      read: "Читать разбор",
+      items: [
+        ["США · 27 августа 2026", "Суд отменил приостановку иммиграционных виз: что известно", "Решение окружного суда, практическое возобновление выдачи и вопросы перед консульским этапом EB-1A и NIW.", "/blog/us-immigrant-visa-issuance-pause-russia/"],
+        ["Великобритания · 6 марта 2026", "HC 1691: почему правила зависят от даты подачи", "Календарь вступления в силу ключевых положений.", "/blog/uk-hc-1691-dates/"],
+        ["Испания · 20 февраля 2026", "Порог дохода DNV в 2026 году и расчет для семьи", "Расчет 200%, 75% и 25% после повышения испанского SMI.", "/blog/spain-dnv-income-2026/"],
+      ],
+    },
+    pricing: [
+      "Стоимость и сроки",
+      "Бюджет зависит от маршрута и объема подготовки",
+      "После оценки шансов определяем подходящий формат: отдельная стратегия, развитие профиля или полное сопровождение. До начала платной работы письменно фиксируем состав, срок и стоимость.",
+      "Цены указаны за работу Samotsvet. Государственные сборы, переводы, лицензированные партнеры и другие внешние расходы рассчитываются отдельно, если они прямо не включены в предложение.",
+    ],
     guarantee: {
-      eyebrow: "Гарантия работы, а не решения ведомства", title: "Одобрение не гарантирует никто. Мы гарантируем качество своей работы", body: "До старта Вы получаете обоснованную оценку кейса по документам и официальным критериям. Стратегию дополнительно проверяет независимый профильный специалист. Состав проекта, цена и график платежей фиксируются заранее и не меняются по ходу без согласованного изменения объёма.", request: "Запрос ведомства отрабатываем без дополнительной оплаты. При отказе повторную подачу готовим без оплаты нашей работы; государственные сборы, переводы и другие внешние расходы оплачиваются отдельно.", stages: [["40%", "При старте", "Стратегия и подготовка"], ["30%", "После подачи", "Возвращаем при отказе"], ["30%", "После одобрения", "При отказе не начисляется"]], refusal: "Если ведомство отказывает, возвращаем второй платёж — 30% стоимости. Финальные 30% не выставляются. В итоге оплаченной остаётся стартовая часть 40%, которая покрывает уже выполненную стратегию и подготовку.", condition: "Гарантия действует при предоставлении достоверных данных, соблюдении согласованной стратегии и выполнении обязанностей клиента. Точные условия и срок возврата фиксируются в договоре до первого платежа.", link: "Полные условия работы" },
-    faq: { eyebrow: "Частые вопросы", title: "Что важно понять до начала проекта", items: [["Можно ли обратиться без публикаций и выступлений?", "Да. Публикации — только один из возможных видов доказательств. Мы проверяем проекты, измеримые результаты, лидерство, независимые подтверждения и потенциал развития профиля. Если основы достаточно, строим план, который доводит реальные достижения до готового доказательственного кейса."], ["Аудит профиля показывает процент одобрения?", "Нет. Мы не выдаём псевдоточный процент. Результат показывает несколько программ, текущую основу профиля и вопросы, которые требуют документальной проверки."], ["Вы работаете только с готовыми кейсами?", "Нет. Если профиль пока не готов, составляем план на 3–12 месяцев: выбираем реальные профессиональные действия, фиксируем результат и собираем независимые подтверждения. Это может сохранить даже талант-маршрут, но не гарантирует одобрение."], ["Как работает гарантия при отказе?", "Стоимость полного сопровождения делится на 40%, 30% и 30%. При отказе мы возвращаем второй платёж 30%, а финальные 30% не выставляем. Оплаченной остаётся стартовая часть 40% за уже выполненную стратегию и подготовку; точные условия закрепляются в договоре."], ["Кто отвечает за юридические вопросы конкретной страны?", "Samotsvet ведёт стратегию и подготовку проекта. Когда вопрос требует лицензированного специалиста соответствующей юрисдикции, мы подключаем профильного партнёра и заранее объясняем его роль."], ["Можно ли сравнить несколько стран?", "Да. Сопоставляем итоговый статус, срок, зависимость от работодателя или бизнеса, положение семьи и реальные доказательства в Вашей ситуации."]]},
-    closing: ["Первый шаг", "Получите карту программ и готовности профиля", "Ответьте на вопросы об опыте, результате и доказательствах. Расчёт происходит в браузере; страна не определяет итог автоматически.", "Пройти аудит профиля"],
+      eyebrow: "Гарантия работы",
+      title: "Одобрение не гарантирует никто. Мы гарантируем качество своей работы",
+      body: "До старта Вы получаете обоснованную оценку кейса по документам и официальным критериям. Стратегию дополнительно проверяет независимый профильный специалист. Состав проекта, цена и график платежей фиксируются заранее.",
+      request: "Запрос ведомства отрабатываем без дополнительной оплаты. При отказе готовим повторную подачу без оплаты нашей работы. Государственные сборы, переводы и другие внешние расходы оплачиваются отдельно.",
+      stages: [["40%", "При старте", "Стратегия и подготовка"], ["30%", "После подачи", "Возвращаем при отказе"], ["30%", "После одобрения", "При отказе не начисляется"]],
+      refusal: "Если ведомство отказывает, возвращаем второй платеж в размере 30% стоимости. Финальные 30% не выставляются. Оплаченной остается стартовая часть 40%, которая покрывает выполненную стратегию и подготовку.",
+      condition: "Гарантия действует при предоставлении достоверных данных, соблюдении согласованной стратегии и выполнении обязанностей клиента. Точные условия и срок возврата фиксируются в договоре до первого платежа.",
+      link: "Полные условия работы",
+    },
+    faq: {
+      eyebrow: "Частые вопросы",
+      title: "Что важно знать до начала проекта",
+      items: [
+        ["Можно ли обратиться без публикаций и выступлений?", "Да. Мы проверяем проекты, измеримые результаты, лидерство, рекомендации и независимые подтверждения. При достаточной основе составляем план, который приводит реальные достижения к готовому доказательственному кейсу."],
+        ["Что покажет оценка шансов?", "Команда изучит вводную анкету, назовет подходящие программы, объяснит сильные стороны и ключевые пробелы. Точный вывод по документам возможен после их отдельной проверки."],
+        ["Вы работаете с профилями, которые пока не готовы?", "Да. Составляем план на 3–12 месяцев, выбираем реальные профессиональные действия, фиксируем результат и собираем независимые подтверждения. Виза таланта может остаться реалистичной целью даже при слабом публичном профиле на старте."],
+        ["Как работает гарантия при отказе?", "Стоимость полного сопровождения делится на 40%, 30% и 30%. При отказе возвращаем второй платеж в размере 30%, а финальные 30% не выставляем. Стартовая часть 40% остается оплатой за выполненную стратегию и подготовку."],
+        ["Кто отвечает за вопросы права конкретной страны?", "Samotsvet ведет стратегию и подготовку проекта. Если задача требует лицензированного специалиста соответствующей юрисдикции, мы подключаем профильного партнера и заранее объясняем его роль."],
+        ["Можно ли сравнить несколько стран?", "Да. Сопоставляем итоговый статус, срок, зависимость от работодателя или бизнеса, положение семьи и доступные доказательства."],
+      ],
+    },
+    closing: [
+      "Первый шаг",
+      "Оцените шансы по нескольким программам",
+      "Заполните вводную анкету. Команда изучит ситуацию вручную и предложит реалистичные варианты в течение одного рабочего дня.",
+      "Оценить шансы",
+    ],
   },
   en: {
-    hero: ["With Nikita Samotsvetov's expertise", "Your relocation is our project", "You focus on work, business and family. I compare routes and assess the foundation of the case; the team manages profile development, evidence, documents, specialist partners and filing.", "Review my case", "Compare routes", "The audit takes 4–6 minutes · result shown on screen · reply within one business day", "10,000+ profiles since 2021 · 800+ matters · 200+ UK matters"],
+    hero: [
+      "End-to-end immigration and relocation",
+      "A visa is your first step towards residence",
+      "Samotsvet provides a complete service. We select the route, prepare the strategy and documents, co-ordinate filing, and bring in the services needed for moving and settling in a new country.",
+      "Assess my options",
+      "Compare programmes",
+      "The form takes about five minutes. We reply within one business day.",
+      "10,000+ profiles reviewed since 2021 · 800+ matters · 200+ UK matters",
+    ],
     founder: ["Nikita Samotsvetov", "Founder of Samotsvet", "LLM International Law and Global Governance", "University of Leeds · 2023"],
-    delegation: { eyebrow: "Relocation can be delegated", title: "What remains with you", body: "One detailed conversation about your experience, usually lasting 90–120 minutes. Signatures where they are genuinely required and decisions at the key project stages.", note: "Understanding criteria, preparing references, reconciling dates and facts across documents, monitoring rule changes and co-ordinating specialist partners are our responsibility. You receive concise progress reports.", items: ["Experience interview", "Signatures", "Key decisions"] },
-    audiences: { eyebrow: "Who we help", title: "We start with your circumstances, not a country", intro: "The same experience may support several programmes. I compare the objective, required status, timing and facts that can be evidenced; the team turns the conclusion into a working plan.", items: [["01", "Specialists and senior leaders", "We distinguish personal contribution to products, teams and commercial outcomes from ordinary responsibilities."], ["02", "Founders and entrepreneurs", "We compare achievement, start-up and investment routes and connect the founder's role to business outcomes."], ["03", "Researchers and authors", "We bring academic, professional and independent recognition into one verifiable trajectory."], ["04", "Remote professionals and families", "We review working arrangements, contracts, income, family documents and the effects of the selected status."]]},
-    problem: { eyebrow: "Why strong experience is not enough on its own", title: "A case loses credibility in the gaps between facts", body: "A strong career does not turn into evidence automatically. In my review, I look for points where a personal role disappears inside a team result, figures conflict across documents or external coverage fails to establish contribution. The team resolves those gaps before filing.", items: [["Personal contribution", "We show what the applicant did and how their decisions connect to the outcome."], ["Independent context", "We separate internal company evidence from recognition outside it."], ["Consistency", "We reconcile dates, roles, metrics and units across the full record."]]},
-    development: { eyebrow: "A profile can be developed", title: "No publications at the outset does not necessarily close the route", body: "I do more than assess an already finished profile. If evidence is insufficient, we build a 3–12 month plan: select genuine projects and professional activity, define measurable outcomes and record the sources that can verify them.", note: "The aim is not to manufacture visibility. It is to bring real experience to a point at which it can be presented consistently and honestly.", link: "How profile development works", items: [["01", "Find the foundation", "Review projects, decisions, increasing responsibility and outcomes already present in the career or business."], ["02", "Map the gaps", "Identify missing independent assessment, public record, referees, metrics or new results."], ["03", "Create verifiable outcomes", "Plan speaking, authorship, expert roles and projects that genuinely continue the professional trajectory."], ["04", "Capture the evidence", "Record the outcome, personal contribution, scale and independent source before detail is lost."]]},
-    compare: { eyebrow: "Route flexibility", title: "We do not sell a country", intro: "I begin with the objective, timing, dependence on an employer and the position of the family. I then test the same experience against several programmes; a preferred country does not determine the conclusion by itself.", link: "Open the full comparison", rows: [["UK", "Global Talent", "A career without one employer sponsor", "Recognition, contribution and independent evidence"], ["UK", "Innovator Founder", "Build an innovative start-up", "A new idea, viability and scalability"], ["US", "EB-1A", "Permanent status through extraordinary ability", "Sustained recognition and high-level achievement"], ["US", "EB-2 NIW", "Permanent status through a US national-interest endeavour", "A future plan and the ability to advance it"], ["US", "O-1", "Temporary work through a professional profile", "Achievements and a US petitioner"], ["US", "E-2", "Run an investment business", "Investment, an operating business and control"], ["ES", "Digital Nomad", "Residence for remote work", "Work, contracts, income and insurance"], ["FR", "Talent — innovative project", "Work on a recognised innovative project", "The project, host company and sufficient resources"], ["FR", "Talent — business creation", "Establish a commercial project in France", "A credible plan, resources and the founder's role"]]},
-    services: { eyebrow: "Ways to work with us", title: "From the first comparison to filing and later status stages", intro: "A project may begin with one defined task or continue through the full cycle with one team. Scope and boundaries are agreed before paid work begins.", link: "View all working formats", items: [["01", "Profile audit", "Several potential programmes, the present foundation and questions requiring deeper review.", "Free · one business day"], ["02", "Route comparison", "A matrix of outcomes, timing, restrictions and evidential tasks.", "A standalone strategic deliverable"], ["03", "Evidence audit", "A criteria map, register of strong facts, weaknesses and preparation plan.", "For a selected route"], ["04", "Profile development", "A 3–12 month plan and a system for recording new outcomes.", "Where the profile is not yet ready"], ["05", "Full support", "Strategy, evidence, references, forms, partners and filing.", "UK from €5,000 · US from €8,000"], ["06", "Extensions and family", "The next status, family filing, extension and related documents.", "Following the main decision"]]},
-    process: { eyebrow: "How we work", title: "Four deliverables rather than a long list of actions", items: [["01", "Route map", "We compare status, timing, restrictions and the position of the family."], ["02", "Evidence matrix", "Each central proposition is connected to a fact, source and criterion."], ["03", "Preparation plan", "We record gaps, tasks, owners and review dates."], ["04", "Reconciled bundle", "We check facts across documents and manage the agreed filing scope."]]},
-    articles: { eyebrow: "What changed", title: "We distinguish a court ruling from its practical implementation", all: "All articles", read: "Review the change", items: [["United States · 27 August 2026", "Court vacates the immigrant-visa pause: what is known", "Why this was not a Supreme Court judgment and what still requires checking before an EB-1A or NIW consular stage.", "/en/blog/us-immigrant-visa-issuance-pause-russia/"], ["United Kingdom · 6 March 2026", "HC 1691: why the filing date determines which rules apply", "A timetable for the key changes.", "/en/blog/uk-hc-1691-dates/"], ["Spain · 20 February 2026", "The 2026 DNV income threshold and family calculation", "The 200%, 75% and 25% calculation following the SMI increase.", "/en/blog/spain-dnv-income-2026/"]]},
-    pricing: ["Fees and timing", "The final budget depends on the route and present readiness", "Following the profile audit, we establish whether the matter needs a standalone strategy, profile development or full support. Scope, timing and fee are agreed in writing before paid work begins.", "Fees cover Samotsvet's work. Government fees, translations, licensed partners and other external costs are quoted separately unless expressly included."],
-    guarantee: { eyebrow: "A guarantee of work, not an authority's decision", title: "No one can guarantee approval. We guarantee the quality of our work", body: "Before the project begins, you receive a reasoned assessment based on the documents and official criteria. An independent specialist also reviews the strategy. Scope, fee and payment schedule are fixed in advance and change only if the parties agree to change the scope.", request: "We respond to an authority's request without an additional professional fee. After a refusal, we prepare one repeat filing without charging for our work; government fees, translations and other external costs remain separate.", stages: [["40%", "At the start", "Strategy and preparation"], ["30%", "After filing", "Refunded after a refusal"], ["30%", "After approval", "Not charged after a refusal"]], refusal: "If the authority refuses the application, we refund the second payment, equal to 30% of the fee. The final 30% is not invoiced. The amount ultimately retained is the initial 40%, covering strategy and preparation already completed.", condition: "The guarantee applies where the client provides accurate information, follows the agreed strategy and performs their contractual obligations. The exact terms and refund period are recorded in the agreement before the first payment.", link: "Full working terms" },
-    faq: { eyebrow: "Common questions", title: "What to understand before a project begins", items: [["Can I approach you without publications or speaking experience?", "Yes. Publications are only one possible form of evidence. We examine projects, measurable outcomes, leadership, independent evidence and the scope to develop the profile. Where the foundation is sufficient, we build a plan that turns genuine achievements into a filing-ready evidential case."], ["Does the profile audit provide an approval percentage?", "No. We do not produce a spurious percentage. The result identifies several potential programmes, the present foundation and questions requiring documentary review."], ["Do you only work with filing-ready cases?", "No. Where the profile is not ready, we build a 3–12 month plan around genuine professional activity, recorded outcomes and independent evidence. This can keep a talent route in consideration, but it does not guarantee approval."], ["How does the guarantee work after a refusal?", "The full-support fee is divided into 40%, 30% and 30%. After a refusal, we refund the second 30% payment and do not invoice the final 30%. The initial 40% remains paid for strategy and preparation already completed; the precise terms are recorded in the agreement."], ["Who handles jurisdiction-specific legal questions?", "Samotsvet leads strategy and project preparation. Where a matter requires a licensed professional in the relevant jurisdiction, we involve a specialist partner and explain their role in advance."], ["Can you compare several countries?", "Yes. We compare the eventual status, timing, dependence on employment or business, family position and evidence available in your circumstances."]]},
-    closing: ["First step", "Receive a map of programmes and profile readiness", "Answer questions about experience, outcomes and evidence. The result is calculated in your browser; a preferred country does not determine it automatically.", "Start the profile audit"],
+    delegation: {
+      eyebrow: "End-to-end relocation",
+      title: "One team manages the project from strategy to relocation",
+      body: "You make the key decisions and provide the source information. We manage the route, evidence, documents, deadlines and the people involved in the project.",
+      note: "After filing, we can bring in trusted specialists for tax, banking, insurance, housing and other practical matters. The precise scope depends on the destination and is recorded in our proposal.",
+      items: ["Route selection", "Preparation and filing", "Relocation services"],
+    },
+    audiences: {
+      eyebrow: "Who we help",
+      title: "We start with your objective and circumstances",
+      intro: "Each country has its own programmes, criteria and evidential requirements. We review the person's circumstances, assess several realistic options and recommend a route suited to their objective, timing and family plans.",
+      items: [
+        ["01", "Specialists and senior leaders", "We examine personal contribution to products, teams and commercial outcomes, then test the facts against programme criteria."],
+        ["02", "Founders and entrepreneurs", "We compare achievement, start-up and investment routes and establish the founder's role in business outcomes."],
+        ["03", "Researchers and authors", "We bring together academic and professional experience, independent recognition and plans for future work."],
+        ["04", "Remote professionals and families", "We review working arrangements, contracts, income, family documents and the effects of the selected status."],
+      ],
+    },
+    problem: {
+      eyebrow: "Case preparation",
+      title: "A decision depends on the facts and their consistency",
+      body: "Strong experience must be presented against the criteria of a particular programme. We define personal contribution, reconcile dates and figures, find independent support and organise the documents into a coherent case.",
+      items: [
+        ["Personal contribution", "We show which decisions the applicant made and how they affected the outcome."],
+        ["Independent context", "We establish the scale of the work and professional recognition through external sources."],
+        ["Consistency", "We reconcile dates, roles, metrics and units across the complete record."],
+      ],
+    },
+    development: {
+      eyebrow: "A profile can be developed",
+      title: "A lack of publications need not rule out a talent visa",
+      body: "Publications are one possible form of evidence. We also examine projects, measurable results, leadership, references and professional recognition. Where a profile is not ready to file, we build a 3–12 month development plan.",
+      note: "The plan is based on genuine projects and professional activity. Each step has a defined outcome, timetable and method of verification, with the aim of producing a filing-ready case.",
+      link: "How profile development works",
+      items: [
+        ["01", "Find the foundation", "Review projects, decisions, increasing responsibility and outcomes already present in the career or business."],
+        ["02", "Define the gaps", "Identify where the case needs metrics, referees, independent assessment, a public record or a new result."],
+        ["03", "Create results", "Plan speaking, authorship, expert roles and projects connected to the applicant's professional trajectory."],
+        ["04", "Record the evidence", "Document the outcome, personal contribution, scale and independent source as the plan progresses."],
+      ],
+    },
+    compare: {
+      eyebrow: "Programme selection",
+      title: "The right route follows from the objective and circumstances",
+      intro: "Assessment criteria differ even between programmes that appear similar. We compare the eventual status, timing, requirements, family position and available evidence, then explain the prospects and limitations of each option.",
+      link: "Compare all programmes",
+      rows: [
+        ["UK", "Global Talent", "A career without one employer sponsor", "Recognition, contribution and independent evidence"],
+        ["UK", "Innovator Founder", "Build an innovative start-up", "A new idea, viability and scalability"],
+        ["US", "EB-1A", "Permanent status through extraordinary ability", "Sustained recognition and high-level achievement"],
+        ["US", "EB-2 NIW", "Permanent status through a US national-interest endeavour", "A future plan and the ability to advance it"],
+        ["US", "O-1", "Temporary work through a professional profile", "Achievements and a US petitioner"],
+        ["US", "E-2", "Run an investment business", "Investment, an operating business and control"],
+        ["ES", "Digital Nomad", "Residence for remote work", "Employment, self-employment or contracting, income and insurance"],
+        ["FR", "Talent: innovative project", "Work on a recognised innovative project", "The project, host company and sufficient resources"],
+        ["FR", "Talent: business creation", "Establish a commercial project in France", "A credible plan, resources and the founder's role"],
+      ],
+    },
+    services: {
+      eyebrow: "Ways to work with us",
+      title: "From assessing your options to filing and settling in",
+      intro: "A project can begin with one defined task or continue through the complete process. Scope, fee, timing and responsibilities are agreed before paid work begins.",
+      link: "View all services",
+      items: [
+        ["01", "Options assessment", "We review the introductory form, compare suitable programmes and recommend the next step.", "Free · one business day"],
+        ["02", "Route comparison", "We prepare a matrix covering status, timing, restrictions and evidential tasks.", "A standalone strategic deliverable"],
+        ["03", "Evidence review", "We test facts against the criteria, identify strong material and produce a preparation plan.", "For a selected route"],
+        ["04", "Profile development", "We create a 3–12 month programme of professional activity and a system for recording results.", "Where the profile is not ready"],
+        ["05", "Full support", "We manage strategy, evidence, references, forms, specialist partners and filing.", "UK from €5,000 · US from €8,000"],
+        ["06", "Relocation services", "We co-ordinate post-decision tasks including family, extensions, tax, banking, insurance and housing.", "Scope depends on the country"],
+      ],
+    },
+    process: {
+      eyebrow: "How we work",
+      title: "Four clear deliverables during the project",
+      items: [
+        ["01", "Route map", "We compare status, timing, restrictions and the position of the family."],
+        ["02", "Evidence matrix", "Each central proposition is connected to a fact, source and criterion."],
+        ["03", "Preparation plan", "We record gaps, tasks, owners and review dates."],
+        ["04", "Reconciled bundle", "We check facts across documents and manage the agreed filing scope."],
+      ],
+    },
+    articles: {
+      eyebrow: "Rule changes",
+      title: "What changed and how it affects a filing",
+      all: "All articles",
+      read: "Read the analysis",
+      items: [
+        ["United States · 27 August 2026", "Court vacates the immigrant-visa pause: what is known", "The district court ruling, practical resumption of issuance and questions before an EB-1A or NIW consular stage.", "/en/blog/us-immigrant-visa-issuance-pause-russia/"],
+        ["United Kingdom · 6 March 2026", "HC 1691: why the filing date determines which rules apply", "A timetable for the key changes.", "/en/blog/uk-hc-1691-dates/"],
+        ["Spain · 20 February 2026", "The 2026 DNV income threshold and family calculation", "The 200%, 75% and 25% calculation following the SMI increase.", "/en/blog/spain-dnv-income-2026/"],
+      ],
+    },
+    pricing: [
+      "Fees and timing",
+      "The budget depends on the route and preparation required",
+      "Following the options assessment, we recommend the appropriate format: a standalone strategy, profile development or full support. Scope, timing and fee are agreed in writing before paid work begins.",
+      "Fees cover Samotsvet's work. Government fees, translations, licensed partners and other external costs are quoted separately unless expressly included.",
+    ],
+    guarantee: {
+      eyebrow: "Our work guarantee",
+      title: "No one can guarantee approval. We guarantee the quality of our work",
+      body: "Before the project begins, you receive a reasoned assessment based on the documents and official criteria. An independent specialist also reviews the strategy. Scope, fee and payment schedule are fixed in advance.",
+      request: "We respond to an authority's request without an additional professional fee. After a refusal, we prepare one repeat filing without charging for our work. Government fees, translations and other external costs remain separate.",
+      stages: [["40%", "At the start", "Strategy and preparation"], ["30%", "After filing", "Refunded after a refusal"], ["30%", "After approval", "Not charged after a refusal"]],
+      refusal: "If the authority refuses the application, we refund the second payment, equal to 30% of the fee. The final 30% is not invoiced. The initial 40% remains paid for strategy and preparation already completed.",
+      condition: "The guarantee applies where the client provides accurate information, follows the agreed strategy and performs their contractual obligations. The exact terms and refund period are recorded in the agreement before the first payment.",
+      link: "Full working terms",
+    },
+    faq: {
+      eyebrow: "Common questions",
+      title: "What to know before a project begins",
+      items: [
+        ["Can I approach you without publications or speaking experience?", "Yes. We examine projects, measurable results, leadership, references and independent evidence. Where the foundation is sufficient, we build a plan that turns genuine achievements into a filing-ready evidential case."],
+        ["What does the options assessment provide?", "Our team reviews the introductory form, identifies suitable programmes and explains the strengths and key gaps. A firm view on the documents requires a separate evidence review."],
+        ["Do you work with profiles that are not ready to file?", "Yes. We create a 3–12 month plan around genuine professional activity, recorded results and independent evidence. A talent visa may remain a realistic objective even where the initial public profile is limited."],
+        ["How does the guarantee work after a refusal?", "The full-support fee is divided into 40%, 30% and 30%. After a refusal, we refund the second 30% payment and do not invoice the final 30%. The initial 40% remains paid for strategy and preparation already completed."],
+        ["Who handles questions of local law?", "Samotsvet leads strategy and project preparation. Where a task requires a licensed professional in the relevant jurisdiction, we involve a specialist partner and explain their role in advance."],
+        ["Can you compare several countries?", "Yes. We compare the eventual status, timing, dependence on employment or business, family position and available evidence."],
+      ],
+    },
+    closing: [
+      "First step",
+      "Assess your options across several programmes",
+      "Complete the introductory form. Our team will review your circumstances personally and recommend realistic options within one business day.",
+      "Assess my options",
+    ],
   },
 } as const;
 
@@ -84,7 +307,7 @@ export function HomePage({ locale = "ru" }: { locale?: Locale }) {
       <section className="hero section-shell">
         <div className="hero-copy"><p className="eyebrow">{text.hero[0]}</p><h1>{text.hero[1]}</h1><p className="hero-lede">{text.hero[2]}</p><div className="hero-actions"><Link className="button button-primary" href={assessmentPath}>{text.hero[3]}</Link><Link className="button button-secondary" href={comparePath}>{text.hero[4]}</Link></div><p className="hero-response">{text.hero[5]}</p><p className="hero-note">{text.hero[6]}</p></div>
         <figure className="hero-founder">
-          <div className="hero-founder-photo"><Image src="/nikita-founder-white-v3.webp" alt={text.founder[0]} width={1149} height={1368} priority sizes="(max-width: 980px) 100vw, 48vw" /></div>
+          <div className="hero-founder-photo"><Image src="/nikita-founder-white-v3.webp" alt={text.founder[0]} width={1149} height={1368} priority sizes="(max-width: 980px) 520px, 44vw" /></div>
           <figcaption><strong>{text.founder[0]}</strong><span>{text.founder[1]}</span><small>{text.founder[2]}<br />{text.founder[3]}</small></figcaption>
         </figure>
       </section>
