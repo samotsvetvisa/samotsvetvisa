@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { FOUNDER_NAME, LEGAL_NAME, SERVICE_PRICES, SITE_URL, withTrailingSlash } from "../site";
 import { ClientResults } from "./ClientResults";
+import { HeroVisual } from "./HeroVisual";
 import { PressMentions } from "./PressMentions";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
@@ -306,10 +306,7 @@ export function HomePage({ locale = "ru" }: { locale?: Locale }) {
     <main>
       <section className="hero section-shell">
         <div className="hero-copy"><p className="eyebrow">{text.hero[0]}</p><h1>{text.hero[1]}</h1><p className="hero-lede">{text.hero[2]}</p><div className="hero-actions"><Link className="button button-primary" href={assessmentPath}>{text.hero[3]}</Link><Link className="button button-secondary" href={comparePath}>{text.hero[4]}</Link></div><p className="hero-response">{text.hero[5]}</p><p className="hero-note">{text.hero[6]}</p></div>
-        <figure className="hero-founder">
-          <div className="hero-founder-photo"><Image src="/nikita-founder-white-v3.webp" alt={text.founder[0]} width={1149} height={1368} priority sizes="(max-width: 980px) 520px, 44vw" /></div>
-          <figcaption><strong>{text.founder[0]}</strong><span>{text.founder[1]}</span><small>{text.founder[2]}<br />{text.founder[3]}</small></figcaption>
-        </figure>
+        <HeroVisual locale={locale} />
       </section>
 
       <section className="delegation-band"><div className="section-shell delegation-layout"><div><p className="eyebrow eyebrow-light">{text.delegation.eyebrow}</p><h2>{text.delegation.title}</h2><p>{text.delegation.body}</p></div><div><div className="delegation-items">{text.delegation.items.map((item, index) => <span key={item}><b>{String(index + 1).padStart(2, "0")}</b>{item}</span>)}</div><p>{text.delegation.note}</p></div></div></section>
