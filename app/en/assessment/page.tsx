@@ -5,8 +5,8 @@ import { SiteHeader } from "../../components/SiteHeader";
 import { pageMetadata } from "../../site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Immigration options assessment",
-  description: "Tell us about your objectives, experience and starting position. Samotsvet will compare suitable programmes and recommend the next step.",
+  title: "Free consultation with Nikita Samotsvetov",
+  description: "Briefly tell us about your work and relocation plans. We will discuss your circumstances and the next step during a free initial consultation.",
   path: "/en/assessment",
   locale: "en",
 });
@@ -17,11 +17,11 @@ export default function EnglishAssessmentPage() {
       <SiteHeader locale="en" />
       <main>
         <section className="inner-hero section-shell assessment-hero">
-          <div><p className="eyebrow">Options assessment</p><h1>Start with your circumstances</h1></div>
-          <p>Complete the introductory form. We will review your objective, starting position, experience and available evidence, then compare realistic programmes.</p>
+          <div><p className="eyebrow">Initial consultation</p><h1>Free consultation with Nikita Samotsvetov</h1></div>
+          <p>Briefly tell us about your work and your plans to relocate. During the initial consultation, we will discuss your circumstances and the next step. The meeting lasts up to 20 minutes; you do not need to prepare a full set of documents in advance.</p>
         </section>
         <section className="section-shell assessment-layout">
-          <aside><span>What happens next</span><ol><li>Our team reviews the form personally.</li><li>We compare suitable countries and programmes.</li><li>We assess the case foundation and key gaps.</li><li>We recommend the next step within one business day.</li></ol></aside>
+          <aside><span>What is included</span><ol><li>Up to 20 minutes with Nikita Samotsvetov.</li><li>A discussion of your objective, circumstances and constraints.</li><li>A preliminary view of suitable options.</li><li>A clear next step after the conversation.</li></ol><p>The initial consultation is free. A detailed profile audit and a written strategy are separate services, agreed before paid work begins.</p></aside>
           <AssessmentForm locale="en" />
         </section>
       </main>

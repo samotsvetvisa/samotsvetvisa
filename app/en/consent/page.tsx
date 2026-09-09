@@ -19,8 +19,8 @@ export default function EnglishConsentPage() {
         <article className="legal-page section-shell privacy-page">
           <p className="eyebrow">Personal data</p>
           <h1>Consent to the processing of personal data</h1>
-          <p className="legal-updated">Version dated 4 September 2026</p>
-          <p className="legal-intro">By selecting the separate checkbox and submitting the form for an options assessment, you freely give this consent.</p>
+          <p className="legal-updated">Version dated 9 September 2026</p>
+          <p className="legal-intro">By selecting the separate checkbox and submitting a request for a free initial consultation, you freely give this consent.</p>
 
           <section>
             <h2>1. Controller</h2>
@@ -33,10 +33,10 @@ export default function EnglishConsentPage() {
             <p>This consent covers the information you enter in the form:</p>
             <ul>
               <li>your name and contact details;</li>
-              <li>citizenship, current country of residence, intended destination, route, objective, timing and family position;</li>
-              <li>working arrangements, professional or business profile, available evidence, current stage, and previous applications or refusals;</li>
-              <li>a LinkedIn or CV link, if provided voluntarily;</li>
-              <li>enquiry source, UTM values, landing page and referring page;</li>
+              <li>a short summary of your work and professional or business experience;</li>
+              <li>the selected country or goal and intended relocation timing;</li>
+              <li>the programme topic where the form is opened from a specific route page;</li>
+              <li>enquiry source, permitted UTM values, entry and source pages, external referrer and button location;</li>
               <li>technical request data required for security and spam prevention.</li>
             </ul>
             <p>Do not submit passport details, medical information, criminal record documents, bank details or other sensitive or excessive information through the form.</p>
@@ -45,8 +45,8 @@ export default function EnglishConsentPage() {
           <section>
             <h2>3. Purposes</h2>
             <ul>
-              <li>to respond and conduct an initial review;</li>
-              <li>to compare the starting position with possible programmes and propose the next stage;</li>
+              <li>to respond and arrange a free initial consultation;</li>
+              <li>to discuss possible programmes on a preliminary basis and propose the next stage;</li>
               <li>to prepare an individual proposal and take pre-contractual steps;</li>
               <li>to understand the enquiry source, secure the form and protect lawful rights.</li>
             </ul>
@@ -61,7 +61,7 @@ export default function EnglishConsentPage() {
           <section>
             <h2>5. Recipients and location of the primary record</h2>
             <p>After submission, the browser sends the completed form once to the Samotsvet CRM at <code>crm.samotsvetvisa.com</code>. The primary record is created on a server in Russia. Authorised Samotsvet personnel and contractors may access the enquiry to the extent required to respond.</p>
-            <p>A specialist reviews the form. The options assessment is not legal advice, a guarantee of approval or an automated decision producing legal effects.</p>
+            <p>A specialist reviews the request. A preliminary view given during or after the consultation is not legal advice, a guarantee of approval or an automated decision producing legal effects.</p>
             <p>Case material is sent to a foreign lawyer, regulated adviser, translator or other professional only after the applicable legal basis has been established and any required notice, consent and contractual steps have been completed.</p>
           </section>
 

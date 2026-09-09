@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { BrandLockup } from "./BrandLockup";
+import { ConsultationLink } from "./ConsultationLink";
 import { HashLink } from "./HashLink";
 import { LanguageSwitch } from "./LanguageSwitch";
 import { withTrailingSlash } from "../site";
@@ -88,14 +89,14 @@ export function SiteHeader({ locale = "ru" }: { locale?: "ru" | "en" }) {
           </Link>
           <nav className="desktop-nav" aria-label={isEnglish ? "Primary navigation" : "Главная навигация"}>
             <HashLink href={withTrailingSlash(`${base}/#directions`)}>{isEnglish ? "Destinations" : "Направления"}</HashLink>
-            <HashLink href={withTrailingSlash(`${base}/#services`)}>{isEnglish ? "Services" : "Услуги"}</HashLink>
             <HashLink href={withTrailingSlash(`${base}/#process`)}>{isEnglish ? "How we work" : "Как работаем"}</HashLink>
+            <HashLink href={withTrailingSlash(`${base}/#services`)}>{isEnglish ? "Services" : "Услуги"}</HashLink>
             <HashLink href={withTrailingSlash(`${base}/#results`)}>{isEnglish ? "Experience" : "Опыт"}</HashLink>
             <Link href={withTrailingSlash(`${base}/blog`)}>{isEnglish ? "Insights" : "Блог"}</Link>
             <Link href={withTrailingSlash(`${base}/about`)}>{isEnglish ? "About" : "О нас"}</Link>
           </nav>
           <LanguageSwitch />
-          <Link className="header-cta" href={assessmentPath}>{isEnglish ? "Assess my options" : "Оценить шансы"}</Link>
+          <ConsultationLink className="header-cta" locale={locale} location="header">{isEnglish ? "Free consultation" : "Бесплатная консультация"}</ConsultationLink>
           <button
             className={`mobile-menu-toggle${menuOpen ? " is-open" : ""}`}
             type="button"
@@ -124,26 +125,28 @@ export function SiteHeader({ locale = "ru" }: { locale?: "ru" | "en" }) {
           <div className="mobile-menu-secondary">
             <HashLink href={withTrailingSlash(`${base}/#process`)} afterNavigate={closeMenu}>{isEnglish ? "How we work" : "Как работаем"}</HashLink>
             <HashLink href={withTrailingSlash(`${base}/#services`)} afterNavigate={closeMenu}>{isEnglish ? "Services" : "Услуги"}</HashLink>
+            <HashLink href={withTrailingSlash(`${base}/#results`)} afterNavigate={closeMenu}>{isEnglish ? "Experience" : "Опыт"}</HashLink>
             <Link href={withTrailingSlash(`${base}/blog`)} onClick={closeMenu}>{isEnglish ? "Insights" : "Блог"}</Link>
             <Link href={withTrailingSlash(`${base}/about`)} onClick={closeMenu}>{isEnglish ? "About" : "О нас"}</Link>
             <Link href={withTrailingSlash(`${base}/contacts`)} onClick={closeMenu}>{isEnglish ? "Contact" : "Контакты"}</Link>
           </div>
-          <Link className="button button-primary mobile-menu-assessment" href={assessmentPath} onClick={closeMenu}>
-            {isEnglish ? "Assess my options" : "Оценить шансы"}
-          </Link>
+          <ConsultationLink className="button button-primary mobile-menu-assessment" locale={locale} location="mobile_menu" onClick={closeMenu}>
+            {isEnglish ? "Free consultation" : "Бесплатная консультация"}
+          </ConsultationLink>
         </nav>
       </div>
 
       {!isAssessmentPage ? (
-        <Link
+        <ConsultationLink
           className={`mobile-sticky-assessment${showStickyAssessment && !menuOpen && !closingAreaVisible ? " is-visible" : ""}`}
-          href={assessmentPath}
+          locale={locale}
+          location="mobile_sticky"
           aria-hidden={!showStickyAssessment || menuOpen || closingAreaVisible}
           tabIndex={showStickyAssessment && !menuOpen && !closingAreaVisible ? 0 : -1}
         >
-          {isEnglish ? "Assess my options" : "Оценить шансы"}
+          {isEnglish ? "Free consultation" : "Бесплатная консультация"}
           <span aria-hidden="true">→</span>
-        </Link>
+        </ConsultationLink>
       ) : null}
     </>
   );

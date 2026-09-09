@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { ConsultationLink } from "../components/ConsultationLink";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
 import { pageMetadata } from "../site";
@@ -44,8 +44,8 @@ export default function ProfileDevelopmentPage() {
         </section>
 
         <section className="section-shell closing-cta">
-          <div><p className="eyebrow eyebrow-light">Первый шаг</p><h2>Начнем с оценки шансов и доступных доказательств</h2></div>
-          <div><p>После анализа зафиксируем объем работы, ориентир по срокам и стоимость программы.</p><Link className="button button-gold" href="/assessment/">Оценить шансы</Link></div>
+          <div><p className="eyebrow eyebrow-light">Первичная консультация</p><h2>Обсудим исходный профиль и цель</h2></div>
+          <div><p>Если нужна программа развития, после разговора зафиксируем объем работы, ориентир по срокам и стоимость.</p><ConsultationLink className="button button-gold" location="profile_development_final" /></div>
         </section>
       </main>
       <SiteFooter />

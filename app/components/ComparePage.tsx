@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ConsultationLink } from "./ConsultationLink";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
 import { SITE_URL, withTrailingSlash } from "../site";
@@ -325,7 +326,15 @@ export function ComparePage({ locale = "ru" }: { locale?: Locale }) {
                       <div><dt>{en ? "Government processing" : "Рассмотрение ведомством"}</dt><dd>{route.processing}</dd></div>
                       <div><dt>{en ? "External party" : "Кто участвует кроме заявителя"}</dt><dd>{route.external}</dd></div>
                     </dl>
-                    <Link href={route.href}>{en ? "Open the programme" : "Открыть программу"} <span aria-hidden="true">↗</span></Link>
+                    <div className="programme-card-actions">
+                      <Link href={route.href}>{en ? "More about the programme" : "Подробнее о программе"} <span aria-hidden="true">↗</span></Link>
+                      <ConsultationLink
+                        locale={locale}
+                        country={({ uk: "uk", usa: "usa", spain: "spain", france: "france" } as const)[group.id as "uk" | "usa" | "spain" | "france"]}
+                        program={route.href.split("#route-")[1] || route.name}
+                        location="compare_program"
+                      />
+                    </div>
                   </article>
                 ))}
               </div>
@@ -336,7 +345,7 @@ export function ComparePage({ locale = "ru" }: { locale?: Locale }) {
         <p className="compare-disclaimer">{en ? "This comparison is a starting point, not an eligibility decision. Nationality, present status, family circumstances, filing location and documentary detail may change the conclusion." : "Это отправная точка, а не решение о соответствии. Гражданство, текущий статус, семья, место подачи и содержание документов могут изменить вывод."}</p>
       </section>
 
-      <section className="section-shell closing-cta"><div><p className="eyebrow eyebrow-light">{en ? "Your circumstances" : "Ваша ситуация"}</p><h2>{en ? "Compare several programmes against the same facts" : "Сравним несколько программ на одних и тех же фактах"}</h2></div><div><p>{en ? "Complete the introductory form. Our team will review the objective, starting position, experience and available evidence." : "Заполните вводную анкету. Команда изучит цель, исходные данные, опыт и доступные доказательства."}</p><Link className="button button-gold" href={withTrailingSlash(`${base}/assessment`)}>{en ? "Assess my options" : "Оценить шансы"}</Link></div></section>
+      <section className="section-shell closing-cta"><div><p className="eyebrow eyebrow-light">{en ? "Your circumstances" : "Ваша ситуация"}</p><h2>{en ? "Compare several programmes against the same facts" : "Сравним несколько программ на одних и тех же фактах"}</h2></div><div><p>{en ? "Complete five short fields. During the free consultation, we will discuss suitable options and the next step." : "Заполните пять коротких полей. На бесплатной консультации обсудим подходящие варианты и следующий шаг."}</p><ConsultationLink className="button button-gold" locale={locale} country="compare" location="compare_final" /></div></section>
     </main>
     <SiteFooter locale={locale} />
   </>;

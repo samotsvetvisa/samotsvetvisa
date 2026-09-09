@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ConsultationLink } from "../../../components/ConsultationLink";
 import { SiteFooter } from "../../../components/SiteFooter";
 import { SiteHeader } from "../../../components/SiteHeader";
 import { formatArticleDate } from "../../../content/article-date";
@@ -20,6 +21,7 @@ export default async function EnglishArticlePage({ params }: { params: Promise<{
   const { slug } = await params;
   const article = articlesEn.find((item) => item.slug === slug);
   if (!article) notFound();
+  const consultationCountry = ({ uk: "uk", usa: "usa", spain: "spain", france: "france" } as const)[article.relatedCountry];
   const articleSchema = { "@context": "https://schema.org", "@type": "Article", headline: article.title, description: article.description, datePublished: article.published, dateModified: article.published, author: { "@type": "Person", name: article.author, url: `${SITE_URL}/en/about#nikita` }, publisher: { "@id": `${SITE_URL}/#organisation` }, mainEntityOfPage: `${SITE_URL}/en/blog/${article.slug}`, image: `${SITE_URL}/og-samotsvet.png` };
 
   return (
@@ -36,8 +38,8 @@ export default async function EnglishArticlePage({ params }: { params: Promise<{
               <div>{article.sources.map((source) => <a href={source.href} key={source.href} target="_blank" rel="noreferrer">{source.label}<span aria-hidden="true">↗</span></a>)}</div>
             </section>
           )}
-          <aside><p>Would you like to apply this to your circumstances?</p><Link href={`/en/countries/${article.relatedCountry}/`}>View route</Link><Link href="/en/assessment/">Assess my options</Link></aside>
-          <section className="article-author" id="article-author" aria-label="About the author"><div className="article-author-photo"><img src="/nikita-founder-white-v3.webp" alt="Nikita Samotsvetov" width="180" height="220" /></div><div><p className="article-author-label">Author</p><h2><Link href="/en/about/#nikita">Nikita Samotsvetov</Link></h2><p>Founder and practice lead at Samotsvet. Nikita is responsible for the methodology, source review and quality control.</p></div></section>
+          <aside><p>Let us discuss how this applies to your circumstances</p><Link href={`/en/countries/${article.relatedCountry}/`}>View route</Link><ConsultationLink locale="en" country={consultationCountry} program={article.slug} location="article_end">Free consultation</ConsultationLink></aside>
+          <section className="article-author" id="article-author" aria-label="About the author"><div className="article-author-photo"><img src="/nikita-founder-white-v3.webp" alt="Nikita Samotsvetov" width="180" height="220" /></div><div><p className="article-author-label">Author</p><h2><Link href="/en/about/#nikita">Nikita Samotsvetov</Link></h2><p>Nikita Samotsvetov is the founder of Samotsvet. He is responsible for strategy and quality control in case preparation.</p></div></section>
         </div>
       </article>
     </main><SiteFooter locale="en" /></>

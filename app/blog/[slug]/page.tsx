@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ConsultationLink } from "../../components/ConsultationLink";
 import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
 import { formatArticleDate } from "../../content/article-date";
@@ -27,6 +28,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const article = articles.find((item) => item.slug === slug);
   if (!article) notFound();
+  const consultationCountry = ({ uk: "uk", usa: "usa", spain: "spain", france: "france" } as const)[article.relatedCountry];
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -71,16 +73,16 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               </section>
             )}
             <aside>
-              <p>Нужно применить это к Вашей ситуации?</p>
+              <p>Обсудим, как это относится к Вашей ситуации</p>
               <Link href={`/countries/${article.relatedCountry}/`}>Посмотреть маршрут</Link>
-              <Link href="/assessment/">Оценить шансы</Link>
+              <ConsultationLink country={consultationCountry} program={article.slug} location="article_end">Бесплатная консультация</ConsultationLink>
             </aside>
             <section className="article-author" id="article-author" aria-label="Об авторе">
               <div className="article-author-photo"><img src="/nikita-founder-white-v3.webp" alt="Никита Самоцветов" width="180" height="220" /></div>
               <div>
                 <p className="article-author-label">Автор</p>
                 <h2><Link href="/about/#nikita">Никита Самоцветов</Link></h2>
-                <p>Основатель и руководитель практики Samotsvet. Никита отвечает за методологию, проверку источников и контроль качества подготовки.</p>
+                <p>Никита Самоцветов - основатель Samotsvet. Отвечает за стратегию и контроль качества подготовки кейсов.</p>
               </div>
             </section>
           </div>

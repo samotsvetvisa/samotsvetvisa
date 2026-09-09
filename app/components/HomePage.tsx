@@ -1,6 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { FOUNDER_NAME, LEGAL_NAME, SERVICE_PRICES, SITE_URL, withTrailingSlash } from "../site";
 import { ClientResults } from "./ClientResults";
+import { ConsultationLink } from "./ConsultationLink";
 import { HeroVisual } from "./HeroVisual";
 import { PressMentions } from "./PressMentions";
 import { SiteFooter } from "./SiteFooter";
@@ -10,27 +12,34 @@ type Locale = "ru" | "en";
 
 const copy = {
   ru: {
-    hero: [
-      "Иммиграция и релокация под ключ",
-      "Виза: Ваш первый шаг к ВНЖ",
-      "Samotsvet работает как агентство полного цикла. Мы подбираем маршрут, готовим стратегию и документы, координируем подачу и подключаем нужные сервисы для переезда и обустройства в новой стране.",
-      "Оценить шансы",
-      "Сравнить программы",
-      "Анкета занимает около 5 минут. Ответим в течение одного рабочего дня.",
-      "10 000+ разобранных профилей с 2021 года · 800+ кейсов · 200+ по Великобритании",
-    ],
-    founder: ["Никита Самоцветов", "Основатель Samotsvet", "LLM International Law and Global Governance", "University of Leeds · 2023"],
-    delegation: {
-      eyebrow: "Релокация под ключ",
-      title: "Одна команда ведет проект от стратегии до переезда",
-      body: "Вы принимаете решения в ключевых точках и предоставляете исходные сведения. Мы берем на себя маршрут, доказательства, документы, контроль сроков и координацию участников проекта.",
-      note: "После подачи можем подключить проверенных специалистов по налогам, банкам, страхованию, жилью и другим практическим задачам. Состав сервисов зависит от страны и фиксируется в предложении.",
-      items: ["Выбор маршрута", "Подготовка и подача", "Сервисы после переезда"],
+    hero: {
+      eyebrow: "Samotsvet - агентство Никиты Самоцветова",
+      title: "Возьмем на себя подготовку Вашей иммиграции",
+      body: "Помогаем специалистам и предпринимателям выбрать маршрут для себя и семьи. Никита Самоцветов лично определяет стратегию и проверяет готовность кейса. Мы организуем подготовку документов, работу профильных партнеров и сопровождение подачи.",
+      routes: "Великобритания · США · Испания · Франция",
+      founder: "Никита Самоцветов",
+      role: "Основатель Samotsvet",
+      education: "LLM, University of Leeds",
+      secondary: "Как мы работаем",
+      note: "С Никитой Самоцветовым, до 20 минут. После короткой заявки свяжемся с Вами в течение рабочего дня, чтобы согласовать время.",
+    },
+    founderRole: {
+      eyebrow: "Личная ответственность",
+      title: "За стратегию и качество подготовки отвечает Никита Самоцветов",
+      quote: "Я лично разбираю исходную ситуацию, выбираю маршрут и проверяю ключевые материалы перед подачей. Для каждого проекта мы фиксируем задачи, сроки и роли участников. Профильных партнеров подключаем там, где нужна экспертиза конкретной страны.",
+      signature: "Никита Самоцветов, основатель Samotsvet",
+      link: "Об основателе",
+      items: [
+        ["01", "Первая консультация", "Уточняю Вашу цель, исходные данные и ограничения. Объясняю следующий шаг."],
+        ["02", "Выбор стратегии", "Определяю маршрут и объясняю альтернативы. План фиксируем в согласованном объеме работы."],
+        ["03", "Проверка доказательств", "Проверяю ключевые утверждения, источники и противоречия между документами."],
+        ["04", "Готовность к подаче", "Проверяю комплект по согласованному плану и определяю вопросы, которые еще нужно закрыть."],
+      ],
     },
     audiences: {
       eyebrow: "Кому помогаем",
       title: "Начинаем с Вашей цели и исходных данных",
-      intro: "У стран разные программы, критерии и требования к доказательствам. Мы изучаем ситуацию человека, оцениваем шансы по нескольким вариантам и предлагаем маршрут, который соответствует его цели, срокам и планам семьи.",
+      intro: "У стран разные программы, критерии и требования к доказательствам. Мы сравниваем подходящие варианты и предлагаем маршрут с учетом цели, сроков и планов семьи.",
       items: [
         ["01", "Специалисты и руководители", "Разбираем личный вклад в продукты, команды и бизнес-результаты, затем соотносим факты с критериями программ."],
         ["02", "Основатели и предприниматели", "Сравниваем маршруты через достижения, стартап или инвестиции и подтверждаем роль основателя в результатах бизнеса."],
@@ -38,86 +47,52 @@ const copy = {
         ["04", "Удаленные специалисты и семьи", "Проверяем формат занятости, договоры, доход, семейный комплект и последствия выбранного статуса."],
       ],
     },
-    problem: {
-      eyebrow: "Подготовка кейса",
-      title: "Решение строится на фактах и их согласованности",
-      body: "Сильный опыт нужно перевести на язык конкретной программы. Мы определяем личный вклад, сверяем даты и показатели, находим независимые подтверждения и собираем документы в последовательную систему.",
+    directions: {
+      eyebrow: "Направления",
+      title: "Каждая программа оценивает заявителя по своим правилам",
+      intro: "Смотрим на будущий статус, сроки, положение семьи и факты, которые можно подтвердить. Название страны само по себе не определяет подходящий маршрут.",
+      more: "Подробнее о программе",
+      compare: "Сравнить все программы",
       items: [
-        ["Личный вклад", "Показываем, какие решения принял заявитель и как они повлияли на результат."],
-        ["Независимый контекст", "Подтверждаем масштаб проекта и профессиональное признание внешними источниками."],
-        ["Согласованность", "Сверяем даты, роли, показатели и единицы измерения во всем комплекте."],
-      ],
-    },
-    development: {
-      eyebrow: "Профиль можно подготовить",
-      title: "Отсутствие публикаций не закрывает путь к визе таланта",
-      body: "Публикации составляют только один из возможных видов доказательств. Мы оцениваем проекты, измеримые результаты, лидерство, рекомендации и профессиональное признание. Если профиль пока не готов к подаче, составляем план развития на 3–12 месяцев.",
-      note: "План опирается на реальные проекты и профессиональные действия. Для каждого шага заранее определяем результат, срок и способ подтверждения, чтобы привести профиль к готовому кейсу.",
-      link: "Как устроено развитие профиля",
-      items: [
-        ["01", "Находим основу", "Разбираем проекты, решения, рост ответственности и результаты, которые уже есть в карьере или бизнесе."],
-        ["02", "Определяем пробелы", "Проверяем, где нужны метрики, рекомендатели, независимая оценка, публичный след или новый результат."],
-        ["03", "Создаем результаты", "Планируем выступления, авторские материалы, экспертные роли и проекты, связанные с профессиональной траекторией."],
-        ["04", "Фиксируем доказательства", "Документируем итог, личный вклад, масштаб и независимый источник по мере выполнения плана."],
-      ],
-    },
-    compare: {
-      eyebrow: "Выбор программы",
-      title: "Маршрут выбираем по цели и ситуации",
-      intro: "Критерии оценки различаются даже у внешне похожих программ. Мы сравниваем будущий статус, сроки, требования, положение семьи и доступные доказательства, затем объясняем шансы и ограничения каждого варианта.",
-      link: "Открыть сравнение программ",
-      rows: [
-        ["UK", "Global Talent", "Карьера без привязки к одному работодателю", "Признание, личный вклад и независимые подтверждения"],
-        ["UK", "Innovator Founder", "Запуск инновационного стартапа", "Новая идея, жизнеспособность и масштабирование"],
-        ["US", "EB-1A", "Постоянный статус через выдающиеся способности", "Устойчивое признание и достижения высокого уровня"],
-        ["US", "EB-2 NIW", "Постоянный статус через проект в интересах США", "Будущий план и способность его реализовать"],
-        ["US", "O-1", "Временная работа по профессиональному профилю", "Достижения и американский заявитель"],
-        ["US", "E-2", "Управление инвестиционным бизнесом", "Инвестиции, работающий бизнес и контроль"],
-        ["ES", "Digital Nomad", "ВНЖ для удаленной работы", "Работа по найму, ИП или контракт, доход и страхование"],
-        ["FR", "Talent: инновационный проект", "Работа над признанным инновационным проектом", "Проект, принимающая компания и достаточные средства"],
-        ["FR", "Talent: создание бизнеса", "Создание коммерческого проекта во Франции", "Бизнес-план, ресурсы и роль основателя"],
-      ],
-    },
-    services: {
-      eyebrow: "Форматы работы",
-      title: "От оценки шансов до подачи и обустройства",
-      intro: "Проект можно начать с отдельной задачи или передать нам весь цикл. Состав работы, стоимость, сроки и ответственность сторон фиксируем до платного этапа.",
-      link: "Посмотреть все услуги",
-      items: [
-        ["01", "Оценка шансов", "Изучаем вводную анкету, сравниваем подходящие программы и предлагаем следующий шаг.", "Бесплатно · один рабочий день"],
-        ["02", "Сравнение маршрутов", "Готовим матрицу вариантов со статусом, сроками, ограничениями и задачами по доказательствам.", "Отдельный стратегический результат"],
-        ["03", "Проверка доказательств", "Сопоставляем факты с критериями, отмечаем сильные материалы и составляем план подготовки.", "Для выбранного маршрута"],
-        ["04", "Развитие профиля", "Формируем план профессиональных действий на 3–12 месяцев и систему фиксации результатов.", "Когда профиль пока не готов"],
-        ["05", "Полное сопровождение", "Ведем стратегию, доказательства, рекомендации, формы, партнеров и подачу.", "UK от €5 000 · US от €8 000"],
-        ["06", "Релокационные сервисы", "Координируем задачи после решения: семья, продление, налоги, банки, страхование и жилье.", "Состав зависит от страны"],
+        ["UK", "Global Talent", "Карьера без привязки к одному работодателю", "Признание, личный вклад и независимые подтверждения", "/countries/uk/#route-global-talent"],
+        ["UK", "Innovator Founder", "Запуск инновационного стартапа", "Новая идея, жизнеспособность и масштабирование", "/countries/uk/#route-innovator-founder"],
+        ["US", "EB-1A", "Постоянный статус через выдающиеся способности", "Устойчивое признание и достижения высокого уровня", "/countries/usa/#route-eb-1a"],
+        ["US", "EB-2 NIW", "Постоянный статус через проект в интересах США", "Будущий план и способность его реализовать", "/countries/usa/#route-eb-2-niw"],
+        ["US", "O-1", "Временная работа по профессиональному профилю", "Достижения и американский заявитель", "/countries/usa/#route-o-1"],
+        ["US", "E-2", "Управление инвестиционным бизнесом", "Инвестиции, работающий бизнес и контроль", "/countries/usa/#route-e-2"],
+        ["ES", "Digital Nomad", "ВНЖ для удаленной работы", "Работа по найму, ИП или контракт, доход и страхование", "/countries/spain/#route-digital-nomad-visa"],
+        ["FR", "Talent: инновационный проект", "Работа над признанным инновационным проектом", "Проект, принимающая компания и достаточные средства", "/countries/france/#route-french-tech-visa"],
+        ["FR", "Talent: создание бизнеса", "Создание коммерческого проекта во Франции", "Бизнес-план, ресурсы и роль основателя", "/countries/france/#route-talent-business"],
       ],
     },
     process: {
       eyebrow: "Как работаем",
-      title: "Четыре понятных результата по ходу проекта",
+      title: "Четыре этапа от первой консультации до подачи",
+      intro: "Каждый этап заканчивается конкретным рабочим результатом. Если доказательств пока недостаточно, мы планируем реальные профессиональные действия и доводим профиль до готовности.",
       items: [
-        ["01", "Карта маршрутов", "Сравниваем статус, срок, ограничения и положение семьи."],
-        ["02", "Матрица доказательств", "Связываем каждый центральный тезис с фактом, источником и критерием."],
-        ["03", "План подготовки", "Фиксируем пробелы, задачи, ответственных и контрольные даты."],
-        ["04", "Согласованный комплект", "Проверяем факты между документами и ведем подачу в согласованном объеме."],
+        ["01", "Маршрут и объем работы", "Сравниваем программы, уточняем ограничения и письменно фиксируем задачи, сроки и роли участников."],
+        ["02", "Карта доказательств", "Связываем ключевые утверждения с фактами, источниками и критериями выбранной программы."],
+        ["03", "Подготовка профиля", "Закрываем пробелы реальными проектами, результатами и независимыми подтверждениями, если это нужно до подачи."],
+        ["04", "Согласованный комплект", "Сверяем факты между документами, проводим финальную проверку и сопровождаем подачу в согласованном объеме."],
       ],
     },
-    articles: {
-      eyebrow: "Изменения правил",
-      title: "Объясняем, что изменилось и как это влияет на подачу",
-      all: "Все материалы",
-      read: "Читать разбор",
+    services: {
+      eyebrow: "Форматы и стоимость",
+      title: "Начинаем с бесплатной консультации",
+      intro: "После разговора определяем, нужна ли отдельная проверка документов, развитие профиля или полное сопровождение. Состав и цена платной работы фиксируются заранее.",
+      link: "Все услуги и границы работы",
       items: [
-        ["США · 27 августа 2026", "Суд отменил приостановку иммиграционных виз: что известно", "Решение окружного суда, практическое возобновление выдачи и вопросы перед консульским этапом EB-1A и NIW.", "/blog/us-immigrant-visa-issuance-pause-russia/"],
-        ["Великобритания · 6 марта 2026", "HC 1691: почему правила зависят от даты подачи", "Календарь вступления в силу ключевых положений.", "/blog/uk-hc-1691-dates/"],
-        ["Испания · 20 февраля 2026", "Порог дохода DNV в 2026 году и расчет для семьи", "Расчет 200%, 75% и 25% после повышения испанского SMI.", "/blog/spain-dnv-income-2026/"],
+        ["01", "Бесплатная первичная консультация", "Обсудим ситуацию, предварительно определим подходящие варианты и следующий шаг.", "До 20 минут с Никитой Самоцветовым"],
+        ["02", "Аудит профиля", "Проверяем документы и доказательства, сопоставляем их с критериями и готовим письменную стратегию.", "Объем и цена до начала работы"],
+        ["03", "Развитие профиля", "Формируем план профессиональных действий и систему фиксации результатов на 3–12 месяцев.", "Когда доказательств пока недостаточно"],
+        ["04", "Полное сопровождение", "Ведем стратегию, доказательства, рекомендации, формы, профильных партнеров и подачу.", "Великобритания от €5 000 · США от €8 000"],
       ],
     },
     pricing: [
       "Стоимость и сроки",
       "Бюджет зависит от маршрута и объема подготовки",
-      "После оценки шансов определяем подходящий формат: отдельная стратегия, развитие профиля или полное сопровождение. До начала платной работы письменно фиксируем состав, срок и стоимость.",
-      "Цены указаны за работу Samotsvet. Государственные сборы, переводы, лицензированные партнеры и другие внешние расходы рассчитываются отдельно, если они прямо не включены в предложение.",
+      "До начала платной работы письменно фиксируем состав, срок, стоимость и ответственность сторон.",
+      "Цены указаны за работу Samotsvet. Государственные сборы, переводы и внешние специалисты рассчитываются отдельно, если они прямо не включены в предложение.",
     ],
     guarantee: {
       eyebrow: "Гарантия работы",
@@ -131,45 +106,57 @@ const copy = {
     },
     faq: {
       eyebrow: "Частые вопросы",
-      title: "Что важно знать до начала проекта",
+      title: "Что важно знать до начала работы",
       items: [
-        ["Можно ли обратиться без публикаций и выступлений?", "Да. Мы проверяем проекты, измеримые результаты, лидерство, рекомендации и независимые подтверждения. При достаточной основе составляем план, который приводит реальные достижения к готовому доказательственному кейсу."],
-        ["Что покажет оценка шансов?", "Команда изучит вводную анкету, назовет подходящие программы, объяснит сильные стороны и ключевые пробелы. Точный вывод по документам возможен после их отдельной проверки."],
-        ["Вы работаете с профилями, которые пока не готовы?", "Да. Составляем план на 3–12 месяцев, выбираем реальные профессиональные действия, фиксируем результат и собираем независимые подтверждения. Виза таланта может остаться реалистичной целью даже при слабом публичном профиле на старте."],
-        ["Как работает гарантия при отказе?", "Стоимость полного сопровождения делится на 40%, 30% и 30%. При отказе возвращаем второй платеж в размере 30%, а финальные 30% не выставляем. Стартовая часть 40% остается оплатой за выполненную стратегию и подготовку."],
-        ["Кто отвечает за вопросы права конкретной страны?", "Samotsvet ведет стратегию и подготовку проекта. Если задача требует лицензированного специалиста соответствующей юрисдикции, мы подключаем профильного партнера и заранее объясняем его роль."],
-        ["Можно ли сравнить несколько стран?", "Да. Сопоставляем итоговый статус, срок, зависимость от работодателя или бизнеса, положение семьи и доступные доказательства."],
+        ["Что входит в бесплатную консультацию?", "До 20 минут разговора с Никитой Самоцветовым: обсудим цель, исходную ситуацию и следующий шаг. Аудит документов и письменная стратегия относятся к отдельной согласованной работе."],
+        ["Никита лично участвует в моем проекте?", "Никита определяет стратегию и проверяет ключевые материалы перед подачей. Подготовка документов и задачи профильных партнеров организуются по согласованному плану. Состав работы и ответственность фиксируем до старта."],
+        ["Нужно ли сначала покупать аудит профиля?", "Формат зависит от задачи. Если ситуация ясна и Вы готовы к подготовке, можно сразу обсудить сопровождение. Если нужен отдельный подробный разбор, согласуем аудит профиля."],
+        ["Можно ли обратиться без публикаций и выступлений?", "Да. Проверяем проекты, измеримые результаты, лидерство, рекомендации и независимые подтверждения. При достаточной основе составляем план, который приводит реальные достижения к готовому доказательственному кейсу."],
+        ["Как работает гарантия при отказе?", "При отказе возвращаем второй платеж в размере 30%, а финальные 30% не выставляем. Стартовая часть 40% остается оплатой за выполненную стратегию и подготовку."],
       ],
     },
-    closing: [
-      "Первый шаг",
-      "Оцените шансы по нескольким программам",
-      "Заполните вводную анкету. Команда изучит ситуацию вручную и предложит реалистичные варианты в течение одного рабочего дня.",
-      "Оценить шансы",
-    ],
+    articles: {
+      eyebrow: "Изменения правил",
+      title: "Объясняем, что изменилось и как это влияет на подачу",
+      all: "Все материалы",
+      read: "Читать разбор",
+      items: [
+        ["США · 27 августа 2026", "Суд отменил приостановку иммиграционных виз: что известно", "Решение окружного суда, практическое возобновление выдачи и вопросы перед консульским этапом EB-1A и NIW.", "/blog/us-immigrant-visa-issuance-pause-russia/"],
+        ["Великобритания · 6 марта 2026", "HC 1691: почему правила зависят от даты подачи", "Календарь вступления в силу ключевых положений.", "/blog/uk-hc-1691-dates/"],
+        ["Испания · 20 февраля 2026", "Порог дохода DNV в 2026 году и расчет для семьи", "Расчет 200%, 75% и 25% после повышения испанского SMI.", "/blog/spain-dnv-income-2026/"],
+      ],
+    },
+    closing: ["Обсудим Вашу ситуацию", "Оставьте короткую заявку на бесплатную первичную консультацию с Никитой Самоцветовым. Свяжемся с Вами в течение рабочего дня, чтобы согласовать время."],
   },
   en: {
-    hero: [
-      "End-to-end immigration and relocation",
-      "A visa is your first step towards residence",
-      "Samotsvet provides a complete service. We select the route, prepare the strategy and documents, co-ordinate filing, and bring in the services needed for moving and settling in a new country.",
-      "Assess my options",
-      "Compare programmes",
-      "The form takes about five minutes. We reply within one business day.",
-      "10,000+ profiles reviewed since 2021 · 800+ matters · 200+ UK matters",
-    ],
-    founder: ["Nikita Samotsvetov", "Founder of Samotsvet", "LLM International Law and Global Governance", "University of Leeds · 2023"],
-    delegation: {
-      eyebrow: "End-to-end relocation",
-      title: "One team manages the project from strategy to relocation",
-      body: "You make the key decisions and provide the source information. We manage the route, evidence, documents, deadlines and the people involved in the project.",
-      note: "After filing, we can bring in trusted specialists for tax, banking, insurance, housing and other practical matters. The precise scope depends on the destination and is recorded in our proposal.",
-      items: ["Route selection", "Preparation and filing", "Relocation services"],
+    hero: {
+      eyebrow: "Samotsvet - founded and led by Nikita Samotsvetov",
+      title: "We manage your immigration preparation",
+      body: "We help professionals and entrepreneurs choose an immigration route for themselves and their families. Nikita Samotsvetov personally leads the strategy and reviews the case before submission. We coordinate document preparation, specialist partners and the application process.",
+      routes: "United Kingdom · United States · Spain · France",
+      founder: "Nikita Samotsvetov",
+      role: "Founder of Samotsvet",
+      education: "LLM, University of Leeds",
+      secondary: "How we work",
+      note: "A free initial consultation with Nikita Samotsvetov, lasting up to 20 minutes. Complete the short form and we will contact you within one working day to arrange a time.",
+    },
+    founderRole: {
+      eyebrow: "Personal responsibility",
+      title: "Strategy and preparation quality are led by Nikita Samotsvetov",
+      quote: "I personally review your circumstances, choose the route and check the key materials before submission. For each project, we agree the tasks, timetable and responsibilities. We involve specialist partners where country-specific expertise is required.",
+      signature: "Nikita Samotsvetov, founder of Samotsvet",
+      link: "About the founder",
+      items: [
+        ["01", "Initial consultation", "I clarify your goals, circumstances and constraints, and explain the next step."],
+        ["02", "Strategy", "I choose the route and explain the alternatives. We record the plan within the agreed scope of work."],
+        ["03", "Evidence review", "I check key claims, sources and inconsistencies between documents."],
+        ["04", "Readiness for submission", "I review the documents against the agreed plan and identify any outstanding questions."],
+      ],
     },
     audiences: {
       eyebrow: "Who we help",
       title: "We start with your objective and circumstances",
-      intro: "Each country has its own programmes, criteria and evidential requirements. We review the person's circumstances, assess several realistic options and recommend a route suited to their objective, timing and family plans.",
+      intro: "Each country has its own programmes, criteria and evidential requirements. We compare suitable options and recommend a route that reflects your objective, timing and family plans.",
       items: [
         ["01", "Specialists and senior leaders", "We examine personal contribution to products, teams and commercial outcomes, then test the facts against programme criteria."],
         ["02", "Founders and entrepreneurs", "We compare achievement, start-up and investment routes and establish the founder's role in business outcomes."],
@@ -177,86 +164,52 @@ const copy = {
         ["04", "Remote professionals and families", "We review working arrangements, contracts, income, family documents and the effects of the selected status."],
       ],
     },
-    problem: {
-      eyebrow: "Case preparation",
-      title: "A decision depends on the facts and their consistency",
-      body: "Strong experience must be presented against the criteria of a particular programme. We define personal contribution, reconcile dates and figures, find independent support and organise the documents into a coherent case.",
+    directions: {
+      eyebrow: "Destinations",
+      title: "Each programme assesses an applicant under different rules",
+      intro: "We consider the eventual status, timing, family position and the facts that can be evidenced. A preferred country does not by itself determine the right route.",
+      more: "More about the programme",
+      compare: "Compare all programmes",
       items: [
-        ["Personal contribution", "We show which decisions the applicant made and how they affected the outcome."],
-        ["Independent context", "We establish the scale of the work and professional recognition through external sources."],
-        ["Consistency", "We reconcile dates, roles, metrics and units across the complete record."],
-      ],
-    },
-    development: {
-      eyebrow: "A profile can be developed",
-      title: "A lack of publications need not rule out a talent visa",
-      body: "Publications are one possible form of evidence. We also examine projects, measurable results, leadership, references and professional recognition. Where a profile is not ready to file, we build a 3–12 month development plan.",
-      note: "The plan is based on genuine projects and professional activity. Each step has a defined outcome, timetable and method of verification, with the aim of producing a filing-ready case.",
-      link: "How profile development works",
-      items: [
-        ["01", "Find the foundation", "Review projects, decisions, increasing responsibility and outcomes already present in the career or business."],
-        ["02", "Define the gaps", "Identify where the case needs metrics, referees, independent assessment, a public record or a new result."],
-        ["03", "Create results", "Plan speaking, authorship, expert roles and projects connected to the applicant's professional trajectory."],
-        ["04", "Record the evidence", "Document the outcome, personal contribution, scale and independent source as the plan progresses."],
-      ],
-    },
-    compare: {
-      eyebrow: "Programme selection",
-      title: "The right route follows from the objective and circumstances",
-      intro: "Assessment criteria differ even between programmes that appear similar. We compare the eventual status, timing, requirements, family position and available evidence, then explain the prospects and limitations of each option.",
-      link: "Compare all programmes",
-      rows: [
-        ["UK", "Global Talent", "A career without one employer sponsor", "Recognition, contribution and independent evidence"],
-        ["UK", "Innovator Founder", "Build an innovative start-up", "A new idea, viability and scalability"],
-        ["US", "EB-1A", "Permanent status through extraordinary ability", "Sustained recognition and high-level achievement"],
-        ["US", "EB-2 NIW", "Permanent status through a US national-interest endeavour", "A future plan and the ability to advance it"],
-        ["US", "O-1", "Temporary work through a professional profile", "Achievements and a US petitioner"],
-        ["US", "E-2", "Run an investment business", "Investment, an operating business and control"],
-        ["ES", "Digital Nomad", "Residence for remote work", "Employment, self-employment or contracting, income and insurance"],
-        ["FR", "Talent: innovative project", "Work on a recognised innovative project", "The project, host company and sufficient resources"],
-        ["FR", "Talent: business creation", "Establish a commercial project in France", "A credible plan, resources and the founder's role"],
-      ],
-    },
-    services: {
-      eyebrow: "Ways to work with us",
-      title: "From assessing your options to filing and settling in",
-      intro: "A project can begin with one defined task or continue through the complete process. Scope, fee, timing and responsibilities are agreed before paid work begins.",
-      link: "View all services",
-      items: [
-        ["01", "Options assessment", "We review the introductory form, compare suitable programmes and recommend the next step.", "Free · one business day"],
-        ["02", "Route comparison", "We prepare a matrix covering status, timing, restrictions and evidential tasks.", "A standalone strategic deliverable"],
-        ["03", "Evidence review", "We test facts against the criteria, identify strong material and produce a preparation plan.", "For a selected route"],
-        ["04", "Profile development", "We create a 3–12 month programme of professional activity and a system for recording results.", "Where the profile is not ready"],
-        ["05", "Full support", "We manage strategy, evidence, references, forms, specialist partners and filing.", "UK from €5,000 · US from €8,000"],
-        ["06", "Relocation services", "We co-ordinate post-decision tasks including family, extensions, tax, banking, insurance and housing.", "Scope depends on the country"],
+        ["UK", "Global Talent", "A career without one employer sponsor", "Recognition, contribution and independent evidence", "/countries/uk/#route-global-talent"],
+        ["UK", "Innovator Founder", "Build an innovative start-up", "A new idea, viability and scalability", "/countries/uk/#route-innovator-founder"],
+        ["US", "EB-1A", "Permanent residence through extraordinary ability", "Sustained recognition and high-level achievement", "/countries/usa/#route-eb-1a"],
+        ["US", "EB-2 NIW", "Permanent residence through a US national-interest endeavour", "A future plan and the ability to advance it", "/countries/usa/#route-eb-2-niw"],
+        ["US", "O-1", "Temporary work through a professional profile", "Achievements and a US petitioner", "/countries/usa/#route-o-1"],
+        ["US", "E-2", "Run an investment business", "Investment, an operating business and control", "/countries/usa/#route-e-2"],
+        ["ES", "Digital Nomad", "Residence for remote work", "Employment, self-employment or contracting, income and insurance", "/countries/spain/#route-digital-nomad-visa"],
+        ["FR", "Talent: innovative project", "Work on a recognised innovative project", "The project, host company and sufficient resources", "/countries/france/#route-french-tech-visa"],
+        ["FR", "Talent: business creation", "Establish a commercial project in France", "A credible plan, resources and the founder's role", "/countries/france/#route-talent-business"],
       ],
     },
     process: {
       eyebrow: "How we work",
-      title: "Four clear deliverables during the project",
+      title: "Four stages from the first consultation to filing",
+      intro: "Each stage ends with a practical deliverable. Where the evidence is not yet sufficient, we plan genuine professional activity and develop the profile until it is ready.",
       items: [
-        ["01", "Route map", "We compare status, timing, restrictions and the position of the family."],
-        ["02", "Evidence matrix", "Each central proposition is connected to a fact, source and criterion."],
-        ["03", "Preparation plan", "We record gaps, tasks, owners and review dates."],
-        ["04", "Reconciled bundle", "We check facts across documents and manage the agreed filing scope."],
+        ["01", "Route and scope", "We compare programmes, clarify constraints and record the tasks, timetable and responsibilities in writing."],
+        ["02", "Evidence map", "We connect the key propositions to facts, sources and the criteria of the selected programme."],
+        ["03", "Profile development", "Where necessary, we close gaps through genuine projects, outcomes and independent evidence before filing."],
+        ["04", "Reconciled bundle", "We check facts across documents, conduct the final review and manage the agreed filing scope."],
       ],
     },
-    articles: {
-      eyebrow: "Rule changes",
-      title: "What changed and how it affects a filing",
-      all: "All articles",
-      read: "Read the analysis",
+    services: {
+      eyebrow: "Ways to work with us",
+      title: "We begin with a free consultation",
+      intro: "After the conversation, we establish whether you need a document review, profile development or full support. Scope and fee are agreed before paid work begins.",
+      link: "All services and scope boundaries",
       items: [
-        ["United States · 27 August 2026", "Court vacates the immigrant-visa pause: what is known", "The district court ruling, practical resumption of issuance and questions before an EB-1A or NIW consular stage.", "/en/blog/us-immigrant-visa-issuance-pause-russia/"],
-        ["United Kingdom · 6 March 2026", "HC 1691: why the filing date determines which rules apply", "A timetable for the key changes.", "/en/blog/uk-hc-1691-dates/"],
-        ["Spain · 20 February 2026", "The 2026 DNV income threshold and family calculation", "The 200%, 75% and 25% calculation following the SMI increase.", "/en/blog/spain-dnv-income-2026/"],
+        ["01", "Free initial consultation", "We discuss your circumstances, identify suitable options on a preliminary basis and explain the next step.", "Up to 20 minutes with Nikita Samotsvetov"],
+        ["02", "Profile audit", "We review documents and evidence against the criteria and prepare a written strategy.", "Scope and fee agreed in advance"],
+        ["03", "Profile development", "We create a 3–12 month programme of professional activity and a system for recording results.", "Where the evidence is not yet sufficient"],
+        ["04", "Full support", "We manage strategy, evidence, references, forms, specialist partners and filing.", "United Kingdom from €5,000 · United States from €8,000"],
       ],
     },
     pricing: [
       "Fees and timing",
       "The budget depends on the route and preparation required",
-      "Following the options assessment, we recommend the appropriate format: a standalone strategy, profile development or full support. Scope, timing and fee are agreed in writing before paid work begins.",
-      "Fees cover Samotsvet's work. Government fees, translations, licensed partners and other external costs are quoted separately unless expressly included.",
+      "Scope, timing, fee and responsibilities are agreed in writing before paid work begins.",
+      "Fees cover Samotsvet's work. Government fees, translations and external specialists are quoted separately unless expressly included.",
     ],
     guarantee: {
       eyebrow: "Our work guarantee",
@@ -270,22 +223,27 @@ const copy = {
     },
     faq: {
       eyebrow: "Common questions",
-      title: "What to know before a project begins",
+      title: "What to know before work begins",
       items: [
+        ["What does the free consultation include?", "A conversation of up to 20 minutes with Nikita Samotsvetov about your goals, circumstances and the next step. A document audit and a written strategy are separate services, agreed in advance."],
+        ["Will Nikita personally work on my project?", "Nikita leads the strategy and reviews key materials before submission. Document preparation and specialist partners' tasks follow an agreed plan. We define the scope and responsibilities before work begins."],
+        ["Do I need to buy a profile audit first?", "The format depends on your needs. If your circumstances are clear and you are ready to proceed, we can discuss application support directly. If a separate detailed review is needed, we will agree a profile audit."],
         ["Can I approach you without publications or speaking experience?", "Yes. We examine projects, measurable results, leadership, references and independent evidence. Where the foundation is sufficient, we build a plan that turns genuine achievements into a filing-ready evidential case."],
-        ["What does the options assessment provide?", "Our team reviews the introductory form, identifies suitable programmes and explains the strengths and key gaps. A firm view on the documents requires a separate evidence review."],
-        ["Do you work with profiles that are not ready to file?", "Yes. We create a 3–12 month plan around genuine professional activity, recorded results and independent evidence. A talent visa may remain a realistic objective even where the initial public profile is limited."],
-        ["How does the guarantee work after a refusal?", "The full-support fee is divided into 40%, 30% and 30%. After a refusal, we refund the second 30% payment and do not invoice the final 30%. The initial 40% remains paid for strategy and preparation already completed."],
-        ["Who handles questions of local law?", "Samotsvet leads strategy and project preparation. Where a task requires a licensed professional in the relevant jurisdiction, we involve a specialist partner and explain their role in advance."],
-        ["Can you compare several countries?", "Yes. We compare the eventual status, timing, dependence on employment or business, family position and available evidence."],
+        ["How does the guarantee work after a refusal?", "We refund the second payment, equal to 30% of the fee, and do not invoice the final 30%. The initial 40% remains paid for strategy and preparation already completed."],
       ],
     },
-    closing: [
-      "First step",
-      "Assess your options across several programmes",
-      "Complete the introductory form. Our team will review your circumstances personally and recommend realistic options within one business day.",
-      "Assess my options",
-    ],
+    articles: {
+      eyebrow: "Rule changes",
+      title: "What changed and how it affects a filing",
+      all: "All articles",
+      read: "Read the analysis",
+      items: [
+        ["United States · 27 August 2026", "Court vacates the immigrant-visa pause: what is known", "The district court ruling, practical resumption of issuance and questions before an EB-1A or NIW consular stage.", "/blog/us-immigrant-visa-issuance-pause-russia/"],
+        ["United Kingdom · 6 March 2026", "HC 1691: why the filing date determines which rules apply", "A timetable for the key changes.", "/blog/uk-hc-1691-dates/"],
+        ["Spain · 20 February 2026", "The 2026 DNV income threshold and family calculation", "The 200%, 75% and 25% calculation following the SMI increase.", "/blog/spain-dnv-income-2026/"],
+      ],
+    },
+    closing: ["Let us discuss your circumstances", "Complete the short form to request a free initial consultation with Nikita Samotsvetov. We will contact you within one working day to arrange a time."],
   },
 } as const;
 
@@ -293,7 +251,7 @@ export function HomePage({ locale = "ru" }: { locale?: Locale }) {
   const text = copy[locale];
   const isEnglish = locale === "en";
   const base = isEnglish ? "/en" : "";
-  const assessmentPath = withTrailingSlash(`${base}/assessment`);
+  const aboutPath = withTrailingSlash(`${base}/about#nikita`);
   const comparePath = withTrailingSlash(`${base}/compare`);
   const servicesPath = withTrailingSlash(`${base}/services`);
   const faqData = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: text.faq.items.map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) };
@@ -305,37 +263,78 @@ export function HomePage({ locale = "ru" }: { locale?: Locale }) {
     <SiteHeader locale={locale} />
     <main>
       <section className="hero section-shell">
-        <div className="hero-copy"><p className="eyebrow">{text.hero[0]}</p><h1>{text.hero[1]}</h1><p className="hero-lede">{text.hero[2]}</p><div className="hero-actions"><Link className="button button-primary" href={assessmentPath}>{text.hero[3]}</Link><Link className="button button-secondary" href={comparePath}>{text.hero[4]}</Link></div><p className="hero-response">{text.hero[5]}</p><p className="hero-note">{text.hero[6]}</p></div>
+        <div className="hero-copy">
+          <p className="eyebrow">{text.hero.eyebrow}</p>
+          <h1>{text.hero.title}</h1>
+          <p className="hero-lede">{text.hero.body}</p>
+          <p className="hero-routes">{text.hero.routes}</p>
+          <Link className="hero-founder" href={aboutPath}>
+            <img src="/nikita-founder-white-v3.webp" alt={isEnglish ? "Nikita Samotsvetov, founder of Samotsvet" : "Никита Самоцветов, основатель Samotsvet"} width="1149" height="1368" />
+            <span><strong>{text.hero.founder}</strong><small>{text.hero.role}<br />{text.hero.education}</small></span>
+          </Link>
+          <div className="hero-actions">
+            <ConsultationLink className="button button-primary" locale={locale} location="homepage_hero" />
+            <a className="button button-secondary" href="#process">{text.hero.secondary}</a>
+          </div>
+          <p className="hero-response">{text.hero.note}</p>
+        </div>
         <HeroVisual locale={locale} />
       </section>
 
-      <section className="delegation-band"><div className="section-shell delegation-layout"><div><p className="eyebrow eyebrow-light">{text.delegation.eyebrow}</p><h2>{text.delegation.title}</h2><p>{text.delegation.body}</p></div><div><div className="delegation-items">{text.delegation.items.map((item, index) => <span key={item}><b>{String(index + 1).padStart(2, "0")}</b>{item}</span>)}</div><p>{text.delegation.note}</p></div></div></section>
+      <section className="founder-guidance-band">
+        <div className="section-shell founder-guidance">
+          <div className="founder-guidance-quote">
+            <p className="eyebrow eyebrow-light">{text.founderRole.eyebrow}</p>
+            <h2>{text.founderRole.title}</h2>
+            <blockquote>{text.founderRole.quote}</blockquote>
+            <p className="founder-guidance-signature">{text.founderRole.signature}</p>
+            <Link className="text-link text-link-light" href={aboutPath}>{text.founderRole.link} <span aria-hidden="true">↗</span></Link>
+          </div>
+          <ol>{text.founderRole.items.map(([number, title, body]) => <li key={number}><span>{number}</span><div><h3>{title}</h3><p>{body}</p></div></li>)}</ol>
+        </div>
+      </section>
 
-      <section className="section-shell section-block audience-section"><Heading eyebrow={text.audiences.eyebrow} title={text.audiences.title} intro={text.audiences.intro} /><div className="audience-grid">{text.audiences.items.map(([n,t,b]) => <article key={n}><span>{n}</span><h3>{t}</h3><p>{b}</p></article>)}</div></section>
+      <section className="section-shell section-block audience-section">
+        <Heading eyebrow={text.audiences.eyebrow} title={text.audiences.title} intro={text.audiences.intro} />
+        <div className="audience-grid">{text.audiences.items.map(([number, title, body]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{body}</p></article>)}</div>
+      </section>
 
-      <section className="problem-band"><div className="section-shell problem-layout"><div><p className="eyebrow eyebrow-light">{text.problem.eyebrow}</p><h2>{text.problem.title}</h2><p>{text.problem.body}</p></div><div className="problem-list">{text.problem.items.map(([t,b]) => <article key={t}><h3>{t}</h3><p>{b}</p></article>)}</div></div></section>
+      <section className="comparison-preview" id="directions">
+        <div className="section-shell section-block">
+          <Heading eyebrow={text.directions.eyebrow} title={text.directions.title} intro={text.directions.intro} />
+          <div className="comparison-preview-grid">{text.directions.items.map(([code, name, outcome, evidence, path]) => <article key={`${code}-${name}`}><span>{code}</span><h3>{name}</h3><strong>{outcome}</strong><p>{evidence}</p><Link href={`${base}${path}`}>{text.directions.more} <span aria-hidden="true">↗</span></Link></article>)}</div>
+          <Link className="button button-secondary comparison-link" href={comparePath}>{text.directions.compare}</Link>
+        </div>
+      </section>
 
-      <section className="section-shell section-block development-evidence"><Heading eyebrow={text.development.eyebrow} title={text.development.title} intro={text.development.body} /><p className="development-note">{text.development.note}</p><div className="development-steps">{text.development.items.map(([n,t,b]) => <article key={n}><span>{n}</span><h3>{t}</h3><p>{b}</p></article>)}</div><Link className="text-link" href={withTrailingSlash(`${base}/profile-development`)}>{text.development.link} <span aria-hidden="true">↗</span></Link></section>
+      <section className="section-shell section-block compact-process" id="process">
+        <Heading eyebrow={text.process.eyebrow} title={text.process.title} intro={text.process.intro} />
+        <ol>{text.process.items.map(([number, title, body]) => <li key={number}><span>{number}</span><div><h3>{title}</h3><p>{body}</p></div></li>)}</ol>
+      </section>
 
-      <section className="comparison-preview" id="directions"><div className="section-shell section-block"><Heading eyebrow={text.compare.eyebrow} title={text.compare.title} intro={text.compare.intro} /><div className="comparison-preview-grid">{text.compare.rows.map(([code,name,outcome,evidence]) => <article key={`${code}-${name}`}><span>{code}</span><h3>{name}</h3><strong>{outcome}</strong><p>{evidence}</p></article>)}</div><Link className="button button-secondary comparison-link" href={comparePath}>{text.compare.link}</Link></div></section>
+      <section className="section-shell section-block services-section" id="services">
+        <Heading eyebrow={text.services.eyebrow} title={text.services.title} intro={text.services.intro} />
+        <div className="service-card-grid service-card-grid-four">{text.services.items.map(([number, title, body, meta]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{body}</p><strong>{meta}</strong></article>)}</div>
+        <Link className="text-link" href={servicesPath}>{text.services.link} <span aria-hidden="true">↗</span></Link>
+      </section>
 
-      <section className="section-shell section-block services-section" id="services"><Heading eyebrow={text.services.eyebrow} title={text.services.title} intro={text.services.intro} /><div className="service-card-grid">{text.services.items.map(([n,t,b,m]) => <article key={n}><span>{n}</span><h3>{t}</h3><p>{b}</p><strong>{m}</strong></article>)}</div><Link className="text-link" href={servicesPath}>{text.services.link} <span aria-hidden="true">↗</span></Link></section>
+      <section className="section-shell pricing-strip" id="pricing">
+        <div><p className="eyebrow">{text.pricing[0]}</p><h2>{text.pricing[1]}</h2></div>
+        <div><p>{text.pricing[2]}</p><small className="pricing-note">{text.pricing[3]}</small></div>
+        <div className="price-grid">{SERVICE_PRICES.map(item => <div className="price-item" key={item.code}><span>{isEnglish ? item.countryEn : item.countryRu}</span><strong>{isEnglish ? item.priceEn : item.price}</strong><small>{isEnglish ? "Preparation" : "Подготовка"}: {isEnglish ? item.timelineEn : item.timelineRu}</small>{isEnglish && "noteEn" in item ? <small>{item.noteEn}</small> : !isEnglish && "noteRu" in item ? <small>{item.noteRu}</small> : null}</div>)}</div>
+      </section>
 
       <ClientResults locale={locale} />
 
-      <section className="section-shell section-block compact-process" id="process"><Heading eyebrow={text.process.eyebrow} title={text.process.title} /><ol>{text.process.items.map(([n,t,b]) => <li key={n}><span>{n}</span><div><h3>{t}</h3><p>{b}</p></div></li>)}</ol></section>
-
-      <section className="editorial-section"><div className="section-shell section-block"><div className="section-heading"><div><p className="eyebrow">{text.articles.eyebrow}</p><h2>{text.articles.title}</h2></div><Link className="text-link" href={withTrailingSlash(`${base}/blog`)}>{text.articles.all} <span aria-hidden="true">↗</span></Link></div><div className="article-grid">{text.articles.items.map(([tag,title,body,href]) => <article className="article-card" key={href}><p className="article-tag">{tag}</p><h3>{title}</h3><p>{body}</p><Link href={href}>{text.articles.read} <span aria-hidden="true">→</span></Link></article>)}</div></div></section>
-
-      <section className="section-shell pricing-strip" id="pricing"><div><p className="eyebrow">{text.pricing[0]}</p><h2>{text.pricing[1]}</h2></div><div><p>{text.pricing[2]}</p><small className="pricing-note">{text.pricing[3]}</small></div><div className="price-grid">{SERVICE_PRICES.map(item => <div className="price-item" key={item.code}><span>{isEnglish ? item.countryEn : item.countryRu}</span><strong>{isEnglish ? item.priceEn : item.price}</strong><small>{isEnglish ? "Preparation" : "Подготовка"}: {isEnglish ? item.timelineEn : item.timelineRu}</small>{isEnglish && "noteEn" in item ? <small>{item.noteEn}</small> : !isEnglish && "noteRu" in item ? <small>{item.noteRu}</small> : null}</div>)}</div></section>
-
       <section className="guarantee-section" id="guarantee"><div className="section-shell guarantee-layout"><div className="guarantee-heading"><p className="eyebrow eyebrow-light">{text.guarantee.eyebrow}</p><h2>{text.guarantee.title}</h2><p>{text.guarantee.body}</p><p>{text.guarantee.request}</p><Link className="button button-gold" href={withTrailingSlash(`${base}/legal`)}>{text.guarantee.link}</Link></div><div><div className="guarantee-stages">{text.guarantee.stages.map(([amount, moment, scope], index) => <article key={amount}><span>{String(index + 1).padStart(2, "0")}</span><strong>{amount}</strong><h3>{moment}</h3><p>{scope}</p></article>)}</div><div className="guarantee-refusal"><strong>{isEnglish ? "If the authority refuses" : "Если ведомство отказывает"}</strong><p>{text.guarantee.refusal}</p></div><small>{text.guarantee.condition}</small></div></div></section>
 
-      <section className="section-shell section-block faq-section"><Heading eyebrow={text.faq.eyebrow} title={text.faq.title} /><div className="faq-list">{text.faq.items.map(([q,a]) => <details key={q}><summary>{q}<span aria-hidden="true">+</span></summary><p>{a}</p></details>)}</div></section>
+      <section className="section-shell section-block faq-section"><Heading eyebrow={text.faq.eyebrow} title={text.faq.title} /><div className="faq-list">{text.faq.items.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div></section>
+
+      <section className="editorial-section"><div className="section-shell section-block"><div className="section-heading"><div><p className="eyebrow">{text.articles.eyebrow}</p><h2>{text.articles.title}</h2></div><Link className="text-link" href={withTrailingSlash(`${base}/blog`)}>{text.articles.all} <span aria-hidden="true">↗</span></Link></div><div className="article-grid">{text.articles.items.map(([tag, title, body, path]) => <article className="article-card" key={path}><p className="article-tag">{tag}</p><h3>{title}</h3><p>{body}</p><Link href={`${base}${path}`}>{text.articles.read} <span aria-hidden="true">→</span></Link></article>)}</div></div></section>
 
       <PressMentions locale={locale} />
 
-      <section className="section-shell closing-cta"><div><p className="eyebrow eyebrow-light">{text.closing[0]}</p><h2>{text.closing[1]}</h2></div><div><p>{text.closing[2]}</p><Link className="button button-gold" href={assessmentPath}>{text.closing[3]}</Link></div></section>
+      <section className="section-shell closing-cta"><div><p className="eyebrow eyebrow-light">{isEnglish ? "Initial consultation" : "Первичная консультация"}</p><h2>{text.closing[0]}</h2></div><div><p>{text.closing[1]}</p><ConsultationLink className="button button-gold" locale={locale} location="homepage_final" /></div></section>
     </main>
     <SiteFooter locale={locale} />
   </>;

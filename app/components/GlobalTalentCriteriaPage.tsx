@@ -1,7 +1,7 @@
-import Link from "next/link";
+import { ConsultationLink } from "./ConsultationLink";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
-import { SITE_URL, withTrailingSlash } from "../site";
+import { SITE_URL } from "../site";
 
 type Locale = "ru" | "en";
 
@@ -44,9 +44,9 @@ const copy = {
     ],
     sourceTitle: "Официальные источники",
     sourceNote: "Требования могут измениться. Перед подачей нужно заново проверить действующие страницы GOV.UK и инструкции endorsing body.",
-    ctaTitle: "Разложим Ваш опыт по карте без псевдопроцента",
-    ctaBody: "Заполните вводную анкету. Мы определим, какие основания стоит проверить, что уже можно подтвердить и где нужен план развития профиля.",
-    cta: "Оценить шансы",
+    ctaTitle: "Обсудим Ваш опыт и возможный следующий шаг",
+    ctaBody: "Оставьте короткую заявку на бесплатную консультацию. До разговора готовить комплект документов не нужно.",
+    cta: "Бесплатная консультация",
   },
   en: {
     eyebrow: "Open methodology",
@@ -86,9 +86,9 @@ const copy = {
     ],
     sourceTitle: "Official sources",
     sourceNote: "Requirements can change. Re-check the current GOV.UK pages and endorsing-body guidance before filing.",
-    ctaTitle: "Map your experience without a spurious percentage",
-    ctaBody: "Complete the introductory form. We will identify grounds worth testing, evidence already available and areas requiring a profile-development plan.",
-    cta: "Assess my options",
+    ctaTitle: "Discuss your experience and the possible next step",
+    ctaBody: "Complete the short form for a free consultation. You do not need to prepare a full document bundle before the conversation.",
+    cta: "Free consultation",
   },
 } as const;
 
@@ -115,7 +115,7 @@ export function GlobalTalentCriteriaPage({ locale = "ru" }: { locale?: Locale })
       <section className="section-shell criteria-section"><h2>{text.docsTitle}</h2><div className="criteria-docs">{text.docs.map(([title, body], index) => <article key={title}><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{title}</h3><p>{body}</p></div></article>)}</div></section>
       <section className="section-shell section-block compact-process criteria-process"><p className="eyebrow">{en ? "Working method" : "Методика работы"}</p><h2>{text.methodTitle}</h2><ol>{text.method.map(([number, title, body]) => <li key={number}><span>{number}</span><div><h3>{title}</h3><p>{body}</p></div></li>)}</ol></section>
       <section className="section-shell sources-block criteria-sources"><div><p className="eyebrow">{en ? "Primary sources" : "Первоисточники"}</p><h2>{text.sourceTitle}</h2><p>{text.sourceNote}</p></div><div>{sources.map(([label, href]) => <a href={href} target="_blank" rel="noreferrer" key={href}>{label} <span>↗</span></a>)}</div></section>
-      <section className="section-shell closing-cta"><div><p className="eyebrow eyebrow-light">{en ? "Your profile" : "Ваш профиль"}</p><h2>{text.ctaTitle}</h2></div><div><p>{text.ctaBody}</p><Link className="button button-gold" href={withTrailingSlash(`${base}/assessment`)}>{text.cta}</Link></div></section>
+      <section className="section-shell closing-cta"><div><p className="eyebrow eyebrow-light">{en ? "Your profile" : "Ваш профиль"}</p><h2>{text.ctaTitle}</h2></div><div><p>{text.ctaBody}</p><ConsultationLink className="button button-gold" locale={locale} country="uk" program="global-talent" location="criteria_final">{text.cta}</ConsultationLink></div></section>
     </main>
     <SiteFooter locale={locale} />
   </>;

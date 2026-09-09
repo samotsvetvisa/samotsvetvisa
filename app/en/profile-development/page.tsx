@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { ConsultationLink } from "../../components/ConsultationLink";
 import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
 import { pageMetadata } from "../../site";
@@ -45,8 +45,8 @@ export default function EnglishProfileDevelopmentPage() {
         </section>
 
         <section className="section-shell closing-cta">
-          <div><p className="eyebrow eyebrow-light">First step</p><h2>We begin with the profile and available evidence</h2></div>
-          <div><p>After the assessment, we set out the scope, indicative timing and programme fee.</p><Link className="button button-gold" href="/en/assessment/">Assess my options</Link></div>
+          <div><p className="eyebrow eyebrow-light">Initial consultation</p><h2>Discuss your starting profile and objective</h2></div>
+          <div><p>If a development programme is appropriate, we will set out its scope, indicative timing and fee after the conversation.</p><ConsultationLink className="button button-gold" locale="en" location="profile_development_final" /></div>
         </section>
       </main>
       <SiteFooter locale="en" />

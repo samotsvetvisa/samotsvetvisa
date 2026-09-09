@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ConsultationLink } from "../../components/ConsultationLink";
 import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
 import { OtherDestinations } from "../../components/OtherDestinations";
 import { countries } from "../../content/countries";
 import { countryFaqs } from "../../content/country-faqs";
-import { pageMetadata, SERVICE_MODEL_RU, SERVICE_PRICES, withTrailingSlash } from "../../site";
+import { pageMetadata, SERVICE_MODEL_RU, SERVICE_PRICES } from "../../site";
 
 export function generateStaticParams() {
   return countries.map(({ slug }) => ({ slug }));
@@ -27,6 +28,7 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
   const item = countries.find((country) => country.slug === slug);
   if (!item) notFound();
   const price = SERVICE_PRICES.find((entry) => entry.code === item.code);
+  const consultationCountry = ({ uk: "uk", usa: "usa", spain: "spain", france: "france" } as const)[item.slug as "uk" | "usa" | "spain" | "france"];
   const riskGroups = item.riskGroups ?? [{ title: "", risks: item.risks ?? [] }];
   const faqs = countryFaqs[item.slug as keyof typeof countryFaqs] ?? [];
   const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) };
@@ -43,8 +45,9 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
             <h1>{item.title}</h1>
             <p>{item.intro}</p>
             {item.slug === "uk" ? <p className="country-track-record"><strong>Британское направление входит в основной фокус практики с 2021 года.</strong></p> : null}
-            {price ? <><p className="country-price"><span>Ориентировочная стоимость: <strong>{price.price}</strong></span><span>Срок работы: <strong>{price.timelineRu}</strong></span></p>{"noteRu" in price ? <p className="country-price-note">{price.noteRu}</p> : null}</> : null}
-            <Link className="button button-primary" href={withTrailingSlash(`/assessment?country=${item.slug}`)}>Оценить шансы</Link>
+            {price ? <><p className="country-price"><span>Ориентировочная стоимость: <strong>{price.price}</strong></span><span>Срок подготовки: <strong>{price.timelineRu}</strong></span></p>{"noteRu" in price ? <p className="country-price-note">{price.noteRu}</p> : null}</> : null}
+            <p className="country-consultation-note">Первичная консультация с Никитой Самоцветовым бесплатна.</p>
+            <ConsultationLink className="button button-primary" country={consultationCountry} location="country_hero" />
           </div>
           {item.slug === "uk" ? <Link className="text-link criteria-country-link" href="/global-talent-criteria/">Открыть карту критериев Global Talent <span aria-hidden="true">↗</span></Link> : null}
         </section>
@@ -59,6 +62,7 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
                 <p>{route.summary}</p>
                 <h4>{route.fitTitle}</h4>
                 <ul>{route.fit.map((point) => <li key={point}>{point}</li>)}</ul>
+                <ConsultationLink className="route-consultation-link" country={consultationCountry} program={route.anchor} location="country_program">Бесплатная консультация по программе <span aria-hidden="true">→</span></ConsultationLink>
               </article>
             ))}
           </div>
@@ -95,7 +99,7 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
 
         <section className="section-shell closing-cta country-cta">
           <div><p className="eyebrow eyebrow-light">Следующий шаг</p><h2>{item.headings.closing}</h2></div>
-          <div><p>{item.headings.closingBody}</p><Link className="button button-gold" href={withTrailingSlash(`/assessment?country=${item.slug}`)}>Оценить шансы</Link></div>
+          <div><p>{item.headings.closingBody}</p><ConsultationLink className="button button-gold" country={consultationCountry} location="country_final" /></div>
         </section>
       </main>
       <SiteFooter />

@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ConsultationLink } from "../../../components/ConsultationLink";
 import { SiteFooter } from "../../../components/SiteFooter";
 import { SiteHeader } from "../../../components/SiteHeader";
 import { OtherDestinations } from "../../../components/OtherDestinations";
 import { countriesEn } from "../../../content/countries-en";
 import { countryFaqsEn } from "../../../content/country-faqs";
-import { pageMetadata, SERVICE_MODEL_EN, SERVICE_PRICES, withTrailingSlash } from "../../../site";
+import { pageMetadata, SERVICE_MODEL_EN, SERVICE_PRICES } from "../../../site";
 
 export function generateStaticParams() { return countriesEn.map(({ slug }) => ({ slug })); }
 
@@ -21,6 +22,7 @@ export default async function EnglishCountryPage({ params }: { params: Promise<{
   const item = countriesEn.find((country) => country.slug === slug);
   if (!item) notFound();
   const price = SERVICE_PRICES.find((entry) => entry.code === item.code);
+  const consultationCountry = ({ uk: "uk", usa: "usa", spain: "spain", france: "france" } as const)[item.slug as "uk" | "usa" | "spain" | "france"];
   const riskGroups = item.riskGroups ?? [{ title: "", risks: item.risks ?? [] }];
   const faqs = countryFaqsEn[item.slug as keyof typeof countryFaqsEn] ?? [];
   const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) };
@@ -32,13 +34,13 @@ export default async function EnglishCountryPage({ params }: { params: Promise<{
       <main>
         <section className="country-hero section-shell">
           <div className="country-hero-code">{item.code}</div>
-          <div><p className="eyebrow">{item.eyebrow}</p><h1>{item.title}</h1><p>{item.intro}</p>{item.slug === "uk" ? <p className="country-track-record"><strong>The United Kingdom has been a core practice focus since 2021.</strong></p> : null}{price ? <><p className="country-price"><span>Indicative fee: <strong>{price.priceEn}</strong></span><span>Timing: <strong>{price.timelineEn}</strong></span></p>{"noteEn" in price ? <p className="country-price-note">{price.noteEn}</p> : null}</> : null}<Link className="button button-primary" href={withTrailingSlash(`/en/assessment?country=${item.slug}`)}>Assess my options</Link></div>
+          <div><p className="eyebrow">{item.eyebrow}</p><h1>{item.title}</h1><p>{item.intro}</p>{item.slug === "uk" ? <p className="country-track-record"><strong>The United Kingdom has been a core practice focus since 2021.</strong></p> : null}{price ? <><p className="country-price"><span>Indicative fee: <strong>{price.priceEn}</strong></span><span>Preparation: <strong>{price.timelineEn}</strong></span></p>{"noteEn" in price ? <p className="country-price-note">{price.noteEn}</p> : null}</> : null}<p className="country-consultation-note">The initial consultation with Nikita Samotsvetov is free.</p><ConsultationLink className="button button-primary" locale="en" country={consultationCountry} location="country_hero" /></div>
         </section>
 
         <section className="section-shell country-routes">
           <div className="inner-section-title"><p className="eyebrow">Routes</p><h2>{item.headings.routes}</h2></div>
           <div className="route-detail-grid">
-            {item.routes.map((route, index) => <article key={route.name} id={`route-${route.anchor}`}><span>{String(index + 1).padStart(2, "0")}</span><h3>{route.name}</h3><p>{route.summary}</p><h4>{route.fitTitle}</h4><ul>{route.fit.map((point) => <li key={point}>{point}</li>)}</ul></article>)}
+            {item.routes.map((route, index) => <article key={route.name} id={`route-${route.anchor}`}><span>{String(index + 1).padStart(2, "0")}</span><h3>{route.name}</h3><p>{route.summary}</p><h4>{route.fitTitle}</h4><ul>{route.fit.map((point) => <li key={point}>{point}</li>)}</ul><ConsultationLink className="route-consultation-link" locale="en" country={consultationCountry} program={route.anchor} location="country_program">Free programme consultation <span aria-hidden="true">→</span></ConsultationLink></article>)}
           </div>
           {item.slug === "uk" ? <Link className="text-link criteria-country-link" href="/en/global-talent-criteria/">Open the Global Talent criteria map <span aria-hidden="true">↗</span></Link> : null}
           {item.processing ? <div className="country-facts"><h2>{item.processing.title}</h2><table><thead><tr>{item.processing.headers.map((header) => <th key={header}>{header}</th>)}</tr></thead><tbody>{item.processing.rows.map((row) => <tr key={row[0]}>{row.map((cell) => <td key={cell}>{cell}</td>)}</tr>)}</tbody></table>{item.processing.note ? <p>{item.processing.note}</p> : null}</div> : null}
@@ -65,7 +67,7 @@ export default async function EnglishCountryPage({ params }: { params: Promise<{
 
         <section className="section-shell closing-cta country-cta">
           <div><p className="eyebrow eyebrow-light">Next step</p><h2>{item.headings.closing}</h2></div>
-          <div><p>{item.headings.closingBody}</p><Link className="button button-gold" href={withTrailingSlash(`/en/assessment?country=${item.slug}`)}>Assess my options</Link></div>
+          <div><p>{item.headings.closingBody}</p><ConsultationLink className="button button-gold" locale="en" country={consultationCountry} location="country_final" /></div>
         </section>
       </main>
       <SiteFooter locale="en" />

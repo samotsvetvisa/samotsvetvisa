@@ -6,7 +6,7 @@ const appRoot = path.resolve("app");
 const rules = [
   { name: "буква ё", pattern: /[Ёё]/gu },
   { name: "длинное тире", pattern: /—/gu },
-  { name: "старое название формы", pattern: /аудит\s+профиля|profile\s+audit/giu },
+  { name: "аудит как название первого обращения", pattern: /(?:получить|запросить)\s+аудит\s+профиля|request\s+(?:a\s+)?profile\s+audit/giu },
   { name: "шаблон «это не..., это...»", pattern: /\bэто\s+не\b[^.!?\n]{0,140}\b(?:это|а)\b/giu },
   { name: "шаблон «не просто»", pattern: /\bне\s+просто\b/giu },
   { name: "шаблон «не только..., но...»", pattern: /\bне\s+только\b[^.!?\n]{0,140}\bно\b/giu },

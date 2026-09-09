@@ -2,37 +2,116 @@
 
 import { useEffect } from "react";
 
-const attributionKeys = ["utm_source", "utm_medium", "utm_campaign"] as const;
+export const ATTRIBUTION_STORAGE_KEY = "samotsvet_consultation_context_v1";
+const attributionKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"] as const;
+
+export type StoredAttribution = {
+  entryPage: string;
+  referrer: string;
+  utm: Partial<Record<(typeof attributionKeys)[number], string>>;
+  sourcePage?: string;
+  ctaLocation?: string;
+  country?: string;
+  program?: string;
+};
+
+function cleanPath(url: URL) {
+  return url.pathname || "/";
+}
+
+function readStoredAttribution(): StoredAttribution | null {
+  try {
+    const raw = window.sessionStorage.getItem(ATTRIBUTION_STORAGE_KEY);
+    return raw ? JSON.parse(raw) as StoredAttribution : null;
+  } catch {
+    return null;
+  }
+}
+
+function writeStoredAttribution(value: StoredAttribution) {
+  try {
+    window.sessionStorage.setItem(ATTRIBUTION_STORAGE_KEY, JSON.stringify(value));
+  } catch {
+    // The form continues to work when session storage is unavailable.
+  }
+}
+
+function externalReferrer() {
+  if (!document.referrer) return "";
+  try {
+    const referrer = new URL(document.referrer);
+    return referrer.origin === window.location.origin ? "" : `${referrer.origin}${cleanPath(referrer)}`;
+  } catch {
+    return "";
+  }
+}
+
+function dispatchLocalEvent(name: string, detail: Record<string, string>) {
+  window.dispatchEvent(new CustomEvent("samotsvet:analytics", { detail: { event: name, ...detail } }));
+}
 
 export function AttributionLinker() {
   useEffect(() => {
     const current = new URL(window.location.href);
-    const attribution = attributionKeys
-      .map((key) => [key, current.searchParams.get(key)] as const)
-      .filter((entry): entry is readonly [typeof attributionKeys[number], string] => Boolean(entry[1]));
+    const initial = readStoredAttribution() ?? {
+      entryPage: cleanPath(current),
+      referrer: externalReferrer(),
+      utm: Object.fromEntries(
+        attributionKeys
+          .map((key) => [key, current.searchParams.get(key)?.slice(0, 200) || ""] as const)
+          .filter(([, value]) => Boolean(value)),
+      ),
+    };
+    writeStoredAttribution(initial);
 
-    function preserveAttribution(event: MouseEvent) {
-      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    function trackClick(event: MouseEvent) {
       const target = event.target;
       if (!(target instanceof Element)) return;
       const anchor = target.closest("a[href]");
-      if (!(anchor instanceof HTMLAnchorElement) || anchor.target === "_blank" || anchor.hasAttribute("download")) return;
+      if (!(anchor instanceof HTMLAnchorElement)) return;
 
-      const destination = new URL(anchor.href, window.location.href);
-      if (destination.origin !== window.location.origin) return;
-
-      if (attribution.length === 0) return;
-
-      for (const [key, value] of attribution) {
-        if (!destination.searchParams.has(key)) destination.searchParams.set(key, value);
+      if (anchor.dataset.consultationCta === "true") {
+        const context: StoredAttribution = {
+          ...(readStoredAttribution() ?? initial),
+          sourcePage: window.location.pathname,
+          ctaLocation: anchor.dataset.ctaLocation || "unspecified",
+          country: anchor.dataset.country || "",
+          program: anchor.dataset.program || "",
+        };
+        writeStoredAttribution(context);
+        dispatchLocalEvent("consultation_cta_click", {
+          page: window.location.pathname,
+          cta_location: context.ctaLocation || "unspecified",
+          country: context.country || "",
+          program: context.program || "",
+          language: document.documentElement.lang || "ru",
+        });
       }
-      event.preventDefault();
-      event.stopPropagation();
-      window.location.assign(destination.toString());
+
+      let channel = anchor.dataset.contactChannel;
+      if (!channel) {
+        const href = anchor.getAttribute("href") || "";
+        if (href.startsWith("mailto:")) channel = "email";
+        else {
+          try {
+            const destination = new URL(anchor.href, window.location.href);
+            if (destination.hostname === "t.me" || destination.hostname === "telegram.me") channel = "telegram";
+          } catch {
+            // Ignore malformed third-party links without affecting navigation.
+          }
+        }
+      }
+      if (channel) {
+        dispatchLocalEvent("contact_click", {
+          channel,
+          page: window.location.pathname,
+          cta_location: anchor.dataset.ctaLocation || "unspecified",
+        });
+      }
     }
 
-    document.addEventListener("click", preserveAttribution, true);
-    return () => document.removeEventListener("click", preserveAttribution, true);
+    document.addEventListener("click", trackClick, true);
+    return () => document.removeEventListener("click", trackClick, true);
   }, []);
 
   return null;

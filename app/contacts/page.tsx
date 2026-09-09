@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ConsultationLink } from "../components/ConsultationLink";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
 import { CONTACT_EMAIL, pageMetadata, TELEGRAM_DIRECT_URL, TELEGRAM_HANDLE, TELEGRAM_URL } from "../site";
@@ -27,17 +28,17 @@ export default function ContactsPage() {
             <h2>Напишите нам</h2>
             <p>Можно коротко описать ситуацию в Telegram или по электронной почте. Ответим лично и предложим следующий шаг.</p>
             <div className="contact-links">
-              <a className="button contact-channel contact-channel-telegram" href={TELEGRAM_DIRECT_URL} target="_blank" rel="noreferrer"><TelegramIcon /><span>Написать в Telegram</span></a>
-              <a className="button contact-channel" href={`mailto:${CONTACT_EMAIL}`}>Написать на почту</a>
-              <a className="contact-channel-link" href={TELEGRAM_URL} target="_blank" rel="noreferrer">Перейти в канал {TELEGRAM_HANDLE}</a>
+              <a className="button contact-channel contact-channel-telegram" href={TELEGRAM_DIRECT_URL} target="_blank" rel="noreferrer" data-contact-channel="telegram" data-cta-location="contacts_primary"><TelegramIcon /><span>Написать в Telegram</span></a>
+              <a className="button contact-channel" href={`mailto:${CONTACT_EMAIL}`} data-contact-channel="email" data-cta-location="contacts_primary">Написать на почту</a>
+              <a className="contact-channel-link" href={TELEGRAM_URL} target="_blank" rel="noreferrer" data-contact-channel="telegram_channel" data-cta-location="contacts_primary">Перейти в канал {TELEGRAM_HANDLE}</a>
             </div>
           </article>
 
           <article className="contact-card">
             <p className="eyebrow">Первичное обращение</p>
-            <h2>Начните с короткой анкеты</h2>
-            <p>Опишите задачу и оставьте удобный контакт. Мы изучим анкету и предложим подходящий следующий шаг.</p>
-            <Link className="button button-primary" href="/assessment/">Оценить шансы</Link>
+            <h2>Запишитесь на бесплатную консультацию</h2>
+            <p>Ответьте на пять коротких вопросов. Свяжемся с Вами в течение рабочего дня, чтобы согласовать время разговора с Никитой Самоцветовым.</p>
+            <ConsultationLink className="button button-primary" location="contacts_card" />
           </article>
 
           <article className="contact-card">
@@ -56,7 +57,7 @@ export default function ContactsPage() {
             <p className="eyebrow">Обращения по данным</p>
             <h2>Как направить запрос</h2>
             <p>Запрос на доступ, исправление, ограничение обработки или удаление данных можно направить по электронной почте. Укажите имя и контакт, использованный в анкете, чтобы мы могли найти запись.</p>
-            <a className="text-link" href={`mailto:${CONTACT_EMAIL}`}>Направить электронный запрос <span aria-hidden="true">↗</span></a>
+            <a className="text-link" href={`mailto:${CONTACT_EMAIL}`} data-contact-channel="email" data-cta-location="privacy_request">Направить электронный запрос <span aria-hidden="true">↗</span></a>
           </article>
 
           <article className="contact-card">

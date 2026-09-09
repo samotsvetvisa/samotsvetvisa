@@ -10,8 +10,38 @@ export const TELEGRAM_HANDLE = "@samotsvetvisa";
 export const TELEGRAM_URL = "https://t.me/samotsvetvisa";
 export const TELEGRAM_DIRECT_URL = "https://t.me/samotsvetvisa?direct";
 
-export const SERVICE_MODEL_RU = "Samotsvet ведет проект одной командой. После первичного разбора клиент получает карту маршрутов и таблицу доказательств с пробелами, сроками и ответственными. Затем мы собираем материалы, сверяем факты между документами, координируем профильных партнеров и сопровождаем подачу до решения.";
-export const SERVICE_MODEL_EN = "Samotsvet delivers each project through one team. Following the initial review, the client receives a route map and an evidence table showing gaps, timing and responsibilities. We then assemble the material, reconcile facts across documents, co-ordinate specialist partners and support the filing through to the decision.";
+export const CONSULTATION_COUNTRY_CODES = {
+  uk: "uk",
+  usa: "us",
+  us: "us",
+  spain: "es",
+  es: "es",
+  france: "fr",
+  fr: "fr",
+  compare: "compare",
+} as const;
+
+export type ConsultationCountry = keyof typeof CONSULTATION_COUNTRY_CODES;
+
+export function consultationHref({
+  locale = "ru",
+  country,
+  program,
+}: {
+  locale?: "ru" | "en";
+  country?: ConsultationCountry | "";
+  program?: string;
+} = {}) {
+  const pathname = withTrailingSlash(`${locale === "en" ? "/en" : ""}/assessment`);
+  const params = new URLSearchParams();
+  if (country) params.set("country", CONSULTATION_COUNTRY_CODES[country]);
+  if (program) params.set("program", program);
+  const query = params.toString();
+  return query ? `${pathname}?${query}` : pathname;
+}
+
+export const SERVICE_MODEL_RU = "Работа начинается с бесплатной первичной консультации. Для платного проекта Samotsvet письменно фиксирует маршрут, задачи, сроки и роли участников. Затем команда собирает материалы, сверяет факты между документами, координирует профильных партнеров и сопровождает подачу в согласованном объеме.";
+export const SERVICE_MODEL_EN = "Work begins with a free initial consultation. For a paid project, Samotsvet records the route, tasks, timetable and responsibilities in writing. The team then assembles the material, reconciles facts across documents, co-ordinates specialist partners and manages the agreed filing scope.";
 
 export const SERVICE_PRICES = [
   { code: "UK", countryRu: "Великобритания", countryEn: "United Kingdom", price: "от €5 000", priceEn: "from €5,000", timelineRu: "от 2 месяцев", timelineEn: "from 2 months", noteRu: "В стоимость работы входит проектирование стратегии, карта критериев, подготовка доказательств и рекомендаций и координация подачи. Государственные сборы и внешние специалисты рассчитываются отдельно.", noteEn: "Our fee covers strategy, the criteria map, evidence and reference preparation, and filing co-ordination. Government fees and external professionals are quoted separately." },

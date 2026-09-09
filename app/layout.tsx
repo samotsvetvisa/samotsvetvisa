@@ -10,7 +10,7 @@ const geist = Geist({ variable: "--font-geist", subsets: ["latin", "cyrillic"] }
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: "Samotsvet: иммиграция и релокация под ключ", template: "%s | Samotsvet" },
-  description: "Агентство полного цикла для специалистов, предпринимателей и семей: оценка шансов, выбор маршрута, развитие профиля, подготовка документов и релокация под ключ.",
+  description: "Агентство полного цикла для специалистов, предпринимателей и семей: бесплатная консультация, выбор маршрута, развитие профиля, подготовка документов и релокация под ключ.",
   robots: { index: true, follow: true },
   icons: {
     icon: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
   openGraph: {
     title: "Samotsvet: иммиграция и релокация под ключ",
-    description: "Оценка шансов, выбор маршрута, подготовка кейса, подача и сервисы для переезда одной командой.",
+    description: "Выбор маршрута, подготовка кейса, подача и сервисы для переезда одной командой.",
     url: "/",
     type: "website",
     locale: "ru_RU",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Samotsvet: иммиграция и релокация под ключ",
-    description: "Оценка шансов, выбор маршрута, подготовка кейса, подача и сервисы для переезда одной командой.",
+    description: "Выбор маршрута, подготовка кейса, подача и сервисы для переезда одной командой.",
     images: [OG_IMAGE],
   },
 };

@@ -2,28 +2,26 @@ type Locale = "ru" | "en";
 
 const copy = {
   ru: {
-    eyebrow: "Насмотренность",
-    title: "Десять тысяч профилей учат видеть закономерности",
-    intro: "С 2021 года через мою работу в агентствах и напрямую прошло более 10 000 профессиональных профилей. Командой доведено до результата более 800 клиентских кейсов, в том числе свыше 200 по Великобритании. Этот объем помогает быстрее узнавать повторяющиеся риски и отличать сильную основу от неподтвержденного впечатления.",
+    eyebrow: "Опыт",
+    title: "Практика в иммиграционных проектах с 2021 года",
+    intro: "Метрики включают работу Никиты в агентствах и напрямую, полное сопровождение и участие в отдельных этапах проектов. Они описывают завершенные клиентские кейсы, а не число одобрений, полученных только под брендом Samotsvet.",
     metrics: [
       ["800+", "завершенных клиентских кейсов"],
-      ["10 000+", "профессиональных профилей разобрано"],
       ["200+", "кейсов по Великобритании"],
-      ["с 2021", "практика в иммиграционных проектах"],
+      ["10 000+", "разобранных профессиональных профилей"],
     ],
     casesTitle: "",
     cases: [],
     note: "",
   },
   en: {
-    eyebrow: "Pattern recognition",
-    title: "Ten thousand profiles teach you to recognise patterns",
-    intro: "Since 2021, more than 10,000 professional profiles have passed through my work in agencies and directly. The team has taken more than 800 client matters through to completion, including over 200 UK matters. That volume helps us identify recurring risks and distinguish a strong foundation from an unsupported impression sooner.",
+    eyebrow: "Experience",
+    title: "Work on immigration projects since 2021",
+    intro: "The figures include Nikita's work in agencies and directly, full support and participation in defined stages of a project. They describe completed client matters, rather than approvals obtained solely under the Samotsvet brand.",
     metrics: [
       ["800+", "completed client matters"],
-      ["10,000+", "professional profiles reviewed"],
       ["200+", "United Kingdom matters"],
-      ["since 2021", "work on immigration projects"],
+      ["10,000+", "professional profiles reviewed"],
     ],
     casesTitle: "",
     cases: [],

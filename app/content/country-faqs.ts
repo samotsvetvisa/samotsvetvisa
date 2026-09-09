@@ -18,7 +18,7 @@ export const countryFaqs = {
   ],
   france: [
     ["Чем различаются маршруты через инновационный проект и создание бизнеса?", "В первом случае важны признанный инновационный проект и принимающая сторона во Франции. Во втором отдельно проверяются бизнес-план, ресурсы, экономическая реалистичность и активная роль основателя."],
-    ["Нужно ли иметь готовую компанию во Франции до оценки шансов?", "Нет. Для первого разбора достаточно описать проект, свою роль, доступные ресурсы и предполагаемую модель. После этого определяем, какой маршрут стоит проверять и какие документы понадобятся."],
+    ["Нужно ли иметь готовую компанию во Франции до первой консультации?", "Нет. Для разговора достаточно описать проект, свою роль, доступные ресурсы и предполагаемую модель. После этого определяем, какой маршрут стоит проверять и какие документы понадобятся."],
     ["Можно ли одновременно сравнить Францию с Великобританией или США?", "Да. В сравнении учитываем критерии, итоговый статус, сроки, зависимость от работодателя или бизнеса и положение семьи. Предпочтительная страна сама по себе не определяет рекомендацию."],
   ],
 } satisfies Record<string, readonly CountryFaq[]>;
@@ -41,7 +41,7 @@ export const countryFaqsEn = {
   ],
   france: [
     ["How do the innovative-project and business-creation routes differ?", "The first depends on a recognised innovative project and a French host. The second requires separate analysis of the business plan, resources, commercial credibility and the founder's active role."],
-    ["Do I need an operating French company before the options assessment?", "No. For the initial review, describe the project, your role, available resources and intended model. We then identify which route merits deeper testing and what documentation will be needed."],
+    ["Do I need an operating French company before the first consultation?", "No. For the conversation, describe the project, your role, available resources and intended model. We then identify which route merits deeper testing and what documentation will be needed."],
     ["Can France be compared with the United Kingdom or United States?", "Yes. We compare the criteria, eventual status, timing, dependence on employment or business and the position of the family. A preferred country does not determine the recommendation by itself."],
   ],
 } satisfies Record<string, readonly CountryFaq[]>;
