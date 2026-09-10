@@ -13,28 +13,15 @@ type Locale = "ru" | "en";
 const copy = {
   ru: {
     hero: {
-      eyebrow: "Samotsvet - агентство Никиты Самоцветова",
+      eyebrow: "Samotsvet - агентство по иммиграции и релокации",
       title: "Возьмем на себя подготовку Вашей иммиграции",
-      body: "Помогаем специалистам и предпринимателям выбрать маршрут для себя и семьи. Никита Самоцветов лично определяет стратегию и проверяет готовность кейса. Мы организуем подготовку документов, работу профильных партнеров и сопровождение подачи.",
+      body: "Помогаем специалистам и предпринимателям выбрать маршрут для себя и семьи. Определяем стратегию, организуем подготовку документов, работу профильных партнеров и сопровождение подачи.",
       routes: "Великобритания · США · Испания · Франция",
       founder: "Никита Самоцветов",
       role: "Основатель Samotsvet",
       education: "LLM, University of Leeds",
       secondary: "Как мы работаем",
-      note: "С Никитой Самоцветовым, до 20 минут. После короткой заявки свяжемся с Вами в течение рабочего дня, чтобы согласовать время.",
-    },
-    founderRole: {
-      eyebrow: "Личная ответственность",
-      title: "За стратегию и качество подготовки отвечает Никита Самоцветов",
-      quote: "Я лично разбираю исходную ситуацию, выбираю маршрут и проверяю ключевые материалы перед подачей. Для каждого проекта мы фиксируем задачи, сроки и роли участников. Профильных партнеров подключаем там, где нужна экспертиза конкретной страны.",
-      signature: "Никита Самоцветов, основатель Samotsvet",
-      link: "Об основателе",
-      items: [
-        ["01", "Первая консультация", "Уточняю Вашу цель, исходные данные и ограничения. Объясняю следующий шаг."],
-        ["02", "Выбор стратегии", "Определяю маршрут и объясняю альтернативы. План фиксируем в согласованном объеме работы."],
-        ["03", "Проверка доказательств", "Проверяю ключевые утверждения, источники и противоречия между документами."],
-        ["04", "Готовность к подаче", "Проверяю комплект по согласованному плану и определяю вопросы, которые еще нужно закрыть."],
-      ],
+      note: "Бесплатная консультация до 20 минут. После короткой заявки свяжемся с Вами в течение рабочего дня, чтобы согласовать время.",
     },
     audiences: {
       eyebrow: "Кому помогаем",
@@ -42,7 +29,7 @@ const copy = {
       intro: "У стран разные программы, критерии и требования к доказательствам. Мы сравниваем подходящие варианты и предлагаем маршрут с учетом цели, сроков и планов семьи.",
       items: [
         ["01", "Специалисты и руководители", "Разбираем личный вклад в продукты, команды и бизнес-результаты, затем соотносим факты с критериями программ."],
-        ["02", "Основатели и предприниматели", "Сравниваем маршруты через достижения, стартап или инвестиции и подтверждаем роль основателя в результатах бизнеса."],
+        ["02", "Фаундеры и предприниматели", "Сравниваем маршруты через достижения, стартап или инвестиции и подтверждаем роль фаундера в результатах бизнеса."],
         ["03", "Исследователи и авторы", "Собираем академический и профессиональный опыт, независимое признание и планы дальнейшей работы."],
         ["04", "Удаленные специалисты и семьи", "Проверяем формат занятости, договоры, доход, семейный комплект и последствия выбранного статуса."],
       ],
@@ -82,7 +69,7 @@ const copy = {
       intro: "После разговора определяем, нужна ли отдельная проверка документов, развитие профиля или полное сопровождение. Состав и цена платной работы фиксируются заранее.",
       link: "Все услуги и границы работы",
       items: [
-        ["01", "Бесплатная первичная консультация", "Обсудим ситуацию, предварительно определим подходящие варианты и следующий шаг.", "До 20 минут с Никитой Самоцветовым"],
+        ["01", "Бесплатная первичная консультация", "Обсудим ситуацию, предварительно определим подходящие варианты и следующий шаг.", "До 20 минут"],
         ["02", "Аудит профиля", "Проверяем документы и доказательства, сопоставляем их с критериями и готовим письменную стратегию.", "Объем и цена до начала работы"],
         ["03", "Развитие профиля", "Формируем план профессиональных действий и систему фиксации результатов на 3–12 месяцев.", "Когда доказательств пока недостаточно"],
         ["04", "Полное сопровождение", "Ведем стратегию, доказательства, рекомендации, формы, профильных партнеров и подачу.", "Великобритания от €5 000 · США от €8 000"],
@@ -96,23 +83,19 @@ const copy = {
     ],
     guarantee: {
       eyebrow: "Гарантия работы",
-      title: "Одобрение не гарантирует никто. Мы гарантируем качество своей работы",
-      body: "До старта Вы получаете обоснованную оценку кейса по документам и официальным критериям. Стратегию дополнительно проверяет независимый профильный специалист. Состав проекта, цена и график платежей фиксируются заранее.",
-      request: "Запрос ведомства отрабатываем без дополнительной оплаты. При отказе готовим повторную подачу без оплаты нашей работы. Государственные сборы, переводы и другие внешние расходы оплачиваются отдельно.",
-      stages: [["40%", "При старте", "Стратегия и подготовка"], ["30%", "После подачи", "Возвращаем при отказе"], ["30%", "После одобрения", "При отказе не начисляется"]],
-      refusal: "Если ведомство отказывает, возвращаем второй платеж в размере 30% стоимости. Финальные 30% не выставляются. Оплаченной остается стартовая часть 40%, которая покрывает выполненную стратегию и подготовку.",
-      condition: "Гарантия действует при предоставлении достоверных данных, соблюдении согласованной стратегии и выполнении обязанностей клиента. Точные условия и срок возврата фиксируются в договоре до первого платежа.",
+      title: "При отказе возвращаем средства, уплаченные за подачу",
+      body: "До начала работы фиксируем в договоре маршрут, состав проекта, стоимость и график платежей.",
+      stages: [["40%", "При старте", "Стратегия и подготовка"], ["30%", "При подаче", "Возвращаем при отказе"], ["30%", "После одобрения", "Оплачивается по результату"]],
       link: "Полные условия работы",
     },
     faq: {
       eyebrow: "Частые вопросы",
       title: "Что важно знать до начала работы",
       items: [
-        ["Что входит в бесплатную консультацию?", "До 20 минут разговора с Никитой Самоцветовым: обсудим цель, исходную ситуацию и следующий шаг. Аудит документов и письменная стратегия относятся к отдельной согласованной работе."],
-        ["Никита лично участвует в моем проекте?", "Никита определяет стратегию и проверяет ключевые материалы перед подачей. Подготовка документов и задачи профильных партнеров организуются по согласованному плану. Состав работы и ответственность фиксируем до старта."],
+        ["Что входит в бесплатную консультацию?", "До 20 минут разговора о Вашей цели, исходной ситуации и следующем шаге. Аудит документов и письменная стратегия относятся к отдельной согласованной работе."],
         ["Нужно ли сначала покупать аудит профиля?", "Формат зависит от задачи. Если ситуация ясна и Вы готовы к подготовке, можно сразу обсудить сопровождение. Если нужен отдельный подробный разбор, согласуем аудит профиля."],
         ["Можно ли обратиться без публикаций и выступлений?", "Да. Проверяем проекты, измеримые результаты, лидерство, рекомендации и независимые подтверждения. При достаточной основе составляем план, который приводит реальные достижения к готовому доказательственному кейсу."],
-        ["Как работает гарантия при отказе?", "При отказе возвращаем второй платеж в размере 30%, а финальные 30% не выставляем. Стартовая часть 40% остается оплатой за выполненную стратегию и подготовку."],
+        ["Как работает гарантия при отказе?", "Возвращаем средства, уплаченные за подачу. Точные условия возврата фиксируются в договоре до начала работы."],
       ],
     },
     articles: {
@@ -126,32 +109,19 @@ const copy = {
         ["Испания · 20 февраля 2026", "Порог дохода DNV в 2026 году и расчет для семьи", "Расчет 200%, 75% и 25% после повышения испанского SMI.", "/blog/spain-dnv-income-2026/"],
       ],
     },
-    closing: ["Обсудим Вашу ситуацию", "Оставьте короткую заявку на бесплатную первичную консультацию с Никитой Самоцветовым. Свяжемся с Вами в течение рабочего дня, чтобы согласовать время."],
+    closing: ["Обсудим Вашу ситуацию", "Оставьте короткую заявку на бесплатную первичную консультацию. Свяжемся с Вами в течение рабочего дня, чтобы согласовать время."],
   },
   en: {
     hero: {
-      eyebrow: "Samotsvet - founded and led by Nikita Samotsvetov",
+      eyebrow: "Samotsvet immigration and relocation",
       title: "We manage your immigration preparation",
-      body: "We help professionals and entrepreneurs choose an immigration route for themselves and their families. Nikita Samotsvetov personally leads the strategy and reviews the case before submission. We coordinate document preparation, specialist partners and the application process.",
+      body: "We help professionals and entrepreneurs choose an immigration route for themselves and their families. We set the strategy and coordinate document preparation, specialist partners and the application process.",
       routes: "United Kingdom · United States · Spain · France",
       founder: "Nikita Samotsvetov",
       role: "Founder of Samotsvet",
       education: "LLM, University of Leeds",
       secondary: "How we work",
-      note: "A free initial consultation with Nikita Samotsvetov, lasting up to 20 minutes. Complete the short form and we will contact you within one working day to arrange a time.",
-    },
-    founderRole: {
-      eyebrow: "Personal responsibility",
-      title: "Strategy and preparation quality are led by Nikita Samotsvetov",
-      quote: "I personally review your circumstances, choose the route and check the key materials before submission. For each project, we agree the tasks, timetable and responsibilities. We involve specialist partners where country-specific expertise is required.",
-      signature: "Nikita Samotsvetov, founder of Samotsvet",
-      link: "About the founder",
-      items: [
-        ["01", "Initial consultation", "I clarify your goals, circumstances and constraints, and explain the next step."],
-        ["02", "Strategy", "I choose the route and explain the alternatives. We record the plan within the agreed scope of work."],
-        ["03", "Evidence review", "I check key claims, sources and inconsistencies between documents."],
-        ["04", "Readiness for submission", "I review the documents against the agreed plan and identify any outstanding questions."],
-      ],
+      note: "The initial consultation is free and lasts up to 20 minutes. Complete the short form and we will contact you within one working day to arrange a time.",
     },
     audiences: {
       eyebrow: "Who we help",
@@ -199,7 +169,7 @@ const copy = {
       intro: "After the conversation, we establish whether you need a document review, profile development or full support. Scope and fee are agreed before paid work begins.",
       link: "All services and scope boundaries",
       items: [
-        ["01", "Free initial consultation", "We discuss your circumstances, identify suitable options on a preliminary basis and explain the next step.", "Up to 20 minutes with Nikita Samotsvetov"],
+        ["01", "Free initial consultation", "We discuss your circumstances, identify suitable options on a preliminary basis and explain the next step.", "Up to 20 minutes"],
         ["02", "Profile audit", "We review documents and evidence against the criteria and prepare a written strategy.", "Scope and fee agreed in advance"],
         ["03", "Profile development", "We create a 3–12 month programme of professional activity and a system for recording results.", "Where the evidence is not yet sufficient"],
         ["04", "Full support", "We manage strategy, evidence, references, forms, specialist partners and filing.", "United Kingdom from €5,000 · United States from €8,000"],
@@ -213,23 +183,19 @@ const copy = {
     ],
     guarantee: {
       eyebrow: "Our work guarantee",
-      title: "No one can guarantee approval. We guarantee the quality of our work",
-      body: "Before the project begins, you receive a reasoned assessment based on the documents and official criteria. An independent specialist also reviews the strategy. Scope, fee and payment schedule are fixed in advance.",
-      request: "We respond to an authority's request without an additional professional fee. After a refusal, we prepare one repeat filing without charging for our work. Government fees, translations and other external costs remain separate.",
-      stages: [["40%", "At the start", "Strategy and preparation"], ["30%", "After filing", "Refunded after a refusal"], ["30%", "After approval", "Not charged after a refusal"]],
-      refusal: "If the authority refuses the application, we refund the second payment, equal to 30% of the fee. The final 30% is not invoiced. The initial 40% remains paid for strategy and preparation already completed.",
-      condition: "The guarantee applies where the client provides accurate information, follows the agreed strategy and performs their contractual obligations. The exact terms and refund period are recorded in the agreement before the first payment.",
+      title: "If an application is refused, we refund the amount paid for filing",
+      body: "Before work begins, the route, scope, fee and payment schedule are recorded in the agreement.",
+      stages: [["40%", "At the start", "Strategy and preparation"], ["30%", "At filing", "Refunded after a refusal"], ["30%", "After approval", "Paid on the outcome"]],
       link: "Full working terms",
     },
     faq: {
       eyebrow: "Common questions",
       title: "What to know before work begins",
       items: [
-        ["What does the free consultation include?", "A conversation of up to 20 minutes with Nikita Samotsvetov about your goals, circumstances and the next step. A document audit and a written strategy are separate services, agreed in advance."],
-        ["Will Nikita personally work on my project?", "Nikita leads the strategy and reviews key materials before submission. Document preparation and specialist partners' tasks follow an agreed plan. We define the scope and responsibilities before work begins."],
+        ["What does the free consultation include?", "A conversation of up to 20 minutes about your objective, circumstances and the next step. A document audit and a written strategy are separate services, agreed in advance."],
         ["Do I need to buy a profile audit first?", "The format depends on your needs. If your circumstances are clear and you are ready to proceed, we can discuss application support directly. If a separate detailed review is needed, we will agree a profile audit."],
         ["Can I approach you without publications or speaking experience?", "Yes. We examine projects, measurable results, leadership, references and independent evidence. Where the foundation is sufficient, we build a plan that turns genuine achievements into a filing-ready evidential case."],
-        ["How does the guarantee work after a refusal?", "We refund the second payment, equal to 30% of the fee, and do not invoice the final 30%. The initial 40% remains paid for strategy and preparation already completed."],
+        ["How does the guarantee work after a refusal?", "We refund the amount paid for filing. The exact refund terms are recorded in the agreement before work begins."],
       ],
     },
     articles: {
@@ -243,7 +209,7 @@ const copy = {
         ["Spain · 20 February 2026", "The 2026 DNV income threshold and family calculation", "The 200%, 75% and 25% calculation following the SMI increase.", "/blog/spain-dnv-income-2026/"],
       ],
     },
-    closing: ["Let us discuss your circumstances", "Complete the short form to request a free initial consultation with Nikita Samotsvetov. We will contact you within one working day to arrange a time."],
+    closing: ["Let us discuss your circumstances", "Complete the short form to request a free initial consultation. We will contact you within one working day to arrange a time."],
   },
 } as const;
 
@@ -281,19 +247,6 @@ export function HomePage({ locale = "ru" }: { locale?: Locale }) {
         <HeroVisual locale={locale} />
       </section>
 
-      <section className="founder-guidance-band">
-        <div className="section-shell founder-guidance">
-          <div className="founder-guidance-quote">
-            <p className="eyebrow eyebrow-light">{text.founderRole.eyebrow}</p>
-            <h2>{text.founderRole.title}</h2>
-            <blockquote>{text.founderRole.quote}</blockquote>
-            <p className="founder-guidance-signature">{text.founderRole.signature}</p>
-            <Link className="text-link text-link-light" href={aboutPath}>{text.founderRole.link} <span aria-hidden="true">↗</span></Link>
-          </div>
-          <ol>{text.founderRole.items.map(([number, title, body]) => <li key={number}><span>{number}</span><div><h3>{title}</h3><p>{body}</p></div></li>)}</ol>
-        </div>
-      </section>
-
       <section className="section-shell section-block audience-section">
         <Heading eyebrow={text.audiences.eyebrow} title={text.audiences.title} intro={text.audiences.intro} />
         <div className="audience-grid">{text.audiences.items.map(([number, title, body]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{body}</p></article>)}</div>
@@ -326,7 +279,7 @@ export function HomePage({ locale = "ru" }: { locale?: Locale }) {
 
       <ClientResults locale={locale} />
 
-      <section className="guarantee-section" id="guarantee"><div className="section-shell guarantee-layout"><div className="guarantee-heading"><p className="eyebrow eyebrow-light">{text.guarantee.eyebrow}</p><h2>{text.guarantee.title}</h2><p>{text.guarantee.body}</p><p>{text.guarantee.request}</p><Link className="button button-gold" href={withTrailingSlash(`${base}/legal`)}>{text.guarantee.link}</Link></div><div><div className="guarantee-stages">{text.guarantee.stages.map(([amount, moment, scope], index) => <article key={amount}><span>{String(index + 1).padStart(2, "0")}</span><strong>{amount}</strong><h3>{moment}</h3><p>{scope}</p></article>)}</div><div className="guarantee-refusal"><strong>{isEnglish ? "If the authority refuses" : "Если ведомство отказывает"}</strong><p>{text.guarantee.refusal}</p></div><small>{text.guarantee.condition}</small></div></div></section>
+      <section className="guarantee-section" id="guarantee"><div className="section-shell guarantee-layout"><div className="guarantee-heading"><p className="eyebrow eyebrow-light">{text.guarantee.eyebrow}</p><h2>{text.guarantee.title}</h2><p>{text.guarantee.body}</p><Link className="button button-gold" href={withTrailingSlash(`${base}/legal`)}>{text.guarantee.link}</Link></div><div className="guarantee-stages">{text.guarantee.stages.map(([amount, moment, scope], index) => <article key={amount}><span>{String(index + 1).padStart(2, "0")}</span><strong>{amount}</strong><h3>{moment}</h3><p>{scope}</p></article>)}</div></div></section>
 
       <section className="section-shell section-block faq-section"><Heading eyebrow={text.faq.eyebrow} title={text.faq.title} /><div className="faq-list">{text.faq.items.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div></section>
 
