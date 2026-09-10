@@ -13,12 +13,12 @@ type Locale = "ru" | "en";
 const copy = {
   ru: {
     hero: {
-      eyebrow: "Samotsvet - агентство по иммиграции и релокации",
+      eyebrow: "Samotsvet - миграция и релокация под ключ",
       title: "Возьмем на себя подготовку Вашей иммиграции",
       body: "Помогаем специалистам и предпринимателям выбрать маршрут для себя и семьи. Определяем стратегию, организуем подготовку документов, работу профильных партнеров и сопровождение подачи.",
       routes: "Великобритания · США · Испания · Франция",
       founder: "Никита Самоцветов",
-      role: "Основатель Samotsvet",
+      role: "Фаундер Samotsvet",
       education: "LLM, University of Leeds",
       secondary: "Как мы работаем",
       note: "Бесплатная консультация до 20 минут. После короткой заявки свяжемся с Вами в течение рабочего дня, чтобы согласовать время.",
@@ -31,7 +31,7 @@ const copy = {
         ["01", "Специалисты и руководители", "Разбираем личный вклад в продукты, команды и бизнес-результаты, затем соотносим факты с критериями программ."],
         ["02", "Фаундеры и предприниматели", "Сравниваем маршруты через достижения, стартап или инвестиции и подтверждаем роль фаундера в результатах бизнеса."],
         ["03", "Исследователи и авторы", "Собираем академический и профессиональный опыт, независимое признание и планы дальнейшей работы."],
-        ["04", "Удаленные специалисты и семьи", "Проверяем формат занятости, договоры, доход, семейный комплект и последствия выбранного статуса."],
+        ["04", "Специалисты на удаленном графике", "Проверяем формат занятости, договоры, доход и последствия выбранного статуса."],
       ],
     },
     directions: {
@@ -113,7 +113,7 @@ const copy = {
   },
   en: {
     hero: {
-      eyebrow: "Samotsvet immigration and relocation",
+      eyebrow: "Samotsvet - end-to-end immigration and relocation",
       title: "We manage your immigration preparation",
       body: "We help professionals and entrepreneurs choose an immigration route for themselves and their families. We set the strategy and coordinate document preparation, specialist partners and the application process.",
       routes: "United Kingdom · United States · Spain · France",
@@ -131,7 +131,7 @@ const copy = {
         ["01", "Specialists and senior leaders", "We examine personal contribution to products, teams and commercial outcomes, then test the facts against programme criteria."],
         ["02", "Founders and entrepreneurs", "We compare achievement, start-up and investment routes and establish the founder's role in business outcomes."],
         ["03", "Researchers and authors", "We bring together academic and professional experience, independent recognition and plans for future work."],
-        ["04", "Remote professionals and families", "We review working arrangements, contracts, income, family documents and the effects of the selected status."],
+        ["04", "Professionals working remotely", "We review working arrangements, contracts, income and the effects of the selected status."],
       ],
     },
     directions: {
@@ -235,7 +235,7 @@ export function HomePage({ locale = "ru" }: { locale?: Locale }) {
           <p className="hero-lede">{text.hero.body}</p>
           <p className="hero-routes">{text.hero.routes}</p>
           <Link className="hero-founder" href={aboutPath}>
-            <img src="/nikita-founder-white-v3.webp" alt={isEnglish ? "Nikita Samotsvetov, founder of Samotsvet" : "Никита Самоцветов, основатель Samotsvet"} width="1149" height="1368" />
+            <img src="/nikita-founder-white-v3.webp" alt={isEnglish ? "Nikita Samotsvetov, founder of Samotsvet" : "Никита Самоцветов, фаундер Samotsvet"} width="1149" height="1368" />
             <span><strong>{text.hero.founder}</strong><small>{text.hero.role}<br />{text.hero.education}</small></span>
           </Link>
           <div className="hero-actions">

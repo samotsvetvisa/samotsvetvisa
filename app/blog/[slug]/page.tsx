@@ -28,6 +28,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const article = articles.find((item) => item.slug === slug);
   if (!article) notFound();
+  const isEditorial = article.author === "Редакция Samotsvet";
   const consultationCountry = ({ uk: "uk", usa: "usa", spain: "spain", france: "france" } as const)[article.relatedCountry];
   const articleSchema = {
     "@context": "https://schema.org",
@@ -36,7 +37,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     description: article.description,
     datePublished: article.published,
     dateModified: article.published,
-    author: { "@type": "Person", name: article.author, url: `${SITE_URL}/about#nikita` },
+    author: isEditorial
+      ? { "@type": "Organization", name: "Samotsvet", url: SITE_URL }
+      : { "@type": "Person", name: article.author, url: `${SITE_URL}/about#nikita` },
     publisher: { "@id": `${SITE_URL}/#organisation` },
     mainEntityOfPage: `${SITE_URL}/blog/${article.slug}`,
     image: `${SITE_URL}/og-samotsvet.png`,
@@ -51,7 +54,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <header>
             <p className="eyebrow">{article.tag}</p>
             <h1>{article.title}</h1>
-            <div className="article-byline"><Link href="/about/#nikita">{article.author}</Link><span aria-hidden="true">{" · "}</span><span>{article.reading}</span><span aria-hidden="true">{" · "}</span><time dateTime={article.published}>Опубликовано {formatArticleDate(article.published)}</time></div>
+            <div className="article-byline">{isEditorial ? <span>{article.author}</span> : <Link href="/about/#nikita">{article.author}</Link>}<span aria-hidden="true">{" · "}</span><span>{article.reading}</span><span aria-hidden="true">{" · "}</span><time dateTime={article.published}>Опубликовано {formatArticleDate(article.published)}</time></div>
             <p className="article-lead">{article.lead}</p>
           </header>
           <div className="article-body">
@@ -77,14 +80,20 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               <Link href={`/countries/${article.relatedCountry}/`}>Посмотреть маршрут</Link>
               <ConsultationLink country={consultationCountry} program={article.slug} location="article_end">Бесплатная консультация</ConsultationLink>
             </aside>
-            <section className="article-author" id="article-author" aria-label="Об авторе">
-              <div className="article-author-photo"><img src="/nikita-founder-white-v3.webp" alt="Никита Самоцветов" width="180" height="220" /></div>
-              <div>
-                <p className="article-author-label">Автор</p>
-                <h2><Link href="/about/#nikita">Никита Самоцветов</Link></h2>
-                <p>Никита Самоцветов - основатель Samotsvet. Отвечает за стратегию и контроль качества подготовки кейсов.</p>
-              </div>
-            </section>
+            {isEditorial ? (
+              <section className="article-author article-author-editorial" id="article-author" aria-label="О редакции">
+                <div><p className="article-author-label">Редакция</p><h2>Samotsvet</h2><p>Материал подготовлен редакцией Samotsvet по официальным источникам. Мы отделяем действующие правила от предложений и объясняем, как изменения влияют на маршрут и сроки.</p></div>
+              </section>
+            ) : (
+              <section className="article-author" id="article-author" aria-label="Об авторе">
+                <div className="article-author-photo"><img src="/nikita-founder-white-v3.webp" alt="Никита Самоцветов" width="180" height="220" /></div>
+                <div>
+                  <p className="article-author-label">Автор</p>
+                  <h2><Link href="/about/#nikita">Никита Самоцветов</Link></h2>
+                  <p>Никита Самоцветов - фаундер Samotsvet. Отвечает за стратегию и контроль качества подготовки кейсов.</p>
+                </div>
+              </section>
+            )}
           </div>
         </article>
       </main>

@@ -2,6 +2,68 @@ import type { Article } from "./articles";
 
 export const news2026En: Article[] = [
   {
+    slug: "uk-hc-584-global-talent-innovator-founder",
+    tag: "United Kingdom · Immigration Rules",
+    title: "HC 584: what the September changes mean for Global Talent and Innovator Founder",
+    description: "The 3 September 2026 rules package and its practical significance for two independent talent routes.",
+    reading: "4 min read",
+    published: "2026-09-03",
+    author: "Samotsvet editorial team",
+    lead: "On 3 September 2026, the Home Office published HC 584. Most provisions take effect on 8 October, but the document does not make separate changes to the Global Talent or Innovator Founder requirements.",
+    relatedCountry: "uk",
+    sources: [
+      { label: "GOV.UK - Statement of Changes HC 584", href: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-584-3-september-2026" },
+      { label: "GOV.UK - HC 584 Explanatory Memorandum", href: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-584-3-september-2026/explanatory-memorandum-to-the-statement-of-changes-in-immigration-rules-hc-584-3-september-2026-accessible" },
+      { label: "GOV.UK - Appendix Global Talent", href: "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-global-talent" },
+      { label: "GOV.UK - Appendix Innovator Founder", href: "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-innovator-founder" },
+    ],
+    sections: [
+      { title: "What the package covers", paragraphs: ["HC 584 changes provisions for Skilled Worker, Student, the EU Settlement Scheme, Visitor and several other routes. The main group of changes takes effect on 8 October 2026, with further provisions applying on 29 October, 30 November and 9 December.", "For the affected routes, some applications made before the relevant commencement date are decided under the previous rules. The exact filing date therefore matters as much as the subject of the change."] },
+      { title: "The position for Global Talent and Innovator Founder", paragraphs: ["Appendix Global Talent and Appendix Innovator Founder are not among the appendices amended by HC 584. The September package introduces no new criteria, income thresholds or endorsement requirements for these routes.", "This does not mean that the wider UK immigration system is unchanged. The narrower conclusion is that HC 584 does not make the Global Talent or Innovator Founder routes more restrictive."] },
+      { title: "The Samotsvet view", paragraphs: ["A large statement of changes can make a general tightening look like a change to every UK route. We first identify the appendix that has been amended and its commencement date, then decide whether a strategy needs to change.", "Global Talent and Innovator Founder applicants do not need to rebuild their cases because of HC 584. We continue to work to the criteria in force and monitor later statements that expressly amend the relevant appendix."] },
+    ],
+  },
+  {
+    slug: "us-diversity-visa-pause-august-2026",
+    tag: "United States · Diversity Visa",
+    title: "Diversity Visa issuance is paused again after the earlier pause was set aside",
+    description: "Why the end of the December restriction did not restart Diversity Visa issuance.",
+    reading: "4 min read",
+    published: "2026-08-31",
+    author: "Samotsvet editorial team",
+    lead: "The earlier pause on Diversity Visa issuance ceased to apply on 28 August following a court order. The Department of State immediately imposed a new pause while it reviews screening and vetting procedures.",
+    relatedCountry: "usa",
+    sources: [
+      { label: "Department of State - updated Diversity Visa issuance guidance", href: "https://travel.state.gov/content/travel/en/News/visas-news/diversity-visa-issuance-updated-guidance.html" },
+    ],
+    sections: [
+      { title: "The current position", paragraphs: ["The Department of State continues to accept applications and schedule interviews, but no Diversity Visas are issued while the new pause remains in force. The official guidance provides no exceptions.", "Existing visas were not revoked by the decision. The restriction concerns the issuance of new Diversity Visas, not every US immigrant category."] },
+      { title: "Why this is a separate issue", paragraphs: ["The end of the broader January pause affecting nationals of 75 countries and the Diversity Visa rules arise from different documents. A positive development concerning one restriction does not remove the other.", "EB-1A and EB-2 NIW are not Diversity Visa categories. Their applicants must separately check the petition, visa-number availability and the position of the relevant consular post."] },
+      { title: "The Samotsvet view", paragraphs: ["This development shows why a plan cannot be based on a headline saying that restrictions were lifted. We separate the category, procedural stage and government body: a court order may remove one barrier without restarting issuance under another programme.", "Diversity Visa applicants should keep scheduled interviews and their documents ready, but should base timing on a further official update. EB-1A and NIW applicants should not apply a restriction written specifically for DV to their own cases."] },
+    ],
+  },
+  {
+    slug: "us-immigrant-visa-pause-lifted-august-2026",
+    tag: "United States · Immigrant visas",
+    title: "The Department of State has lifted the general immigrant-visa pause for Russian nationals",
+    description: "The official 28 August update and the remaining checks for EB-1A and NIW consular cases.",
+    reading: "4 min read",
+    published: "2026-08-28",
+    author: "Samotsvet editorial team",
+    lead: "The Department of State has confirmed that, from 21 August 2026, the earlier pause on immigrant-visa issuance to nationals of 75 countries, including Russia, is no longer in effect.",
+    relatedCountry: "usa",
+    sources: [
+      { label: "Department of State - immigrant-visa issuance update", href: "https://travel.state.gov/content/travel/en/News/visas-news/immigrant-visa-processing-updates-for-nationalities-at-high-risk-of-public-benefits-usage.html" },
+      { label: "CLINIC v Rubio - case materials", href: "https://www.nilc.org/litigation/clinic-v-rubio/" },
+      { label: "Department of State - place of immigrant-visa interview", href: "https://travel.state.gov/content/travel/en/News/visas-news/adjudicating-iv-applicants-in-their-country-of-residence.html" },
+    ],
+    sections: [
+      { title: "What changed on 28 August", paragraphs: ["The Department of State's official page now states that the January pause is no longer in effect following the court order in CLINIC v Rubio. Applicants may submit documents, attend interviews and receive a decision without that general nationality-based bar.", "The update does not remove the ordinary admissibility, public-charge, documentary and category-specific requirements."] },
+      { title: "What this means for EB-1A and NIW", paragraphs: ["For EB-1A and EB-2 NIW applicants completing the process through a consulate, a distinct barrier at the final visa-issuance stage has been removed. I-140 approval, visa-number availability and the consular decision remain separate stages.", "Before relying on a relocation date, applicants should confirm the interview location, available appointments and the operation of the selected consular post. A general Department of State announcement does not create the same timetable for every embassy or case."] },
+      { title: "The Samotsvet view", paragraphs: ["This is a material improvement for Russian applicants, but it does not mean that every part of the process has restarted automatically. We would not change category or rebuild an evidence record because of this news alone: the first step is to identify the stage of the particular matter and the barrier that remains.", "Consular processing can again be treated as a working scenario for new matters, with time allowed for operational delay and a contingency where appropriate. For approved petitions, the priority is to check the NVC position, consular post and financial evidence."] },
+    ],
+  },
+  {
     slug: "us-immigrant-visa-issuance-pause-russia",
     tag: "United States · Immigrant visas",
     title: "Court vacates the immigrant-visa pause: what it means for Russian nationals",
